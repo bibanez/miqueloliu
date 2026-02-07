@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miquel Oliu — Enregistraments</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="nav-container"></div>
+
+  <main>
+    <div class="page-header">
+      <h1 data-i18n="recordings.title"></h1>
+      <p data-i18n="recordings.description"></p>
+    </div>
+
+    <div id="recordings-content">
+      <p class="loading" data-i18n="recordings.loading"></p>
+    </div>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/sheets.js"></script>
+  <script src="js/components.js"></script>
+
+  <!-- Page-specific logic -->
+  <script>
+    const PageInit = {
+      recordings: async () => {
+        const container = document.getElementById('recordings-content');
+
+        try {
+          const rows = await Sheets.fetch(CONFIG.sheets.recordings);
+
+          if (rows.length === 0) {
+            container.innerHTML = `<p class="empty-state" data-i18n="recordings.empty"></p>`;
+            I18n.apply();
+            return;
+          }
+
+          let html = '<div class="card-grid">';
+
+          rows.forEach(row => {
+            const link = row.url
+              ? `<a href="${row.url}" target="_blank" rel="noopener">&#9654; Listen</a>`
+              : '';
+            html += `
+              <div class="card">
+                <h3>${row.title || ''}</h3>
+                <p class="meta">${row.performers || ''} · ${row.year || ''}</p>
+                <p>${row.album || ''}</p>
+                ${link}
+              </div>`;
+          });
+
+          html += '</div>';
+          container.innerHTML = html;
+          I18n.apply();
+
+        } catch (err) {
+          console.error('[Recordings]', err);
+          container.innerHTML = `<p class="empty-state" data-i18n="recordings.empty"></p>`;
+          I18n.apply();
+        }
+      }
+    };
+  </script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
