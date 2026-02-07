@@ -40,7 +40,7 @@ const Sheets = (() => {
     const rows = (json.table.rows || []).map(row => {
       const obj = {};
       row.c.forEach((cell, i) => {
-        obj[cols[i]] = cell ? (cell.v != null ? cell.v : '') : '';
+        obj[cols[i]] = cell ? (cell.f != null ? cell.f : (cell.v != null ? cell.v : '')) : '';
       });
       return obj;
     });

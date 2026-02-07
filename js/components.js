@@ -9,11 +9,11 @@ const Components = (() => {
 
   /** Detect which page is active based on the filename. */
   function activePage() {
-    const path = window.location.pathname;
-    if (path.endsWith('catalogue.html'))  return 'catalogue';
-    if (path.endsWith('recordings.html')) return 'recordings';
-    if (path.endsWith('press.html'))      return 'press';
-    if (path.endsWith('contact.html'))    return 'contact';
+    const slug = window.location.pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
+    if (slug === 'catalogue')  return 'catalogue';
+    if (slug === 'recordings') return 'recordings';
+    if (slug === 'press')      return 'press';
+    if (slug === 'contact')    return 'contact';
     return 'home';
   }
 

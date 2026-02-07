@@ -19,7 +19,7 @@
 
 const CONFIG = {
   // Replace with your published Google Spreadsheet ID
-  spreadsheetId: 'YOUR_SPREADSHEET_ID_HERE',
+  spreadsheetId: '16EcU1wy-Ee8jHlBlHa9CUBTjLf5bf-l5L8uB3yJmFXs',
 
   // Sheet names — must match the tab names in your spreadsheet exactly
   sheets: {
