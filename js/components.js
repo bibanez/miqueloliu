@@ -10,6 +10,7 @@ const Components = (() => {
   /** Detect which page is active based on the filename. */
   function activePage() {
     const slug = window.location.pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
+    if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
     if (slug === 'recordings') return 'recordings';
     if (slug === 'press')      return 'press';
@@ -33,6 +34,7 @@ const Components = (() => {
         </button>
         <ul class="nav-links">
           ${link('index.html',      'home')}
+          ${link('biografia.html',  'biography')}
           ${link('catalogue.html',  'catalogue')}
           ${link('recordings.html', 'recordings')}
           ${link('press.html',      'press')}

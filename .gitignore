@@ -1,0 +1,4 @@
+# Documents de treball (no s'han de publicar a Cloudflare Pages)
+documentacio/
+
+.DS_Store

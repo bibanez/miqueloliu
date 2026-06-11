@@ -28,6 +28,10 @@ html {
   scroll-behavior: smooth;
 }
 
+::selection {
+  background: rgba(139, 115, 85, 0.25);
+}
+
 body {
   font-family: var(--font-sans);
   color: var(--color-text);
@@ -193,31 +197,167 @@ main {
   max-width: 600px;
 }
 
-/* --- Hero (Frontpage) --- */
-.hero {
+/* --- Frontpage --- */
+.home-hero {
+  position: relative;
+}
+
+.home-hero img {
+  display: block;
+  width: 100%;
+  height: clamp(240px, 28vw, 340px);
+  object-fit: cover;
+  object-position: center 65%; /* favors the dark water; hides top-left artifact */
+}
+
+.home-hero-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 2.25rem;
   text-align: center;
-  padding: 5rem 0 4rem;
+  color: #f5f3ef;
 }
 
-.hero h1 {
-  font-size: 3.5rem;
-  margin-bottom: 0.5rem;
+.home-hero-title h1 {
+  font-size: clamp(2rem, 4.5vw, 2.8rem);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-shadow: 0 1px 14px rgba(0, 0, 0, 0.45);
 }
 
-.hero .subtitle {
-  font-family: var(--font-sans);
-  font-size: 1.1rem;
+.home-hero-subtitle {
+  margin: 0.35rem 0 0;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: rgba(250, 249, 247, 0.85);
+}
+
+.home {
+  padding-top: 4.5rem;
+}
+
+.quote {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.quote p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.3rem;
+  line-height: 1.9;
+  color: var(--color-text);
+}
+
+.quote-attribution {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
   color: var(--color-text-light);
-  letter-spacing: 0.15em;
-  text-transform: lowercase;
+  letter-spacing: 0.04em;
+}
+
+.quote-attribution .quote-source {
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.testimonials {
+  max-width: 640px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-text-light);
+  margin-bottom: 3rem;
+}
+
+.testimonial {
   margin-bottom: 0;
 }
 
-.hero-divider {
+.testimonials .text-divider {
+  margin: 3.5rem auto;
+  background: var(--color-border);
+}
+
+.testimonial-text p {
+  line-height: 1.9;
+}
+
+.testimonial cite {
+  display: block;
+  margin-top: 1.25rem;
+  font-style: normal;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  letter-spacing: 0.14em;
+}
+
+.home-links {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+  max-width: 640px;
+  margin: 5rem auto 1rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.home-links a {
+  font-size: 0.9rem;
+  text-transform: lowercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-light);
+}
+
+.home-links a:hover {
+  color: var(--color-accent);
+  opacity: 1;
+}
+
+/* Subtle reveal-on-scroll (class added by JS only when motion is allowed) */
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+.testimonial-poem .testimonial-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  line-height: 2;
+  color: var(--color-text-light);
+}
+
+/* --- Divider (between text blocks) --- */
+.text-divider {
   width: 60px;
   height: 1px;
   background: var(--color-accent);
-  margin: 2rem auto;
+  margin: 3rem auto;
+}
+
+/* --- Biography --- */
+.bio {
+  max-width: 720px;
+}
+
+.bio-block p {
+  line-height: 1.8;
 }
 
 /* --- Sections --- */
@@ -268,35 +408,106 @@ section:last-child {
   margin-bottom: 0;
 }
 
-/* --- Table (Catalogue) --- */
-.catalogue-table {
-  width: 100%;
-  border-collapse: collapse;
+/* --- Works (Catalogue) --- */
+.works-category {
+  max-width: 720px;
+  margin-bottom: 4rem;
 }
 
-.catalogue-table th,
-.catalogue-table td {
-  text-align: left;
-  padding: 0.75rem 1rem;
+.works-category-title {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-border);
+}
+
+.work {
+  margin-bottom: 2.5rem;
+}
+
+.work:last-child {
+  margin-bottom: 0;
+}
+
+.work-title {
+  font-size: 1.15rem;
+  margin-bottom: 0.35rem;
+}
+
+.work-years {
+  color: var(--color-text-light);
   font-size: 0.95rem;
 }
 
-.catalogue-table th {
-  font-family: var(--font-serif);
-  font-weight: 400;
-  color: var(--color-text);
-  font-size: 0.85rem;
-  text-transform: lowercase;
-  letter-spacing: 0.05em;
+.work-subtitle,
+.work-instrumentation,
+.work-duration,
+.work-detail {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 0.2rem;
 }
 
-.catalogue-table td {
+.work-subtitle {
+  font-style: italic;
+}
+
+.work-movements {
+  list-style: none;
+  margin: 0.2rem 0 0.4rem 1.25rem;
+  font-style: italic;
+  font-size: 0.9rem;
   color: var(--color-text-light);
 }
 
-.catalogue-table tbody tr:hover {
-  background: rgba(139, 115, 85, 0.04);
+.work-links {
+  margin: 0.5rem 0 0.2rem;
+  font-size: 0.85rem;
+}
+
+.work-links .work-link-sep {
+  margin: 0 0.5rem;
+  color: var(--color-text-light);
+}
+
+.work-note-toggle {
+  background: none;
+  border: none;
+  padding: 0;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.work-note-toggle:hover {
+  opacity: 0.7;
+}
+
+.work-note {
+  margin: 0.75rem 0;
+  padding: 0.25rem 0 0.25rem 1.25rem;
+  border-left: 2px solid var(--color-border);
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+.work-audio {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  margin: 0.75rem 0;
+}
+
+.work-part {
+  margin: 1.5rem 0 1.5rem 1.5rem;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--color-border);
+}
+
+.work-part .work-title {
+  font-size: 1.05rem;
 }
 
 /* --- Contact --- */
@@ -363,9 +574,23 @@ footer {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
-  .hero h1 { font-size: 2.5rem; }
 
   main { padding: 2rem 1.25rem; }
+
+  .home-hero-title { bottom: 1.5rem; }
+
+  .home-hero-subtitle { letter-spacing: 0.2em; }
+
+  .home { padding-top: 3.5rem; }
+
+  .quote p { font-size: 1.1rem; }
+
+  .home-links { gap: 2rem; }
+
+  .work-part {
+    margin-left: 0.5rem;
+    padding-left: 1rem;
+  }
 
   .nav-toggle { display: block; }
 
@@ -396,10 +621,5 @@ footer {
 
   .card-grid {
     grid-template-columns: 1fr;
-  }
-
-  .catalogue-table th:nth-child(n+4),
-  .catalogue-table td:nth-child(n+4) {
-    display: none;
   }
 }

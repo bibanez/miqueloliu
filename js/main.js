@@ -13,4 +13,22 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof PageInit !== 'undefined' && typeof PageInit[page] === 'function') {
     PageInit[page]();
   }
+
+  // Subtle reveal-on-scroll for home page text blocks
+  const revealEls = document.querySelectorAll('.quote, .testimonial, .home-links');
+  if (revealEls.length && 'IntersectionObserver' in window &&
+      !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach((el) => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  }
 });

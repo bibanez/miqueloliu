@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Miquel Oliu — Catàleg</title>
+  <title>Miquel Oliu — Obres</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -19,61 +19,107 @@
       <p data-i18n="catalogue.description"></p>
     </div>
 
-    <div id="catalogue-content">
-      <p class="loading" data-i18n="catalogue.loading"></p>
-    </div>
+    <div id="catalogue-content"></div>
   </main>
 
   <div id="footer-container"></div>
 
-  <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/sheets.js"></script>
+  <script src="js/data/works.js"></script>
   <script src="js/components.js"></script>
 
   <!-- Page-specific logic -->
   <script>
     const PageInit = {
-      catalogue: async () => {
+      catalogue: () => {
         const container = document.getElementById('catalogue-content');
-        const lang = I18n.currentLang();
+        const AUDIO_EXT = /\.(mp3|m4a|ogg|wav)(\?.*)?$/i;
 
-        try {
-          const rows = await Sheets.fetch(CONFIG.sheets.catalogue);
+        const loc = v => I18n.fmt(I18n.loc(v));
 
-          if (rows.length === 0) {
+        function renderLinks(work) {
+          const items = [];
+          if (work.links && work.links.audio) {
+            if (AUDIO_EXT.test(work.links.audio)) {
+              // Self-hosted audio gets an inline player below the links row
+              items.push(`<span class="work-link-label" data-i18n="works.link.audio"></span>`);
+            } else {
+              items.push(`<a href="${work.links.audio}" target="_blank" rel="noopener" data-i18n="works.link.audio"></a>`);
+            }
+          }
+          if (work.links && work.links.score) {
+            items.push(`<a href="${work.links.score}" target="_blank" rel="noopener" data-i18n="works.link.score"></a>`);
+          }
+          if (work.note) {
+            items.push(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
+          }
+          if (work.links && work.links.info) {
+            items.push(`<a href="${work.links.info}" target="_blank" rel="noopener" data-i18n="works.link.info"></a>`);
+          }
+
+          let html = '';
+          if (items.length) {
+            html += `<p class="work-links">${items.join('<span class="work-link-sep">·</span>')}</p>`;
+          }
+          if (work.links && work.links.audio && AUDIO_EXT.test(work.links.audio)) {
+            html += `<audio class="work-audio" controls preload="none" src="${work.links.audio}"></audio>`;
+          }
+          if (work.note) {
+            html += `<div class="work-note" id="note-${work.id}" hidden>${loc(work.note)}</div>`;
+          }
+          return html;
+        }
+
+        function renderWork(work, isPart) {
+          const years = work.years ? ` <span class="work-years">(${work.years})</span>` : '';
+          const titleTag = isPart ? 'h4' : 'h3';
+          let html = `<article class="work${isPart ? ' work-part' : ''}" id="work-${work.id}">`;
+          html += `<${titleTag} class="work-title">${loc(work.title)}${years}</${titleTag}>`;
+
+          if (work.subtitle)        html += `<p class="work-subtitle">${loc(work.subtitle)}</p>`;
+          if (work.instrumentation) html += `<p class="work-instrumentation">${loc(work.instrumentation)}</p>`;
+          if (work.movements) {
+            html += `<ul class="work-movements">${work.movements.map(m => `<li>${loc(m)}</li>`).join('')}</ul>`;
+          }
+          if (work.duration)        html += `<p class="work-duration">${loc(work.duration)}</p>`;
+          (work.details || []).forEach(d => { html += `<p class="work-detail">${loc(d)}</p>`; });
+
+          html += renderLinks(work);
+          (work.parts || []).forEach(p => { html += renderWork(p, true); });
+
+          html += '</article>';
+          return html;
+        }
+
+        function render() {
+          if (typeof WORKS === 'undefined' || WORKS.length === 0) {
             container.innerHTML = `<p class="empty-state" data-i18n="catalogue.empty"></p>`;
             I18n.apply();
             return;
           }
 
-          let html = `<table class="catalogue-table">
-            <thead><tr>
-              <th data-i18n="catalogue.col.title"></th>
-              <th data-i18n="catalogue.col.year"></th>
-              <th data-i18n="catalogue.col.instrumentation"></th>
-              <th data-i18n="catalogue.col.duration"></th>
-            </tr></thead><tbody>`;
-
-          rows.forEach(row => {
-            html += `<tr>
-              <td>${row.title || ''}</td>
-              <td>${row.year  || ''}</td>
-              <td>${row.instrumentation || ''}</td>
-              <td>${row.duration || ''}</td>
-            </tr>`;
+          let html = '';
+          WORKS.forEach(category => {
+            html += `<section class="works-category" id="${category.id}">`;
+            html += `<h2 class="works-category-title">${I18n.loc(category.name)}</h2>`;
+            category.works.forEach(work => { html += renderWork(work, false); });
+            html += '</section>';
           });
 
-          html += '</tbody></table>';
           container.innerHTML = html;
           I18n.apply();
 
-        } catch (err) {
-          console.error('[Catalogue]', err);
-          container.innerHTML = `<p class="empty-state" data-i18n="catalogue.empty"></p>`;
-          I18n.apply();
+          container.querySelectorAll('.work-note-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const note = document.getElementById(btn.dataset.target);
+              if (note) note.hidden = !note.hidden;
+            });
+          });
         }
+
+        render();
+        I18n.onChange(() => render());
       }
     };
   </script>

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lloc web oficial de Miquel Oliu, compositor.">
   <title>Miquel Oliu — Compositor</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,33 +14,60 @@
 
   <div id="nav-container"></div>
 
-  <main>
-    <!-- Hero -->
-    <div class="hero">
+  <!-- Full-bleed hero: landscape photo with the composer's name -->
+  <header class="home-hero">
+    <img src="img/portada.jpg" alt="">
+    <div class="home-hero-title">
       <h1>Miquel Oliu</h1>
-      <p class="subtitle" data-i18n="home.subtitle"></p>
-      <div class="hero-divider"></div>
+      <p class="home-hero-subtitle" data-i18n="home.hero.subtitle"></p>
     </div>
+  </header>
 
-    <!-- Bio -->
-    <section>
-      <h2 class="section-title" data-i18n="home.bio.title"></h2>
-      <p data-i18n="home.bio.text"></p>
+  <main class="home">
+    <!-- Rilke quote -->
+    <blockquote class="quote">
+      <p data-i18n-html="home.quote.text"></p>
+      <footer class="quote-attribution" data-i18n-html="home.quote.attribution"></footer>
+    </blockquote>
+
+    <div class="text-divider"></div>
+
+    <!-- Three texts about his music -->
+    <section class="testimonials">
+      <p class="section-label" data-i18n="home.testimonials.label"></p>
+
+      <div class="testimonial">
+        <div class="testimonial-text" data-i18n-html="home.testimonial.humet.text"></div>
+        <cite data-i18n="home.testimonial.humet.author"></cite>
+      </div>
+
+      <div class="text-divider"></div>
+
+      <div class="testimonial">
+        <div class="testimonial-text" data-i18n-html="home.testimonial.guix.text"></div>
+        <cite data-i18n="home.testimonial.guix.author"></cite>
+      </div>
+
+      <div class="text-divider"></div>
+
+      <div class="testimonial testimonial-poem">
+        <div class="testimonial-text" data-i18n-html="home.testimonial.clapes.text" lang="ca"></div>
+        <cite data-i18n="home.testimonial.clapes.author"></cite>
+      </div>
     </section>
 
-    <!-- Latest news (placeholder — could be populated from Sheets) -->
-    <section>
-      <h2 class="section-title" data-i18n="home.latest.title"></h2>
-      <p class="empty-state" data-i18n="home.latest.empty"></p>
+    <!-- Entry points to the rest of the site -->
+    <section class="home-links">
+      <a href="biografia.html" data-i18n="nav.biography"></a>
+      <a href="catalogue.html" data-i18n="nav.catalogue"></a>
+      <a href="contact.html" data-i18n="nav.contact"></a>
     </section>
   </main>
 
   <div id="footer-container"></div>
 
-  <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/sheets.js"></script>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
 </body>

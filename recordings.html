@@ -19,58 +19,51 @@
       <p data-i18n="recordings.description"></p>
     </div>
 
-    <div id="recordings-content">
-      <p class="loading" data-i18n="recordings.loading"></p>
-    </div>
+    <div id="recordings-content"></div>
   </main>
 
   <div id="footer-container"></div>
 
-  <script src="js/config.js"></script>
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
-  <script src="js/sheets.js"></script>
+  <script src="js/data/recordings.js"></script>
   <script src="js/components.js"></script>
 
   <!-- Page-specific logic -->
   <script>
     const PageInit = {
-      recordings: async () => {
+      recordings: () => {
         const container = document.getElementById('recordings-content');
+        const loc = v => I18n.fmt(I18n.loc(v));
 
-        try {
-          const rows = await Sheets.fetch(CONFIG.sheets.recordings);
-
-          if (rows.length === 0) {
+        function render() {
+          if (typeof RECORDINGS === 'undefined' || RECORDINGS.length === 0) {
             container.innerHTML = `<p class="empty-state" data-i18n="recordings.empty"></p>`;
             I18n.apply();
             return;
           }
 
           let html = '<div class="card-grid">';
-
-          rows.forEach(row => {
+          RECORDINGS.forEach(row => {
             const link = row.url
-              ? `<a href="${row.url}" target="_blank" rel="noopener">&#9654; Listen</a>`
+              ? `<a href="${row.url}" target="_blank" rel="noopener">&#9654;</a>`
               : '';
             html += `
               <div class="card">
-                <h3>${row.title || ''}</h3>
-                <p class="meta">${row.performers || ''} · ${row.year || ''}</p>
-                <p>${row.album || ''}</p>
+                <h3>${loc(row.title)}</h3>
+                <p class="meta">${loc(row.performers)} · ${row.year || ''}</p>
+                <p>${loc(row.album)}</p>
                 ${link}
               </div>`;
           });
-
           html += '</div>';
+
           container.innerHTML = html;
           I18n.apply();
-
-        } catch (err) {
-          console.error('[Recordings]', err);
-          container.innerHTML = `<p class="empty-state" data-i18n="recordings.empty"></p>`;
-          I18n.apply();
         }
+
+        render();
+        I18n.onChange(() => render());
       }
     };
   </script>
