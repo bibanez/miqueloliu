@@ -19,7 +19,10 @@
       <p data-i18n="catalogue.description"></p>
     </div>
 
-    <div id="catalogue-content"></div>
+    <div class="catalogue-layout">
+      <nav class="catalogue-nav" id="catalogue-nav" aria-label="Categories"></nav>
+      <div id="catalogue-content"></div>
+    </div>
   </main>
 
   <div id="footer-container"></div>
@@ -27,6 +30,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/data/works.js"></script>
+  <script src="js/orchestra.js"></script>
   <script src="js/components.js"></script>
 
   <!-- Page-specific logic -->
@@ -34,6 +38,7 @@
     const PageInit = {
       catalogue: () => {
         const container = document.getElementById('catalogue-content');
+        const quickNav = document.getElementById('catalogue-nav');
         const AUDIO_EXT = /\.(mp3|m4a|ogg|wav)(\?.*)?$/i;
 
         const loc = v => I18n.fmt(I18n.loc(v));
@@ -78,18 +83,63 @@
           html += `<${titleTag} class="work-title">${loc(work.title)}${years}</${titleTag}>`;
 
           if (work.subtitle)        html += `<p class="work-subtitle">${loc(work.subtitle)}</p>`;
-          if (work.instrumentation) html += `<p class="work-instrumentation">${loc(work.instrumentation)}</p>`;
+          if (work.instrumentation) {
+            // Les plantilles orquestrals [2.2.2.2.-…] es poden desplegar en un diagrama
+            const raw = I18n.loc(work.instrumentation);
+            const orch = Orchestra.parse(raw);
+            if (orch) {
+              html += `<p class="work-instrumentation"><button class="work-orchestra-toggle" data-target="orch-${work.id}" aria-controls="orch-${work.id}" aria-expanded="false">${raw}<span class="orchestra-hint" data-i18n="works.orchestra.hint"></span></button></p>`;
+              html += `<div class="orchestra-panel" id="orch-${work.id}" data-formula="${raw}" hidden></div>`;
+            } else {
+              html += `<p class="work-instrumentation">${loc(work.instrumentation)}</p>`;
+            }
+          }
           if (work.movements) {
             html += `<ul class="work-movements">${work.movements.map(m => `<li>${loc(m)}</li>`).join('')}</ul>`;
           }
           if (work.duration)        html += `<p class="work-duration">${loc(work.duration)}</p>`;
           (work.details || []).forEach(d => { html += `<p class="work-detail">${loc(d)}</p>`; });
 
+          // Disponibilitat de la partitura: editada per Ficta o sota demanda
+          if (work.score) {
+            const scoreValue = work.score === 'contact'
+              ? `<a href="contact.html" data-i18n="works.score.contact"></a>`
+              : `<span data-i18n="works.score.ficta"></span>`;
+            html += `<p class="work-detail work-score"><span data-i18n="works.score.label"></span> ${scoreValue}</p>`;
+          }
+
           html += renderLinks(work);
           (work.parts || []).forEach(p => { html += renderWork(p, true); });
 
           html += '</article>';
           return html;
+        }
+
+        function renderNav() {
+          quickNav.innerHTML = WORKS.map(c =>
+            `<a href="#${c.id}">${I18n.loc(c.name)}</a>`
+          ).join('');
+          quickNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+              // Desplega la secció abans de saltar-hi
+              const section = document.getElementById(link.getAttribute('href').slice(1));
+              if (section) section.open = true;
+            });
+          });
+          updateActiveLink();
+        }
+
+        function updateActiveLink() {
+          const siteNav = document.querySelector('#nav-container nav');
+          const offset = (siteNav ? siteNav.offsetHeight : 72) + 40;
+          let current = WORKS.length ? WORKS[0].id : null;
+          WORKS.forEach(c => {
+            const section = document.getElementById(c.id);
+            if (section && section.getBoundingClientRect().top <= offset) current = c.id;
+          });
+          quickNav.querySelectorAll('a').forEach(a => {
+            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+          });
         }
 
         function render() {
@@ -99,15 +149,24 @@
             return;
           }
 
+          // Conserva l'estat plegat/desplegat entre re-renderitzats (canvi d'idioma)
+          const closed = new Set(
+            [...container.querySelectorAll('details.works-category:not([open])')].map(d => d.id)
+          );
+          const openOrch = new Set(
+            [...container.querySelectorAll('.orchestra-panel:not([hidden])')].map(p => p.id)
+          );
+
           let html = '';
           WORKS.forEach(category => {
-            html += `<section class="works-category" id="${category.id}">`;
-            html += `<h2 class="works-category-title">${I18n.loc(category.name)}</h2>`;
+            html += `<details class="works-category" id="${category.id}"${closed.has(category.id) ? '' : ' open'}>`;
+            html += `<summary class="works-category-summary"><h2 class="works-category-title">${I18n.loc(category.name)}</h2></summary>`;
             category.works.forEach(work => { html += renderWork(work, false); });
-            html += '</section>';
+            html += '</details>';
           });
 
           container.innerHTML = html;
+          renderNav();
           I18n.apply();
 
           container.querySelectorAll('.work-note-toggle').forEach(btn => {
@@ -116,10 +175,32 @@
               if (note) note.hidden = !note.hidden;
             });
           });
+
+          container.querySelectorAll('.work-orchestra-toggle').forEach(btn => {
+            const panel = document.getElementById(btn.dataset.target);
+            if (!panel) return;
+            // El diagrama es construeix la primera vegada que s'obre el panell
+            const fillPanel = () => {
+              if (panel.firstChild) return;
+              const orch = Orchestra.parse(panel.dataset.formula);
+              if (!orch) return;
+              panel.innerHTML = Orchestra.renderPanel(orch);
+              Orchestra.bind(panel);  // sincronització de l'hover — necessita el contingut
+            };
+            const setOpen = (open, animate) => {
+              if (open) fillPanel();
+              panel.hidden = !open;
+              if (open && animate) panel.classList.add('is-opening');
+              btn.setAttribute('aria-expanded', String(open));
+            };
+            if (openOrch.has(panel.id)) setOpen(true, false);  // language re-render: refill in new language, no replay
+            btn.addEventListener('click', () => setOpen(panel.hidden, true));
+          });
         }
 
         render();
         I18n.onChange(() => render());
+        window.addEventListener('scroll', updateActiveLink, { passive: true });
       }
     };
   </script>

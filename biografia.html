@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Miquel Oliu — Biografia</title>
+  <script>
+    // Evita un flaix del contingut en català quan l'idioma desat és un altre
+    try {
+      var storedLang = localStorage.getItem('miqueloliu_lang');
+      if (storedLang === 'es' || storedLang === 'en') document.documentElement.lang = storedLang;
+    } catch (e) {}
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -18,8 +25,8 @@
       <h1 data-i18n="bio.title"></h1>
     </div>
 
-    <!-- Text en català (pendent de traduccions ES/EN) -->
-    <article class="bio" lang="ca">
+    <!-- Biografia en tres idiomes; la visibilitat es controla per CSS segons html[lang] -->
+    <article class="bio lang-block" lang="ca">
       <section class="bio-block">
         <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
         <p>Músic, format com a pianista i compositor.</p>
@@ -47,6 +54,67 @@
       <section class="bio-block">
         <p>Actualment, paral·lelament a la composició, desenvolupa la seva activitat professional en el camp de la pedagogia com a professor de piano a l’Escola-Conservatori Professional de Música de Vic (des del curs 2002-03).</p>
         <p>És amant dels infants, de la natura i del silenci, fet que traspua en bona part de les seves obres.</p>
+      </section>
+    </article>
+
+    <article class="bio lang-block" lang="es">
+      <section class="bio-block">
+        <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
+        <p>Músico, formado como pianista y compositor.</p>
+        <p>Ha sido galardonado con el «XXXII Premio Reina Sofía de Composición Musical» (2015), con la obra <em>Al·legories de tardor</em> (Alegorías de otoño) para orquesta sinfónica, estrenada por la Orquesta de RTVE bajo la dirección de Carlos Kalmar; y ha sido compositor de la «Xarxa de Músiques» de Joventuts Musicals de Catalunya - Fundació Ferrer-Salat, durante el curso 2016-17.</p>
+        <p>Ha estudiado en el Conservatorio Superior de Música de Aragón (Zaragoza) con el profesor Agustí Charles terminando el Grado Superior en el 2002 (Plan 66).</p>
+        <p>En su evolución como compositor ha sido muy importante el contacto con Ramon Humet de quien recibe clases de forma regular durante dos años (2010-2012).</p>
+        <p>Ha recibido consejos de Josep Soler y Benet Casablancas, entre otros. Asiste a diversas clases magistrales y cursos de perfeccionamiento destacando los de Sofía Gubaidulina (2013) y Tristán Murail (2015) en Zaragoza y con el mismo T. Murail en el Festival Mixtur de Barcelona (2019).</p>
+        <p>Su catálogo reúne obras para instrumentos solistas, distintos conjuntos de cámara, coro y orquesta. Ha recibido encargos de instituciones y de intérpretes como: Percussions de Barcelona, Festival de Campllong, European Shakuhachi Society, Joventuts Musicals de Catalunya, L’Auditori de Barcelona, Palau de la Música Catalana, Pueri Cantores, Dalia Quartet, Festival Mixtur, Associació Joan Manén, Ensemble QuLacoza, Tempus Trio, Miquel Bernat, Agnès Mauri, Cor Noctes, Drumming Grupo de percussao, entre otros.</p>
+        <p>En los últimos años destacan: de L’Auditori de Barcelona y la SGAE-AEOS (Asociación Española de Orquestas Sinfónicas) con la obra <em>In luce praesenti</em> estrenada dentro de la Temporada 2021-22 de la OBC (Orquesta Sinfónica de Barcelona y Nacional de Catalunya) bajo la dirección de Juanjo Mena, y grabada en julio del 2022 por el sello de L’Auditori (Auditori play) con la OBC bajo la dirección de Benjamin Schwarz. También del mismo Auditori de Barcelona, con la obra para orquesta sinfónica <em>Pluja</em> (Lluvia) estrenada dentro de la temporada 2025-26 de la OBC, y con gira posterior por Alemania y el País Vasco, bajo la dirección de su titular Ludovic Morlot. Y un último del Palau de la Música Catalana, en colaboración con el Ayuntamiento de Barcelona, dentro del proyecto Barcelona Creació Sonora con el <em>Tercer quadern de Preludis</em> per a piano (Tercer cuaderno de Preludios), con el pianista Miquel Villalba (diciembre 2023).</p>
+        <p>La música de Miquel Oliu se ha interpretado en distintos lugares del estado español, Alemania, Francia, Portugal, Polonia, Suiza, Japón: L’Auditori de Barcelona, el Palau de la Música Catalana, l’Elbphilharmonie de Hamburg (Grosser Saal), la Liederhalle de Stuttgart, la Tonhalle de Düsseldorf, el Kursaal de San Sebastián-Donostia, el Palacio Euskalduna de Bilbao, el Teatro Monumental y la Fundación Juan March de Madrid, la Schubertiada de Vilabertran, el Auditori Josep Carreras de Vila-seca, el Teatre Atlàntida de Vic o el Monasterio de Montserrat, entre muchos otros.</p>
+        <p>Sus obras han sido grabadas en diversos CD, producidos por Ficta —que edita también las partituras—, Seed Music, y IBS Classical, de los cuales destaca el <em>Llibre d’hores</em>, monográfico con obra para piano, con el pianista Miquel Villalba (Ficta 2023).</p>
+      </section>
+
+      <div class="text-divider"></div>
+
+      <section class="bio-block">
+        <p>Los estudios musicales y pianísticos de Miquel Oliu se iniciaron en Olot con Mercè Valls de la Academia Marshall de Barcelona. Se formó en el Conservatorio Superior de Música de Barcelona con Antoni Besses obteniendo el título superior de piano con las máximas calificaciones (Matrícula de honor en el último curso) y distintos premios.</p>
+        <p>En su evolución musical y pianística destaca la influencia del pianista y pedagogo belga Frédéric Gevers; por su relación con la música y el instrumento, y su mirada del arte y la vida.</p>
+        <p>Así mismo ha recibido consejos de Mercè Roldós, Josep Mª Colom, Francisco Poyato, Michel Béroff (París) y Pascal Devoyon (Berlín), entre otros.</p>
+        <p>Su interés por la música en su vertiente más teórica y creativa —escribe música desde pequeño— lo llevó a formarse en otras especialidades, y obtuvo también los títulos superiores de Pedagogía; el de Solfeo, Teoría de la música, Transposición y Acompañamiento con las máximas calificaciones; Premio de honor de Fuga, Mención de honor de Armonía. Destacan los cursos de análisis de la música del S.XX con Carles Guinovart y Roy Howat.</p>
+      </section>
+
+      <div class="text-divider"></div>
+
+      <section class="bio-block">
+        <p>Actualmente, paralelamente a la composición, desarrolla su actividad profesional en el campo de la pedagogía como profesor de piano en la Escuela-Conservatorio Profesional de Música de Vic (desde el curso 2002-03).</p>
+        <p>En buena parte de su obra rezuma su amor por los niños, la naturaleza y el silencio.</p>
+      </section>
+    </article>
+
+    <article class="bio lang-block" lang="en">
+      <section class="bio-block">
+        <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
+        <p>Musician, trained as a pianist and composer.</p>
+        <p>He was awarded the 32nd Reina Sofía Prize for Musical Composition (2015), for the work <em>Al·legories de tardor</em> (Autumn allegories) for symphony orchestra, premiered by the RTVE Symphony Orchestra, conducted by Carlos Kalmar. He was also the composer for the “Xarxa de Músiques” program of Joventuts Musicals de Catalunya – Fundació Ferrer-Salat during the 2016-17 academic year.</p>
+        <p>He studied at the Conservatorio Superior de Música de Aragón (Zaragoza) with Professor Agustí Charles, completing his Higher Degree in 2002 (Plan 66).</p>
+        <p>In his development as a composer, his contact with Ramon Humet—under whom he studied regularly over a two-year period—was particularly significant (2010-2012). He has received guidance from Josep Soler and Benet Casablancas, among others, and has attended various master classes and advanced courses, notably with Sofia Gubaidulina (2013) and Tristan Murail (2015) in Zaragoza, and with Tristan Murail again in the Barcelona Festival Mixtur (2019).</p>
+        <p>His catalogue includes works for solo instruments as well as chamber, choral, and orchestral ensembles. He has received commissions from institutions and performers such as Percussions de Barcelona, Festival de Campllong, European Shakuhachi Society, Joventuts Musicals de Catalunya, L’Auditori de Barcelona, Palau de la Música Catalana, Pueri Cantores, Dalia Quartet, Festival Mixtur, Associació Joan Manén, Ensemble QuLacoza, Tempus Trio, Miquel Bernat, Agnès Mauri, Cor Noctes, and Drumming Grupo de Percussão, among others.</p>
+        <p>In recent years, notable works include <em>In luce praesenti</em>, commissioned by L’Auditori de Barcelona and SGAE-AEOS (Spanish Association of Symphony Orchestras), which premiered during the 2021-22 season of the OBC (Barcelona Symphony Orchestra), conducted by Juanjo Mena, and was recorded in July 2022 by L’Auditori’s label (Auditori Play) with the OBC conducted by Benjamin Schwarz. Also commissioned by L’Auditori de Barcelona, the orchestral work <em>Pluja</em> (Rain) was premiered in the 2025-26 OBC season and subsequently toured in Germany and the Basque Country under its principal conductor Ludovic Morlot. And another from the Palau de la Música Catalana, in collaboration with the Barcelona City Council, as part of the Barcelona Creació Sonora project: <em>Tercer quadern de Preludis</em> (Third book of preludes) for piano, with pianist Miquel Villalba (December 2023).</p>
+        <p>Miquel Oliu’s music has been performed at venues across Spain, Germany, France, Portugal, Poland, Switzerland, and Japan: L’Auditori de Barcelona, the Palau de la Música Catalana, the Elbphilharmonie in Hamburg (Großer Saal), the Liederhalle in Stuttgart, the Tonhalle in Düsseldorf, the Kursaal in San Sebastián-Donostia, the Palacio Euskalduna in Bilbao, the Teatro Monumental and Juan March Foundation in Madrid, the Schubertíada in Vilabertran, the Auditori Josep Carreras in Vila-seca, the Teatre Atlàntida in Vic and the Monastery of Montserrat, among many others.</p>
+        <p>His works have been recorded on several CDs produced by Ficta (also his publisher), Seed Music, and IBS Classical. Notable among these is <em>Llibre d’hores</em> (Book of hours), a monographic piano album performed by Miquel Villalba (Ficta, 2023).</p>
+      </section>
+
+      <div class="text-divider"></div>
+
+      <section class="bio-block">
+        <p>Miquel Oliu began his musical and piano studies in Olot with Mercè Valls of the Acadèmia Marshall in Barcelona. He later studied at the Conservatori Superior de Música de Barcelona with Antoni Besses, obtaining his higher degree in piano with top honors (including a distinction in his final year) and several awards.</p>
+        <p>In his development as a musician and pianist, the influence of Belgian pianist and pedagogue Frédéric Gevers has been particularly significant, especially regarding his relationship with music and his instrument, as well as his outlook on art and life.</p>
+        <p>He has also received guidance from Mercè Roldós, Josep Maria Colom, Francisco Poyato, Michel Béroff (Paris), and Pascal Devoyon (Berlin), among others.</p>
+        <p>His interest in the more theoretical and creative dimensions of music—he has composed since childhood—led him to pursue advanced studies in Pedagogy, Solfège, Music Theory, Transposition, and Accompaniment with top distinctions; he was awarded the Prize of Honor in Fugue and an Honorable Mention in Harmony. His courses in 20th-century music analysis with Carles Guinovart and Roy Howat are also of note.</p>
+      </section>
+
+      <div class="text-divider"></div>
+
+      <section class="bio-block">
+        <p>Currently, alongside his work as a composer, he is active in the field of education as a piano teacher at the Escola-Conservatori Professional de Música de Vic (since the 2002-03 academic year).</p>
+        <p>A significant portion of his work reflects his fondness for children, nature, and silence.</p>
       </section>
     </article>
   </main>
