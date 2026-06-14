@@ -43,6 +43,10 @@
 
         const loc = v => I18n.fmt(I18n.loc(v));
 
+        // Open state of the parts fold (e.g. Llibre d'hores) is preserved across
+        // language re-renders; populated in render() before renderWork runs.
+        let openParts = new Set();
+
         function renderLinks(work) {
           const items = [];
           if (work.links && work.links.audio) {
@@ -109,7 +113,15 @@
           }
 
           html += renderLinks(work);
-          (work.parts || []).forEach(p => { html += renderWork(p, true); });
+
+          // Sub-pieces (quaderns/volums) folded under a collapsible toggle
+          if (work.parts && work.parts.length) {
+            const partsId = `parts-${work.id}`;
+            html += `<details class="work-parts" id="${partsId}"${openParts.has(partsId) ? ' open' : ''}>`;
+            html += `<summary class="work-parts-summary"><span data-i18n="works.parts.show"></span></summary>`;
+            work.parts.forEach(p => { html += renderWork(p, true); });
+            html += '</details>';
+          }
 
           html += '</article>';
           return html;
@@ -155,6 +167,9 @@
           );
           const openOrch = new Set(
             [...container.querySelectorAll('.orchestra-panel:not([hidden])')].map(p => p.id)
+          );
+          openParts = new Set(
+            [...container.querySelectorAll('details.work-parts[open]')].map(d => d.id)
           );
 
           let html = '';

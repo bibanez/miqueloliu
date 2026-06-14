@@ -821,6 +821,41 @@ section:last-child {
   }
 }
 
+/* Collapsible group of sub-pieces (e.g. the quaderns of Llibre d'hores) */
+.work-parts {
+  margin-top: 0.75rem;
+}
+
+.work-parts-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+  transition: opacity 0.2s;
+}
+
+.work-parts-summary::-webkit-details-marker {
+  display: none;
+}
+
+.work-parts-summary::before {
+  content: '▸';
+  font-size: 0.7em;
+  transition: transform 0.2s ease;
+}
+
+.work-parts[open] > .work-parts-summary::before {
+  transform: rotate(90deg);
+}
+
+.work-parts-summary:hover {
+  opacity: 0.7;
+}
+
 .work-part {
   margin: 1.5rem 0 1.5rem 1.5rem;
   padding-left: 1.25rem;
@@ -829,6 +864,7 @@ section:last-child {
 
 .work-part .work-title {
   font-size: 1.05rem;
+  font-weight: 400;
 }
 
 /* --- Contact --- */
