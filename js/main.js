@@ -14,8 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
     PageInit[page]();
   }
 
+  // Home hero: the nav floats transparent over the photo, then condenses into
+  // a solid bar once the hero has mostly scrolled away.
+  if (document.body.classList.contains('has-hero')) {
+    const navContainer = document.getElementById('nav-container');
+    const hero = document.querySelector('.home-hero');
+    if (navContainer && hero) {
+      let ticking = false;
+      const sync = () => {
+        const threshold = hero.offsetHeight * 0.6;
+        navContainer.classList.toggle('condensed', window.scrollY > threshold);
+        ticking = false;
+      };
+      sync();
+      window.addEventListener('scroll', () => {
+        if (!ticking) { window.requestAnimationFrame(sync); ticking = true; }
+      }, { passive: true });
+    }
+  }
+
   // Subtle reveal-on-scroll for home page text blocks
-  const revealEls = document.querySelectorAll('.quote, .testimonial, .home-links');
+  const revealEls = document.querySelectorAll('.quote, .home-intro, .testimonial, .home-links');
   if (revealEls.length && 'IntersectionObserver' in window &&
       !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const io = new IntersectionObserver((entries) => {

@@ -66,6 +66,9 @@ const Components = (() => {
     if (navContainer)    navContainer.innerHTML = renderNav();
     if (footerContainer) footerContainer.innerHTML = renderFooter();
 
+    // The home page has a full-bleed hero: let the nav float over it.
+    if (activePage() === 'home') document.body.classList.add('has-hero');
+
     // Mobile hamburger toggle
     const toggle = document.querySelector('.nav-toggle');
     const links  = document.querySelector('.nav-links');

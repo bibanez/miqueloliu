@@ -43,18 +43,16 @@
             return;
           }
 
-          let html = '<div class="card-grid">';
+          let html = '<div class="entry-list">';
           RECORDINGS.forEach(row => {
-            const link = row.url
-              ? `<a href="${row.url}" target="_blank" rel="noopener">&#9654;</a>`
-              : '';
+            const meta = [loc(row.performers), row.year].filter(Boolean).join(' · ');
             html += `
-              <div class="card">
-                <h3>${loc(row.title)}</h3>
-                <p class="meta">${loc(row.performers)} · ${row.year || ''}</p>
-                <p>${loc(row.album)}</p>
-                ${link}
-              </div>`;
+              <article class="entry">
+                <h3 class="entry-title">${loc(row.title)}</h3>
+                ${meta ? `<p class="entry-meta">${meta}</p>` : ''}
+                ${row.album ? `<p class="entry-body">${loc(row.album)}</p>` : ''}
+                ${row.url ? `<p class="entry-links"><a href="${row.url}" target="_blank" rel="noopener">&#9654;</a></p>` : ''}
+              </article>`;
           });
           html += '</div>';
 
