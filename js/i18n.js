@@ -72,7 +72,7 @@ const I18n = (() => {
     return str.replace(/\{year\}/g, new Date().getFullYear());
   }
 
-  /** Apply translations to every element with data-i18n / data-i18n-html. */
+  /** Apply translations to every element with data-i18n / data-i18n-html / data-i18n-placeholder. */
   function apply(lang) {
     lang = lang || currentLang();
     document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -83,6 +83,10 @@ const I18n = (() => {
     document.querySelectorAll('[data-i18n-html]').forEach(el => {
       const key = el.getAttribute('data-i18n-html');
       el.innerHTML = t(key, lang);
+    });
+    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+      const key = el.getAttribute('data-i18n-placeholder');
+      el.placeholder = t(key, lang);
     });
   }
 

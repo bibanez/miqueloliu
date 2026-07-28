@@ -12,8 +12,6 @@ const Components = (() => {
     const slug = window.location.pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
     if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
-    if (slug === 'recordings') return 'recordings';
-    if (slug === 'press')      return 'press';
     if (slug === 'contact')    return 'contact';
     return 'home';
   }
@@ -36,8 +34,6 @@ const Components = (() => {
           ${link('index.html',      'home')}
           ${link('biografia.html',  'biography')}
           ${link('catalogue.html',  'catalogue')}
-          ${link('recordings.html', 'recordings')}
-          ${link('press.html',      'press')}
           ${link('contact.html',    'contact')}
           <li>
             <div class="lang-switcher">
@@ -52,8 +48,24 @@ const Components = (() => {
   }
 
   function renderFooter() {
+    const active = activePage();
+    const pages = [
+      { href: 'index.html',     key: 'home' },
+      { href: 'biografia.html', key: 'biography' },
+      { href: 'catalogue.html', key: 'catalogue' },
+      { href: 'contact.html',   key: 'contact' }
+    ];
+
+    const linksHtml = pages
+      .filter(p => p.key !== active)
+      .map(p => `<a href="${p.href}" data-i18n="nav.${p.key}"></a>`)
+      .join('\n        ');
+
     return `
     <footer>
+      <nav class="footer-links">
+        ${linksHtml}
+      </nav>
       <p data-i18n="footer.copyright"></p>
     </footer>`;
   }
@@ -66,8 +78,8 @@ const Components = (() => {
     if (navContainer)    navContainer.innerHTML = renderNav();
     if (footerContainer) footerContainer.innerHTML = renderFooter();
 
-    // The home page has a full-bleed hero: let the nav float over it.
-    if (activePage() === 'home') document.body.classList.add('has-hero');
+    // Pages with a full-bleed hero: let the nav float over it.
+    if (document.querySelector('.home-hero')) document.body.classList.add('has-hero');
 
     // Mobile hamburger toggle
     const toggle = document.querySelector('.nav-toggle');

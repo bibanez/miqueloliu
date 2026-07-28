@@ -14,12 +14,11 @@
   <div id="nav-container"></div>
 
   <main>
-    <div class="page-header">
-      <h1 data-i18n="catalogue.title"></h1>
-      <p data-i18n="catalogue.description"></p>
-    </div>
-
     <div class="catalogue-layout">
+      <div class="page-header">
+        <h1 data-i18n="catalogue.title"></h1>
+        <p data-i18n="catalogue.description"></p>
+      </div>
       <nav class="catalogue-nav" id="catalogue-nav" aria-label="Categories"></nav>
       <div id="catalogue-content"></div>
     </div>
@@ -127,31 +126,80 @@
           return html;
         }
 
+        let isManualClicking = false;
+        let clickTimer = null;
+
+        function setActiveTab(currentId) {
+          let activeTab = null;
+          quickNav.querySelectorAll('a').forEach(a => {
+            const isActive = a.getAttribute('href') === '#' + currentId;
+            a.classList.toggle('active', isActive);
+            if (isActive) activeTab = a;
+          });
+
+          if (activeTab && quickNav.scrollWidth > quickNav.clientWidth) {
+            activeTab.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+          }
+        }
+
         function renderNav() {
           quickNav.innerHTML = WORKS.map(c =>
             `<a href="#${c.id}">${I18n.loc(c.name)}</a>`
           ).join('');
+
           quickNav.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-              // Desplega la secció abans de saltar-hi
-              const section = document.getElementById(link.getAttribute('href').slice(1));
-              if (section) section.open = true;
+            link.addEventListener('click', (e) => {
+              e.preventDefault();
+              const targetId = link.getAttribute('href').slice(1);
+              const targetEl = document.getElementById(targetId);
+
+              if (targetEl) {
+                isManualClicking = true;
+                clearTimeout(clickTimer);
+                setActiveTab(targetId);
+
+                targetEl.scrollIntoView({ behavior: 'smooth' });
+
+                clickTimer = setTimeout(() => {
+                  isManualClicking = false;
+                }, 1000);
+              }
             });
           });
+
           updateActiveLink();
         }
 
         function updateActiveLink() {
+          if (isManualClicking) return;
+
+          const scrollPos = window.scrollY || window.pageYOffset;
+          const windowHeight = window.innerHeight;
+          const docHeight = Math.max(
+            document.body.scrollHeight,
+            document.documentElement.scrollHeight
+          );
+
+          // Activa la darrera categoria quan s'arriba a la part inferior de la pàgina
+          if (scrollPos + windowHeight >= docHeight - 150 && WORKS.length > 0) {
+            setActiveTab(WORKS[WORKS.length - 1].id);
+            return;
+          }
+
           const siteNav = document.querySelector('#nav-container nav');
-          const offset = (siteNav ? siteNav.offsetHeight : 72) + 40;
+          const navHeight = siteNav ? siteNav.offsetHeight : 72;
+          const offset = navHeight + 115;
+
           let current = WORKS.length ? WORKS[0].id : null;
           WORKS.forEach(c => {
             const section = document.getElementById(c.id);
-            if (section && section.getBoundingClientRect().top <= offset) current = c.id;
+            if (section) {
+              const top = section.getBoundingClientRect().top;
+              if (top <= offset) current = c.id;
+            }
           });
-          quickNav.querySelectorAll('a').forEach(a => {
-            a.classList.toggle('active', a.getAttribute('href') === '#' + current);
-          });
+
+          setActiveTab(current);
         }
 
         function render() {
@@ -161,10 +209,7 @@
             return;
           }
 
-          // Conserva l'estat plegat/desplegat entre re-renderitzats (canvi d'idioma)
-          const closed = new Set(
-            [...container.querySelectorAll('details.works-category:not([open])')].map(d => d.id)
-          );
+          // Conserva l'estat dels panells d'orquestra i sub-peces entre re-renderitzats (canvi d'idioma)
           const openOrch = new Set(
             [...container.querySelectorAll('.orchestra-panel:not([hidden])')].map(p => p.id)
           );
@@ -174,10 +219,10 @@
 
           let html = '';
           WORKS.forEach(category => {
-            html += `<details class="works-category" id="${category.id}"${closed.has(category.id) ? '' : ' open'}>`;
-            html += `<summary class="works-category-summary"><h2 class="works-category-title">${I18n.loc(category.name)}</h2></summary>`;
+            html += `<section class="works-category" id="${category.id}">`;
+            html += `<h2 class="works-category-title">${I18n.loc(category.name)}</h2>`;
             category.works.forEach(work => { html += renderWork(work, false); });
-            html += '</details>';
+            html += '</section>';
           });
 
           container.innerHTML = html;

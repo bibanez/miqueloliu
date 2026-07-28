@@ -24,8 +24,6 @@ const TRANSLATIONS = {
     'nav.home':        'Inici',
     'nav.biography':   'Biografia',
     'nav.catalogue':   'Obres',
-    'nav.recordings':  'Enregistraments',
-    'nav.press':       'Premsa',
     'nav.contact':     'Contacte',
 
     // Frontpage — hero
@@ -73,6 +71,8 @@ const TRANSLATIONS = {
 
     // Biography
     'bio.title': 'Biografia',
+    'bio.toggle.short': 'Versió curta',
+    'bio.toggle.long':  'Versió llarga',
 
     // Works
     'catalogue.title':       'Obres',
@@ -119,24 +119,35 @@ const TRANSLATIONS = {
     'works.orchestra.cellos':        'violoncels',
     'works.orchestra.basses':        'contrabaixos',
 
-    // Recordings
-    'recordings.title':       'Enregistraments',
-    'recordings.description': 'Selecció d\'enregistraments disponibles.',
-    'recordings.empty':       'Els enregistraments es carregaran properament.',
-
-    // Press
-    'press.title':       'Premsa',
-    'press.description': 'Ressenyes, entrevistes i mencions als mitjans.',
-    'press.empty':       'Les entrades de premsa es carregaran properament.',
-
     // Contact
-    'contact.title':       'Contacte',
-    'contact.description': 'Per a consultes sobre partitures, encàrrecs o col·laboracions.',
-    'contact.email.label': 'Correu electrònic',
-    'contact.email.value': 'hola@miqueloliu.cat',
-    'contact.social.label':'Xarxes socials',
-    'contact.general.label': 'Informació general',
-    'contact.general.text':  'Per a qualsevol consulta, podeu escriure al correu electrònic indicat.',
+    'contact.title':                  'Contacte',
+    'contact.description':            'Per a consultes sobre partitures, encàrrecs, concerts o col·laboracions.',
+    'contact.card.title':             'Informació de contacte',
+    'contact.email.label':            'Correu electrònic',
+    'contact.email.value':            'hola@miqueloliu.cat',
+    'contact.copy.button':            'Copiar adreça',
+    'contact.copy.copied':            'Copiat al porta-retalls',
+    'contact.location.label':         'Ubicació',
+    'contact.location.value':         'Barcelona / Catalunya',
+    'contact.publisher.label':        'Partitures i edició',
+    'contact.publisher.text':         'Edicions impreses disponibles a Editorial Ficta. Per a partitures d’estudi o material de lloguer d’obres simfòniques i de cambra, podeu sol·licitar-ho directament.',
+    'contact.publisher.link':         'Visitar Editorial Ficta',
+    'contact.form.title':             'Enviar un missatge',
+    'contact.form.name':              'Nom i cognoms',
+    'contact.form.name.placeholder':  'El teu nom',
+    'contact.form.email':             'Correu electrònic',
+    'contact.form.email.placeholder': 'el-teu-correu@exemple.cat',
+    'contact.form.subject':           'Motiu de la consulta',
+    'contact.form.subject.select':    'Selecciona una opció...',
+    'contact.form.subject.general':   'Consulta general',
+    'contact.form.subject.score':     'Sol·licitud de partitura / material',
+    'contact.form.subject.commission':'Encàrrec o proposta de concert',
+    'contact.form.subject.other':     'Altres col·laboracions',
+    'contact.form.message':           'Missatge',
+    'contact.form.message.placeholder': 'Escriu el teu missatge aquí...',
+    'contact.form.send':              'Enviar correu electrònic',
+    'contact.form.notice':            'S’obrirà el teu client de correu electrònic preconfigurat amb les dades introduïdes.',
+    'contact.form.success':           'Gràcies! S’ha preparat el correu per enviar.',
 
     // Footer
     'footer.copyright': '© {year} Miquel Oliu. Tots els drets reservats.',
@@ -148,8 +159,6 @@ const TRANSLATIONS = {
     'nav.home':        'Inicio',
     'nav.biography':   'Biografía',
     'nav.catalogue':   'Obras',
-    'nav.recordings':  'Grabaciones',
-    'nav.press':       'Prensa',
     'nav.contact':     'Contacto',
 
     // Frontpage — hero
@@ -197,6 +206,8 @@ const TRANSLATIONS = {
 
     // Biography
     'bio.title': 'Biografía',
+    'bio.toggle.short': 'Versión corta',
+    'bio.toggle.long':  'Versión larga',
 
     // Works
     'catalogue.title':       'Obras',
@@ -243,24 +254,35 @@ const TRANSLATIONS = {
     'works.orchestra.cellos':        'violonchelos',
     'works.orchestra.basses':        'contrabajos',
 
-    // Recordings
-    'recordings.title':       'Grabaciones',
-    'recordings.description': 'Selección de grabaciones disponibles.',
-    'recordings.empty':       'Las grabaciones se cargarán próximamente.',
-
-    // Press
-    'press.title':       'Prensa',
-    'press.description': 'Reseñas, entrevistas y menciones en medios.',
-    'press.empty':       'Las entradas de prensa se cargarán próximamente.',
-
     // Contact
-    'contact.title':       'Contacto',
-    'contact.description': 'Para consultas sobre partituras, encargos o colaboraciones.',
-    'contact.email.label': 'Correo electrónico',
-    'contact.email.value': 'hola@miqueloliu.cat',
-    'contact.social.label':'Redes sociales',
-    'contact.general.label': 'Información general',
-    'contact.general.text':  'Para cualquier consulta, puede escribir al correo electrónico indicado.',
+    'contact.title':                  'Contacto',
+    'contact.description':            'Para consultas sobre partituras, encargos, conciertos o colaboraciones.',
+    'contact.card.title':             'Información de contacto',
+    'contact.email.label':            'Correo electrónico',
+    'contact.email.value':            'hola@miqueloliu.cat',
+    'contact.copy.button':            'Copiar dirección',
+    'contact.copy.copied':            'Copiado al portapapeles',
+    'contact.location.label':         'Ubicación',
+    'contact.location.value':         'Barcelona / Cataluña',
+    'contact.publisher.label':        'Partituras y edición',
+    'contact.publisher.text':         'Ediciones impresas disponibles en Editorial Ficta. Para partituras de estudio o material de alquiler de obras sinfónicas y de cámara, puede solicitarlo directamente.',
+    'contact.publisher.link':         'Visitar Editorial Ficta',
+    'contact.form.title':             'Enviar un mensaje',
+    'contact.form.name':              'Nombre y apellidos',
+    'contact.form.name.placeholder':  'Tu nombre',
+    'contact.form.email':             'Correo electrónico',
+    'contact.form.email.placeholder': 'tu-correo@ejemplo.com',
+    'contact.form.subject':           'Motivo de la consulta',
+    'contact.form.subject.select':    'Selecciona una opción...',
+    'contact.form.subject.general':   'Consulta general',
+    'contact.form.subject.score':     'Solicitud de partitura / material',
+    'contact.form.subject.commission':'Encargo o propuesta de concierto',
+    'contact.form.subject.other':     'Otras colaboraciones',
+    'contact.form.message':           'Mensaje',
+    'contact.form.message.placeholder': 'Escribe tu mensaje aquí...',
+    'contact.form.send':              'Enviar correo electrónico',
+    'contact.form.notice':            'Se abrirá tu cliente de correo electrónico preconfigurado con los datos introducidos.',
+    'contact.form.success':           '¡Gracias! Se ha preparado el correo para enviar.',
 
     // Footer
     'footer.copyright': '© {year} Miquel Oliu. Todos los derechos reservados.',
@@ -272,8 +294,6 @@ const TRANSLATIONS = {
     'nav.home':        'Home',
     'nav.biography':   'Biography',
     'nav.catalogue':   'Works',
-    'nav.recordings':  'Recordings',
-    'nav.press':       'Press',
     'nav.contact':     'Contact',
 
     // Frontpage — hero
@@ -321,6 +341,8 @@ const TRANSLATIONS = {
 
     // Biography
     'bio.title': 'Biography',
+    'bio.toggle.short': 'Short version',
+    'bio.toggle.long':  'Long version',
 
     // Works
     'catalogue.title':       'Works',
@@ -367,24 +389,35 @@ const TRANSLATIONS = {
     'works.orchestra.cellos':        'cellos',
     'works.orchestra.basses':        'double basses',
 
-    // Recordings
-    'recordings.title':       'Recordings',
-    'recordings.description': 'A selection of available recordings.',
-    'recordings.empty':       'Recordings will be available soon.',
-
-    // Press
-    'press.title':       'Press',
-    'press.description': 'Reviews, interviews and media mentions.',
-    'press.empty':       'Press entries will be available soon.',
-
     // Contact
-    'contact.title':       'Contact',
-    'contact.description': 'For enquiries about scores, commissions or collaborations.',
-    'contact.email.label': 'Email',
-    'contact.email.value': 'hola@miqueloliu.cat',
-    'contact.social.label':'Social media',
-    'contact.general.label': 'General information',
-    'contact.general.text':  'For any enquiry, please write to the email address above.',
+    'contact.title':                  'Contact',
+    'contact.description':            'For enquiries regarding scores, commissions, performances or collaborations.',
+    'contact.card.title':             'Contact details',
+    'contact.email.label':            'Email address',
+    'contact.email.value':            'hola@miqueloliu.cat',
+    'contact.copy.button':            'Copy address',
+    'contact.copy.copied':            'Copied to clipboard',
+    'contact.location.label':         'Location',
+    'contact.location.value':         'Barcelona / Catalonia',
+    'contact.publisher.label':        'Scores & Publishing',
+    'contact.publisher.text':         'Printed editions available via Editorial Ficta. For study scores or rental performance material for orchestral and chamber works, please inquire directly.',
+    'contact.publisher.link':         'Visit Editorial Ficta',
+    'contact.form.title':             'Send a message',
+    'contact.form.name':              'Name',
+    'contact.form.name.placeholder':  'Your name',
+    'contact.form.email':             'Email address',
+    'contact.form.email.placeholder': 'your-email@example.com',
+    'contact.form.subject':           'Subject',
+    'contact.form.subject.select':    'Select an option...',
+    'contact.form.subject.general':   'General enquiry',
+    'contact.form.subject.score':     'Score / performance material request',
+    'contact.form.subject.commission':'Commission or concert proposal',
+    'contact.form.subject.other':     'Other collaborations',
+    'contact.form.message':           'Message',
+    'contact.form.message.placeholder': 'Write your message here...',
+    'contact.form.send':              'Send email',
+    'contact.form.notice':            'This will open your default email client with your message pre-filled.',
+    'contact.form.success':           'Thank you! Your email draft has been opened.',
 
     // Footer
     'footer.copyright': '© {year} Miquel Oliu. All rights reserved.',

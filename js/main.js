@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Subtle reveal-on-scroll for home page text blocks
-  const revealEls = document.querySelectorAll('.quote, .home-intro, .testimonial, .home-links');
+  const revealEls = document.querySelectorAll('.quote, .home-intro, .testimonial, .bio-block p');
   if (revealEls.length && 'IntersectionObserver' in window &&
       !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     const io = new IntersectionObserver((entries) => {

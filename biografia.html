@@ -20,13 +20,73 @@
 
   <div id="nav-container"></div>
 
-  <main>
-    <div class="page-header">
+  <!-- Full-bleed hero: landscape photo with the page title -->
+  <header class="home-hero">
+    <img src="img/biografia.jpg" alt="">
+    <div class="home-hero-title">
       <h1 data-i18n="bio.title"></h1>
     </div>
+  </header>
 
-    <!-- Biografia en tres idiomes; la visibilitat es controla per CSS segons html[lang] -->
-    <article class="bio lang-block" lang="ca">
+  <main data-bio-mode="short">
+
+    <!-- Selector de versió: curta vs llarga -->
+    <div class="bio-toggle-container">
+      <button class="bio-tab active" data-mode="short" data-i18n="bio.toggle.short"></button>
+      <button class="bio-tab" data-mode="full" data-i18n="bio.toggle.long"></button>
+    </div>
+
+    <!-- Biografia curta en tres idiomes -->
+    <article class="bio bio-short lang-block" lang="ca">
+      <section class="bio-block">
+        <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
+        <p>Músic, format com a pianista i compositor.</p>
+        <p>Ha estat guardonat amb el «XXXII Premi Reina Sofia de Composició Musical» (2015), amb l’obra <em>Al·legories de tardor</em> per a orquestra simfònica, estrenada per l’Orquestra de RTVE sota la direcció de Carlos Kalmar; i ha estat compositor de la «Xarxa de Músiques» de Joventuts Musicals de Catalunya - Fundació Ferrer-Salat, durant el curs 2016-17.</p>
+        <p>Ha estudiat al Conservatorio Superior de Música de Aragón (Saragossa) amb el professor Agustí Charles acabant el Grau Superior el 2002.</p>
+        <p>En la seva evolució com a compositor ha estat molt important el contacte amb Ramon Humet de qui rep classes de manera sovintejada durant dos anys (2010-2012).</p>
+        <p>Assisteix a diverses classes magistrals i cursos de perfeccionament destacant els de Sofia Gubaidulina (2013) i Tristan Murail (2015) a Saragossa i amb el mateix T. Murail en el Festival Mixtur de Barcelona (2019).</p>
+        <p>El seu catàleg reuneix obres per a instruments solistes, diversos conjunts de cambra, cor i orquestra. Ha rebut encàrrecs de nombroses institucions i intèrprets, entre els quals destaquen els dos de L’Auditori de Barcelona per a l’OBC (Orquestra Simfònica de Barcelona i Nacional de Catalunya): un amb l’obra <em>In luce praesenti</em> estrenada dins la temporada 2021-22 de l’OBC sota la direcció de Juanjo Mena, i enregistrada el juliol del 2022 pel segell de L’Auditori (Auditori play) sota la direcció de Benjamin Schwarz; i el segon amb l’obra <em>Pluja</em> estrenada dins la temporada 2025-26 i amb gira posterior per Alemanya i el País Basc, sota la direcció del seu titular Ludovic Morlot.</p>
+        <p>Destaca també el del Palau de la Música Catalana, en col·laboració amb l’Ajuntament de Barcelona, dins el projecte Barcelona Creació Sonora amb el <em>Tercer quadern de Preludis</em> per a piano, amb el pianista Miquel Villalba (desembre 2023).</p>
+        <p>La música de Miquel Oliu s’ha interpretat en diversos llocs de l’estat espanyol, Alemanya, França, Portugal, Polònia, Suïssa, Japó: L’Auditori de Barcelona, el Palau de la Música Catalana, l’Elbphilharmonie de Hamburg (Grosser Saal), la Liederhalle d’Stuttgart, la Tonhalle de Düsseldorf, el Kursaal de San Sebastián-Donostia, el Palacio Euskalduna de Bilbao, el Teatro Monumental i la Fundación Juan March de Madrid, la Schubertíada de Vilabertran, l’Auditori Josep Carreras de Vila-seca, el Teatre Atlàntida de Vic o el Monestir de Montserrat, entre molts d’altres.</p>
+        <p>Les seves obres han estat enregistrades en diversos CD, produïts per Ficta —que edita també les partitures—, Seed Music, i IBS Classical, dels quals destaca el <em>Llibre d’hores</em>, monogràfic amb obra per a piano, amb el pianista Miquel Villalba (Ficta 2023).</p>
+        <p>És amant dels infants, de la natura i del silenci, fet que traspua en bona part de les seves obres.</p>
+      </section>
+    </article>
+
+    <article class="bio bio-short lang-block" lang="es">
+      <section class="bio-block">
+        <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
+        <p>Músico, formado como pianista y compositor.</p>
+        <p>Ha sido galardonado con el «XXXII Premio Reina Sofía de Composición Musical» (2015), con la obra <em>Al·legories de tardor</em> (Alegorías de otoño) para orquesta sinfónica, estrenada por la Orquesta de RTVE bajo la dirección de Carlos Kalmar; y ha sido compositor de la «Xarxa de Músiques» de Joventuts Musicals de Catalunya - Fundació Ferrer-Salat, durante el curso 2016-17.</p>
+        <p>Ha estudiado en el Conservatorio Superior de Música de Aragón (Zaragoza) con el profesor Agustí Charles terminando el Grado Superior en el 2002.</p>
+        <p>En su evolución como compositor ha sido muy importante el contacto con Ramon Humet de quien recibe clases de forma regular durante dos años (2010-2012).</p>
+        <p>Asiste a diversas clases magistrales y cursos de perfeccionamiento destacando los de Sofía Gubaidulina (2013) y Tristán Murail (2015) en Zaragoza y con el mismo T. Murail en el Festival Mixtur de Barcelona (2019).</p>
+        <p>Su catálogo reúne obras para instrumentos solistas, distintos conjuntos de cámara, coro y orquesta. Ha recibido encargos de numerosas instituciones e intérpretes, entre los cuales destacan los dos de L’Auditori de Barcelona para la OBC (Orquestra Simfònica de Barcelona i Nacional de Catalunya): uno con la obra <em>In luce praesenti</em> estrenada dentro de la temporada 2021-22 de la OBC bajo la dirección de Juanjo Mena, y grabada en julio de 2022 por el sello de L’Auditori (Auditori play) bajo la dirección de Benjamin Schwarz; y el segundo con la obra <em>Pluja</em> (Lluvia) estrenada dentro de la temporada 2025-26 y con gira posterior por Alemania y el País Vasco, bajo la dirección de su titular Ludovic Morlot.</p>
+        <p>Destaca también el del Palau de la Música Catalana, en colaboración con el Ayuntamiento de Barcelona, dentro del proyecto Barcelona Creació Sonora con el <em>Tercer quadern de Preludis</em> per a piano (Tercer cuaderno de Preludios), con el pianista Miquel Villalba (diciembre 2023).</p>
+        <p>La música de Miquel Oliu se ha interpretado en distintos lugares del estado español, Alemania, Francia, Portugal, Polonia, Suiza, Japón: L’Auditori de Barcelona, el Palau de la Música Catalana, l’Elbphilharmonie de Hamburg (Grosser Saal), la Liederhalle de Stuttgart, la Tonhalle de Düsseldorf, el Kursaal de San Sebastián-Donostia, el Palacio Euskalduna de Bilbao, el Teatro Monumental y la Fundación Juan March de Madrid, la Schubertiada de Vilabertran, el Auditori Josep Carreras de Vila-seca, el Teatre Atlàntida de Vic o el Monasterio de Montserrat, entre muchos otros.</p>
+        <p>Sus obras han sido grabadas en diversos CD, producidos por Ficta —que edita también las partituras—, Seed Music, y IBS Classical, de los cuales destaca el <em>Llibre d’hores</em> (Libro de horas), monográfico con obra para piano, con el pianista Miquel Villalba (Ficta 2023).</p>
+        <p>En buena parte de su obra rezuma su amor por los niños, la naturaleza y el silencio.</p>
+      </section>
+    </article>
+
+    <article class="bio bio-short lang-block" lang="en">
+      <section class="bio-block">
+        <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
+        <p>Musician, trained as a pianist and composer.</p>
+        <p>He was awarded the 32nd Reina Sofía Prize for Musical Composition (2015), for the work <em>Al·legories de tardor</em> (Autumn allegories) for symphony orchestra, premiered by the RTVE Symphony Orchestra, conducted by Carlos Kalmar. He was also the composer for the “Xarxa de Músiques” program of Joventuts Musicals de Catalunya – Fundació Ferrer-Salat during the 2016–17 academic year.</p>
+        <p>He studied at the Conservatorio Superior de Música de Aragón (Zaragoza) with Professor Agustí Charles, completing his Higher Degree in 2002.</p>
+        <p>In his development as a composer, his contact with Ramon Humet—under whom he studied regularly over a two-year period—was particularly significant (2010–2012).</p>
+        <p>He has attended various master classes and advanced courses, notably with Sofia Gubaidulina (2013) and Tristan Murail (2015) in Zaragoza, and with Tristan Murail again at the Barcelona Festival Mixtur (2019).</p>
+        <p>His catalogue includes works for solo instruments as well as chamber, choral, and orchestral ensembles. He has received numerous commissions from institutions and performers, among which the two works commissioned by L’Auditori de Barcelona for the OBC (Barcelona Symphony Orchestra) stand out: the first, <em>In luce praesenti</em>, premiered during the 2021–22 season of the OBC conducted by Juanjo Mena, and recorded in July 2022 by L’Auditori’s label (Auditori Play), with the OBC conducted by Benjamin Schwarz; the second, <em>Pluja</em> (Rain), premiered in the 2025–26 OBC season and subsequently toured in Germany and the Basque Country under its principal conductor Ludovic Morlot.</p>
+        <p>Also notable is the commission from the Palau de la Música Catalana, in collaboration with the Barcelona City Council, as part of the Barcelona Creació Sonora project: <em>Tercer quadern de Preludis</em> (Third book of preludes) for piano, with pianist Miquel Villalba (December 2023).</p>
+        <p>Miquel Oliu's music has been performed at venues across Spain, Germany, France, Portugal, Poland, Switzerland, and Japan: L'Auditori de Barcelona, the Palau de la Música Catalana, the Elbphilharmonie in Hamburg (Großer Saal), the Liederhalle in Stuttgart, the Tonhalle in Düsseldorf, the Kursaal in San Sebastián-Donostia, the Palacio Euskalduna in Bilbao, the Teatro Monumental and Juan March Foundation in Madrid, the Schubertíada in Vilabertran, the Auditori Josep Carreras in Vila-seca, the Teatre Atlàntida in Vic and the Monastery of Montserrat, among many others.</p>
+        <p>His works have been recorded on several CDs produced by Ficta (also his publisher), Seed Music, and IBS Classical. Notable among these is <em>Llibre d'hores</em> (The book of hours), a monographic piano album performed by Miquel Villalba (Ficta, 2023).</p>
+        <p>A significant portion of his work reflects his fondness for children, nature, and silence.</p>
+      </section>
+    </article>
+
+    <!-- Biografia completa en tres idiomes -->
+    <article class="bio bio-long lang-block" lang="ca">
       <section class="bio-block">
         <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
         <p>Músic, format com a pianista i compositor.</p>
@@ -57,7 +117,7 @@
       </section>
     </article>
 
-    <article class="bio lang-block" lang="es">
+    <article class="bio bio-long lang-block" lang="es">
       <section class="bio-block">
         <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
         <p>Músico, formado como pianista y compositor.</p>
@@ -88,7 +148,7 @@
       </section>
     </article>
 
-    <article class="bio lang-block" lang="en">
+    <article class="bio bio-long lang-block" lang="en">
       <section class="bio-block">
         <p><strong>Miquel Oliu Nieto</strong> (Barcelona, 1973)</p>
         <p>Musician, trained as a pianist and composer.</p>
@@ -124,6 +184,40 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+
+  <!-- Page-specific logic for biography toggle -->
+  <script>
+    const PageInit = {
+      biography: () => {
+        const main = document.querySelector('main');
+        const tabs = document.querySelectorAll('.bio-tab');
+        if (!main || !tabs.length) return;
+
+        const setMode = (mode) => {
+          main.setAttribute('data-bio-mode', mode);
+          tabs.forEach(tab => {
+            tab.classList.toggle('active', tab.getAttribute('data-mode') === mode);
+          });
+          try { localStorage.setItem('miqueloliu_bio_mode', mode); } catch (e) {}
+        };
+
+        let savedMode = 'short';
+        try {
+          const stored = localStorage.getItem('miqueloliu_bio_mode');
+          if (stored === 'full' || stored === 'short') savedMode = stored;
+        } catch (e) {}
+
+        setMode(savedMode);
+
+        tabs.forEach(tab => {
+          tab.addEventListener('click', () => {
+            setMode(tab.getAttribute('data-mode'));
+          });
+        });
+      }
+    };
+  </script>
+
   <script src="js/main.js"></script>
 </body>
 </html>
