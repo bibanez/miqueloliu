@@ -35,7 +35,7 @@
           <div class="contact-section">
             <p class="contact-label" data-i18n="contact.email.label"></p>
             <div class="email-box">
-              <a href="mailto:hola@miqueloliu.cat" class="contact-email-link">hola@miqueloliu.cat</a>
+              <a href="mailto:mqoliu@gmail.com" class="contact-email-link">mqoliu@gmail.com</a>
               <button type="button" id="copy-email-btn" class="copy-btn" aria-label="Copy email address">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
                 <span id="copy-btn-text" data-i18n="contact.copy.button"></span>
@@ -109,7 +109,7 @@
 
         if (copyBtn) {
           copyBtn.addEventListener('click', async () => {
-            const email = 'hola@miqueloliu.cat';
+            const email = 'mqoliu@gmail.com';
             try {
               if (navigator.clipboard && navigator.clipboard.writeText) {
                 await navigator.clipboard.writeText(email);
@@ -144,7 +144,7 @@
             const mailSubject = encodeURIComponent(`[Miquel Oliu Web] ${subjectText}`);
             const mailBody = encodeURIComponent(`Motiu: ${subjectText}\n\nMissatge:\n${message}`);
 
-            window.location.href = `mailto:hola@miqueloliu.cat?subject=${mailSubject}&body=${mailBody}`;
+            window.location.href = `mailto:mqoliu@gmail.com?subject=${mailSubject}&body=${mailBody}`;
 
             if (formStatus) {
               const currentLang = I18n.currentLang();
