@@ -20,16 +20,26 @@
 <body>
   <div id="nav-container"></div>
 
-  <main>
+  <main data-page="work-detail" data-work-id="set-cants">
     <article class="work-detail-layout">
       <div class="page-header work-detail-header">
         <p class="work-detail-back"><a href="catalogue.html#work-set-cants" data-i18n="works.detail.back"></a></p>
-        <div class="lang-block" lang="ca"><h1>Set cants</h1></div>
-          <div class="lang-block" lang="es"><h1>Set cants (Siete cantos)</h1></div>
-          <div class="lang-block" lang="en"><h1>Set cants (Seven songs)</h1></div>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><h1>Set cants</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="es"><h1>Set cants (Siete cantos)</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><h1>Set cants (Seven songs)</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="fr"><h1>Set cants</h1></div>
+        <nav class="work-detail-language-nav" aria-label="Programme note languages">
+          <span class="work-detail-language-label" data-i18n="works.detail.language.label"></span>
+          <div class="work-detail-language-tabs" role="tablist">
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="ca" aria-label="Català" aria-selected="false">CA</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="es" aria-label="Castellano" aria-selected="false">ES</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="en" aria-label="English" aria-selected="false">EN</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="fr" aria-label="Français" aria-selected="false">FR</button>
+          </div>
+        </nav>
       </div>
       <div class="work-detail-content">
-        <div class="lang-block" lang="ca"><div class="work-info"><h2>Nota de programa</h2>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><div class="work-info"><h2>Nota de programa</h2>
           <p>Aquest petit cicle per a veu i piano neix d’un nou retrobament amb els textos del poeta Antoni Clapés, més concretament de la suite Heimat, de la qual són extrets tots els poemes, a excepció del segon, que forma part del llibre L’arbre que s’allunyà. Per la forta identificació viscuda amb aquesta suite, n’he destriat els set poemes que em suggereixen espontàniament una idea musical —descriptiva o simbòlica— i que alhora tenen elements comuns que els vertebren i unifiquen. El punt de partida és la figura del caminant en temps d’hivern; un caminant que és captivat per la natura que l’envolta, que es desprèn d’ell mateix i que —fora de la ment, de la raó— es «fon» amb l’aire, la boira, l’ocell, la bellesa de l’instant... que «és» en el silenci.</p>
           <p>La brevetat dels textos, algun quasi com un aforisme, m’ha suggerit una música també concisa: un text cantat que tendeix a l’essencial i que intenta ésser fidel a les seves pauses i espais, amb el piano que vol situar-lo, subratllar-lo, acompanyar-lo, a manera d’imatge, de paisatge sonor. Cada un dels set cants està construït amb els seus trets identificadors, però alhora l’obra està concebuda com una sola unitat, amb material comú, elements de continuïtat o de contrast i en forma d’arc, on el cant central és el més curt —només uns trenta segons— i els extrems, els més llargs, a fi d’ajudar a emmarcar-la en l’ambient/l’estat que el text demana.</p>
           <p>Set cants per a soprano i piano és una obra encàrrec de l’Associació Joan Manén per ser estrenada el 2023 en el 12è cicle de concerts, i està dedicada a Antoni Clapés, amb agraïment per la confiança mostrada, per les estones compartides i pels seus poemes.</p>
@@ -46,7 +56,6 @@
           <p class="work-info-poem-line">dins seu.</p>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">	L’assossec i l’espera.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">Ser pur aire</p>
           <p class="work-info-poem-line">			en l’aire.</p>
@@ -139,125 +148,13 @@
           <p class="work-info-poem-line">		     Per això</p>
           <p class="work-info-poem-line">camina.</p>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">Per això és.</p>
           </div></div></div>
-          <div class="lang-block" lang="es"><div class="work-info"><h2>Nota de programa</h2>
-          <p>Aquest petit cicle per a veu i piano neix d’un nou retrobament amb els textos del poeta Antoni Clapés, més concretament de la suite Heimat, de la qual són extrets tots els poemes, a excepció del segon, que forma part del llibre L’arbre que s’allunyà. Per la forta identificació viscuda amb aquesta suite, n’he destriat els set poemes que em suggereixen espontàniament una idea musical —descriptiva o simbòlica— i que alhora tenen elements comuns que els vertebren i unifiquen. El punt de partida és la figura del caminant en temps d’hivern; un caminant que és captivat per la natura que l’envolta, que es desprèn d’ell mateix i que —fora de la ment, de la raó— es «fon» amb l’aire, la boira, l’ocell, la bellesa de l’instant... que «és» en el silenci.</p>
-          <p>La brevetat dels textos, algun quasi com un aforisme, m’ha suggerit una música també concisa: un text cantat que tendeix a l’essencial i que intenta ésser fidel a les seves pauses i espais, amb el piano que vol situar-lo, subratllar-lo, acompanyar-lo, a manera d’imatge, de paisatge sonor. Cada un dels set cants està construït amb els seus trets identificadors, però alhora l’obra està concebuda com una sola unitat, amb material comú, elements de continuïtat o de contrast i en forma d’arc, on el cant central és el més curt —només uns trenta segons— i els extrems, els més llargs, a fi d’ajudar a emmarcar-la en l’ambient/l’estat que el text demana.</p>
-          <p>Set cants per a soprano i piano és una obra encàrrec de l’Associació Joan Manén per ser estrenada el 2023 en el 12è cicle de concerts, i està dedicada a Antoni Clapés, amb agraïment per la confiança mostrada, per les estones compartides i pels seus poemes.</p>
-          <h3>I.</h3>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">Entre marges blancs,</p>
-          <p class="work-info-poem-line">s’obre pas el camí.</p>
-          <p class="work-info-poem-line">Vol arribar a l’indret familiar</p>
-          <p class="work-info-poem-line">però els traços s’han anat esvaint</p>
-          <p class="work-info-poem-line">com promeses a desgrat,</p>
-          <p class="work-info-poem-line">com l’ombra fosca</p>
-          <p class="work-info-poem-line">del vol de corb  —  fugaç.</p>
-          <p class="work-info-poem-line">Com el ressò dels passos del caminant</p>
-          <p class="work-info-poem-line">dins seu.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">	L’assossec i l’espera.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">Ser pur aire</p>
-          <p class="work-info-poem-line">			en l’aire.</p>
-          </div>
-          <h3>II.</h3>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">Arribes a la cruïlla</p>
-          </div>
-          <p>	pedres velles i molses als bancals</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">una merla desapareix dins la boira</p>
-          </div>
-          <p>		dins la remor sorda dels àlbers</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">t’hi apregones</p>
-          </div>
-          <p>	vols anar més enllà — foraviar-te, potser</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">i esdevens boira, tu també</p>
-          </div>
-          <h3>III.</h3>
-          <p>Com denes d’un rosari</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">invisible, cauen</p>
-          <p class="work-info-poem-line">un rere l’altre</p>
-          <p class="work-info-poem-line">els flocs de neu:</p>
-          <p class="work-info-poem-line">cadascun coneix</p>
-          <p class="work-info-poem-line">el lloc precís</p>
-          <p class="work-info-poem-line">on s’ha de confondre</p>
-          <p class="work-info-poem-line">amb els altres,</p>
-          <p class="work-info-poem-line">on s’ha de fondre.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">(Comprendre això, ara,</p>
-          <p class="work-info-poem-line">és més enllà de la teva raó.)</p>
-          </div>
-          <h3>IV.</h3>
-          <p>Una remor de silenci</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">s’alça del paisatge blanc —</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">una emoció que vibra</p>
-          <p class="work-info-poem-line">	molt més enllà</p>
-          <p class="work-info-poem-line">		d’aquest instant.</p>
-          </div>
-          <h3>V.</h3>
-          <p>Entre la fullaraca</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">i una fina capa de neu,</p>
-          <p class="work-info-poem-line">com un senyal de la deïtat,</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">el crocus comença a brinar</p>
-          <p class="work-info-poem-line">amb la seva</p>
-          <p class="work-info-poem-line">humil</p>
-          <p class="work-info-poem-line">	efímera</p>
-          <p class="work-info-poem-line">		inútil</p>
-          <p class="work-info-poem-line">bellesa.</p>
-          </div>
-          <h3>VI.</h3>
-          <p>Una garsa</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">	—o n’eren dues?—</p>
-          <p class="work-info-poem-line">alça el seu bec dur</p>
-          <p class="work-info-poem-line">	enlaire</p>
-          <p class="work-info-poem-line">i exhala una nota aguda</p>
-          <p class="work-info-poem-line">que esqueixa el silenci</p>
-          <p class="work-info-poem-line">del migdia</p>
-          <p class="work-info-poem-line">		     i s’expandeix</p>
-          <p class="work-info-poem-line">enllà de l’estesa blanca</p>
-          <p class="work-info-poem-line">dels camps gebrats.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">Ningú no la sent,</p>
-          <p class="work-info-poem-line">aquesta nota        llevat tu.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">Admira aquest gest</p>
-          <p class="work-info-poem-line">foraviat, humil.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">Gaudeix de la caducitat</p>
-          <p class="work-info-poem-line">del goig de l’instant</p>
-          <p class="work-info-poem-line">	en tu.</p>
-          </div>
-          <h3>VII.</h3>
-          <p>Què no sap el caminant?</p>
-          <div class="work-info-poem">
-          <p class="work-info-poem-line">Què ha de saber</p>
-          <p class="work-info-poem-line">—si ha de saber res—</p>
-          <p class="work-info-poem-line">el caminant?</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">El silenci és l’única parla</p>
-          <p class="work-info-poem-line">per al caminant.</p>
-          <p class="work-info-poem-line">		     Per això</p>
-          <p class="work-info-poem-line">camina.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <p class="work-info-poem-line">Per això és.</p>
-          </div></div></div>
-          <div class="lang-block" lang="en"><div class="work-info"><h2>Program note</h2>
+          <div class="work-detail-lang-block" data-detail-lang="es"><div class="work-info"><h2>Nota de programa</h2>
+          <p>Este pequeño ciclo para voz y piano nace de un nuevo reencuentro con los textos del poeta Antoni Clapés, más concretamente de la suite Heimat, de la cual son extraídos todos los poemas, a excepción del segundo, que forma parte del libro L’arbre que s’allunyà. Por la fuerte identificación vivida con esta suite, he escogido los siete poemas que me sugieren espontáneamente una idea musical —descriptiva o simbólica— y que a la vez tienen elementos comunes que los vertebran y unifican. El punto de partida es la figura del caminante en tiempo de invierno; un caminante que es cautivado por la naturaleza que lo envuelve, que se desprende de él mismo y que —fuera de la mente, de la razón— se «funde» con el aire, la niebla, el pájaro, la belleza del instante... que «es» en el silencio.</p>
+          <p>La brevedad de los textos, alguno casi como un aforismo, me ha sugerido una música también concisa: un texto cantado que tiende a lo esencial y que intenta ser fiel a sus pausas y espacios, con el piano que quiere situarlo, subrayarlo, acompañarlo, a manera de imagen, de paisaje sonoro. Cada uno de los siete cantos está construido con sus rasgos identificadores, pero a la vez la obra está concebida como una sola unidad, con material común, elementos de continuidad o de contraste y en forma de arco, donde el canto central es el más corto —solo unos treinta segundos— y los extremos, los más largos, con el fin de ayudar a enmarcarla en el ambiente/estado que el texto pide.</p>
+          <p>Set cants per a soprano i piano (Siete cantos para soprano y piano) es una obra encargo de la Associació Joan Manén para ser estrenada el 2023 en el 12º ciclo de conciertos, y está dedicada a Antoni Clapés, con agradecimiento por la confianza mostrada, por el tiempo compartido y por sus poemas.</p></div></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><div class="work-info"><h2>Program note</h2>
           <p>This short cycle for voice and piano was born from a new reunion with the texts of the poet Antoni Clapés, more specifically from the Heimat suite from which all the poems are extracted, with the exception of the 2nd, which is part of the book L'arbre que s’allunyà (The tree who walked away). From the strong identification with this suite, I have distinguished the seven poems that spontaneously suggest a musical idea - descriptive and / or symbolic - and that at the same time have common elements that structure and unify them. The starting point is the figure of the walker in wintertime; a walker who is captivated by the nature that surrounds him, who detaches himself and who — out of his mind, out of reason — “melts” with the air, the fog, the bird, the beauty of the moment ... that “is” in silence.</p>
           <p>The brevity of the texts, some almost like an aphorism, has suggested to me a concise music: a sung text that tends to the essential, and that tries to be faithful to its pauses and spaces, with the piano that wants to place it, underline it, accompany it, as an image, as a soundscape. Each of the seven songs is constructed with its identifying features but at the same time the work is conceived as a single unit, with common material, elements of continuity and / or contrast and in the form of an arch, the central song being the shortest —only about 30 seconds— and the longest ends, in order to help frame it in the environment / state that the text calls for.</p>
           <p>Set cants (Seven songs), for soprano and piano has been commissioned by Associació Joan Manén to be premiered in 2023 in the 12th cycle of concerts and is dedicated to Antoni Clapés, with gratitude for the confidence shown, the times shared and for his poems.</p>
@@ -274,9 +171,7 @@
           <p class="work-info-poem-line">Like the echo of the walker's steps</p>
           <p class="work-info-poem-line">inside him.</p>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">	The quietness and the waiting.</p>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">To be air, pure</p>
           <p class="work-info-poem-line">			in the air.</p>
@@ -364,15 +259,117 @@
           <p class="work-info-poem-line">have to know</p>
           <p class="work-info-poem-line">if he has to know anything?</p>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">Silence is the walker's</p>
           <p class="work-info-poem-line">only speech.</p>
           <p class="work-info-poem-line">		     Which is why</p>
           <p class="work-info-poem-line">he walks.</p>
           <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
-          <div class="work-info-stanza-break" aria-hidden="true"></div>
           <p class="work-info-poem-line">Which is why he is.</p>
+          </div></div></div>
+          <div class="work-detail-lang-block" data-detail-lang="fr"><div class="work-info"><h2>A propos du programme</h2>
+          <p>La rencontre toujours renouvelée avec les textes du poète Antoni Clapés est à l'origine de ce petit cycle de compositions pour voix et piano, et plus précisément la suite Heimat, dont sont tirés tous les poèmes à l'exception du second, qui fait partie du livre L'arbre que s'allunyà. Après une forte identification avec cette suite, j'ai choisi en son sein les sept poèmes qui me suggèrent de manière spontanée une image musicale, soit descriptive, soit symbolique, poèmes qui ont également des éléments communs qui en sont le lien autant que la colonne vertébrale. Le point de départ en est la figure du marcheur pendant l'hiver, marcheur captivé par la nature qui l'entoure, jaillissant de lui-même et qui, en dehors de la pensée ou de la raison, provoque une « fusion » avec l'air, le brouillard, la beauté de l'instant... « contenus » dans le silence.</p>
+          <p>Ces textes brefs, pour certains on peut presque parler d'aphorismes, m'ont suggéré une musique également concise : un texte chanté qui tend à l'essentiel, qui cherche aussi à être fidèle à ses pauses et ses espaces, avec un piano qui veut le mettre en place, le souligner, l'accompagner, tel une image ou un paysage sonore. Les sept chants sont construits chacun avec des traits d'identité particuliers, mais ils sont conçus en même temps comme un tout uni, avec une matière commune, et des éléments de continuité ou de contraste qui forment un arc, où le chant central est le plus bref - une trentaine de secondes à peine - et aux extrêmes, ceux, plus longs, qui cherchent à mettre un cadre à l'ambiance/état demandée par le texte.</p>
+          <p>Set cants per a soprano i piano est une œuvre commandée par l'Association Joan Manén, dont la création est prévue en 2023 au cours du 12è cycle de concerts, et est dédiée à Antoni Clapés montrant la gratitude pour la confiance témoignée, pour les moments partagés aussi bien que pour ses poèmes.</p>
+          <h3>I</h3>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">Entre les marges blanches</p>
+          <p class="work-info-poem-line">le chemin fraie un espace.</p>
+          <p class="work-info-poem-line">Tu voudrais arriver à un endroit familier</p>
+          <p class="work-info-poem-line">mais les empreintes vont s’estompant</p>
+          <p class="work-info-poem-line">comme des promesses non tenues,</p>
+          <p class="work-info-poem-line">comme l’ombre obscure</p>
+          <p class="work-info-poem-line">du vol du corbeau   —   fugace.</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">Comme l’écho de tes pas</p>
+          <p class="work-info-poem-line">en toi.</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">L’apaisement et l’attente.</p>
+          <p class="work-info-poem-line">Être pur air</p>
+          <p class="work-info-poem-line">					dans l’air.</p>
+          </div>
+          <h3>II</h3>
+          <p>Tu arrives au carrefour   —</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">pierres vieilles et mousses dans les terrasses,</p>
+          <p class="work-info-poem-line">une merle s'évanouît dans le brouillard</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">dans la rumeur sourde des peupliers.</p>
+          <p class="work-info-poem-line">Toi tu t'y enfonces</p>
+          <p class="work-info-poem-line">tu veux t'en aller plus au-delà   —   t'égarer, peut-être</p>
+          <p class="work-info-poem-line">et tu deviens brouillard, toi aussi.</p>
+          </div>
+          <h3>III</h3>
+          <p>Tels les grains d’un chapelet</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">invisible, tombent</p>
+          <p class="work-info-poem-line">l’un après l’autre</p>
+          <p class="work-info-poem-line">les flocons de neige   —</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">chacun d’eux</p>
+          <p class="work-info-poem-line">connaît le lieu précis</p>
+          <p class="work-info-poem-line">où il doit se confondre</p>
+          <p class="work-info-poem-line">avec les autres</p>
+          <p class="work-info-poem-line">où il doit se fondre.</p>
+          <p class="work-info-poem-line">Où il doit être.</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">(Comprendre cela, maintenant,</p>
+          <p class="work-info-poem-line">dépasse de loin ton entendement.)</p>
+          </div>
+          <h3>IV</h3>
+          <p>Un bruissement de silence</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">s’élève du paysage blanc   —</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">une émotion qui vibre</p>
+          <p class="work-info-poem-line">	loin très loin</p>
+          <p class="work-info-poem-line">		de cet instant.</p>
+          </div>
+          <h3>V</h3>
+          <p>Entre les feuilles mortes</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">et une fine couche de neige,</p>
+          <p class="work-info-poem-line">tel un signe de la déité,</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">le crocus commence à pousser</p>
+          <p class="work-info-poem-line">avec son</p>
+          <p class="work-info-poem-line">humble</p>
+          <p class="work-info-poem-line">		éphémère</p>
+          <p class="work-info-poem-line">				inutile</p>
+          <p class="work-info-poem-line">beauté.</p>
+          </div>
+          <h3>VI</h3>
+          <p>Une pie</p>
+          <p>(ou peut-être deux ?)</p>
+          <p>lève son dur bec</p>
+          <p>			vers le ciel</p>
+          <p>et exhale une note aigue</p>
+          <p>qui hache le silence</p>
+          <p>de midi</p>
+          <p>		et se déploie</p>
+          <p>au-delà de l’étendue blanche</p>
+          <p>des champs glacés.</p>
+          <p>Personne ne l’écoute,</p>
+          <p>cette note 		sauf toi.</p>
+          <p>Admire ce geste</p>
+          <p>égaré, humble.</p>
+          <p>Savoure l’évanescence</p>
+          <p>de la joie de l’instant</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">				en toi.</p>
+          </div>
+          <h3>VII</h3>
+          <p>Que ne sait-il pas, le promeneur ?</p>
+          <div class="work-info-poem">
+          <p class="work-info-poem-line">Que doit-il savoir</p>
+          <p class="work-info-poem-line">(s’il doit savoir quelque chose)</p>
+          <p class="work-info-poem-line">le promeneur ?</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">Le silence est la seule voix</p>
+          <p class="work-info-poem-line">du promeneur.</p>
+          <p class="work-info-poem-line">			Sa seule raison</p>
+          <p class="work-info-poem-line">d’être en chemin.</p>
+          <div class="work-info-stanza-break" aria-hidden="true"></div>
+          <p class="work-info-poem-line">Ta seule raison d’être.</p>
           </div></div></div>
       </div>
       <p class="work-detail-back work-detail-back-bottom"><a href="catalogue.html#work-set-cants" data-i18n="works.detail.back"></a></p>
@@ -384,6 +381,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/work-detail.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

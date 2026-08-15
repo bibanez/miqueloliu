@@ -40,7 +40,16 @@ This order matters — each script depends on globals defined by the previous on
 
 ### Work detail pages
 
-Programme notes are transposed from the working Word files in `documentacio/obres/`. The source folder remains gitignored; the generated, trilingual static pages live in `obres/` and are linked from `WORKS` through `links.info`.
+Programme notes are generated from the working Word files in `documentacio/obres/` by `scripts/generate-work-pages.py`. The source folder remains gitignored; generated static pages live in `obres/`, while `js/data/work-info.js` records their available source languages and routes. The catalogue uses that metadata to render `+info` as a link only when a note has at least one Catalan, Spanish, or English source, and as a disabled label otherwise.
+
+The language in the shared navigation controls the site chrome. Detail pages have a second, source-language tab strip for Catalan, Spanish, English, French, German, Euskera, or any language added to the generator manifest. When the shared language changes, the detail tab follows it when that source language exists; otherwise the reader's selected note language is preserved.
+
+Run the generator with the bundled Python runtime after source documents change:
+
+```bash
+DOC_PY=/Users/vicar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
+"$DOC_PY" scripts/generate-work-pages.py
+```
 
 Detail pages include `<base href="../">` so the shared root-level components continue to work from the nested `obres/` URLs.
 

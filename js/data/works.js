@@ -15,9 +15,12 @@
  *   details         [ ...línies en ordre: encàrrec, estrena, enregistrament, premi, CD… ]
  *   score           disponibilitat de la partitura: 'ficta' (editada per Ficta)
  *                   o 'contact' (sota demanda, enllaça amb contact.html)
- *   links           { audio, score, info } — URLs; només es mostren si existeixen.
+ *   links           { audio, score } — URLs; només es mostren si existeixen.
  *                   Un audio acabat en .mp3/.m4a/.ogg/.wav es mostra com a
  *                   reproductor incrustat en lloc d'enllaç extern.
+ *
+ * Les notes de programa i la disponibilitat de +info es generen des de
+ * scripts/generate-work-pages.py i es publiquen a js/data/work-info.js.
  *   note            nota de programa ({ca, es, en} o string) — es mostra plegada
  *   parts           [ ...sub-peces amb la mateixa estructura ] (p.ex. quaderns)
  *
@@ -49,7 +52,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/pluja.html' },
       },
       {
         id: 'in-luce-praesenti',
@@ -75,7 +77,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/in-luce-praesenti.html' },
       },
       {
         id: 'allegories-de-tardor-orquestra',
@@ -100,7 +101,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/allegories-de-tardor-orquestra.html' },
       },
     ],
   },
@@ -132,7 +132,6 @@ const WORKS = [
           'CD: Aeternum (IBS Classical, 2025) – Tempus Trio',
         ],
         score: 'ficta',
-        links: { info: 'obres/un-simple-aleteig.html' },
       },
       {
         id: 'set-cants',
@@ -167,7 +166,6 @@ const WORKS = [
           'CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet',
         ],
         score: 'ficta',
-        links: { info: 'obres/set-cants.html' },
       },
       {
         id: 'angel-terrible',
@@ -196,7 +194,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/angel-terrible.html' },
       },
       {
         id: 'jardins-del-silenci',
@@ -226,7 +223,6 @@ const WORKS = [
           'CD: Mirades sonores (Ficta, 2025) – Mariona Oliu, Miquel Villalba',
         ],
         score: 'ficta',
-        links: { info: 'obres/jardins-del-silenci.html' },
       },
       {
         id: 'ofrena-a-ant-negre',
@@ -243,7 +239,6 @@ const WORKS = [
         },
         duration: '12’',
         score: 'contact',
-        links: { info: 'obres/ofrena-a-ant-negre.html' },
       },
       {
         id: 'inabastable-perfil',
@@ -268,7 +263,6 @@ const WORKS = [
           'CD: Intertwined Paths (Seed-music, 2016) – Joel Bardolet, Marco Scilironi',
         ],
         score: 'ficta',
-        links: { info: 'obres/inabastable-perfil.html' },
       },
       {
         id: 'set-extractes-petit-princep',
@@ -297,7 +291,6 @@ const WORKS = [
           },
         ],
         score: 'contact',
-        links: { info: 'obres/set-extractes-petit-princep.html' },
       },
       {
         id: 'lament-de-pluja',
@@ -326,7 +319,6 @@ const WORKS = [
           },
         ],
         score: 'contact',
-        links: { info: 'obres/lament-de-pluja.html' },
       },
     ],
   },
@@ -362,7 +354,6 @@ const WORKS = [
           'CD: Llibre d’hores (Ficta, 2023) – Miquel Villalba',
         ],
         score: 'ficta',
-        links: { info: 'obres/llibre-dhores.html' },
         parts: [
           {
             id: 'preludis-primer-quadern',
@@ -515,7 +506,6 @@ const WORKS = [
           },
         ],
         score: 'contact',
-        links: { info: 'obres/cantic.html' },
       },
       {
         id: 'fondres',
@@ -544,7 +534,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/fondres.html' },
       },
       {
         id: 'despertar',
@@ -563,7 +552,6 @@ const WORKS = [
           },
         ],
         score: 'contact',
-        links: { info: 'obres/despertar.html' },
       },
       {
         id: 'allegories-de-tardor-piano',
@@ -583,7 +571,6 @@ const WORKS = [
           'CD: Llibre d’hores (Ficta, 2023) – Miquel Villalba',
         ],
         score: 'ficta',
-        links: { info: 'obres/allegories-de-tardor-piano.html' },
       },
       {
         id: 'meditatio',
@@ -677,7 +664,6 @@ const WORKS = [
           'CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet',
         ],
         score: 'ficta',
-        links: { info: 'obres/set-cants.html' },
       },
       {
         id: 'sant-josep-va-a-buscar-foc',
@@ -707,7 +693,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/sant-josep-va-a-buscar-foc.html' },
       },
       {
         id: 'jo-laimo',
@@ -736,7 +721,6 @@ const WORKS = [
           },
         ],
         score: 'ficta',
-        links: { info: 'obres/jo-laimo.html' },
       },
       {
         id: 'da-pacem',

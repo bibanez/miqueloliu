@@ -20,16 +20,24 @@
 <body>
   <div id="nav-container"></div>
 
-  <main>
+  <main data-page="work-detail" data-work-id="angel-terrible">
     <article class="work-detail-layout">
       <div class="page-header work-detail-header">
         <p class="work-detail-back"><a href="catalogue.html#work-angel-terrible" data-i18n="works.detail.back"></a></p>
-        <div class="lang-block" lang="ca"><h1>L’àngel terrible</h1></div>
-          <div class="lang-block" lang="es"><h1>L’àngel terrible (El ángel terrible)</h1></div>
-          <div class="lang-block" lang="en"><h1>L’àngel terrible (The terrible angel)</h1></div>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><h1>L’àngel terrible</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="es"><h1>L’àngel terrible (El ángel terrible)</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><h1>L’àngel terrible (The terrible angel)</h1></div>
+        <nav class="work-detail-language-nav" aria-label="Programme note languages">
+          <span class="work-detail-language-label" data-i18n="works.detail.language.label"></span>
+          <div class="work-detail-language-tabs" role="tablist">
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="ca" aria-label="Català" aria-selected="false">CA</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="es" aria-label="Castellano" aria-selected="false">ES</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="en" aria-label="English" aria-selected="false">EN</button>
+          </div>
+        </nav>
       </div>
       <div class="work-detail-content">
-        <div class="lang-block" lang="ca"><div class="work-info"><h2>Nota de programa</h2>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><div class="work-info"><h2>Nota de programa</h2>
           <p>El poeta en llengua alemanya R.M. Rilke utilitza en diversos moments de la seva obra l’associació de la figura de l’àngel amb “allò terrible”; idea que poc a poc se m’ha anat apareixent en apropar-m’hi. Em captivava aquest “xoc” entre la nostra realitat quotidiana habitual i aquesta nova visió lluminosa de l’àngel. De fet, en la nostra tradició espiritual, l’àngel s’apareix repetidament tot dient “no tingueu por”. Pot ser, aquest fet, causat per la nostra por a una altra realitat?, pel nostre tancament a “allò bo” però desconegut?</p>
           <p>Aquesta ha estat la primera deu permanent d’inspiració per a aquest quartet de corda: la dignificació del dolor com a possible font d’obertura, d’alliberament, i el ressò del convit de l’àngel a deixar la por, a obrir-nos.</p>
           <p>L’altra font d’inspiració ha estat l’Art de la fuga de J.S. Bach; el seu tema és el punt de partida per a l’elaboració de tots els materials, des dels punts de vista motívic, harmònic i formal. Una obra, sempre admirada, que sota la seva sobrietat i perfecció té el do d’expressar —alhora— la bellesa i la profunditat del patiment humà, tot aportant-nos un bocí d’aquesta Pau que tots anhelem.</p>
@@ -46,7 +54,7 @@
           <p>immensa, intemporal, d’amplis espais tinc.”</p>
           <p>						Rainer Maria Rilke</p>
           <p>						    Das Stunden-Buch (El llibre d’hores)</p></div></div>
-          <div class="lang-block" lang="es"><div class="work-info"><h2>Nota de programa</h2>
+          <div class="work-detail-lang-block" data-detail-lang="es"><div class="work-info"><h2>Nota de programa</h2>
           <p>El poeta en lengua alemana R.M. Rilke utiliza en distintos momentos de su obra la asociación de la figura del ángel con “aquello terrible”; idea que poco a poco se me ha ido apareciendo al acercarme a ella. Me cautivaba este “choque” entre nuestra realidad cotidiana habitual y ésta nueva visión luminosa del ángel. De hecho, en nuestra tradición espiritual, el ángel se aparece repetidamente diciendo “no tengáis miedo”. ¿Puede ser, este hecho, causado per nuestro miedo a otra realidad?, ¿por nuestro cierre a “lo bueno” pero desconocido?</p>
           <p>Ésta ha sido la primera fuente permanente de inspiración para este cuarteto de cuerda: la dignificación del dolor como  posible fuente de obertura, de liberación, y el eco de la invitación del ángel a dejar el miedo, a abrirnos.</p>
           <p>La otra fuente de inspiración ha sido el Arte de la fuga de J.S. Bach; su tema es el punto de partida para la elaboración de todos los materiales, desde los puntos de vista motívico, armónico y formal. Una obra, siempre admirada, que debajo de su sobriedad y perfección tiene el don de expresar —a la vez— la belleza y la profundidad del sufrimiento humano, aportándonos un trocito de esta Paz que todos anhelamos.</p>
@@ -63,7 +71,7 @@
           <p>inmensa, intemporal, de amplios espacios tengo.”</p>
           <p>						Rainer Maria Rilke</p>
           <p>						    Das Stunden-Buch (El libro de horas)</p></div></div>
-          <div class="lang-block" lang="en"><div class="work-info"><h2>Programme note</h2>
+          <div class="work-detail-lang-block" data-detail-lang="en"><div class="work-info"><h2>Programme note</h2>
           <p>The German poet R.M. Rilke links the figure of the angel with the concept of “the terrible”, an idea that I came to realize as I approached his work. I was captivated by this “shock” between our everyday reality and this new luminous vision of the angel. As a matter of fact, in our spiritual tradition, the angel repeatedly appears saying:  ”Don’t be afraid”. Can this, perhaps, be caused by our fear of a different reality? By our deliberate separation from “the good” but at the same time unknown?</p>
           <p>This idea has been the primary source of inspiration for this string quartet: the dignification of the pain as a potential source of opening, of relief, and the echo of the angel’s call to forsake fear and to open ourselves up.</p>
           <p>The other source of inspiration has been the The Art of Fugue by J.S. Bach; its topic is the starting point for the creation of all the materials, from a motivational, harmonic and formal point of view. A work always admired, that under its sobriety and perfection has the gift of expressing both the beauty and the depth of human suffering, giving us a share of this peace we all wish for.</p>
@@ -90,6 +98,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/work-detail.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

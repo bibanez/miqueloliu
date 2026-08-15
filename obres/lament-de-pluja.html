@@ -20,18 +20,26 @@
 <body>
   <div id="nav-container"></div>
 
-  <main>
+  <main data-page="work-detail" data-work-id="lament-de-pluja">
     <article class="work-detail-layout">
       <div class="page-header work-detail-header">
         <p class="work-detail-back"><a href="catalogue.html#work-lament-de-pluja" data-i18n="works.detail.back"></a></p>
-        <div class="lang-block" lang="ca"><h1>Lament de pluja</h1></div>
-          <div class="lang-block" lang="es"><h1>Lament de pluja (Lamento de lluvia)</h1></div>
-          <div class="lang-block" lang="en"><h1>Lament de pluja (Lament of rain)</h1></div>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><h1>Lament de pluja</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="es"><h1>Lament de pluja (Lamento de lluvia)</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><h1>Lament de pluja (Lament of rain)</h1></div>
+        <nav class="work-detail-language-nav" aria-label="Programme note languages">
+          <span class="work-detail-language-label" data-i18n="works.detail.language.label"></span>
+          <div class="work-detail-language-tabs" role="tablist">
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="ca" aria-label="Català" aria-selected="false">CA</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="es" aria-label="Castellano" aria-selected="false">ES</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="en" aria-label="English" aria-selected="false">EN</button>
+          </div>
+        </nav>
       </div>
       <div class="work-detail-content">
-        <div class="lang-block" lang="ca"><div class="work-info"><p>A partir del coral de la cantata BWV18 de J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (Així com la pluja i la neu cauen del cel),  i el seu text corresponent (Is 55, 10-11).</p></div></div>
-          <div class="lang-block" lang="es"><div class="work-info"><p>A partir del coral de la cantata BWV18 de J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (Así como la lluvia y la nieve caen del cielo), y su texto correspondiente (Is 55, 10-11).</p></div></div>
-          <div class="lang-block" lang="en"><div class="work-info"><p>From the chorale of cantata BWV18 J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (For as the rain and snow cometh down), and its corresponding text (Isa 55, 10-11).</p></div></div>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><div class="work-info"><p>A partir del coral de la cantata BWV18 de J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (Així com la pluja i la neu cauen del cel),  i el seu text corresponent (Is 55, 10-11).</p></div></div>
+          <div class="work-detail-lang-block" data-detail-lang="es"><div class="work-info"><p>A partir del coral de la cantata BWV18 de J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (Así como la lluvia y la nieve caen del cielo), y su texto correspondiente (Is 55, 10-11).</p></div></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><div class="work-info"><p>From the chorale of cantata BWV18 J.S.Bach «Gleichwie der Regen und Schnee vom Himmel fällt» (For as the rain and snow cometh down), and its corresponding text (Isa 55, 10-11).</p></div></div>
       </div>
       <p class="work-detail-back work-detail-back-bottom"><a href="catalogue.html#work-lament-de-pluja" data-i18n="works.detail.back"></a></p>
     </article>
@@ -42,6 +50,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/work-detail.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

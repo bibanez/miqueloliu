@@ -20,22 +20,30 @@
 <body>
   <div id="nav-container"></div>
 
-  <main>
+  <main data-page="work-detail" data-work-id="set-extractes-petit-princep">
     <article class="work-detail-layout">
       <div class="page-header work-detail-header">
         <p class="work-detail-back"><a href="catalogue.html#work-set-extractes-petit-princep" data-i18n="works.detail.back"></a></p>
-        <div class="lang-block" lang="ca"><h1>Set extractes de El Petit Príncep</h1></div>
-          <div class="lang-block" lang="es"><h1>Set extractes de El Petit Príncep (Siete extractos de El principito)</h1></div>
-          <div class="lang-block" lang="en"><h1>Set extractes de El Petit Príncep (Seven extracts from The Little Prince)</h1></div>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><h1>Set extractes de El Petit Príncep</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="es"><h1>Set extractes de El Petit Príncep (Siete extractos de El principito)</h1></div>
+          <div class="work-detail-lang-block" data-detail-lang="en"><h1>Set extractes de El Petit Príncep (Seven extracts from The Little Prince)</h1></div>
+        <nav class="work-detail-language-nav" aria-label="Programme note languages">
+          <span class="work-detail-language-label" data-i18n="works.detail.language.label"></span>
+          <div class="work-detail-language-tabs" role="tablist">
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="ca" aria-label="Català" aria-selected="false">CA</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="es" aria-label="Castellano" aria-selected="false">ES</button>
+            <button class="work-detail-language-tab" type="button" role="tab" data-work-language="en" aria-label="English" aria-selected="false">EN</button>
+          </div>
+        </nav>
       </div>
       <div class="work-detail-content">
-        <div class="lang-block" lang="ca"><div class="work-info"><p>Obra encàrrec del Festival de música de Campllong, estrenada l’agost de 2010 pel grup Percussions de Barcelona i Tiam Goudarzi a la flauta de bec.</p>
+        <div class="work-detail-lang-block" data-detail-lang="ca"><div class="work-info"><p>Obra encàrrec del Festival de música de Campllong, estrenada l’agost de 2010 pel grup Percussions de Barcelona i Tiam Goudarzi a la flauta de bec.</p>
           <p>Dividida en set parts corresponents a set fragments del text de A. de Saint-Exupéry que serveixen de font d’inspiració. Un text que traspua innocència i alhora poua fondo, parlant d’uns valors universals que xoquen frontalment amb el món actual. L’impuls per a escriure aquesta música ha estat el ressò interior d’aquest text que ens convida a una altra percepció del que ens envolta.</p>
           <p>La música –d’estreta relació amb el text– vol ser discursiva i evocadora, els elements senzills són els que agafen rellevància i acaben donant unitat a l’obra. El so noble, fràgil i solitari de la flauta de bec, amb les sonoritats de la fusta de la marimba junt amb d’altres instruments de percussió ressonants volen apropar-nos a l’ambient que ens proposa Saint-Exupéry: desert, silenci, senzillesa... i al misteri del temps, que ens uneix a tots.</p></div></div>
-          <div class="lang-block" lang="es"><div class="work-info"><p>Obra encargo del Festival de música de Campllong, estrenada en agosto del 2010 por Percussions de Barcelona y Tiam Goudarzi en la flauta de pico.</p>
+          <div class="work-detail-lang-block" data-detail-lang="es"><div class="work-info"><p>Obra encargo del Festival de música de Campllong, estrenada en agosto del 2010 por Percussions de Barcelona y Tiam Goudarzi en la flauta de pico.</p>
           <p>Dividida en siete partes correspondientes a siete fragmentos del texto de A. de Saint-Exupéry que sirven de fuente de inspiración. Un texto que rezuma inocencia y a la vez desempoza hondo, hablando de unos valores universales que chocan frontalmente con el mundo actual. El impulso para escribir esta música ha sido la resonancia interior de este texto que nos invita a otra percepción de lo que nos rodea.</p>
           <p>La música –de estrecha relación con el texto– quiere ser discursiva y evocadora, los elementos sencillos son los que cogen relevancia y terminan dando unidad a la obra. El sonido noble, frágil y solitario de la flauta de pico, con las sonoridades de la madera de la marimba junto con otros instrumentos de percusión resonantes quieren acercarnos al ambiente que nos propone Saint-Exupéry: desierto, silencio, sencillez... y al misterio del tiempo, que nos une a todos.</p></div></div>
-          <div class="lang-block" lang="en"><div class="work-info"><p>Commissioned by the Festival de Música de Campllong, this work was premiered in August 2010 by the group Percussions de Barcelona, with Tiam Goudarzi playing the recorder.</p>
+          <div class="work-detail-lang-block" data-detail-lang="en"><div class="work-info"><p>Commissioned by the Festival de Música de Campllong, this work was premiered in August 2010 by the group Percussions de Barcelona, with Tiam Goudarzi playing the recorder.</p>
           <p>It is divided into seven parts corresponding to seven excerpts from a text by A. de Saint-Exupéry, which serve as a source of inspiration. A text that exudes innocence as it delves deeply, speaking of universal values that stand in stark contrast to the current world. The impulse to write this music arose from the inner resonance of this text, which invites us to a different perception of our surroundings.</p>
           <p>The music—closely connected to the text—aims to be both discursive and evocative. Simple elements become significant and ultimately provide unity to the work. The noble, fragile, and solitary sound of the recorder, together with the wooden sonorities of the marimba and other resonant percussion instruments, seeks to bring us closer to the atmosphere set forth by Saint-Exupéry: desert, silence, simplicity… and the mystery of time, which unites us all.</p></div></div>
       </div>
@@ -48,6 +56,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/components.js"></script>
+  <script src="js/work-detail.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

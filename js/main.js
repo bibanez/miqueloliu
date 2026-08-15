@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   Components.init();
 
   // Run page-specific logic if a page initialiser is defined
-  const page = Components.activePage();
+  const page = document.querySelector('main[data-page]')?.dataset.page || Components.activePage();
   if (typeof PageInit !== 'undefined' && typeof PageInit[page] === 'function') {
     PageInit[page]();
   }

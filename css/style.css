@@ -723,6 +723,12 @@ section:last-child {
   color: var(--color-text-light);
 }
 
+.work-link-disabled {
+  color: var(--color-text-light);
+  opacity: 0.42;
+  cursor: not-allowed;
+}
+
 .work-note-toggle {
   background: none;
   border: none;
@@ -958,6 +964,71 @@ section:last-child {
   margin: 0 0 1.5rem;
   font-size: 0.85rem;
   letter-spacing: 0.04em;
+}
+
+.work-detail-lang-block {
+  display: none;
+}
+
+.work-detail-lang-block.is-active {
+  display: block;
+}
+
+.work-detail-language-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin-top: 2rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.work-detail-language-label {
+  flex: 0 0 auto;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-light);
+}
+
+.work-detail-language-tabs {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-left: auto;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.work-detail-language-tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.work-detail-language-tab {
+  flex: 0 0 auto;
+  position: relative;
+  padding: 0.35rem 0 0.45rem;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: none;
+  color: var(--color-text-light);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.work-detail-language-tab:hover,
+.work-detail-language-tab.active,
+.work-detail-language-tab[aria-selected="true"] {
+  color: var(--color-text);
+}
+
+.work-detail-language-tab.active,
+.work-detail-language-tab[aria-selected="true"] {
+  border-bottom-color: var(--color-accent);
 }
 
 .work-detail-back-bottom {
@@ -1332,6 +1403,18 @@ footer {
   .work-part {
     margin-left: 0.5rem;
     padding-left: 1rem;
+  }
+
+  .work-detail-language-nav {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .work-detail-language-tabs {
+    width: 100%;
+    margin-left: 0;
+    gap: 1.25rem;
   }
 
   .nav-toggle { display: block; }

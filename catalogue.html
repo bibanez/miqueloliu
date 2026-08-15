@@ -29,6 +29,7 @@
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
   <script src="js/data/works.js"></script>
+  <script src="js/data/work-info.js"></script>
   <!-- Orchestra seating functionality disabled for now (kept for future chamber music seating) -->
   <!-- <script src="js/orchestra.js"></script> -->
   <script src="js/components.js"></script>
@@ -47,7 +48,7 @@
         // language re-renders; populated in render() before renderWork runs.
         let openParts = new Set();
 
-        function renderLinks(work) {
+        function renderLinks(work, isPart) {
           const items = [];
           if (work.links && work.links.audio) {
             if (AUDIO_EXT.test(work.links.audio)) {
@@ -63,8 +64,18 @@
           if (work.note) {
             items.push(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
           }
-          if (work.links && work.links.info) {
-            items.push(`<a href="${work.links.info}" data-i18n="works.link.info"></a>`);
+          const info = typeof WORK_INFO !== 'undefined'
+            ? WORK_INFO[work.id]
+            : (work.links && work.links.info ? {
+              href: work.links.info,
+              hasSiteLanguage: true,
+            } : null);
+          if (!isPart) {
+            if (info && info.hasSiteLanguage) {
+              items.push(`<a href="${info.href}" data-i18n="works.link.info"></a>`);
+            } else {
+              items.push(`<span class="work-link-disabled" aria-disabled="true" data-i18n="works.link.info"></span>`);
+            }
           }
 
           let html = '';
@@ -115,7 +126,7 @@
             html += `<p class="work-detail work-score"><span data-i18n="works.score.label"></span> ${scoreValue}</p>`;
           }
 
-          html += renderLinks(work);
+          html += renderLinks(work, isPart);
 
           // Sub-pieces (quaderns/volums) folded under a collapsible toggle
           if (work.parts && work.parts.length) {
