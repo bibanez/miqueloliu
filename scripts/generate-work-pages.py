@@ -453,7 +453,6 @@ def render_page(entry, rendered, languages):
         <p class="work-detail-back"><a href="catalogue.html#work-{entry["id"]}" data-i18n="works.detail.back"></a></p>
         {title_html}
         <nav class="work-detail-language-nav" aria-label="Programme note languages">
-          <span class="work-detail-language-label" data-i18n="works.detail.language.label"></span>
           <div class="work-detail-language-tabs" role="tablist">
             {tabs_html}
           </div>
