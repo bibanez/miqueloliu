@@ -38,6 +38,12 @@ This order matters — each script depends on globals defined by the previous on
 - **`js/data/works.js`** (`WORKS`) — the entire work catalogue as static data. The schema is documented in a header comment in that file; honour it when editing.
 - **`js/orchestra.js`** (`Orchestra`) — parses instrumentation formulas like `[3.2.3.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -12.12.10.8.6.]` and renders an interactive SVG seating chart. `Orchestra.parse()` returns `null` for anything not a well-formed formula, so callers fall back to plain text.
 
+### Work detail pages
+
+Programme notes are transposed from the working Word files in `documentacio/obres/`. The source folder remains gitignored; the generated, trilingual static pages live in `obres/` and are linked from `WORKS` through `links.info`.
+
+Detail pages include `<base href="../">` so the shared root-level components continue to work from the nested `obres/` URLs.
+
 ### Page-specific logic: the `PageInit` pattern
 
 A page that needs its own JS defines a global `PageInit` object **inline before loading `main.js`**, keyed by the page name from `activePage()` (e.g. `PageInit.catalogue = () => {...}`). `main.js` invokes the matching function after components are mounted. `catalogue.html` is the only current example: it renders `WORKS` into collapsible categories and re-renders on language change via `I18n.onChange()`.

@@ -9,7 +9,12 @@ const Components = (() => {
 
   /** Detect which page is active based on the filename. */
   function activePage() {
-    const slug = window.location.pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
+    const pathname = window.location.pathname;
+    // Detail pages are generated under /obres/, but belong to the catalogue
+    // section for shared navigation and footer highlighting.
+    if (/\/obres\//.test(pathname)) return 'catalogue';
+
+    const slug = pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
     if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
     if (slug === 'contact')    return 'contact';
@@ -80,6 +85,12 @@ const Components = (() => {
 
     // Pages with a full-bleed hero: let the nav float over it.
     if (document.querySelector('.home-hero')) document.body.classList.add('has-hero');
+
+    // Temporary visual comparison modes for the bottom return link.
+    const backPreview = new URLSearchParams(window.location.search).get('back');
+    if (backPreview === 'a' || backPreview === 'c') {
+      document.body.classList.add(`back-preview-${backPreview}`);
+    }
 
     // Mobile hamburger toggle
     const toggle = document.querySelector('.nav-toggle');

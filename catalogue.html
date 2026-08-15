@@ -28,6 +28,7 @@
 
   <script src="js/translations.js"></script>
   <script src="js/i18n.js"></script>
+  <script src="js/data/works.js"></script>
   <!-- Orchestra seating functionality disabled for now (kept for future chamber music seating) -->
   <!-- <script src="js/orchestra.js"></script> -->
   <script src="js/components.js"></script>
@@ -63,7 +64,7 @@
             items.push(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
           }
           if (work.links && work.links.info) {
-            items.push(`<a href="${work.links.info}" target="_blank" rel="noopener" data-i18n="works.link.info"></a>`);
+            items.push(`<a href="${work.links.info}" data-i18n="works.link.info"></a>`);
           }
 
           let html = '';
@@ -234,6 +235,15 @@
           container.innerHTML = html;
           renderNav();
           I18n.apply();
+
+          // The catalogue is rendered after the browser processes the URL
+          // fragment, so restore the requested work anchor once its DOM exists.
+          if (window.location.hash) {
+            const target = document.getElementById(window.location.hash.slice(1));
+            if (target) {
+              setTimeout(() => target.scrollIntoView({ block: 'start' }), 0);
+            }
+          }
 
           container.querySelectorAll('.work-note-toggle').forEach(btn => {
             btn.addEventListener('click', () => {
