@@ -1002,6 +1002,26 @@ section:last-child {
   border-bottom: 1px solid var(--color-border);
 }
 
+.work-detail-sticky-title {
+  flex: 0 1 auto;
+  max-width: 0;
+  overflow: hidden;
+  color: var(--color-text);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(0.2rem);
+  transition: max-width 0.45s ease, opacity 0.35s ease, transform 0.45s ease;
+  white-space: nowrap;
+}
+
+.work-detail-language-nav.is-scrolled .work-detail-sticky-title {
+  max-width: 24rem;
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .work-detail-language-label {
   flex: 0 0 auto;
   color: var(--color-text-light);

@@ -14,6 +14,9 @@ var PageInit = {
     const tabs = [...page.querySelectorAll('[data-work-language]')];
     const blocks = [...page.querySelectorAll('[data-detail-lang]')];
     const label = page.querySelector('.work-detail-language-label');
+    const stickyTitle = page.querySelector('.work-detail-sticky-title');
+    const header = page.querySelector('.work-detail-header');
+    const languageNav = page.querySelector('.work-detail-language-nav');
     const available = tabs.map(tab => tab.dataset.workLanguage);
     const noteLabels = {
       ca: 'nota de programa',
@@ -33,6 +36,8 @@ var PageInit = {
 
       page.dataset.activeLanguage = lang;
       updateNoteLabel(lang);
+      const title = page.querySelector(`[data-detail-lang="${lang}"] h1`);
+      if (stickyTitle && title) stickyTitle.textContent = title.textContent;
       tabs.forEach(tab => {
         const active = tab.dataset.workLanguage === lang;
         tab.classList.toggle('active', active);
@@ -48,6 +53,15 @@ var PageInit = {
     tabs.forEach(tab => {
       tab.addEventListener('click', () => setActiveLanguage(tab.dataset.workLanguage));
     });
+
+    // Once the title has scrolled away, show its compact counterpart in the
+    // sticky bar. CSS handles the transition so it remains stable everywhere.
+    if (header && languageNav && 'IntersectionObserver' in window) {
+      const observer = new IntersectionObserver(([entry]) => {
+        languageNav.classList.toggle('is-scrolled', !entry.isIntersecting);
+      }, { rootMargin: `-${parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--nav-height')) || 72}px 0px 0px` });
+      observer.observe(header);
+    }
 
     // Keep the note language aligned with the global switcher whenever that
     // language exists in the source document. If it does not, preserve the

@@ -454,6 +454,7 @@ def render_page(entry, rendered, languages):
         {title_html}
       </div>
       <nav class="work-detail-language-nav" aria-label="Programme note languages">
+        <span class="work-detail-sticky-title" aria-hidden="true"></span>
         <span class="work-detail-language-label"></span>
         <div class="work-detail-language-tabs" role="tablist">
           {tabs_html}
