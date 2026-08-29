@@ -67,7 +67,7 @@ const Components = (() => {
       .join('\n        ');
 
     return `
-    <footer>
+    <footer class="site-footer">
       <nav class="footer-links">
         ${linksHtml}
       </nav>
@@ -85,12 +85,6 @@ const Components = (() => {
 
     // Pages with a full-bleed hero: let the nav float over it.
     if (document.querySelector('.home-hero')) document.body.classList.add('has-hero');
-
-    // Temporary visual comparison modes for the bottom return link.
-    const backPreview = new URLSearchParams(window.location.search).get('back');
-    if (backPreview === 'a' || backPreview === 'c') {
-      document.body.classList.add(`back-preview-${backPreview}`);
-    }
 
     // Mobile hamburger toggle
     const toggle = document.querySelector('.nav-toggle');

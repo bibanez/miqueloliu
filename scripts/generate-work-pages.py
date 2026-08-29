@@ -377,7 +377,7 @@ def render_blocks(blocks: list[Block], title_values: list[str]) -> str:
         level = is_heading(block)
         if level:
             close_poem()
-            if not (level == 2 and is_duplicate_title(block.text)):
+            if not (level == 2 and (is_duplicate_title(block.text) or normalize(block.text) in NOTE_HEADINGS)):
                 output.append(f"<h{level}>{inline_text(block.text.strip())}</h{level}>")
             index += 1
             continue
@@ -452,12 +452,13 @@ def render_page(entry, rendered, languages):
       <div class="page-header work-detail-header">
         <p class="work-detail-back"><a href="catalogue.html#work-{entry["id"]}" data-i18n="works.detail.back"></a></p>
         {title_html}
-        <nav class="work-detail-language-nav" aria-label="Programme note languages">
-          <div class="work-detail-language-tabs" role="tablist">
-            {tabs_html}
-          </div>
-        </nav>
       </div>
+      <nav class="work-detail-language-nav" aria-label="Programme note languages">
+        <span class="work-detail-language-label"></span>
+        <div class="work-detail-language-tabs" role="tablist">
+          {tabs_html}
+        </div>
+      </nav>
       <div class="work-detail-content">
         {content_html}
       </div>

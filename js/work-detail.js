@@ -13,12 +13,26 @@ var PageInit = {
 
     const tabs = [...page.querySelectorAll('[data-work-language]')];
     const blocks = [...page.querySelectorAll('[data-detail-lang]')];
+    const label = page.querySelector('.work-detail-language-label');
     const available = tabs.map(tab => tab.dataset.workLanguage);
+    const noteLabels = {
+      ca: 'nota de programa',
+      es: 'nota de programa',
+      en: 'programme note',
+      fr: 'note de programme',
+      de: 'Programmnotiz',
+      eu: 'programa-oharra'
+    };
+
+    function updateNoteLabel(lang) {
+      if (label) label.textContent = noteLabels[lang] || 'programme note';
+    }
 
     function setActiveLanguage(lang) {
       if (!available.includes(lang)) return;
 
       page.dataset.activeLanguage = lang;
+      updateNoteLabel(lang);
       tabs.forEach(tab => {
         const active = tab.dataset.workLanguage === lang;
         tab.classList.toggle('active', active);
