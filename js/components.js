@@ -17,6 +17,7 @@ const Components = (() => {
     const slug = pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
     if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
+    if (slug === 'audio-player-mockups') return 'catalogue';
     if (slug === 'contact')    return 'contact';
     return 'home';
   }

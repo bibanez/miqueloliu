@@ -30,6 +30,7 @@
   <script src="js/i18n.js"></script>
   <script src="js/data/works.js"></script>
   <script src="js/data/work-info.js"></script>
+  <script src="js/recording-player.js"></script>
   <!-- Orchestra seating functionality disabled for now (kept for future chamber music seating) -->
   <!-- <script src="js/orchestra.js"></script> -->
   <script src="js/components.js"></script>
@@ -47,22 +48,28 @@
         // Open state of the parts fold (e.g. Llibre d'hores) is preserved across
         // language re-renders; populated in render() before renderWork runs.
         let openParts = new Set();
+        let openRecordings = new Set();
 
         function renderLinks(work, isPart) {
           const items = [];
+          const addItem = (html, noSeparatorBefore = false) => {
+            items.push({ html, noSeparatorBefore });
+          };
+          const recordingsId = `audio-${work.id}`;
+          const recordingsOpen = openRecordings.has(recordingsId);
           if (work.links && work.links.audio) {
             if (AUDIO_EXT.test(work.links.audio)) {
               // Self-hosted audio gets an inline player below the links row
-              items.push(`<span class="work-link-label" data-i18n="works.link.audio"></span>`);
+              addItem(`<span class="work-link-label" data-i18n="works.link.audio"></span>`);
             } else {
-              items.push(`<a href="${work.links.audio}" target="_blank" rel="noopener" data-i18n="works.link.audio"></a>`);
+              addItem(`<a href="${work.links.audio}" target="_blank" rel="noopener" data-i18n="works.link.audio"></a>`);
             }
           }
           if (work.links && work.links.score) {
-            items.push(`<a href="${work.links.score}" target="_blank" rel="noopener" data-i18n="works.link.score"></a>`);
+            addItem(`<a href="${work.links.score}" target="_blank" rel="noopener" data-i18n="works.link.score"></a>`);
           }
           if (work.note) {
-            items.push(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
+            addItem(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
           }
           const info = typeof WORK_INFO !== 'undefined'
             ? WORK_INFO[work.id]
@@ -72,15 +79,18 @@
             } : null);
           if (!isPart) {
             if (info && info.hasSiteLanguage) {
-              items.push(`<a href="${info.href}" data-i18n="works.link.info"></a>`);
+              addItem(`<a href="${info.href}" data-i18n="works.link.info"></a>`);
             } else {
-              items.push(`<span class="work-link-disabled" aria-disabled="true" data-i18n="works.link.info"></span>`);
+              addItem(`<span class="work-link-disabled" aria-disabled="true" data-i18n="works.link.info"></span>`);
             }
+          }
+          if (work.recordings && work.recordings.length) {
+            addItem(`<button class="work-audio-toggle" data-target="${recordingsId}" aria-controls="${recordingsId}" aria-expanded="${recordingsOpen}" data-i18n="works.link.audio.${recordingsOpen ? 'close' : 'toggle'}"></button>`, true);
           }
 
           let html = '';
           if (items.length) {
-            html += `<p class="work-links">${items.join('<span class="work-link-sep">·</span>')}</p>`;
+            html += `<p class="work-links">${items.map((item, index) => `${index && !item.noSeparatorBefore ? '<span class="work-link-sep">·</span>' : ''}${item.html}`).join('')}</p>`;
           }
           if (work.links && work.links.audio && AUDIO_EXT.test(work.links.audio)) {
             html += `<audio class="work-audio" controls preload="none" src="${work.links.audio}"></audio>`;
@@ -127,6 +137,15 @@
           }
 
           html += renderLinks(work, isPart);
+
+          if (work.recordings && work.recordings.length) {
+            const recordingsId = `audio-${work.id}`;
+            html += `<div class="work-recordings" id="${recordingsId}"${openRecordings.has(recordingsId) ? '' : ' hidden'}>`;
+            html += work.recordings.map(recording => RecordingPlayer.render(recording, {
+              variant: 'compact',
+            })).join('');
+            html += '</div>';
+          }
 
           // Sub-pieces (quaderns/volums) folded under a collapsible toggle
           if (work.parts && work.parts.length) {
@@ -234,6 +253,9 @@
           openParts = new Set(
             [...container.querySelectorAll('details.work-parts[open]')].map(d => d.id)
           );
+          openRecordings = new Set(
+            [...container.querySelectorAll('.work-recordings:not([hidden])')].map(panel => panel.id)
+          );
 
           let html = '';
           WORKS.forEach(category => {
@@ -246,6 +268,7 @@
           container.innerHTML = html;
           renderNav();
           I18n.apply();
+          RecordingPlayer.bind(container);
 
           // The catalogue is rendered after the browser processes the URL
           // fragment, so restore the requested work anchor once its DOM exists.
@@ -260,6 +283,20 @@
             btn.addEventListener('click', () => {
               const note = document.getElementById(btn.dataset.target);
               if (note) note.hidden = !note.hidden;
+            });
+          });
+
+          container.querySelectorAll('.work-audio-toggle').forEach(btn => {
+            btn.addEventListener('click', () => {
+              const panel = document.getElementById(btn.dataset.target);
+              if (!panel) return;
+              const open = panel.hidden;
+              panel.hidden = !open;
+              btn.setAttribute('aria-expanded', String(open));
+              btn.setAttribute('data-i18n', `works.link.audio.${open ? 'close' : 'toggle'}`);
+              btn.textContent = I18n.t(`works.link.audio.${open ? 'close' : 'toggle'}`);
+              if (open) openRecordings.add(panel.id);
+              else openRecordings.delete(panel.id);
             });
           });
 

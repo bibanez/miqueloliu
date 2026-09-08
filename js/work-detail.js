@@ -18,6 +18,7 @@ var PageInit = {
     const header = page.querySelector('.work-detail-header');
     const languageNav = page.querySelector('.work-detail-language-nav');
     const available = tabs.map(tab => tab.dataset.workLanguage);
+    const content = page.querySelector('.work-detail-content');
     const noteLabels = {
       ca: 'nota de programa',
       es: 'nota de programa',
@@ -26,6 +27,46 @@ var PageInit = {
       de: 'Programmnotiz',
       eu: 'programa-oharra'
     };
+
+    function findWork(id) {
+      if (typeof WORKS === 'undefined') return null;
+      for (const category of WORKS) {
+        for (const work of category.works || []) {
+          if (work.id === id) return work;
+          const part = (work.parts || []).find(item => item.id === id);
+          if (part) return part;
+        }
+      }
+      return null;
+    }
+
+    function renderRecordings() {
+      if (!content || typeof RecordingPlayer === 'undefined') return;
+      const work = findWork(page.dataset.workId);
+      const recordings = work && work.recordings ? work.recordings : [];
+      let mount = page.querySelector('.work-detail-recordings');
+
+      if (!recordings.length) {
+        if (mount) mount.remove();
+        return;
+      }
+
+      const recordingsId = `audio-${page.dataset.workId}`;
+
+      if (!mount) {
+        mount = document.createElement('section');
+        mount.className = 'work-detail-recordings';
+        mount.id = recordingsId;
+        content.before(mount);
+      }
+
+      mount.innerHTML = recordings.map(recording => RecordingPlayer.render(recording, {
+        variant: 'compact',
+      })).join('');
+      mount.hidden = false;
+      I18n.apply();
+      RecordingPlayer.bind(mount);
+    }
 
     function updateNoteLabel(lang) {
       if (label) label.textContent = noteLabels[lang] || 'programme note';
@@ -68,8 +109,10 @@ var PageInit = {
     // reader's current note rather than silently falling back to another one.
     I18n.onChange(lang => {
       if (available.includes(lang)) setActiveLanguage(lang);
+      renderRecordings();
     });
 
     setActiveLanguage(available.includes(I18n.currentLang()) ? I18n.currentLang() : available[0]);
+    renderRecordings();
   }
 };
