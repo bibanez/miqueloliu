@@ -1,14 +1,11 @@
 {
-  "id": "despertar",
-  "title": {
-    "ca": "Despertar",
-    "en": "Despertar (Awakening)"
-  },
-  "years": "2011",
-  "instrumentation": {
-    "ca": "Shakuhachi 2.4"
-  },
-  "duration": "5’",
+  "recordings": [
+    {
+      "src": "/uploads/25-06-despertar-jim-franklin-premier-miquel-oliu.mp3",
+      "id": "despertar-mp3",
+      "title": "Despertar"
+    }
+  ],
   "details": [
     {
       "ca": "Estrena: Juliol 2013. European Shakuhachi Society Summer School, L’Auditori de Barcelona, Sala4. Jim Franklin",
@@ -16,11 +13,9 @@
       "en": "Premiere: July 2013. European Shakuhachi Society Summer School, L’Auditori de Barcelona, Sala4. Jim Franklin"
     }
   ],
-  "score": "contact",
-  "category": "solista",
   "archived": false,
-  "order": 4,
   "assets": [],
+  "movements": [],
   "programmeNote": {
     "sections": [
       {
@@ -55,5 +50,18 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 4,
+  "instrumentation": {
+    "ca": "Shakuhachi 2.4"
+  },
+  "score": "contact",
+  "duration": "5’",
+  "years": "2011",
+  "title": {
+    "ca": "Despertar",
+    "en": "Despertar (Awakening)"
+  },
+  "id": "despertar",
+  "category": "solista"
 }
