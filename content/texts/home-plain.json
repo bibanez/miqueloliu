@@ -1,0 +1,46 @@
+{
+  "entries": [
+    {
+      "key": "home.hero.subtitle",
+      "format": "plain",
+      "ca": "compositor",
+      "es": "compositor",
+      "en": "composer"
+    },
+    {
+      "key": "home.intro.more",
+      "format": "plain",
+      "ca": "biografia completa",
+      "es": "biografía completa",
+      "en": "full biography"
+    },
+    {
+      "key": "home.testimonials.label",
+      "format": "plain",
+      "ca": "Sobre la seva música",
+      "es": "Sobre su música",
+      "en": "On his music"
+    },
+    {
+      "key": "home.testimonial.humet.author",
+      "format": "plain",
+      "ca": "Ramon Humet, compositor",
+      "es": "Ramon Humet, compositor",
+      "en": "Ramon Humet, composer"
+    },
+    {
+      "key": "home.testimonial.guix.author",
+      "format": "plain",
+      "ca": "Josep Mª Guix, compositor",
+      "es": "Josep Mª Guix, compositor",
+      "en": "Josep Mª Guix, composer"
+    },
+    {
+      "key": "home.testimonial.clapes.author",
+      "format": "plain",
+      "ca": "Antoni Clapés, poeta",
+      "es": "Antoni Clapés, poeta",
+      "en": "Antoni Clapés, poet"
+    }
+  ]
+}

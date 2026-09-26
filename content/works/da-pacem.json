@@ -1,0 +1,30 @@
+{
+  "id": "da-pacem",
+  "title": {
+    "ca": "Da pacem"
+  },
+  "years": "2020",
+  "instrumentation": {
+    "ca": "Cor mixt a cappella [SATB]",
+    "es": "Coro mixto a cappella [SATB]",
+    "en": "Mixed choir a cappella [SATB]"
+  },
+  "duration": "3’",
+  "details": [
+    {
+      "ca": "En motiu del centenari de la coral Retorn Planenc",
+      "es": "Con motivo del centenario de la coral Retorn Planenc",
+      "en": "On occasion of the centenary of the Retorn Planenc choir"
+    },
+    {
+      "ca": "Estrena: Desembre 2021. Les Planes d’Hostoles",
+      "es": "Estreno: Diciembre 2021. Les Planes d’Hostoles",
+      "en": "Premiere: December 2021. Les Planes d’Hostoles"
+    }
+  ],
+  "score": "ficta",
+  "category": "veu",
+  "archived": false,
+  "order": 3,
+  "assets": []
+}

@@ -1,0 +1,11 @@
+{
+  "entries": [
+    {
+      "key": "footer.copyright",
+      "format": "plain",
+      "ca": "© {year} Miquel Oliu. Tots els drets reservats.",
+      "es": "© {year} Miquel Oliu. Todos los derechos reservados.",
+      "en": "© {year} Miquel Oliu. All rights reserved."
+    }
+  ]
+}

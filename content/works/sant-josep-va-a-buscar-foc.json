@@ -1,0 +1,70 @@
+{
+  "id": "sant-josep-va-a-buscar-foc",
+  "title": {
+    "ca": "Sant Josep va a buscar foc"
+  },
+  "years": "2024",
+  "subtitle": {
+    "ca": "Arranjament Nadala tradicional catalana",
+    "es": "Adaptación Villancico tradicional catalán",
+    "en": "Arrangement of a traditional Catalan carol"
+  },
+  "instrumentation": {
+    "ca": "Cor d’infants ad libitum i cor mixt [SSAATTBB]",
+    "es": "Coro infantil ad libitum y coro mixto [SSAATTBB]",
+    "en": "Children’s choir ad libitum and mixed choir [SSAATTBB]"
+  },
+  "duration": "5’",
+  "details": [
+    {
+      "ca": "Encàrrec de l’Emvic",
+      "es": "Encargo de la Emvic",
+      "en": "Commission of Emvic"
+    },
+    {
+      "ca": "Estrena: Novembre 2024. Vic. Grup d’infants de l’Emvic, Cor Canigó",
+      "es": "Estreno: Noviembre 2024. Vic. Grupo infantil de la Emvic, Cor Canigó",
+      "en": "Premiere: November 2024. Vic. Children’s choir of Emvic, Cor Canigó"
+    }
+  ],
+  "score": "ficta",
+  "category": "veu",
+  "archived": false,
+  "order": 1,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Sant Josep va a buscar foc",
+        "blocks": [
+          {
+            "type": "poem",
+            "text": "Dedicada a tots els infants que canten, fan bé a la humanitat.\nI a tots els adults que canten amb esperit d’infant."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Sant Josep va a buscar foc",
+        "blocks": [
+          {
+            "type": "poem",
+            "text": "Dedicada a todos los niños que cantan, hacen un bien a la humanidad.\nI a todos los adultos que cantan con espíritu de niño."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Sant Josep va a buscar foc",
+        "blocks": [
+          {
+            "type": "poem",
+            "text": "Dedicated to all the children who sing, for they do great good in the world.\nAnd to all the adults who sing with a childlike spirit."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "miqueloliu-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "validate": "node scripts/build.mjs --validate-only",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "markdown-it": "14.1.0",
+    "nunjucks": "3.2.4",
+    "sanitize-html": "2.17.0",
+    "yaml": "2.8.1"
+  },
+  "devDependencies": {
+    "wrangler": "4.21.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

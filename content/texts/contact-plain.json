@@ -1,0 +1,200 @@
+{
+  "entries": [
+    {
+      "key": "contact.title",
+      "format": "plain",
+      "ca": "Contacte",
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    {
+      "key": "contact.description",
+      "format": "plain",
+      "ca": "Per a consultes sobre partitures, encàrrecs, concerts o col·laboracions.",
+      "es": "Para consultas sobre partituras, encargos, conciertos o colaboraciones.",
+      "en": "For enquiries regarding scores, commissions, performances or collaborations."
+    },
+    {
+      "key": "contact.card.title",
+      "format": "plain",
+      "ca": "Informació de contacte",
+      "es": "Información de contacto",
+      "en": "Contact details"
+    },
+    {
+      "key": "contact.email.label",
+      "format": "plain",
+      "ca": "Correu electrònic",
+      "es": "Correo electrónico",
+      "en": "Email address"
+    },
+    {
+      "key": "contact.email.value",
+      "format": "plain",
+      "ca": "mqoliu@gmail.com",
+      "es": "mqoliu@gmail.com",
+      "en": "mqoliu@gmail.com"
+    },
+    {
+      "key": "contact.copy.button",
+      "format": "plain",
+      "ca": "Copiar adreça",
+      "es": "Copiar dirección",
+      "en": "Copy address"
+    },
+    {
+      "key": "contact.copy.copied",
+      "format": "plain",
+      "ca": "Copiat al porta-retalls",
+      "es": "Copiado al portapapeles",
+      "en": "Copied to clipboard"
+    },
+    {
+      "key": "contact.location.label",
+      "format": "plain",
+      "ca": "Ubicació",
+      "es": "Ubicación",
+      "en": "Location"
+    },
+    {
+      "key": "contact.location.value",
+      "format": "plain",
+      "ca": "Barcelona / Catalunya",
+      "es": "Barcelona / Cataluña",
+      "en": "Barcelona / Catalonia"
+    },
+    {
+      "key": "contact.publisher.label",
+      "format": "plain",
+      "ca": "Partitures i edició",
+      "es": "Partituras y edición",
+      "en": "Scores & Publishing"
+    },
+    {
+      "key": "contact.publisher.text",
+      "format": "plain",
+      "ca": "Edicions impreses disponibles a Editorial Ficta. Per a partitures d’estudi o material de lloguer d’obres simfòniques i de cambra, podeu sol·licitar-ho directament.",
+      "es": "Ediciones impresas disponibles en Editorial Ficta. Para partituras de estudio o material de alquiler de obras sinfónicas y de cámara, puede solicitarlo directamente.",
+      "en": "Printed editions available via Editorial Ficta. For study scores or rental performance material for orchestral and chamber works, please inquire directly."
+    },
+    {
+      "key": "contact.publisher.link",
+      "format": "plain",
+      "ca": "Visitar Editorial Ficta",
+      "es": "Visitar Editorial Ficta",
+      "en": "Visit Editorial Ficta"
+    },
+    {
+      "key": "contact.form.title",
+      "format": "plain",
+      "ca": "Enviar un missatge",
+      "es": "Enviar un mensaje",
+      "en": "Send a message"
+    },
+    {
+      "key": "contact.form.name",
+      "format": "plain",
+      "ca": "Nom i cognoms",
+      "es": "Nombre y apellidos",
+      "en": "Name"
+    },
+    {
+      "key": "contact.form.name.placeholder",
+      "format": "plain",
+      "ca": "El teu nom",
+      "es": "Tu nombre",
+      "en": "Your name"
+    },
+    {
+      "key": "contact.form.email",
+      "format": "plain",
+      "ca": "Correu electrònic",
+      "es": "Correo electrónico",
+      "en": "Email address"
+    },
+    {
+      "key": "contact.form.email.placeholder",
+      "format": "plain",
+      "ca": "el-teu-correu@exemple.cat",
+      "es": "tu-correo@ejemplo.com",
+      "en": "your-email@example.com"
+    },
+    {
+      "key": "contact.form.subject",
+      "format": "plain",
+      "ca": "Motiu de la consulta",
+      "es": "Motivo de la consulta",
+      "en": "Subject"
+    },
+    {
+      "key": "contact.form.subject.select",
+      "format": "plain",
+      "ca": "Selecciona una opció...",
+      "es": "Selecciona una opción...",
+      "en": "Select an option..."
+    },
+    {
+      "key": "contact.form.subject.general",
+      "format": "plain",
+      "ca": "Consulta general",
+      "es": "Consulta general",
+      "en": "General enquiry"
+    },
+    {
+      "key": "contact.form.subject.score",
+      "format": "plain",
+      "ca": "Sol·licitud de partitura / material",
+      "es": "Solicitud de partitura / material",
+      "en": "Score / performance material request"
+    },
+    {
+      "key": "contact.form.subject.commission",
+      "format": "plain",
+      "ca": "Encàrrec o proposta de concert",
+      "es": "Encargo o propuesta de concierto",
+      "en": "Commission or concert proposal"
+    },
+    {
+      "key": "contact.form.subject.other",
+      "format": "plain",
+      "ca": "Altres col·laboracions",
+      "es": "Otras colaboraciones",
+      "en": "Other collaborations"
+    },
+    {
+      "key": "contact.form.message",
+      "format": "plain",
+      "ca": "Missatge",
+      "es": "Mensaje",
+      "en": "Message"
+    },
+    {
+      "key": "contact.form.message.placeholder",
+      "format": "plain",
+      "ca": "Escriu el teu missatge aquí...",
+      "es": "Escribe tu mensaje aquí...",
+      "en": "Write your message here..."
+    },
+    {
+      "key": "contact.form.send",
+      "format": "plain",
+      "ca": "Enviar correu electrònic",
+      "es": "Enviar correo electrónico",
+      "en": "Send email"
+    },
+    {
+      "key": "contact.form.notice",
+      "format": "plain",
+      "ca": "S’obrirà el teu client de correu electrònic preconfigurat amb les dades introduïdes.",
+      "es": "Se abrirá tu cliente de correo electrónico preconfigurado con los datos introducidos.",
+      "en": "This will open your default email client with your message pre-filled."
+    },
+    {
+      "key": "contact.form.success",
+      "format": "plain",
+      "ca": "Gràcies! S’ha preparat el correu per enviar.",
+      "es": "¡Gracias! Se ha preparado el correo para enviar.",
+      "en": "Thank you! Your email draft has been opened."
+    }
+  ]
+}

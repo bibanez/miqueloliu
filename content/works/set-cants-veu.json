@@ -1,0 +1,40 @@
+{
+  "id": "set-cants-veu",
+  "title": {
+    "ca": "Set cants",
+    "es": "Set cants (Siete cantos)",
+    "en": "Set cants (Seven songs)"
+  },
+  "years": "2021",
+  "subtitle": {
+    "ca": "Sobre poemes d’Antoni Clapés",
+    "es": "Sobre poemas de Antoni Clapés",
+    "en": "Poems by Antoni Clapés"
+  },
+  "instrumentation": {
+    "ca": "Soprano i piano",
+    "es": "Soprano y piano",
+    "en": "Soprano and piano"
+  },
+  "duration": "14’",
+  "details": [
+    {
+      "ca": "Encàrrec de l’Associació Joan Manén",
+      "es": "Encargo de la Associació Joan Manén",
+      "en": "Commission of Associació Joan Manén"
+    },
+    {
+      "ca": "Estrena: Juny 2023. Ateneu Barcelonès. Elena Copons, David Malet",
+      "es": "Estreno: Junio 2023. Ateneu Barcelonès. Elena Copons, David Malet",
+      "en": "Premiere: June 2023. Ateneu Barcelonès. Elena Copons, David Malet"
+    },
+    {
+      "ca": "CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet"
+    }
+  ],
+  "score": "ficta",
+  "category": "veu",
+  "archived": false,
+  "order": 0,
+  "assets": []
+}

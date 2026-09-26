@@ -1,7 +1,6 @@
 {
   "name": "miqueloliu",
   "compatibility_date": "2026-02-07",
-  "assets": {
-    "directory": "./"
-  }
+  "assets": { "directory": "./dist" },
+  "preview_urls": true
 }

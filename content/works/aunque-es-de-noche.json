@@ -1,0 +1,23 @@
+{
+  "id": "aunque-es-de-noche",
+  "title": {
+    "ca": "...aunque es de noche"
+  },
+  "years": "2005-2006",
+  "instrumentation": {
+    "ca": "Marimba"
+  },
+  "duration": "11’",
+  "details": [
+    {
+      "ca": "Estrena: Juny 2008. Caja Madrid, Barcelona. Sebastià Bel",
+      "es": "Estreno: Junio 2008. Caja Madrid, Barcelona. Sebastià Bel",
+      "en": "Premiere: June 2008. Caja Madrid, Barcelona. Sebastià Bel"
+    }
+  ],
+  "score": "contact",
+  "category": "solista",
+  "archived": false,
+  "order": 7,
+  "assets": []
+}

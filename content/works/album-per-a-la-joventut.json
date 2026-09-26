@@ -1,0 +1,24 @@
+{
+  "id": "album-per-a-la-joventut",
+  "title": {
+    "ca": "Àlbum per a la joventut",
+    "es": "Àlbum per a la joventut (Álbum para la juventud)",
+    "en": "Àlbum per a la joventut (Album for the young)"
+  },
+  "years": "2024-2026",
+  "instrumentation": {
+    "ca": "Piano"
+  },
+  "duration": "35-40’",
+  "details": [
+    {
+      "ca": "En preparació",
+      "es": "En preparación",
+      "en": "Forthcoming"
+    }
+  ],
+  "category": "solista",
+  "archived": false,
+  "order": 0,
+  "assets": []
+}

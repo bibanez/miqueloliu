@@ -1,0 +1,22 @@
+{
+  "id": "tres-estudis-vibrafon",
+  "title": {
+    "ca": "Tres estudis per a vibràfon",
+    "es": "Tres estudis per a vibràfon (Tres estudios para vibráfono)",
+    "en": "Tres estudis per a vibràfon (Three studies for vibraphone)"
+  },
+  "years": "2011",
+  "duration": "6’",
+  "details": [
+    {
+      "ca": "Encàrrec de Percussions de Barcelona",
+      "es": "Encargo de Percussions de Barcelona",
+      "en": "Commission of Percussions de Barcelona"
+    }
+  ],
+  "score": "contact",
+  "category": "pedagogic",
+  "archived": false,
+  "order": 2,
+  "assets": []
+}

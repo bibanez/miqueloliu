@@ -1,4 +1,6 @@
-# Documents de treball (no s'han de publicar a Cloudflare Pages)
+# Documents de treball (no s'han de publicar a Netlify)
 documentacio/
+node_modules/
+dist/
 
 .DS_Store

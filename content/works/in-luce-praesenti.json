@@ -1,0 +1,145 @@
+{
+  "id": "in-luce-praesenti",
+  "title": {
+    "ca": "In luce praesenti"
+  },
+  "years": "2019-2020",
+  "instrumentation": {
+    "ca": "[2.2.2.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -14.12.10.8.6.]"
+  },
+  "duration": "17’",
+  "details": [
+    {
+      "ca": "Encàrrec de L’Auditori de Barcelona – Fundació SGAE-AEOS",
+      "es": "Encargo de L’Auditori de Barcelona – Fundación SGAE-AEOS",
+      "en": "Commission of L’Auditori de Barcelona – Fundació SGAE-AEOS"
+    },
+    {
+      "ca": "Estrena: Octubre 2021. L’Auditori. OBC, Juanjo Mena",
+      "es": "Estreno: Octubre 2021. L’Auditori. OBC, Juanjo Mena",
+      "en": "Premiere: October 2021. L’Auditori. OBC, Juanjo Mena"
+    },
+    {
+      "ca": "Enregistrament: Juliol 2022. OBC, Benjamin Schwarz",
+      "es": "Grabación: Julio 2022. OBC, Benjamin Schwarz",
+      "en": "Recording: July 2022. OBC, Benjamin Schwarz"
+    }
+  ],
+  "recordings": [
+    {
+      "id": "bach-goldberg-variation-7",
+      "title": "Goldberg Variations, BWV 988 — Variation 7",
+      "composer": "Johann Sebastian Bach",
+      "performer": "Dave Grossman",
+      "duration": "2:01",
+      "src": "audio/bach-goldberg-variation-7.mp3",
+      "waveform": [
+        0.633,
+        0.678,
+        0.76,
+        0.706,
+        0.866,
+        0.865,
+        0.739,
+        0.757,
+        0.827,
+        0.814,
+        0.871,
+        1,
+        0.906,
+        0.806,
+        0.842,
+        0.656,
+        0.638,
+        0.758,
+        0.754,
+        0.79,
+        0.844,
+        0.869,
+        0.739,
+        0.83,
+        0.8,
+        0.869,
+        0.998,
+        0.905,
+        0.789,
+        0.773,
+        0.83,
+        0.859,
+        0.745,
+        0.886,
+        0.821,
+        0.778,
+        0.742,
+        0.774,
+        0.795,
+        0.854,
+        0.811,
+        0.798,
+        0.753,
+        0.87,
+        0.876,
+        0.859,
+        0.694,
+        0.867,
+        0.739,
+        0.876,
+        0.823,
+        0.779,
+        0.761,
+        0.779,
+        0.607,
+        0.847,
+        0.806,
+        0.795,
+        0.659,
+        0.862,
+        0.874,
+        0.772,
+        0.539,
+        0.12
+      ],
+      "sourceUrl": "https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince"
+    }
+  ],
+  "score": "ficta",
+  "category": "orquestra",
+  "archived": false,
+  "order": 1,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "In luce praesenti",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "“La llum resplendeix en la foscor, i la foscor no ha pogut ofegar-la”.\n\nAquest verset extret de l’inici del text de St. Joan, en què l’evangelista exposa la seva visió de la creació del món, ha estat el punt de partida d’inspiració de l’obra. Es pren el terme creació —i aquí la llum— no com a gènesi, ni com a fet passat, o com a futur llunyà, sinó com a present. Aquesta llum no s’imposa de manera grandiloqüent sinó que es revela de forma subtil i que és entesa com a “presència”: en les petites coses, en la natura, que resta més o menys amagada, silenciosa, en tota vida. D’aquí el títol, In luce praesenti (en la llum present).\n\nHi ha un verset de R.M.Rilke que il·lustra meravellosament aquesta idea:\n\n“a través de tot el que existeix s’estén l’únic espai autèntic:\n\nl’espai interior al món”.\n\nEn la seva concepció musical, l’obra s’articula per una banda, en una clara polarització greu/agut (més fosc, tenebrós/més clar, lluminós) en parts diferenciades a partir de la seva construcció harmònica i de registres contraposats; per l’altra en forma d’imatges sonores que s’obren, succeeixen, transformen, a partir d’un fons fosc, i que acaben donant lloc a un element comú: un teixit sonor més viu, que vol reflectir aquest instant de més fina lluminositat. Les imatges pretenen evocar aquesta Bellesa a partir del treball subtil de les relacions motíviques, harmòniques, i de la recerca de les possibilitats sonores, tímbriques i expressives de la orquestra simfònica.\n\nIn luce praesenti està vertebrada en tres grans seccions que s’obren amb un moviment ascendent en glissando, unides per dos passatges de transició amb solos de caràcter sobri, auster, a la corda. Tot condueix a un final que tendeix a una mirada interior, sense direccionalitat, on el motiu generador de l’obra és reduït a l’essencial —un llunyà diàleg entre dues notes, amb èmfasi en el camp harmònic al voltant de fa#, nota de referència—, i on la respiració i el silenci van guanyant “espai” progressivament.\n\nL’obra ha estat escrita per encàrrec de l’Auditori de Barcelona –Fundació SGAE i la AEOS per a ser estrenada la temporada 2020-21 per l’Orquestra Simfònica de Barcelona i Nacional de Catalunya."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "In luce praesenti",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "“La luz resplandece en la oscuridad, y la oscuridad no ha podido ahogarla”.\n\nEste versículo extraído del inicio del texto de S. Juan, en que el evangelista expone su visión de la creación del mundo, ha estado el punto de partida de inspiración de la obra. Se toma el término creación —y aquí la luz— no como génesis, ni como hecho pasado, o como futuro lejano, sino como presente. Esta luz no se impone de manera grandilocuente sino que se revela de forma sutil y que es entendida como “presencia”: en las pequeñas cosas, en la naturaleza, que queda más o menos escondida, silenciosa, en toda vida. De ahí el título, In luce praesenti (en la luz presente).\n\nHay un versículo de R.M.Rilke que ilustra maravillosamente esta idea:\n\n“a través de todo lo que existe se extiende el único espacio auténtico:\n\nel espacio interior al mundo”.\n\nEn su concepción musical, la obra se articula por un lado, en una clara polarización grave/agudo (más oscuro, tenebroso/más claro, luminoso) en partes diferenciadas a partir de su construcción armónica y de registros contrapuestos; por otro lado en forma de imágenes sonoras que se abren, suceden, transforman, a partir de un fondo oscuro, y que terminan dando lugar a un elemento común: un tejido sonoro más vivo, que quiere reflejar este instante de más fina luminosidad. Las imágenes pretenden evocar esta Belleza a partir del trabajo sutil de las relaciones motívicas, armónicas, y de la búsqueda de las posibilidades sonoras, tímbricas y expresivas de la orquesta sinfónica.\n\nIn luce praesenti está vertebrada en tres grandes secciones que se abren con un movimiento ascendente en glissando, unidas por dos pasajes de transición con solos de carácter sobrio, austero, a la cuerda. Todo conduce a un final que tiende a una mirada interior, sin direccionalidad, donde el motivo generador de la obra es reducido a lo esencial —un lejano diálogo entre dos notas, con énfasis en el campo armónico alrededor de fa#, nota de referencia—, y donde la respiración y el silencio van ganando “espacio” progresivamente.\n\nLa obra ha estado escrita por encargo de “L’Auditori” de Barcelona – Fundación SGAE y la AEOS para ser estrenada la temporada 2020-21 por la “Orquestra Simfònica de Barcelona i Nacional de Catalunya”."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "In luce praesenti",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "“The light shines in the darkness, and the darkness cannot smother it”.\n\nThis verse from the beginning of the text by Saint John, in which the evangelist presents his vision of the creation of the world, has been the source of inspiration for this piece. The term “creation” – and thus the light – is taken not as a genesis, neither as a past event nor as a far future, but rather as the present. This light is not imposed in a grandiloquent manner but rather it is subtly revealed and understood as a “presence”: in the small things, in nature, which remains concealed, silent, in all life forms. Hence the title, In luce praesenti (In light present).\n\nThere is a verse by R. M. Rilke which perfectly illustrates this idea:\n\n“Through all that is, the only true space expands:\n\nThe world’s inner space”.\n\nIn its musical conception, the piece is articulated on the one hand, in an obvious polarisation high / low (darker, gloomier / clearer, lighter) in differentiated parts according to their harmonic construction and opposing registers; on the other hand, in the form of soundscape, which opens, occurs and transforms, from a dark background, which ends up giving way to a common element: a more lively sound texture, which intends to reflect this instant of lighter brilliance. The images are intended to evoke this beauty growing out of the subtle work of motivic, harmonic relationships, as well as the research of the sound, timbre and expression possibilities of the symphonic orchestra.\n\nIn luce praesenti is constructed in three large sections opening in an ascending movement in glissando, brought together by two transitional passages with sober and austere solos, at the strings. It all leads to an end that tends to an inner look, without direction, where the generating motif of the piece is reduced to the bare essentials – a long dialogue between two notes, with emphasis in the harmonic field around the fa#, note of reference - , where the breathing and the silence are gradually gaining “space”.\n\nThe piece has been written at the request of the “Auditori de Barcelona – Fundació SGAE” and the AEOS to be released in the season 2020 – 2021 by the “Orquestra Simfònica de Barcelona i Nacional de Catalunya.”"
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

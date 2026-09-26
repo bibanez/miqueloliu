@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "key": "bio.title",
+      "format": "plain",
+      "ca": "Biografia",
+      "es": "Biografía",
+      "en": "Biography"
+    },
+    {
+      "key": "bio.toggle.short",
+      "format": "plain",
+      "ca": "Versió curta",
+      "es": "Versión corta",
+      "en": "Short version"
+    },
+    {
+      "key": "bio.toggle.long",
+      "format": "plain",
+      "ca": "Versió llarga",
+      "es": "Versión larga",
+      "en": "Long version"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "entries": [
+    {
+      "key": "home.quote.text",
+      "format": "lines",
+      "ca": "«Estimo de la meva existència les hores tenebroses\nen què s’aprofundeixen els meus sentits;…\n\n…en elles he après que una segona vida\nimmensa, intemporal, d’amplis espais tinc.»",
+      "es": "«Amo de mi existencia las horas tenebrosas\nen que se profundizan mis sentidos;…\n\n…en ellas he aprendido que una segunda vida\ninmensa, intemporal, de amplios espacios tengo.»",
+      "en": "«Ich liebe meines Wesens Dunkelstunden,\nin welchen meine Sinne sich vertiefen;…\n\n…aus ihnen kommt mir Wissen, dass ich Raum\nzu einem zweiten zeitlos breiten Leben habe.»"
+    },
+    {
+      "key": "home.testimonial.clapes.text",
+      "format": "lines",
+      "ca": "escolto la teva música\n\nsento una inacció audaç\nque m’obre les portes de la reflexió\nels teus silencis demanen\nser escoltats en solitari\n\nperquè aquests sons\nno provenen del buit\ndel no-res\n\nsón presència d’un silenci primigeni\nque reclama un elevat afany d’abstracció\nper poder acoblar emoció i pensament\n\nm’aturo — per anar més lluny\n\npotser més enllà dels jardins del silenci.",
+      "es": "escolto la teva música\n\nsento una inacció audaç\nque m’obre les portes de la reflexió\nels teus silencis demanen\nser escoltats en solitari\n\nperquè aquests sons\nno provenen del buit\ndel no-res\n\nsón presència d’un silenci primigeni\nque reclama un elevat afany d’abstracció\nper poder acoblar emoció i pensament\n\nm’aturo — per anar més lluny\n\npotser més enllà dels jardins del silenci.",
+      "en": "escolto la teva música\n\nsento una inacció audaç\nque m’obre les portes de la reflexió\nels teus silencis demanen\nser escoltats en solitari\n\nperquè aquests sons\nno provenen del buit\ndel no-res\n\nsón presència d’un silenci primigeni\nque reclama un elevat afany d’abstracció\nper poder acoblar emoció i pensament\n\nm’aturo — per anar més lluny\n\npotser més enllà dels jardins del silenci."
+    }
+  ]
+}

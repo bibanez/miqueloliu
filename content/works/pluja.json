@@ -1,0 +1,244 @@
+{
+  "id": "pluja",
+  "title": {
+    "ca": "Pluja",
+    "es": "Pluja (Lluvia)",
+    "en": "Pluja (Rain)"
+  },
+  "years": "2024-2025",
+  "instrumentation": {
+    "ca": "[3.2.3.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -12.12.10.8.6.]"
+  },
+  "duration": "12’",
+  "details": [
+    {
+      "ca": "Encàrrec de L’Auditori de Barcelona – OBC",
+      "es": "Encargo de L’Auditori de Barcelona – OBC",
+      "en": "Commission of L’Auditori de Barcelona – OBC"
+    },
+    {
+      "ca": "Estrena: Novembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
+      "es": "Estreno: Noviembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
+      "en": "Premiere: November 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot"
+    }
+  ],
+  "recordings": [
+    {
+      "id": "bach-goldberg-variation-1",
+      "title": "Goldberg Variations, BWV 988 — Variation 1",
+      "composer": "Johann Sebastian Bach",
+      "performer": "Dave Grossman",
+      "duration": "2:01",
+      "src": "audio/bach-goldberg-variation-1.mp3",
+      "waveform": [
+        1,
+        0.874,
+        0.918,
+        0.858,
+        0.861,
+        0.84,
+        0.989,
+        0.852,
+        0.803,
+        0.875,
+        0.878,
+        0.832,
+        0.848,
+        0.792,
+        0.881,
+        0.981,
+        0.837,
+        0.87,
+        0.91,
+        0.869,
+        0.841,
+        0.834,
+        1,
+        0.842,
+        0.811,
+        0.872,
+        0.883,
+        0.847,
+        0.731,
+        0.899,
+        0.856,
+        0.807,
+        0.811,
+        0.877,
+        0.775,
+        0.91,
+        0.678,
+        0.954,
+        0.881,
+        0.769,
+        0.805,
+        0.824,
+        0.875,
+        0.782,
+        0.988,
+        0.976,
+        0.994,
+        0.835,
+        0.881,
+        0.779,
+        0.859,
+        0.892,
+        0.687,
+        0.953,
+        0.81,
+        0.767,
+        0.85,
+        0.839,
+        0.871,
+        0.845,
+        0.99,
+        0.994,
+        0.741,
+        0.12
+      ],
+      "sourceUrl": "https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince"
+    }
+  ],
+  "score": "ficta",
+  "category": "orquestra",
+  "archived": false,
+  "order": 0,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Pluja",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Una nit, enmig de temps de sequera i de la calor de l’estiu, vaig sentir —i escoltar— com començaven a caure primer unes gotes i, poc després, una pluja fina continuada. Enmig del silenci em va semblar una meravella; la sonoritat i el signe de vida que recomençava. Vaig recordar el poema «Pluja», d’Antoni Clapés, on expressa una identificació interna, una unió amb aquesta pluja i un sentiment de «presència» en l’instant durador que ens ofereix. Vaig escollir un segon poema del mateix llibre percebent que complementava el primer i alhora ajudava a articular l’obra en dues parts.\n\nAquests dos poemes són, doncs, el punt de partida d’aquesta música, que, més enllà del «sentiment psicològic» que diria F. Mompou, en la seva vessant descriptiva conté alguns trets fàcilment identificables que poden ajudar a l’escolta. El sentit descendent, imitatiu, és present al llarg de tota l’obra; a l’inici en poques notes, a la manera de gotes que cauen sobre «l’inexpressable absent» —representat pel soroll de fusta (sense notes) a les cordes i el soroll de l’aire sol a la secció de vent metall— o sobre el «cant obscur» —representat per un motiu més melòdic al registre greu dels clarinets. Després, aquest sentit descendent és present dins una textura continuada amb tendència clara a la repetició i d’on sorgeix un «cant» que també va agafant rellevància/insistència. Tot conflueix en el punt culminant, que tanca la primera meitat de l’obra.\n\nSeguint el fil, i sense pausa, la segona, de caràcter més recollit, posa èmfasi en el ritme ternari, que fins ara havia estat latent. El mateix element descendent de la pluja aquí es transforma en un motiu melòdic, subtil a l’inici però altament identificable, i que en una delicada escriptura orquestral va apareixent en diferents camps harmònics a partir d’un fons amb més quietud. Correspon a la mirada interior a què ens convida especialment el segon poema, a una interioritat en què un «veu» i es descobreix «Vida». Vol ser un missatge d’esperança, de renaixença, en la humilitat de la foscor, de cadascú, del món.\n\n### I"
+          },
+          {
+            "type": "poem",
+            "text": "Pluja sense sòl:\nsimplement pluja\n\ndamunt l’inexpressable\nabsent\n\ndamunt el cant\nobscur del poeta.\n\nPluja.\n\n\tSense sostre\nets pluja     —      tu també.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### II"
+          },
+          {
+            "type": "poem",
+            "text": "Llavors, oblida tot pensament  —  i la memòria,\ni refugia’t en la humilitat de la foscor,\ncar només en ella podràs veure\n\t\t\t\t    i veure’t."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Pluja (Lluvia)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Una noche, en medio de tiempo de sequía y del calor del verano, oí —y escuché— que empezaban a caer primero unas gotas y, poco después, una lluvia fina continuada. En medio del silencio me pareció una maravilla; la sonoridad y el signo de vida que recomenzaba. Recordé el poema «Pluja» (Lluvia), de Antoni Clapés, donde expresa una identificación interna, una unión con esta lluvia y un sentimiento de «presencia» en el instante duradero que nos ofrece. Escogí un segundo poema del mismo libro percibiendo que complementaba el primero y a la vez ayudaba a articular la obra en dos partes.\n\nEstos dos poemas son, pues, el punto de partida de esta música, que, más allá del «sentimiento psicológico» que diría F. Mompou, en su vertiente descriptiva contiene algunos rasgos fácilmente identificables que pueden ayudar a la escucha. El sentido descendente, imitativo, está presente a lo largo de toda la obra; al principio en pocas notas, a modo de gotas que caen sobre «l’inexpressable absent» (el inexpresable ausente) —representado por el ruido de madera (sin notas) en las cuerdas y el ruido del aire solo en la sección de viento metal— o sobre el «cant obscur» (canto oscuro) —representado por un motivo más melódico en el registro grave de los clarinetes. Después, este sentido descendente está presente dentro de una textura continuada con clara tendencia a la repetición y de donde surge un «canto» que también va adquiriendo relevancia/insistencia. Todo confluye en el punto culminante, que cierra la primera mitad de la obra.\n\nSiguiendo el hilo, y sin pausa, la segunda, de carácter más recogido, pone énfasis en el ritmo ternario, que hasta ahora había estado latente. El mismo elemento descendente de la lluvia aquí se transforma en un motivo melódico, sutil al principio pero altamente identificable, y que en una delicada escritura orquestal va apareciendo en distintos campos armónicos a partir de un fondo con más quietud. Corresponde a la mirada interior a la que nos invita especialmente el segundo poema, a una interioridad en la que uno «ve» y se descubre «Vida». Quiere ser un mensaje de esperanza, de renacimiento, en la humildad de la oscuridad, de cada uno, del mundo.\n\n### I"
+          },
+          {
+            "type": "poem",
+            "text": "Lluvia sin suelo  —\nsimplemente lluvia\n\nsobre el inexpresable\nausente\n\nsobre el canto\noscuro del poeta.\n\nLluvia.\n\n\t       Sin techo\neres lluvia                     tú también.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### II"
+          },
+          {
+            "type": "poem",
+            "text": "Por lo tanto, olvida todo pensamiento    —   y la memoria,\nrefúgiate en la humildad de la tiniebla,\nporque solo en ella podrás ver\n\t\t\t\t   y verte.\n\n\t\t\t\t\t\t\tAntoni Clapés (trad. Dolors Udina)"
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Pluja (Rain)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "## Preface\n\nOne night in the dry season, in the heat of the summer, I heard — and listened to — how raindrops began to fall: first just a few and, soon after, a continuous drizzle. It seemed to me a wonderful thing in the midst of the silence; the sound and the sign of life beginning again. I remembered the poem “Pluja” (Rain) by Antoni Clapés, where he expresses his internal identification, the union with this rain and a feeling of “presence” while it lasted. I chose a second poem from the same book, realising that it complemented the first and also helped to organise the work in two parts.\n\nThus, these two poems provide the starting point of this music, which, beyond the “psychological feeling” mentioned by Frederic Mompou, contains some easily identifiable features that can be described to help the listener. An imitative descending direction features throughout the entire work; at the beginning in a few notes, by way of drops that fall on “unspeakable absence”, represented by the sound of wood (without notes) on the strings and the sound of the air alone in the brass section, and on “obscure song”, represented by a more melodic motif in the bass register of the clarinets. After that, this descending direction is present within a continuous texture that displays a clear tendency towards repetition and from which a “song” emerges, also becoming more relevant and insistent. Everything converges in the climax that concludes the first half of the work.\n\nFollowing the thread and without a pause, the second movement – with a more collected character – emphasizes the ternary rhythm, which had been latent until now. The same descending element of the rain is here transformed into a melodic motif, subtle at the beginning but highly identifiable; in a delicate orchestral passage it emerges in different harmonic fields from a stiller background. It corresponds to the inner gaze especially induced by the second poem, leading towards an interiority in which one “sees” and discovers “Life” in oneself. It is intended to be a message of hope and rebirth, in the humility of darkness, of each one of us, of the world.\n\n### I\n\nEarthless rain:\n\nmerely rain\n\nupon unspeakable\n\nabsence\n\nupon the poet's\n\nobscure song.\n\nRain.\n\nWith no roof\n\nyou are rain — yourself.\n\n### II\n\nThen, forget all thought — and memory,\n\nand seek refuge in the humility of darkness,\n\nsince only there will you be able to see\n\nand see yourself.\n\nAntoni Clapés (trans. Sam Abrams)"
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "title": "Pluie",
+        "blocks": [
+          {
+            "type": "poem",
+            "text": "Pluie\n"
+          },
+          {
+            "type": "prose",
+            "body": "### I"
+          },
+          {
+            "type": "poem",
+            "text": "Pluie sans terre:\nsimplement la pluie\n\nsur l’inexprimable\nabsent\n\nsur le chant\nobscur du poète.\n\nPluie.\n\n                    Sans toit\ntu es pluie                        toi aussi.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### II"
+          },
+          {
+            "type": "poem",
+            "text": "Alors, oublie toute pensée — et souvenance,\net  trouve refuge dans l’humilité de l’obscurité,\ncar en elle seulement tu pourras voir\n                                                                     et te voir,   toi."
+          },
+          {
+            "type": "prose",
+            "body": "Antoni Clapés (trad. Mireille Gansel)"
+          }
+        ]
+      },
+      {
+        "language": "de",
+        "title": "Regen",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "### I"
+          },
+          {
+            "type": "poem",
+            "text": "Regen ohne Boden:\neinfach nur Regen\n\nauf das nicht sagbare\nAbwesende\n\nauf den dunklen\nGesang, des Dichters.\n\nRegen.\n\n\tOhne Dach\nbist du Regen    —     du auch.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### II"
+          },
+          {
+            "type": "poem",
+            "text": "Alsdann vergiss alle Gedanken  —   und die Erinnerung\nund flüchte dich in die Demut der Dunkelheit,\ndenn nur in ihr wirst du sehen\n\t\t\tund dich sehen.\n\n\t\t\t\t\tAntoni Clapés (Übersetzung von Claudia Kalász)"
+          }
+        ]
+      },
+      {
+        "language": "eu",
+        "title": "Euri",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "### I"
+          },
+          {
+            "type": "poem",
+            "text": "Euri\n\nZoru gabeko euri:\neuri huts\n\nausente\nadierazi-ezinagaren gainean\n\npoetaren abesti\nilunaren gainean.\n\nEuri.\n\n                Sabai gabe\neuri zara         —       zu ere.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### II"
+          },
+          {
+            "type": "poem",
+            "text": "Orduan, ahaztu pentsamendu oro — eta memoria,\neta babes zaitez umelaren umilean,\nbertan bakarrik ikusi ahal izango baituzu zeure\nburua ikusiaz."
+          },
+          {
+            "type": "prose",
+            "body": "Antoni Clapés (trad. Tere Irastortza)"
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

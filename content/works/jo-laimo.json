@@ -1,0 +1,57 @@
+{
+  "id": "jo-laimo",
+  "title": {
+    "ca": "Jo l’aimo",
+    "es": "Jo l’aimo (Yo la amo)",
+    "en": "Jo l’aimo (I love her)"
+  },
+  "years": "2023",
+  "instrumentation": {
+    "ca": "Viola i cor mixt [SSAATTBB]",
+    "es": "Viola y coro mixto [SSAATTBB]",
+    "en": "Viola and mixed choir [SSAATTBB]"
+  },
+  "duration": "6’",
+  "details": [
+    {
+      "ca": "Encàrrec d’Agnès Mauri",
+      "es": "Encargo de Agnès Mauri",
+      "en": "Commission of Agnès Mauri"
+    },
+    {
+      "ca": "Estrena: Març 2025. Barcelona, Basilea, Cardedeu. Agnès Mauri, Cor Noctes",
+      "es": "Estreno: Marzo 2025. Barcelona, Basilea, Cardedeu. Agnès Mauri, Cor Noctes",
+      "en": "Premiere: March 2025. Barcelona, Basel, Cardedeu. Agnès Mauri, Cor Noctes"
+    }
+  ],
+  "score": "ficta",
+  "category": "veu",
+  "archived": false,
+  "order": 2,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Jo l’aimo",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Jo l’aimo és una obra per a viola solista i cor mixt a cappella escrita a partir de la cançó tradicional catalana «Muntanyes regalades». El punt d’inspiració generador ha estat percebre la relació entre les quatre notes ascendents de l’inici, amb les quintes justes amagades, i les quatre cordes a l’aire de la viola; l’arpegiat ascendent i les seves relacions harmòniques ha estat el material de partida. L’altra font inspiradora ha estat la bellesa dels diferents girs melòdics de la cançó, amb el sentit descendent amagat i el retorn reiterat a la nota re com a nota base. L’obra està estructurada en tres parts, on la cançó, mantenint la melodia original, ocupa la part central. En la primera secció, la viola traça una gran línia expressiva tot impulsant el cor en ressonàncies mantingudes. En la darrera secció, el cor, impulsat per la tornada, agafa més protagonisme i, després d’un breu moment de més «agitació» acaba transformant la lletra: finalment, malgrat les aparents contrarietats de la vida, aquesta, jo l’aimo…\n\nL’obra és un encàrrec de la violista Agnès Mauri per ser interpretada i enregistrada amb el cor de cambra Noctes dirigit per Maria Mauri, i està dedicada a totes dues."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Jo l’aimo (Yo la amo)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Jo l’aimo (Yo la amo) es una obra para viola solista y coro mixto a cappella escrita a partir de la canción tradicional catalana «Muntanyes regalades». El punto de inspiración generador ha sido percibir la relación entre las cuatro notas ascendentes del inicio, con las quintas justas ocultas, y las cuatro cuerdas al aire de la viola; el arpegiado ascendente y sus relaciones armónicas ha sido el material de partida. La otra fuente inspiradora ha sido la belleza de los diferentes giros melódicos de la canción, con el sentido descendente oculto y el retorno reiterado a la nota re como nota base. La obra está estructurada en tres partes, donde la canción, manteniendo la melodía original, ocupa la parte central. En la primera sección, la viola traza una gran línea expresiva impulsando el coro en resonancias sostenidas. En la última sección, el coro, impulsado por el estribillo, adquiere más protagonismo y, después de un breve momento de más «agitación», acaba transformando la letra: finalmente, a pesar de las aparentes contrariedades de la vida, ésta, jo l’aimo (yo la amo)…\n\nLa obra es un encargo de la violista Agnès Mauri para ser interpretada y grabada con el coro de cámara Noctes, dirigido por Maria Mauri, y está dedicada a ambas."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}
