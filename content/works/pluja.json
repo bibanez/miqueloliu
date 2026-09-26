@@ -1,27 +1,4 @@
 {
-  "id": "pluja",
-  "title": {
-    "ca": "Pluja",
-    "es": "Pluja (Lluvia)",
-    "en": "Pluja (Rain)"
-  },
-  "years": "2024-2025",
-  "instrumentation": {
-    "ca": "[3.2.3.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -12.12.10.8.6.]"
-  },
-  "duration": "12’",
-  "details": [
-    {
-      "ca": "Encàrrec de L’Auditori de Barcelona – OBC",
-      "es": "Encargo de L’Auditori de Barcelona – OBC",
-      "en": "Commission of L’Auditori de Barcelona – OBC"
-    },
-    {
-      "ca": "Estrena: Novembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
-      "es": "Estreno: Noviembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
-      "en": "Premiere: November 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot"
-    }
-  ],
   "recordings": [
     {
       "id": "bach-goldberg-variation-1",
@@ -99,10 +76,19 @@
       "sourceUrl": "https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince"
     }
   ],
-  "score": "ficta",
-  "category": "orquestra",
+  "details": [
+    {
+      "ca": "Encàrrec de L’Auditori de Barcelona – OBC",
+      "es": "Encargo de L’Auditori de Barcelona – OBC",
+      "en": "Commission of L’Auditori de Barcelona – OBC"
+    },
+    {
+      "ca": "Estrena: Novembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
+      "es": "Estreno: Noviembre 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot",
+      "en": "Premiere: November 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot"
+    }
+  ],
   "archived": false,
-  "order": 0,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -156,7 +142,15 @@
         "blocks": [
           {
             "type": "prose",
-            "body": "## Preface\n\nOne night in the dry season, in the heat of the summer, I heard — and listened to — how raindrops began to fall: first just a few and, soon after, a continuous drizzle. It seemed to me a wonderful thing in the midst of the silence; the sound and the sign of life beginning again. I remembered the poem “Pluja” (Rain) by Antoni Clapés, where he expresses his internal identification, the union with this rain and a feeling of “presence” while it lasted. I chose a second poem from the same book, realising that it complemented the first and also helped to organise the work in two parts.\n\nThus, these two poems provide the starting point of this music, which, beyond the “psychological feeling” mentioned by Frederic Mompou, contains some easily identifiable features that can be described to help the listener. An imitative descending direction features throughout the entire work; at the beginning in a few notes, by way of drops that fall on “unspeakable absence”, represented by the sound of wood (without notes) on the strings and the sound of the air alone in the brass section, and on “obscure song”, represented by a more melodic motif in the bass register of the clarinets. After that, this descending direction is present within a continuous texture that displays a clear tendency towards repetition and from which a “song” emerges, also becoming more relevant and insistent. Everything converges in the climax that concludes the first half of the work.\n\nFollowing the thread and without a pause, the second movement – with a more collected character – emphasizes the ternary rhythm, which had been latent until now. The same descending element of the rain is here transformed into a melodic motif, subtle at the beginning but highly identifiable; in a delicate orchestral passage it emerges in different harmonic fields from a stiller background. It corresponds to the inner gaze especially induced by the second poem, leading towards an interiority in which one “sees” and discovers “Life” in oneself. It is intended to be a message of hope and rebirth, in the humility of darkness, of each one of us, of the world.\n\n### I\n\nEarthless rain:\n\nmerely rain\n\nupon unspeakable\n\nabsence\n\nupon the poet's\n\nobscure song.\n\nRain.\n\nWith no roof\n\nyou are rain — yourself.\n\n### II\n\nThen, forget all thought — and memory,\n\nand seek refuge in the humility of darkness,\n\nsince only there will you be able to see\n\nand see yourself.\n\nAntoni Clapés (trans. Sam Abrams)"
+            "body": "One night in the dry season, in the heat of the summer, I heard — and listened to — how raindrops began to fall: first just a few and, soon after, a continuous drizzle. It seemed to me a wonderful thing in the midst of the silence; the sound and the sign of life beginning again. I remembered the poem “Pluja” (Rain) by Antoni Clapés, where he expresses his internal identification, the union with this rain and a feeling of “presence” while it lasted. I chose a second poem from the same book, realising that it complemented the first and also helped to organise the work in two parts.\n\nThus, these two poems provide the starting point of this music, which, beyond the “psychological feeling” mentioned by Frederic Mompou, contains some easily identifiable features that can be described to help the listener. An imitative descending direction features throughout the entire work; at the beginning in a few notes, by way of drops that fall on “unspeakable absence”, represented by the sound of wood (without notes) on the strings and the sound of the air alone in the brass section, and on “obscure song”, represented by a more melodic motif in the bass register of the clarinets. After that, this descending direction is present within a continuous texture that displays a clear tendency towards repetition and from which a “song” emerges, also becoming more relevant and insistent. Everything converges in the climax that concludes the first half of the work.\n\nFollowing the thread and without a pause, the second movement – with a more collected character – emphasizes the ternary rhythm, which had been latent until now. The same descending element of the rain is here transformed into a melodic motif, subtle at the beginning but highly identifiable; in a delicate orchestral passage it emerges in different harmonic fields from a stiller background. It corresponds to the inner gaze especially induced by the second poem, leading towards an interiority in which one “sees” and discovers “Life” in oneself. It is intended to be a message of hope and rebirth, in the humility of darkness, of each one of us, of the world."
+          },
+          {
+            "type": "poem",
+            "text": "Earthless rain:\nmerely rain\nupon unspeakable\nabsence\nupon the poet's\nobscure song.\nRain.\nWith no roof\nyou are rain — yourself."
+          },
+          {
+            "type": "poem",
+            "text": "Then, forget all thought — and memory,\nand seek refuge in the humility of darkness,\nsince only there will you be able to see\nand see yourself.\nAntoni Clapés (trans. Sam Abrams)"
           }
         ]
       },
@@ -240,5 +234,19 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 0,
+  "instrumentation": {
+    "ca": "[3.2.3.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -12.12.10.8.6.]"
+  },
+  "score": "ficta",
+  "duration": "12’",
+  "years": "2024-2025",
+  "title": {
+    "ca": "Pluja",
+    "es": "Pluja (Lluvia)",
+    "en": "Pluja (Rain)"
+  },
+  "id": "pluja",
+  "category": "orquestra"
 }
