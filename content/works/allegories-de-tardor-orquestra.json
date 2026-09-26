@@ -1,0 +1,166 @@
+{
+  "id": "allegories-de-tardor-orquestra",
+  "title": {
+    "ca": "Al·legories de tardor – Microludis per a orquestra",
+    "es": "Al·legories de tardor – Microludis per a orquestra (Alegorías de otoño – Microludios para orquesta)",
+    "en": "Al·legories de tardor – Microludis per a orquestra (Autumn allegories – Microludes for orchestra)"
+  },
+  "years": "2012-2013",
+  "instrumentation": {
+    "ca": "[2.2.2.2.-2.2.2.1.-3 perc. –arp. -12.10.8.8.6.]"
+  },
+  "duration": "13’",
+  "details": [
+    {
+      "ca": "XXXII Premi Reina Sofia de Composició Musical",
+      "es": "XXXII Premio Reina Sofía de Composición Musical",
+      "en": "XXXII Queen Sofia Composition Prize"
+    },
+    {
+      "ca": "Estrena: Octubre 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar",
+      "es": "Estreno: Octubre 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar",
+      "en": "Premiere: October 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar"
+    }
+  ],
+  "recordings": [
+    {
+      "id": "bach-goldberg-variation-26",
+      "title": "Goldberg Variations, BWV 988 — Variation 26",
+      "composer": "Johann Sebastian Bach",
+      "performer": "Dave Grossman",
+      "duration": "2:00",
+      "src": "audio/bach-goldberg-variation-26.mp3",
+      "waveform": [
+        0.768,
+        0.865,
+        0.927,
+        0.839,
+        0.795,
+        0.776,
+        0.765,
+        0.747,
+        0.781,
+        0.856,
+        0.781,
+        0.801,
+        0.89,
+        0.824,
+        0.917,
+        0.903,
+        0.759,
+        0.848,
+        0.923,
+        0.827,
+        0.77,
+        0.766,
+        0.765,
+        0.782,
+        0.861,
+        0.775,
+        0.778,
+        0.843,
+        0.893,
+        0.92,
+        0.907,
+        0.815,
+        0.82,
+        0.993,
+        0.995,
+        0.833,
+        0.733,
+        0.869,
+        0.93,
+        0.749,
+        0.783,
+        0.77,
+        0.907,
+        0.876,
+        0.953,
+        0.845,
+        0.776,
+        0.817,
+        0.84,
+        0.995,
+        1,
+        0.838,
+        0.867,
+        0.824,
+        0.947,
+        0.788,
+        0.766,
+        0.787,
+        0.899,
+        0.878,
+        0.956,
+        0.85,
+        0.664,
+        0.12
+      ],
+      "sourceUrl": "https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince"
+    }
+  ],
+  "score": "ficta",
+  "category": "orquestra",
+  "archived": false,
+  "order": 2,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Al·legories de tardor – Microludis per a orquestra",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Al·legories de tardor – Microludis per a orquestra"
+          },
+          {
+            "type": "poem",
+            "text": "I\tFulles I\nII\tGlaç\nIII\tTerra humida\nIV\tFulles II\nV\tOcell solitari\nVI\tGris sobre gris\nVII\tFulles III\nVIII\t  *   *   *"
+          },
+          {
+            "type": "prose",
+            "body": "Aquests microludis són una mirada a alguns elements de la tardor amb les fulles, en tres imatges diferents (fulles que cauen, fulles al vent, colors), com a eix vertebrador. Al·legories doncs que, com totes les mirades, es poden viure a diferents nivells de sensibilitat, de profunditat. És una música que, malgrat els contrastos entre números, tendeix a l’estaticitat, música que no tanca, peces curtes que deixen a l’aire i conviden a una altra percepció del que ens envolta.\n\nEs fa un tractament de la orquestra amb especial atenció als seus recursos tímbrics i colorístics, a partir de l’ambient suggerent de la tardor, amb el seu perfum, color, i el sentiment de quelcom perdut.\n\nL’últim número, sense títol, vol reflectir allò que és present en tot. Es fa èmfasi en les notes si-la# que, de manera més o menys subtil, han anat apareixent en els números anteriors."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Al·legories de tardor – Microludis per a orquestra (Alegorías de otoño – Microludios para orquesta)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Alegorías de otoño – Microludios para orquesta"
+          },
+          {
+            "type": "poem",
+            "text": "I\tHojas I\nII\tHielo\nIII\tTierra húmeda\nIV\tHojas II\nV\tPájaro solitario\nVI\tGris sobre gris\nVII\tHojas III\nVIII\t   *   *   *"
+          },
+          {
+            "type": "prose",
+            "body": "Estos microludios son una mirada a algunos elementos de otoño con las hojas, en tres imágenes distintas (hojas que caen, hojas al viento, colores), como eje vertebrador. Alegorías que, como todas las miradas, se pueden vivir a distintos niveles de sensibilidad, de profundidad. Es una música que, pese a los contrastes entre números, tiende a la estaticidad, música que no cierra, piezas cortas que quedan en el aire e invitan a otra percepción de lo que nos rodea.\n\nSe hace un tratamiento de la orquesta con especial atención a sus recursos tímbricos y colorísticos, a partir del ambiente sugerente del otoño, con su perfume, color, y el sentimiento de algo perdido.\n\nEl último número, sin título, quiere reflejar aquello que está presente en todo. Se hace énfasis en las notas si-la# que, de forma más o menos sutil, han ido apareciendo en los números anteriores."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Al·legories de tardor – Microludis per a orquestra (Autumn allegories – Microludes for orchestra)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Autumn allegories – Microludes for orchestra"
+          },
+          {
+            "type": "poem",
+            "text": "I\tLeaves I\nII\tIce\nIII\tWet earth\nIV\tLeaves II\nV\tLonely bird\nVI\tGrey over grey\nVII\tLeaves III\nVIII\t   *   *   *"
+          },
+          {
+            "type": "prose",
+            "body": "A glance to some Autumn references about leaves, three diferent images (the fall of golden leaves, green leaves of Summer moving in the air, the beautiful colours) taken as a leadind thread. The allegorical glances which can be lived at different levels of sense and sensibility. Short pieces to be ended by oneself, according to the own experience. A kind of music which in spite of the contrast between pieces, has a clear tendency to the elasticity, a music which doesn’t pretend to solve anything, music that remains suspended in the air and invites to discover another perception of what is around us.\n\nThere is a colouristic treatment of the orchestra, particularly focusing on the timbral resources suggested by the Autumn atmosphere, its fragance and colour, and the feeling of something lost.\n\nThe last piece untitled tries to reflect a presence in every thing. A stress on to the notes B-A#, which in a more subtle way, have appeared in some previous pieces."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

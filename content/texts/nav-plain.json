@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "key": "nav.home",
+      "format": "plain",
+      "ca": "Inici",
+      "es": "Inicio",
+      "en": "Home"
+    },
+    {
+      "key": "nav.biography",
+      "format": "plain",
+      "ca": "Biografia",
+      "es": "Biografía",
+      "en": "Biography"
+    },
+    {
+      "key": "nav.catalogue",
+      "format": "plain",
+      "ca": "Obres",
+      "es": "Obras",
+      "en": "Works"
+    },
+    {
+      "key": "nav.contact",
+      "format": "plain",
+      "ca": "Contacte",
+      "es": "Contacto",
+      "en": "Contact"
+    }
+  ]
+}

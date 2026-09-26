@@ -1,0 +1,312 @@
+{
+  "entries": [
+    {
+      "key": "works.link.audio",
+      "format": "plain",
+      "ca": "àudio",
+      "es": "audio",
+      "en": "audio"
+    },
+    {
+      "key": "works.link.audio.toggle",
+      "format": "plain",
+      "ca": "+àudio",
+      "es": "+audio",
+      "en": "+audio"
+    },
+    {
+      "key": "works.link.audio.close",
+      "format": "plain",
+      "ca": "-àudio",
+      "es": "-audio",
+      "en": "-audio"
+    },
+    {
+      "key": "works.link.recording",
+      "format": "plain",
+      "ca": "enregistrament",
+      "es": "grabación",
+      "en": "recording"
+    },
+    {
+      "key": "works.link.score",
+      "format": "plain",
+      "ca": "partitura",
+      "es": "partitura",
+      "en": "score"
+    },
+    {
+      "key": "works.link.note",
+      "format": "plain",
+      "ca": "nota de programa",
+      "es": "nota de programa",
+      "en": "programme note"
+    },
+    {
+      "key": "works.link.info",
+      "format": "plain",
+      "ca": "+info",
+      "es": "+info",
+      "en": "+info"
+    },
+    {
+      "key": "works.detail.back",
+      "format": "plain",
+      "ca": "← Obres",
+      "es": "← Obras",
+      "en": "← Works"
+    },
+    {
+      "key": "works.parts.show",
+      "format": "plain",
+      "ca": "quaderns",
+      "es": "cuadernos",
+      "en": "volumes"
+    },
+    {
+      "key": "works.score.label",
+      "format": "plain",
+      "ca": "Partitura:",
+      "es": "Partitura:",
+      "en": "Score:"
+    },
+    {
+      "key": "works.score.ficta",
+      "format": "plain",
+      "ca": "Ficta",
+      "es": "Ficta",
+      "en": "Ficta"
+    },
+    {
+      "key": "works.score.contact",
+      "format": "plain",
+      "ca": "Contactar",
+      "es": "Contactar",
+      "en": "Contact"
+    },
+    {
+      "key": "works.orchestra.hint",
+      "format": "plain",
+      "ca": "disposició",
+      "es": "disposición",
+      "en": "seating"
+    },
+    {
+      "key": "works.orchestra.diagram.label",
+      "format": "plain",
+      "ca": "Disposició de l’orquestra a l’escenari",
+      "es": "Disposición de la orquesta en el escenario",
+      "en": "Orchestra seating chart"
+    },
+    {
+      "key": "works.orchestra.conductor",
+      "format": "plain",
+      "ca": "director",
+      "es": "director",
+      "en": "conductor"
+    },
+    {
+      "key": "works.orchestra.flutes",
+      "format": "plain",
+      "ca": "flautes",
+      "es": "flautas",
+      "en": "flutes"
+    },
+    {
+      "key": "works.orchestra.flutes.one",
+      "format": "plain",
+      "ca": "flauta",
+      "es": "flauta",
+      "en": "flute"
+    },
+    {
+      "key": "works.orchestra.oboes",
+      "format": "plain",
+      "ca": "oboès",
+      "es": "oboes",
+      "en": "oboes"
+    },
+    {
+      "key": "works.orchestra.oboes.one",
+      "format": "plain",
+      "ca": "oboè",
+      "es": "oboe",
+      "en": "oboe"
+    },
+    {
+      "key": "works.orchestra.clarinets",
+      "format": "plain",
+      "ca": "clarinets",
+      "es": "clarinetes",
+      "en": "clarinets"
+    },
+    {
+      "key": "works.orchestra.clarinets.one",
+      "format": "plain",
+      "ca": "clarinet",
+      "es": "clarinete",
+      "en": "clarinet"
+    },
+    {
+      "key": "works.orchestra.bassoons",
+      "format": "plain",
+      "ca": "fagots",
+      "es": "fagotes",
+      "en": "bassoons"
+    },
+    {
+      "key": "works.orchestra.bassoons.one",
+      "format": "plain",
+      "ca": "fagot",
+      "es": "fagot",
+      "en": "bassoon"
+    },
+    {
+      "key": "works.orchestra.horns",
+      "format": "plain",
+      "ca": "trompes",
+      "es": "trompas",
+      "en": "horns"
+    },
+    {
+      "key": "works.orchestra.horns.one",
+      "format": "plain",
+      "ca": "trompa",
+      "es": "trompa",
+      "en": "horn"
+    },
+    {
+      "key": "works.orchestra.trumpets",
+      "format": "plain",
+      "ca": "trompetes",
+      "es": "trompetas",
+      "en": "trumpets"
+    },
+    {
+      "key": "works.orchestra.trumpets.one",
+      "format": "plain",
+      "ca": "trompeta",
+      "es": "trompeta",
+      "en": "trumpet"
+    },
+    {
+      "key": "works.orchestra.trombones",
+      "format": "plain",
+      "ca": "trombons",
+      "es": "trombones",
+      "en": "trombones"
+    },
+    {
+      "key": "works.orchestra.trombones.one",
+      "format": "plain",
+      "ca": "trombó",
+      "es": "trombón",
+      "en": "trombone"
+    },
+    {
+      "key": "works.orchestra.tuba",
+      "format": "plain",
+      "ca": "tubes",
+      "es": "tubas",
+      "en": "tubas"
+    },
+    {
+      "key": "works.orchestra.tuba.one",
+      "format": "plain",
+      "ca": "tuba",
+      "es": "tuba",
+      "en": "tuba"
+    },
+    {
+      "key": "works.orchestra.timpani",
+      "format": "plain",
+      "ca": "timbales",
+      "es": "timbales",
+      "en": "timpani"
+    },
+    {
+      "key": "works.orchestra.timpani.one",
+      "format": "plain",
+      "ca": "timbales",
+      "es": "timbales",
+      "en": "timpani"
+    },
+    {
+      "key": "works.orchestra.percussion",
+      "format": "plain",
+      "ca": "percussionistes",
+      "es": "percusionistas",
+      "en": "percussionists"
+    },
+    {
+      "key": "works.orchestra.percussion.one",
+      "format": "plain",
+      "ca": "percussionista",
+      "es": "percusionista",
+      "en": "percussionist"
+    },
+    {
+      "key": "works.orchestra.harp",
+      "format": "plain",
+      "ca": "arpes",
+      "es": "arpas",
+      "en": "harps"
+    },
+    {
+      "key": "works.orchestra.harp.one",
+      "format": "plain",
+      "ca": "arpa",
+      "es": "arpa",
+      "en": "harp"
+    },
+    {
+      "key": "works.orchestra.celesta",
+      "format": "plain",
+      "ca": "celestes",
+      "es": "celestas",
+      "en": "celestas"
+    },
+    {
+      "key": "works.orchestra.celesta.one",
+      "format": "plain",
+      "ca": "celesta",
+      "es": "celesta",
+      "en": "celesta"
+    },
+    {
+      "key": "works.orchestra.violins1",
+      "format": "plain",
+      "ca": "violins I",
+      "es": "violines I",
+      "en": "violins I"
+    },
+    {
+      "key": "works.orchestra.violins2",
+      "format": "plain",
+      "ca": "violins II",
+      "es": "violines II",
+      "en": "violins II"
+    },
+    {
+      "key": "works.orchestra.violas",
+      "format": "plain",
+      "ca": "violes",
+      "es": "violas",
+      "en": "violas"
+    },
+    {
+      "key": "works.orchestra.cellos",
+      "format": "plain",
+      "ca": "violoncels",
+      "es": "violonchelos",
+      "en": "cellos"
+    },
+    {
+      "key": "works.orchestra.basses",
+      "format": "plain",
+      "ca": "contrabaixos",
+      "es": "contrabajos",
+      "en": "double basses"
+    }
+  ]
+}

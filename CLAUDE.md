@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-The official website of composer Miquel Oliu — a **static, trilingual (Catalan / Spanish / English) multi-page site** built with vanilla HTML, CSS, and JavaScript. There is **no build step, no framework, and no package.json**: the files in the repo root are served as-is.
+The official website of composer Miquel Oliu — a **static, trilingual (Catalan / Spanish / English) multi-page site** built with vanilla HTML, CSS, and JavaScript. Decap CMS stores editable content in `content/`; the locked Node build validates it and writes the publishable site to `dist/`.
 
 The site language is Catalan (`ca`); content, comments, and commit messages are predominantly written in Catalan.
 
@@ -12,13 +12,17 @@ The site language is Catalan (`ca`); content, comments, and commit messages are 
 
 ```bash
 # Serve locally — any static server works; open http://localhost:8000
-python3 -m http.server 8000
+python3 -m http.server 8000 --directory dist
 
-# Deploy to Cloudflare (assets directory is "./", configured in wrangler.jsonc)
-npx wrangler deploy
+# Build and validate content
+npm ci
+npm run build
+
+# Netlify deploys dist/ automatically from main
+npm test
 ```
 
-There are no tests, linters, or build tooling. Changes are verified by opening the pages in a browser and toggling the three languages.
+`npm run build` validates content and generates the site; `npm run validate` checks content without writing `dist/`. Netlify deploys `dist/` from `main` and creates pull-request previews. The Netlify build validates the content before publishing. Decap uses GitHub login through Netlify OAuth and publishes directly. See `ROLLOUT.md`.
 
 `documentacio/` holds Miquel's working materials (source documents) and is gitignored — never publish or reference it from the site.
 
@@ -40,16 +44,11 @@ This order matters — each script depends on globals defined by the previous on
 
 ### Work detail pages
 
-Programme notes are generated from the working Word files in `documentacio/obres/` by `scripts/generate-work-pages.py`. The source folder remains gitignored; generated static pages live in `obres/`, while `js/data/work-info.js` records their available source languages and routes. The catalogue uses that metadata to render `+info` as a link only when a note has at least one Catalan, Spanish, or English source, and as a disabled label otherwise.
+Decap edits `content/works/<id>.json`, `content/categories/`, `content/pages/`, and `content/texts/`. Work records contain their programme notes and recordings. These are the authoritative published content files. The biography uses rich-text sections per language; interface translations use ordinary language fields rather than a JSON editor. The build preserves each work ID and route, orders works by category and order, sanitizes rendered rich text, generates the compatible `WORKS`, `WORK_INFO`, and `TRANSLATIONS` globals, and copies the existing page shells and assets to `dist/`.
+
+Programme notes were imported from the published `obres/*.html` into language sections with rich-text and poem blocks; their URLs and six source-language sections are preserved. The old Word generator is retired. `documentacio/` remains gitignored and is never copied to `dist/`.
 
 The language in the shared navigation controls the site chrome. Detail pages have a second, source-language tab strip for Catalan, Spanish, English, French, German, Euskera, or any language added to the generator manifest. When the shared language changes, the detail tab follows it when that source language exists; otherwise the reader's selected note language is preserved.
-
-Run the generator with the bundled Python runtime after source documents change:
-
-```bash
-DOC_PY=/Users/vicar/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3
-"$DOC_PY" scripts/generate-work-pages.py
-```
 
 Detail pages include `<base href="../">` so the shared root-level components continue to work from the nested `obres/` URLs.
 

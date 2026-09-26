@@ -1,0 +1,59 @@
+{
+  "id": "despertar",
+  "title": {
+    "ca": "Despertar",
+    "en": "Despertar (Awakening)"
+  },
+  "years": "2011",
+  "instrumentation": {
+    "ca": "Shakuhachi 2.4"
+  },
+  "duration": "5’",
+  "details": [
+    {
+      "ca": "Estrena: Juliol 2013. European Shakuhachi Society Summer School, L’Auditori de Barcelona, Sala4. Jim Franklin",
+      "es": "Estreno: Julio 2013. European Shakuhachi Society Summer School, L’Auditori de Barcelona, Sala4. Jim Franklin",
+      "en": "Premiere: July 2013. European Shakuhachi Society Summer School, L’Auditori de Barcelona, Sala4. Jim Franklin"
+    }
+  ],
+  "score": "contact",
+  "category": "solista",
+  "archived": false,
+  "order": 4,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Despertar",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Despertar a un nou estat. Despertar entès com a redescobrir la pròpia naturalesa original. L’obra és un pas per diferents sonoritats, que es succeeixen i condicionen l’una a l’altra fins a fondre’s en l’aire com a origen de tot altre so. És un recorregut per diversos sentiments: partint del lament, fruit de la lluita entre aquest despertar i el propi desprendre’s, fins a l’abandonament final, on tot resol en una silenciosa coincidència.\n\nL’obra neix a petició d’Horacio Curti, a qui està dedicada."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Despertar",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Despertar a un nuevo estado. Despertar entendido como redescubrir la propia naturaleza original. La obra es un paso por distintas sonoridades, que se suceden y condicionan una a la otra, hasta fundirse en el aire como origen de todo otro sonido. Es un recorrido por distintos sentimientos: partiendo del lamento, fruto de la lucha entre este despertar y el propio desapego, hasta el abandonamiento final, donde todo resuelve en una silenciosa coincidencia.\n\nLa obra nace a petición de Horacio Curti, a quien está dedicada."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Despertar (Awakening)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Awakening to a new state of consciousness to rediscover one’s own true nature. The work is a pass through different sonorities, which follow one another and determine themselves until they blend into the air, as origin of every other sound. A walk through different feelings, from the lament resulting of the struggle between this awakening and one’s own detachment until the final spiritual abandonment, where everything finds resolution in a silent coincidence.\n\nThe work was born at the request of Horacio Curti, to whom it is dedicated."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

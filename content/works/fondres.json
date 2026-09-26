@@ -1,0 +1,67 @@
+{
+  "id": "fondres",
+  "title": {
+    "ca": "Fondre’s",
+    "es": "Fondre’s (Fundirse)",
+    "en": "Fondre’s (Melting)"
+  },
+  "years": "2018",
+  "subtitle": {
+    "ca": "Estudi de concert per a vibràfon",
+    "es": "Estudio de concierto para vibráfono",
+    "en": "Concert study for vibraphone"
+  },
+  "duration": "7’",
+  "details": [
+    {
+      "ca": "Encàrrec de Miquel Bernat",
+      "es": "Encargo de Miquel Bernat",
+      "en": "Commission of Miquel Bernat"
+    },
+    {
+      "ca": "Estrena: Desembre 2019. Évora, Portugal. Miquel Bernat",
+      "es": "Estreno: Diciembre 2019. Évora, Portugal. Miquel Bernat",
+      "en": "Premiere: December 2019. Évora, Portugal. Miquel Bernat"
+    }
+  ],
+  "score": "ficta",
+  "category": "solista",
+  "archived": false,
+  "order": 3,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Fondre’s",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Fondre’s és un estudi per a vibràfon inspirat en un breu poema d’Antoni Clapés:\n\nConfondre’s amb la neu:\n\nser floc que el migdia ha de tornar líquid.\n\nConfondre’s amb el paisatge:\n\nesvanir-s’hi per perdurar.\n\nEstudi basat principalment en una textura polifònica —corresponent sonor a la imatge de petits flocs—; composta per notes en diferents graus de durada que es van fonent en la ressonància.\n\nA partir del punt culminant es dona pas al desenvolupament dels sons amb arc —migdia— i a l’element en notes ràpides, ara en diversos pianíssims, quasi inaudible. Alhora guanyen pas els sons sense baquetes, amb les mans nues de l’intèrpret en contacte amb les làmines, la qual cosa vol ser signe d’humilitat, de noblesa, de manca d’artificis... per acabar essent un estudi de diferents sonoritats que “s’esvaneixen”.\n\nEl material compositiu està extret d’un motiu de la Música callada de Frederic Mompou, citat en dues ocasions quasi de forma íntegra.\n\nObra escrita a petició de Miquel Bernat, a qui està dedicada, tot agraint les estones compartides.\n\nVull fer un agraïment especial a Antoni Clapés, per la seva poesia i per la confiança mostrada."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Fondre’s (Fundirse)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "“Fundirse” es un estudio para vibráfono inspirado en un breve poema de Antoni Clapés:\n\nConfundirse con la nieve:\n\n                       ser copo que el mediodía ha de volver líquido.\n\nConfundirse con el paisaje:\n\n                       desvanecerse para perdurar.\n\n(Trad. Antoni Clapés)\n\nEstudio basado principalmente en una textura polifónica —correspondiente sonoro a la imagen de pequeños copos—; compuesta por notas en distintos grados de duración que se van fundiendo en la resonancia.\n\nA partir del punto culminante se da paso al desarrollo de los sonidos con arco —mediodía— y al elemento en notas rápidas, ahora en distintos pianísimos, casi inaudible. A la vez ganan paso los sonidos sin baquetas, con las manos desnudas del intérprete en contacto con las láminas, lo que quiere ser signo de humildad, de nobleza, de falta de artificios... para terminar siendo un estudio de distintas sonoridades que “se desvanecen”.\n\nEl material compositivo está extraído de un motivo de la Música callada de Frederic Mompou, citado en dos ocasiones casi de forma íntegra.\n\nObra escrita a petición de Miquel Bernat, a quién está dedicada, agradeciéndole los momentos compartidos.\n\nQuiero hacer un agradecimiento especial a Antoni Clapés, por su poesía y por la confianza mostrada."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Fondre’s (Melting)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Melting is a study for vibraphone inspired in a short poem by Antoni Clapés:\n\nTo get mixed with snow:\n\n                       to be snowflake that noon will make liquid.\n\n            To get mixed with landscape:\n\n                       to vanish to endure\n\n(Trans. Antoni Clapés)\n\nStudy based mainly on a polyphonic structure – soundwise equivalent to the image of the little snowflakes -; made up of notes in a variety of lengths that gradually melt in the resonance.\n\nFrom its climax, the sounds played with the arch and the element in quick notes take precedence – midday – now in various pianisimos , almost inaudible.\n\nAt the same time, the sounds played without mallets take prevalence , with the interpreter’s naked hands in contact with the bars, which is meant to be a sign of humility, honesty, stripped of devices… to end up being a study of different sounds that melt away.\n\nThe compositional material is drawn from a motif in Música callada by Frederic Mompou, cited on two occasions almost integrally.\n\nThis work was written by request of Miquel Bernat, to whom it is dedicated, with appreciation for the times spent together.\n\nI would like to express my heartfelt gratitude to Antoni Clapés for his poetry and his trust in me."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

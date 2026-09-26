@@ -1,0 +1,1036 @@
+backend:
+  name: github
+  repo: bibanez/miqueloliu
+  branch: main
+  site_domain: miqueloliu.netlify.app
+  auth_scope: public_repo
+publish_mode: simple
+locale: ca
+media_folder: uploads
+public_folder: /uploads
+site_url: https://miqueloliu.netlify.app
+display_url: https://miqueloliu.netlify.app
+show_preview_links: false
+collections:
+  - name: pages
+    label: Pàgines
+    label_singular: Pàgina
+    files:
+      - name: home
+        label: Inici · imatges i dades
+        file: content/pages/home.json
+        preview_path: /
+        fields:
+          - label: Slug fix
+            name: slug
+            widget: hidden
+            default: home
+          - label: Imatge de portada (màxim 10 MB)
+            name: heroImage
+            widget: image
+            media_library:
+              config:
+                max_file_size: 10485760
+          - label: Fitxers adjunts (imatges/PDF, màxim 10 MB)
+            name: assets
+            widget: list
+            required: false
+            fields:
+              - label: Fitxer
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    max_file_size: 10485760
+      - name: biography
+        label: Biografia
+        file: content/pages/biography.json
+        preview_path: /biografia.html
+        fields:
+          - label: Slug fix
+            name: slug
+            widget: hidden
+            default: biography
+          - label: Fitxers adjunts (imatges/PDF, màxim 10 MB)
+            name: assets
+            widget: list
+            required: false
+            fields:
+              - label: Fitxer
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    max_file_size: 10485760
+          - name: heroImage
+            label: Fotografia de capçalera
+            widget: image
+            media_library:
+              config:
+                max_file_size: 10485760
+          - name: short
+            label: Biografia curta
+            widget: object
+            fields:
+              - name: ca
+                label: Català
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+              - name: es
+                label: Castellà
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+              - name: en
+                label: Anglès
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+          - name: full
+            label: Biografia completa
+            widget: object
+            fields:
+              - name: ca
+                label: Català
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+              - name: es
+                label: Castellà
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+              - name: en
+                label: Anglès
+                widget: list
+                summary: "{{fields.body}}"
+                fields:
+                  - name: body
+                    label: Text
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    editor_components:
+                      - image
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+      - name: contact
+        label: Contacte · imatges i dades
+        file: content/pages/contact.json
+        preview_path: /contact.html
+        fields:
+          - label: Slug fix
+            name: slug
+            widget: hidden
+            default: contact
+          - label: Correu electrònic
+            name: contactEmail
+            widget: string
+            hint: Aquest valor actualitza l’adreça visible i les interaccions del formulari.
+          - label: Fitxers adjunts (imatges/PDF, màxim 10 MB)
+            name: assets
+            widget: list
+            required: false
+            fields:
+              - label: Fitxer
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    max_file_size: 10485760
+          - name: image
+            label: Fotografia
+            widget: image
+            media_library:
+              config:
+                max_file_size: 10485760
+          - name: publisherUrl
+            label: Enllaç de l’editorial
+            widget: string
+    format: json
+  - name: works
+    label: Obres
+    label_singular: Obra
+    folder: content/works
+    preview_path: /obres/{{slug}}.html
+    create: true
+    delete: false
+    slug: "{{fields.id}}"
+    summary: "{{title.ca}} — {{years}}"
+    fields:
+      - label: Identificador fix
+        name: id
+        widget: string
+        hint: URL immutable. Feu servir un slug únic amb lletres minúscules i guions.
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Escriviu lletres minúscules, números i guions.
+      - label: Categoria
+        name: category
+        widget: relation
+        collection: categories
+        value_field: id
+        search_fields:
+          - name.ca
+          - id
+        display_fields:
+          - name.ca
+      - label: Ordre
+        name: order
+        widget: number
+        value_type: int
+        min: 0
+        hint: Nombre per ordenar les obres (els més petits apareixen primer). Es poden repetir.
+      - label: Arxivada
+        name: archived
+        widget: boolean
+        default: false
+        hint: Les obres arxivades no apareixen al catàleg públic.
+      - label: Títol
+        name: title
+        widget: object
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Anys
+        name: years
+        widget: string
+        required: false
+      - label: Subtítol
+        name: subtitle
+        widget: object
+        required: false
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+            required: false
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Instrumentació
+        name: instrumentation
+        widget: object
+        required: false
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+            required: false
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Moviments
+        name: movements
+        widget: list
+        required: false
+        field:
+          label: Títol
+          name: title
+          widget: object
+          fields:
+            - label: Català
+              name: ca
+              widget: string
+            - label: Castellà
+              name: es
+              widget: string
+              required: false
+            - label: Anglès
+              name: en
+              widget: string
+              required: false
+      - label: Durada
+        name: duration
+        widget: string
+        required: false
+      - label: Detalls
+        name: details
+        widget: list
+        required: false
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+            required: false
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Enregistraments
+        name: recordings
+        widget: list
+        required: false
+        fields:
+          - label: Identificador
+            name: id
+            widget: string
+          - label: Títol
+            name: title
+            widget: string
+          - label: Intèrpret
+            name: performer
+            widget: string
+            required: false
+          - label: Compositor
+            name: composer
+            widget: string
+            required: false
+          - label: Durada
+            name: duration
+            widget: string
+            required: false
+          - label: Àudio (fitxer o enllaç)
+            name: src
+            widget: file
+            media_library:
+              config:
+                max_file_size: 10485760
+          - label: Forma d’ona existent
+            name: waveform
+            widget: hidden
+            required: false
+          - label: URL de referència
+            name: sourceUrl
+            widget: string
+            required: false
+      - label: Fitxers adjunts
+        name: assets
+        widget: list
+        required: false
+        fields:
+          - label: Imatge o PDF
+            name: file
+            widget: file
+            media_library:
+              config:
+                max_file_size: 10485760
+      - label: Nota de programa i poemes (CA, ES, EN, FR, DE, EU)
+        name: programmeNote
+        widget: object
+        required: false
+        fields:
+          - name: sections
+            label: Versions per idioma
+            widget: list
+            required: false
+            summary: "{{fields.title}} · {{fields.language}}"
+            fields:
+              - name: language
+                label: Idioma
+                widget: select
+                options:
+                  - value: ca
+                    label: Català
+                  - value: es
+                    label: Castellà
+                  - value: en
+                    label: Anglès
+                  - value: fr
+                    label: Francès
+                  - value: de
+                    label: Alemany
+                  - value: eu
+                    label: Euskera
+              - name: title
+                label: Títol en aquest idioma
+                widget: string
+              - name: blocks
+                label: Text i poemes
+                widget: list
+                types:
+                  - name: prose
+                    label: Text
+                    widget: object
+                    fields:
+                      - name: body
+                        label: Text
+                        widget: markdown
+                        required: true
+                        modes:
+                          - rich_text
+                        editor_components:
+                          - image
+                        buttons:
+                          - bold
+                          - italic
+                          - link
+                          - heading-two
+                          - heading-three
+                          - quote
+                          - bulleted-list
+                          - numbered-list
+                  - name: poem
+                    label: Poema
+                    widget: object
+                    fields:
+                      - name: text
+                        label: Versos
+                        widget: text
+                        hint: Un vers per línia. Deixeu una línia en blanc entre estrofes.
+                  - name: separator
+                    label: Separació entre estrofes
+                    widget: object
+                    fields:
+                      - name: space
+                        label: Separació
+                        widget: hidden
+                        default: true
+          - label: Fitxers adjunts (imatges/PDF, màxim 10 MB)
+            name: assets
+            widget: list
+            required: false
+            fields:
+              - label: Fitxer
+                name: file
+                widget: file
+                media_library:
+                  config:
+                    max_file_size: 10485760
+        collapsed: true
+      - label: Partitura
+        name: score
+        widget: select
+        options:
+          - label: Ficta
+            value: ficta
+          - label: Sota demanda
+            value: contact
+        required: false
+      - label: Enllaços
+        name: links
+        widget: object
+        required: false
+        fields:
+          - label: Àudio
+            name: audio
+            widget: string
+            required: false
+          - label: Partitura
+            name: score
+            widget: file
+            required: false
+            media_library:
+              config:
+                max_file_size: 10485760
+      - label: Peces del cicle
+        name: parts
+        widget: list
+        required: false
+        fields:
+          - label: Identificador
+            name: id
+            widget: string
+          - label: Títol
+            name: title
+            widget: object
+            fields:
+              - label: Català
+                name: ca
+                widget: string
+              - label: Castellà
+                name: es
+                widget: string
+                required: false
+              - label: Anglès
+                name: en
+                widget: string
+                required: false
+          - label: Anys
+            name: years
+            widget: string
+            required: false
+          - label: Moviments
+            name: movements
+            widget: list
+            required: false
+            field:
+              label: Títols
+              name: title
+              widget: object
+              fields:
+                - label: Català
+                  name: ca
+                  widget: string
+                - label: Castellà
+                  name: es
+                  widget: string
+                  required: false
+                - label: Anglès
+                  name: en
+                  widget: string
+                  required: false
+          - label: Durada
+            name: duration
+            widget: string
+            required: false
+          - label: Detalls
+            name: details
+            widget: list
+            required: false
+            fields:
+              - label: Català
+                name: ca
+                widget: string
+                required: false
+              - label: Castellà
+                name: es
+                widget: string
+                required: false
+              - label: Anglès
+                name: en
+                widget: string
+                required: false
+          - label: Enregistraments
+            name: recordings
+            widget: list
+            required: false
+            fields:
+              - label: Identificador
+                name: id
+                widget: string
+              - label: Títol
+                name: title
+                widget: string
+              - label: Intèrpret
+                name: performer
+                widget: string
+                required: false
+              - label: Compositor
+                name: composer
+                widget: string
+                required: false
+              - label: Durada
+                name: duration
+                widget: string
+                required: false
+              - label: Àudio (fitxer o enllaç)
+                name: src
+                widget: file
+                media_library:
+                  config:
+                    max_file_size: 10485760
+              - label: Forma d’ona
+                name: waveform
+                widget: hidden
+                required: false
+              - label: URL de referència
+                name: sourceUrl
+                widget: string
+                required: false
+    sortable_fields:
+      - title.ca
+      - category
+      - order
+    format: json
+    extension: json
+  - name: categories
+    label: Categories
+    folder: content/categories
+    create: true
+    delete: false
+    slug: "{{fields.id}}"
+    fields:
+      - label: Identificador fix
+        name: id
+        widget: string
+      - label: Nom
+        name: name
+        widget: object
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+          - label: Castellà
+            name: es
+            widget: string
+          - label: Anglès
+            name: en
+            widget: string
+      - label: Ordre
+        name: order
+        widget: number
+        hint: Nombre per ordenar les categories.
+    summary: "{{name.ca}}"
+    format: json
+    extension: json
+  - name: interface
+    label: Textos i traduccions
+    files:
+      - name: home-plain
+        label: Inici · etiquetes
+        file: content/texts/home-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: home-lines
+        label: Inici · versos
+        file: content/texts/home-lines.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: text
+                required: true
+              - name: es
+                label: Castellà
+                widget: text
+                required: false
+              - name: en
+                label: Anglès
+                widget: text
+                required: false
+      - name: home-attribution
+        label: Inici · autoria
+        file: content/texts/home-attribution.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: text
+                required: true
+              - name: es
+                label: Castellà
+                widget: text
+                required: false
+              - name: en
+                label: Anglès
+                widget: text
+                required: false
+      - name: home-rich
+        label: Inici · textos
+        file: content/texts/home-rich.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: markdown
+                required: true
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+              - name: es
+                label: Castellà
+                widget: markdown
+                required: false
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+              - name: en
+                label: Anglès
+                widget: markdown
+                required: false
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+      - name: bio-plain
+        label: Biografia · etiquetes
+        file: content/texts/bio-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: contact-plain
+        label: Contacte · etiquetes
+        file: content/texts/contact-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: catalogue-plain
+        label: Catàleg · etiquetes
+        file: content/texts/catalogue-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: nav-plain
+        label: Menú · etiquetes
+        file: content/texts/nav-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: footer-plain
+        label: Peu de pàgina · etiquetes
+        file: content/texts/footer-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: works-plain
+        label: Obres · etiquetes
+        file: content/texts/works-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: recording-plain
+        label: Reproductor d’àudio · etiquetes
+        file: content/texts/recording-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+    format: json
+local_backend: true

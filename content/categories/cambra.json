@@ -1,0 +1,9 @@
+{
+  "id": "cambra",
+  "name": {
+    "ca": "Cambra",
+    "es": "Cámara",
+    "en": "Chamber"
+  },
+  "order": 1
+}

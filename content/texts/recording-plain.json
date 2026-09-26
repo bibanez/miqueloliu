@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "key": "recording.label",
+      "format": "plain",
+      "ca": "Enregistrament",
+      "es": "Grabación",
+      "en": "Recording"
+    },
+    {
+      "key": "recording.example",
+      "format": "plain",
+      "ca": "àudio d’exemple",
+      "es": "audio de ejemplo",
+      "en": "example audio"
+    },
+    {
+      "key": "recording.play",
+      "format": "plain",
+      "ca": "Reprodueix",
+      "es": "Reproducir",
+      "en": "Play"
+    },
+    {
+      "key": "recording.pause",
+      "format": "plain",
+      "ca": "Pausa",
+      "es": "Pausa",
+      "en": "Pause"
+    },
+    {
+      "key": "recording.seek",
+      "format": "plain",
+      "ca": "Busca una posició a l’àudio",
+      "es": "Buscar una posición en el audio",
+      "en": "Seek in audio"
+    },
+    {
+      "key": "recording.source",
+      "format": "plain",
+      "ca": "font",
+      "es": "fuente",
+      "en": "source"
+    },
+    {
+      "key": "recording.download",
+      "format": "plain",
+      "ca": "descarrega",
+      "es": "descargar",
+      "en": "download"
+    },
+    {
+      "key": "recording.mockups.title",
+      "format": "plain",
+      "ca": "Estudis de reproductor",
+      "es": "Estudios de reproductor",
+      "en": "Player studies"
+    },
+    {
+      "key": "recording.mockups.description",
+      "format": "plain",
+      "ca": "Tres direccions visuals per al reproductor d’àudio, amb mostres de música clàssica de domini públic.",
+      "es": "Tres direcciones visuales para el reproductor de audio, con muestras de música clásica de dominio público.",
+      "en": "Three visual directions for the audio player, using public-domain classical music samples."
+    },
+    {
+      "key": "recording.mockups.editorial",
+      "format": "plain",
+      "ca": "01 — editorial",
+      "es": "01 — editorial",
+      "en": "01 — editorial"
+    },
+    {
+      "key": "recording.mockups.waveform",
+      "format": "plain",
+      "ca": "02 — ona sonora",
+      "es": "02 — onda sonora",
+      "en": "02 — waveform"
+    },
+    {
+      "key": "recording.mockups.compact",
+      "format": "plain",
+      "ca": "03 — compacte",
+      "es": "03 — compacto",
+      "en": "03 — compact"
+    }
+  ]
+}

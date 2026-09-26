@@ -1,0 +1,67 @@
+{
+  "id": "set-extractes-petit-princep",
+  "title": {
+    "ca": "Set extractes de El Petit Príncep",
+    "es": "Set extractes de El Petit Príncep (Siete extractos de El principito)",
+    "en": "Set extractes de El Petit Príncep (Seven extracts from The Little Prince)"
+  },
+  "years": "2010",
+  "instrumentation": {
+    "ca": "Flauta de bec i dos percussionistes",
+    "es": "Flauta de pico y dos percusionistas",
+    "en": "Recorder and two percussionists"
+  },
+  "duration": "25’",
+  "details": [
+    {
+      "ca": "Encàrrec del Festival de música de Campllong",
+      "es": "Encargo del Festival de música de Campllong",
+      "en": "Commission of Festival de música de Campllong"
+    },
+    {
+      "ca": "Estrena: Agost 2010. Campllong. Tiam Goudarzi, Percussions de Barcelona",
+      "es": "Estreno: Agosto 2010. Campllong. Tiam Goudarzi, Percussions de Barcelona",
+      "en": "Premiere: August 2010. Campllong. Tiam Goudarzi, Percussions de Barcelona"
+    }
+  ],
+  "score": "contact",
+  "category": "cambra",
+  "archived": false,
+  "order": 6,
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Set extractes de El Petit Príncep",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Obra encàrrec del Festival de música de Campllong, estrenada l’agost de 2010 pel grup Percussions de Barcelona i Tiam Goudarzi a la flauta de bec.\n\nDividida en set parts corresponents a set fragments del text de A. de Saint-Exupéry que serveixen de font d’inspiració. Un text que traspua innocència i alhora poua fondo, parlant d’uns valors universals que xoquen frontalment amb el món actual. L’impuls per a escriure aquesta música ha estat el ressò interior d’aquest text que ens convida a una altra percepció del que ens envolta.\n\nLa música –d’estreta relació amb el text– vol ser discursiva i evocadora, els elements senzills són els que agafen rellevància i acaben donant unitat a l’obra. El so noble, fràgil i solitari de la flauta de bec, amb les sonoritats de la fusta de la marimba junt amb d’altres instruments de percussió ressonants volen apropar-nos a l’ambient que ens proposa Saint-Exupéry: desert, silenci, senzillesa... i al misteri del temps, que ens uneix a tots."
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Set extractes de El Petit Príncep (Siete extractos de El principito)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Obra encargo del Festival de música de Campllong, estrenada en agosto del 2010 por Percussions de Barcelona y Tiam Goudarzi en la flauta de pico.\n\nDividida en siete partes correspondientes a siete fragmentos del texto de A. de Saint-Exupéry que sirven de fuente de inspiración. Un texto que rezuma inocencia y a la vez desempoza hondo, hablando de unos valores universales que chocan frontalmente con el mundo actual. El impulso para escribir esta música ha sido la resonancia interior de este texto que nos invita a otra percepción de lo que nos rodea.\n\nLa música –de estrecha relación con el texto– quiere ser discursiva y evocadora, los elementos sencillos son los que cogen relevancia y terminan dando unidad a la obra. El sonido noble, frágil y solitario de la flauta de pico, con las sonoridades de la madera de la marimba junto con otros instrumentos de percusión resonantes quieren acercarnos al ambiente que nos propone Saint-Exupéry: desierto, silencio, sencillez... y al misterio del tiempo, que nos une a todos."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Set extractes de El Petit Príncep (Seven extracts from The Little Prince)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Commissioned by the Festival de Música de Campllong, this work was premiered in August 2010 by the group Percussions de Barcelona, with Tiam Goudarzi playing the recorder.\n\nIt is divided into seven parts corresponding to seven excerpts from a text by A. de Saint-Exupéry, which serve as a source of inspiration. A text that exudes innocence as it delves deeply, speaking of universal values that stand in stark contrast to the current world. The impulse to write this music arose from the inner resonance of this text, which invites us to a different perception of our surroundings.\n\nThe music—closely connected to the text—aims to be both discursive and evocative. Simple elements become significant and ultimately provide unity to the work. The noble, fragile, and solitary sound of the recorder, together with the wooden sonorities of the marimba and other resonant percussion instruments, seeks to bring us closer to the atmosphere set forth by Saint-Exupéry: desert, silence, simplicity… and the mystery of time, which unites us all."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
+}

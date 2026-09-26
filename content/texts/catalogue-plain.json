@@ -1,0 +1,25 @@
+{
+  "entries": [
+    {
+      "key": "catalogue.title",
+      "format": "plain",
+      "ca": "Obres",
+      "es": "Obras",
+      "en": "Works"
+    },
+    {
+      "key": "catalogue.description",
+      "format": "plain",
+      "ca": "Catàleg d’obres per a diverses formacions instrumentals i vocals.",
+      "es": "Catálogo de obras para diversas formaciones instrumentales y vocales.",
+      "en": "Catalogue of works for various instrumental and vocal ensembles."
+    },
+    {
+      "key": "catalogue.empty",
+      "format": "plain",
+      "ca": "El catàleg es carregarà properament.",
+      "es": "El catálogo se cargará próximamente.",
+      "en": "The catalogue will be available soon."
+    }
+  ]
+}

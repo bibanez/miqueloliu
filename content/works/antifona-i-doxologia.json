@@ -1,0 +1,32 @@
+{
+  "id": "antifona-i-doxologia",
+  "title": {
+    "ca": "Antífona i doxologia",
+    "es": "Antífona i doxologia (Antífona y doxología)",
+    "en": "Antífona i doxologia (Antiphon and doxology)"
+  },
+  "years": "2017",
+  "instrumentation": {
+    "ca": "Cor mixt a capella (o amb suport d’orgue) [SATB]",
+    "es": "Coro mixto a capella (o con soporte de órgano) [SATB]",
+    "en": "Mixed choir a cappella (or with organ accompaniment) [SATB]"
+  },
+  "duration": "3’",
+  "details": [
+    {
+      "ca": "Encàrrec de Pueri Cantores",
+      "es": "Encargo de Pueri Cantores",
+      "en": "Commission of Pueri Cantores"
+    },
+    {
+      "ca": "Estrena: Juliol 2018. Monestir de Montserrat",
+      "es": "Estreno: Julio 2018. Monestir de Montserrat",
+      "en": "Premiere: July 2018. Monestir de Montserrat"
+    }
+  ],
+  "score": "ficta",
+  "category": "veu",
+  "archived": false,
+  "order": 4,
+  "assets": []
+}

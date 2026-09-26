@@ -1,0 +1,25 @@
+{
+  "id": "meditatio",
+  "title": {
+    "ca": "Meditatio"
+  },
+  "years": "2007",
+  "instrumentation": {
+    "ca": "Clarinet sib",
+    "es": "Clarinete sib",
+    "en": "Clarinet Bb"
+  },
+  "duration": "5’",
+  "details": [
+    {
+      "ca": "Estrena: Maig 2007. Ateneu Barcelonès. Cicle música del segle XX-XXI. Josep Fuster",
+      "es": "Estreno: Mayo 2007. Ateneu Barcelonès. Ciclo música del siglo XX-XXI. Josep Fuster",
+      "en": "Premiere: May 2007. Ateneu Barcelonès. Cicle música del segle XX-XXI. Josep Fuster"
+    }
+  ],
+  "score": "contact",
+  "category": "solista",
+  "archived": false,
+  "order": 6,
+  "assets": []
+}

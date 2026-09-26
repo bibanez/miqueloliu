@@ -1,0 +1,24 @@
+{
+  "id": "sis-nadales-tradicionals",
+  "title": {
+    "ca": "Sis Nadales tradicionals catalanes",
+    "es": "Sis Nadales tradicionals catalanes (Seis Villancicos tradicionales catalanes)",
+    "en": "Sis Nadales tradicionals catalanes (Six traditional Catalan carols)"
+  },
+  "instrumentation": {
+    "ca": "Saxo i piano. Nivell Elemental",
+    "es": "Saxo y piano. Nivel Elemental",
+    "en": "Sax and piano. Elementary level"
+  },
+  "details": [
+    {
+      "ca": "En preparació",
+      "es": "En preparación",
+      "en": "Forthcoming"
+    }
+  ],
+  "category": "pedagogic",
+  "archived": false,
+  "order": 1,
+  "assets": []
+}
