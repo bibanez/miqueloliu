@@ -1,22 +1,4 @@
 {
-  "id": "set-cants",
-  "title": {
-    "ca": "Set cants",
-    "es": "Set cants (Siete cantos)",
-    "en": "Set cants (Seven songs)"
-  },
-  "years": "2021",
-  "subtitle": {
-    "ca": "Sobre poemes d’Antoni Clapés",
-    "es": "Sobre poemas de Antoni Clapés",
-    "en": "Poems by Antoni Clapés"
-  },
-  "instrumentation": {
-    "ca": "Soprano i piano",
-    "es": "Soprano y piano",
-    "en": "Soprano and piano"
-  },
-  "duration": "14’",
   "details": [
     {
       "ca": "Encàrrec de l’Associació Joan Manén",
@@ -32,10 +14,7 @@
       "ca": "CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet"
     }
   ],
-  "score": "ficta",
-  "category": "cambra",
   "archived": false,
-  "order": 1,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -57,35 +36,7 @@
           },
           {
             "type": "poem",
-            "text": "Arribes a la cruïlla"
-          },
-          {
-            "type": "prose",
-            "body": "pedres velles i molses als bancals"
-          },
-          {
-            "type": "poem",
-            "text": "una merla desapareix dins la boira"
-          },
-          {
-            "type": "prose",
-            "body": "dins la remor sorda dels àlbers"
-          },
-          {
-            "type": "poem",
-            "text": "t’hi apregones"
-          },
-          {
-            "type": "prose",
-            "body": "vols anar més enllà — foraviar-te, potser"
-          },
-          {
-            "type": "poem",
-            "text": "i esdevens boira, tu també"
-          },
-          {
-            "type": "prose",
-            "body": "### III.\n\nCom denes d’un rosari"
+            "text": "Arribes a la cruïlla\npedres velles i molses als bancals\nuna merla desapareix dins la boira\ndins la remor sorda dels àlbers\nt’hi apregones\nvols anar més enllà — foraviar-te, potser\ni esdevens boira, tu també"
           },
           {
             "type": "poem",
@@ -285,5 +236,26 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 1,
+  "instrumentation": {
+    "ca": "Soprano i piano",
+    "es": "Soprano y piano",
+    "en": "Soprano and piano"
+  },
+  "score": "ficta",
+  "duration": "14’",
+  "years": "2021",
+  "subtitle": {
+    "ca": "Sobre poemes d’Antoni Clapés",
+    "es": "Sobre poemas de Antoni Clapés",
+    "en": "Poems by Antoni Clapés"
+  },
+  "title": {
+    "ca": "Set cants",
+    "es": "Set cants (Siete cantos)",
+    "en": "Set cants (Seven songs)"
+  },
+  "id": "set-cants",
+  "category": "cambra"
 }
