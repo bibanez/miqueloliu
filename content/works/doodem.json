@@ -1,0 +1,33 @@
+{
+  "details": [
+    {
+      "ca": "Encàrrec de Drumming Grupo Percussao",
+      "es": "Encargo de Drumming Grupo Percussao",
+      "en": "Commission of Drumming Grupo Percussao"
+    },
+    {
+      "ca": "Estrena: Maig 2027. Evora. Drumming Grupo Percussao ",
+      "es": "Estreno: Mayo 2027. Evora. Drumming Grupo Percussao",
+      "en": "Premiere: May 2027. Evora. Drumming Grupo Percussao"
+    },
+    {
+      "ca": "Partitura: Ficta (en preparació)",
+      "es": "Partitura: Ficta (en preparación)",
+      "en": "Score: Ficta Forthcoming"
+    }
+  ],
+  "archived": false,
+  "order": 15,
+  "instrumentation": {
+    "ca": "Quatre percussionistes en dues marimbes",
+    "es": "Cuatro percusionistas en dos marimbas",
+    "en": "Four percussionists in two marimbas"
+  },
+  "duration": "6' ",
+  "years": "2026",
+  "title": {
+    "ca": "Doodem"
+  },
+  "id": "doodem",
+  "category": "cambra"
+}
