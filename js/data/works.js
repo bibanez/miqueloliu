@@ -172,6 +172,15 @@ const WORKS = [
         score: 'ficta',
       },
       {
+        recordings: [
+          {
+            id: 'angel-terrible-recording',
+            title: "L’àngel terrible",
+            composer: "Miquel Oliu",
+            duration: '13:55',
+            src: '/uploads/angel-terrible.mp3',
+          },
+        ],
         id: 'angel-terrible',
         title: {
           ca: 'L’àngel terrible',
@@ -269,6 +278,16 @@ const WORKS = [
         score: 'ficta',
       },
       {
+        recordings: [
+          {
+            id: 'set-extractes-petit-princep-extracte-6',
+            title: "Set extractes de El Petit Príncep — Extracte 6",
+            composer: "Miquel Oliu",
+            performer: "Percussions de Barcelona / Tiam Goudarzi",
+            duration: '2:03',
+            src: '/uploads/set-extractes-petit-princep-extracte-6.mp3',
+          },
+        ],
         id: 'set-extractes-petit-princep',
         title: {
           ca: 'Set extractes de El Petit Príncep',

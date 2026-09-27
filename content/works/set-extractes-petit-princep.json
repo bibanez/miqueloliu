@@ -63,5 +63,15 @@
       }
     ],
     "assets": []
-  }
+  },
+  "recordings": [
+    {
+      "id": "set-extractes-petit-princep-extracte-6",
+      "title": "Set extractes de El Petit Príncep — Extracte 6",
+      "composer": "Miquel Oliu",
+      "performer": "Percussions de Barcelona / Tiam Goudarzi",
+      "duration": "2:03",
+      "src": "/uploads/set-extractes-petit-princep-extracte-6.mp3"
+    }
+  ]
 }

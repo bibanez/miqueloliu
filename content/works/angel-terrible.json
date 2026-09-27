@@ -63,5 +63,14 @@
       }
     ],
     "assets": []
-  }
+  },
+  "recordings": [
+    {
+      "id": "angel-terrible-recording",
+      "title": "L’àngel terrible",
+      "composer": "Miquel Oliu",
+      "duration": "13:55",
+      "src": "/uploads/angel-terrible.mp3"
+    }
+  ]
 }
