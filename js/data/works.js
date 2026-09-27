@@ -55,18 +55,6 @@ const WORKS = [
             en: 'Premiere: November 2025. L’Auditori de Barcelona, Liederhalle Stuttgart, Elbphilharmonie Hamburg, Tonhalle Düsseldorf, Palacio Euskalduna Bilbao, Kursaal Donostia/San Sebastián. OBC, Ludovic Morlot',
           },
         ],
-        recordings: [
-          {
-            id: 'bach-goldberg-variation-1',
-            title: 'Goldberg Variations, BWV 988 — Variation 1',
-            composer: 'Johann Sebastian Bach',
-            performer: 'Dave Grossman',
-            duration: '2:01',
-            src: 'audio/bach-goldberg-variation-1.mp3',
-            waveform: [1.0, 0.874, 0.918, 0.858, 0.861, 0.84, 0.989, 0.852, 0.803, 0.875, 0.878, 0.832, 0.848, 0.792, 0.881, 0.981, 0.837, 0.87, 0.91, 0.869, 0.841, 0.834, 1.0, 0.842, 0.811, 0.872, 0.883, 0.847, 0.731, 0.899, 0.856, 0.807, 0.811, 0.877, 0.775, 0.91, 0.678, 0.954, 0.881, 0.769, 0.805, 0.824, 0.875, 0.782, 0.988, 0.976, 0.994, 0.835, 0.881, 0.779, 0.859, 0.892, 0.687, 0.953, 0.81, 0.767, 0.85, 0.839, 0.871, 0.845, 0.99, 0.994, 0.741, 0.12],
-            sourceUrl: 'https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince',
-          },
-        ],
         score: 'ficta',
       },
       {
@@ -92,18 +80,6 @@ const WORKS = [
             en: 'Recording: July 2022. OBC, Benjamin Schwarz',
           },
         ],
-        recordings: [
-          {
-            id: 'bach-goldberg-variation-7',
-            title: 'Goldberg Variations, BWV 988 — Variation 7',
-            composer: 'Johann Sebastian Bach',
-            performer: 'Dave Grossman',
-            duration: '2:01',
-            src: 'audio/bach-goldberg-variation-7.mp3',
-            waveform: [0.633, 0.678, 0.76, 0.706, 0.866, 0.865, 0.739, 0.757, 0.827, 0.814, 0.871, 1.0, 0.906, 0.806, 0.842, 0.656, 0.638, 0.758, 0.754, 0.79, 0.844, 0.869, 0.739, 0.83, 0.8, 0.869, 0.998, 0.905, 0.789, 0.773, 0.83, 0.859, 0.745, 0.886, 0.821, 0.778, 0.742, 0.774, 0.795, 0.854, 0.811, 0.798, 0.753, 0.87, 0.876, 0.859, 0.694, 0.867, 0.739, 0.876, 0.823, 0.779, 0.761, 0.779, 0.607, 0.847, 0.806, 0.795, 0.659, 0.862, 0.874, 0.772, 0.539, 0.12],
-            sourceUrl: 'https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince',
-          },
-        ],
         score: 'ficta',
       },
       {
@@ -126,18 +102,6 @@ const WORKS = [
             ca: 'Estrena: Octubre 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar',
             es: 'Estreno: Octubre 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar',
             en: 'Premiere: October 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar',
-          },
-        ],
-        recordings: [
-          {
-            id: 'bach-goldberg-variation-26',
-            title: 'Goldberg Variations, BWV 988 — Variation 26',
-            composer: 'Johann Sebastian Bach',
-            performer: 'Dave Grossman',
-            duration: '2:00',
-            src: 'audio/bach-goldberg-variation-26.mp3',
-            waveform: [0.768, 0.865, 0.927, 0.839, 0.795, 0.776, 0.765, 0.747, 0.781, 0.856, 0.781, 0.801, 0.89, 0.824, 0.917, 0.903, 0.759, 0.848, 0.923, 0.827, 0.77, 0.766, 0.765, 0.782, 0.861, 0.775, 0.778, 0.843, 0.893, 0.92, 0.907, 0.815, 0.82, 0.993, 0.995, 0.833, 0.733, 0.869, 0.93, 0.749, 0.783, 0.77, 0.907, 0.876, 0.953, 0.845, 0.776, 0.817, 0.84, 0.995, 1.0, 0.838, 0.867, 0.824, 0.947, 0.788, 0.766, 0.787, 0.899, 0.878, 0.956, 0.85, 0.664, 0.12],
-            sourceUrl: 'https://archive.org/details/goldberg-variations-Grossman-Blanchet1720-Lehman-Prince',
           },
         ],
         score: 'ficta',
