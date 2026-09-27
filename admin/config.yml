@@ -30,6 +30,78 @@ collections:
             media_library:
               config:
                 max_file_size: 10485760
+          - label: Textos addicionals
+            name: additionalTestimonials
+            widget: list
+            required: false
+            collapsed: true
+            summary: "{{fields.author.ca}}"
+            fields:
+              - label: Text
+                name: text
+                widget: object
+                fields:
+                  - label: Català
+                    name: ca
+                    widget: markdown
+                    required: true
+                    modes:
+                      - rich_text
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+                  - label: Castellà
+                    name: es
+                    widget: markdown
+                    required: false
+                    modes:
+                      - rich_text
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+                  - label: Anglès
+                    name: en
+                    widget: markdown
+                    required: false
+                    modes:
+                      - rich_text
+                    buttons:
+                      - bold
+                      - italic
+                      - link
+                      - heading-two
+                      - heading-three
+                      - quote
+                      - bulleted-list
+                      - numbered-list
+              - label: Autoria
+                name: author
+                widget: object
+                fields:
+                  - label: Català
+                    name: ca
+                    widget: string
+                    required: true
+                  - label: Castellà
+                    name: es
+                    widget: string
+                    required: false
+                  - label: Anglès
+                    name: en
+                    widget: string
+                    required: false
           - label: Fitxers adjunts (imatges/PDF, màxim 10 MB)
             name: assets
             widget: list

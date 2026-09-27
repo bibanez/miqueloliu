@@ -98,6 +98,12 @@ for (const [slug, page] of Object.entries(pages)) {
   if (page.heroImage) await assertAsset(page.heroImage, slug);
   if (page.image) await assertAsset(page.image, slug);
 }
+for (const item of pages.home.additionalTestimonials || []) {
+  assert(item.text?.ca?.trim() && item.author?.ca?.trim(), 'Cada text addicional de la pàgina d’inici necessita text i autoria en català.');
+  for (const language of ['ca', 'es', 'en']) {
+    if (item.text[language]) await assertMarkdownAssets(item.text[language], 'home');
+  }
+}
 assert(/^[^\s@<>"'`]+@[^\s@<>"'`]+\.[^\s@<>"'`]+$/.test(pages.contact.contactEmail || ''), 'Adreça de correu de contacte invàlida.');
 assert(/^https:\/\//.test(pages.contact.publisherUrl || ''), 'L’enllaç de l’editorial ha de començar per https://.');
 for (const version of ['short', 'full']) {
@@ -156,6 +162,18 @@ for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.htm
   if (slug === 'contact') {
     body = body.replaceAll('mqoliu@gmail.com', esc(page.contactEmail)).replace('src="img/contacte.jpg"', `src="${esc(page.image)}"`).replace('href="https://www.ficta.cat"', `href="${esc(page.publisherUrl)}"`);
     html = html.replaceAll('mqoliu@gmail.com', page.contactEmail);
+  }
+  if (slug === 'home') {
+    const testimonials = (page.additionalTestimonials || []).map(item => {
+      const languages = ['ca', 'es', 'en'];
+      const text = languages.map(language => {
+        const value = item.text[language] || item.text.ca;
+        const author = item.author[language] || item.author.ca;
+        return `<div class="testimonial-lang lang-block" lang="${language}"><div class="testimonial-text">${richText(value)}</div><cite>${esc(author)}</cite></div>`;
+      }).join('');
+      return `<div class="text-divider"></div><div class="testimonial">${text}</div>`;
+    }).join('\n');
+    body = body.replace('<!-- additional-testimonials -->', testimonials);
   }
   html = html.replace(/(<main\b[^>]*>)[\s\S]*?(<\/main>)/i, (_match, open, close) => `${open}${body}${close}`);
   if (page.heroImage) html = html.replace(/(<header class="home-hero">\s*<img src=")[^"]+/, `$1${esc(page.heroImage)}`);
