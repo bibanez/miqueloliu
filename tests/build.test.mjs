@@ -10,7 +10,7 @@ const root = process.cwd();
 async function fixture(t) {
   const dir = await fs.mkdtemp(path.join(os.tmpdir(), 'miqueloliu-test-'));
   t.after(() => fs.rm(dir, { recursive: true, force: true }));
-  for (const name of ['content', 'scripts', 'templates', 'admin', 'css', 'js', 'img', 'audio', 'index.html', 'biografia.html', 'catalogue.html', 'contact.html', 'package.json']) {
+  for (const name of ['content', 'scripts', 'templates', 'admin', 'css', 'js', 'img', 'audio', 'index.html', 'biografia.html', 'catalogue.html', 'premsa.html', 'contact.html', 'package.json']) {
     await fs.cp(path.join(root, name), path.join(dir, name), { recursive: true });
   }
   await fs.symlink(path.join(root, 'node_modules'), path.join(dir, 'node_modules'), 'dir');

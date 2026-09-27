@@ -59,6 +59,8 @@ const categoryIds = new Set(categories.map(c => c.id));
 const fixedIds = await readJson('content/identifiers.json');
 const files = await jsonFiles('content/works');
 const allWorks = await Promise.all(files.map(file => readJson(`content/works/${file}`)));
+const pressFiles = await jsonFiles('content/press');
+const pressItems = await Promise.all(pressFiles.map(file => readJson(`content/press/${file}`)));
 const hasNote = work => Boolean(work.programmeNote?.sections?.length);
 for (let index = 0; index < allWorks.length; index++) {
   const work = allWorks[index];
@@ -92,6 +94,24 @@ for (let index = 0; index < allWorks.length; index++) {
 for (const id of fixedIds.workIds) assert(files.includes(`${id}.json`), `No elimineu l’obra publicada ${id}; arxiveu-la.`);
 for (const id of fixedIds.categoryIds) assert(categoryIds.has(id), `No elimineu la categoria publicada ${id}.`);
 for (const id of fixedIds.programmeNoteIds) assert(hasNote(allWorks.find(w => w.id === id)), `Conserveu la nota publicada de ${id}.`);
+for (let index = 0; index < pressItems.length; index++) {
+  const item = pressItems[index];
+  assert(slugPattern.test(item.id || '') && pressFiles[index] === `${item.id}.json`, `Identificador de premsa invàlid: ${pressFiles[index]}.`);
+  assert(Number.isInteger(item.order) && item.order >= 0, `Ordre invàlid per a l’article ${item.id}.`);
+  assert(item.title?.ca?.trim() && item.kind?.ca?.trim(), `Falta el títol o tipus de l’article ${item.id}.`);
+  if (item.url) {
+    assert(/^https:\/\//i.test(item.url), `URL no vàlida a l’article ${item.id}. Feu servir HTTPS.`);
+    new URL(item.url);
+  }
+  const seen = new Set();
+  for (const section of item.sections || []) {
+    assert(languages[section.language] && !seen.has(section.language), `Idioma duplicat o invàlid a l’article ${item.id}.`);
+    assert(section.title?.trim() && section.body?.trim(), `Falta el títol o el text de l’article ${item.id}.`);
+    seen.add(section.language);
+    await assertMarkdownAssets(section.body, item.id);
+  }
+  assert(item.url || seen.size, `L’article ${item.id} necessita un enllaç o contingut per a la seva pàgina de detall.`);
+}
 const pages = Object.fromEntries(await Promise.all(['home', 'biography', 'catalogue', 'contact'].map(async slug => [slug, await readJson(`content/pages/${slug}.json`)])));
 for (const [slug, page] of Object.entries(pages)) {
   await assertAssets(page.assets, slug);
@@ -133,7 +153,7 @@ for (const filename of await jsonFiles('content/texts')) {
 }
 for (const language of ['ca', 'es', 'en']) translations[language]['contact.email.value'] = pages.contact.contactEmail;
 // Catch accidentally removed UI labels before a broken site can be published.
-for (const file of ['index.html', 'biografia.html', 'catalogue.html', 'contact.html', 'js/components.js']) {
+for (const file of ['index.html', 'biografia.html', 'catalogue.html', 'premsa.html', 'contact.html', 'js/components.js']) {
   const html = await fs.readFile(path.join(root, file), 'utf8');
   for (const [, key] of html.matchAll(/data-i18n(?:-html|-placeholder)?="([a-z][a-z.]+)"/g)) {
     assert(textKeys.has(key), `Falta la traducció ${key}.`);
@@ -147,7 +167,7 @@ if (process.argv.includes('--validate-only')) {
 }
 await fs.rm(dist, { recursive: true, force: true });
 await fs.mkdir(dist, { recursive: true });
-for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.html': 'biography', 'contact.html': 'contact', 'catalogue.html': 'catalogue' })) {
+for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.html': 'biography', 'contact.html': 'contact', 'catalogue.html': 'catalogue', 'premsa.html': 'press' })) {
   let html = await fs.readFile(path.join(root, file), 'utf8');
   const page = pages[slug];
   let body = await fs.readFile(path.join(root, `templates/pages/${slug}.njk`), 'utf8');
@@ -174,8 +194,18 @@ for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.htm
     }).join('\n');
     body = body.replace('<!-- additional-testimonials -->', testimonials);
   }
+  if (slug === 'press') {
+    const items = pressItems.filter(item => !item.archived).sort((a, b) => a.order - b.order || a.id.localeCompare(b.id)).map((item, index) => {
+      const href = item.sections?.length ? `premsa/${item.id}.html` : item.url;
+      const target = item.sections?.length ? '' : ' target="_blank" rel="noopener noreferrer"';
+      const arrow = item.sections?.length ? '→' : '↗';
+      const localized = field => ['ca', 'es', 'en'].map(language => `<span class="lang-block" lang="${language}">${esc(field[language] || field.ca)}</span>`).join('');
+      return `<li class="press-item"><span class="press-item-number" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><div class="press-item-content"><p class="press-item-kind">${localized(item.kind)}</p><h2 class="press-item-title"><a href="${esc(href)}"${target}>${localized(item.title)}<span class="press-item-arrow" aria-hidden="true">${arrow}</span></a></h2></div></li>`;
+    }).join('\n');
+    body = body.replace('<!-- press-items -->', items);
+  }
   html = html.replace(/(<main\b[^>]*>)[\s\S]*?(<\/main>)/i, (_match, open, close) => `${open}${body}${close}`);
-  if (page.heroImage) html = html.replace(/(<header class="home-hero">\s*<img src=")[^"]+/, `$1${esc(page.heroImage)}`);
+  if (page?.heroImage) html = html.replace(/(<header class="home-hero">\s*<img src=")[^"]+/, `$1${esc(page.heroImage)}`);
   await write(file, html);
 }
 for (const directory of ['css', 'js', 'img', 'audio', 'admin']) await fs.cp(path.join(root, directory), path.join(dist, directory), { recursive: true });
@@ -203,14 +233,34 @@ for (const work of allWorks.filter(hasNote)) {
     ${sections.map(s => `<div class="work-detail-lang-block" data-detail-lang="${s.language}"><h1>${esc(s.title)}</h1></div>`).join('\n')}</div>
     <nav class="work-detail-language-nav" aria-label="Programme note languages">
       <span class="work-detail-sticky-title" aria-hidden="true"></span><span class="work-detail-language-label"></span>
-      <div class="work-detail-language-tabs" role="tablist">${sections.map(s => `<button class="work-detail-language-tab" type="button" role="tab" data-work-language="${s.language}" aria-label="${languages[s.language]}" aria-selected="false">${s.language.toUpperCase()}</button>`).join('')}</div>
+      <div class="work-detail-language-tabs" role="tablist">${sections.map(s => `<button class="work-detail-language-tab" type="button" role="tab" data-content-language="${s.language}" aria-label="${languages[s.language]}" aria-selected="false">${s.language.toUpperCase()}</button>`).join('')}</div>
     </nav><div class="work-detail-content">${sections.map(s => `<div class="work-detail-lang-block" data-detail-lang="${s.language}"><div class="work-info">${blocks(s)}</div></div>`).join('\n')}</div>
     <p class="work-detail-back work-detail-back-bottom">${back}</p></article>`;
   const title = typeof work.title === 'string' ? work.title : work.title.ca;
   const route = `obres/${work.id}.html`;
-  await write(route, templates.render('work.njk', { id: work.id, title, description: `Nota de programa de ${title}.`, content }));
+  await write(route, templates.render('detail.njk', { id: work.id, title, description: `Nota de programa de ${title}.`, content, pageType: 'work-detail' }));
   const available = sections.map(s => s.language);
   noteIndex[work.id] = { href: route, languages: available, siteLanguages: available.filter(l => ['ca', 'es', 'en'].includes(l)), hasSiteLanguage: available.some(l => ['ca', 'es', 'en'].includes(l)) };
 }
 await write('js/data/work-info.js', `/* Generated from Decap programme notes. */\nconst WORK_INFO = ${js(noteIndex)};\n`);
-console.log(`Generat dist/ amb ${allWorks.length} obres i ${Object.keys(noteIndex).length} notes de programa.`);
+for (const item of pressItems.filter(record => record.sections?.length)) {
+  const sections = item.sections;
+  const back = `<a href="premsa.html" data-i18n="press.detail.back"></a>`;
+  const content = `<article class="work-detail-layout press-detail-layout">
+    <div class="page-header work-detail-header"><p class="work-detail-back">${back}</p>
+    ${sections.map(section => `<div class="work-detail-lang-block" data-detail-lang="${section.language}"><h1>${esc(section.title)}</h1><p class="press-detail-author">${esc(item.author?.[section.language] || item.author?.ca || '')}</p>${item.url ? `<p class="press-detail-source"><a href="${esc(item.url)}" target="_blank" rel="noopener noreferrer" data-i18n="press.detail.source"></a></p>` : ''}</div>`).join('\n')}</div>
+    <nav class="work-detail-language-nav" aria-label="Article languages">
+      <span class="work-detail-sticky-title" aria-hidden="true"></span><span class="work-detail-language-label"></span>
+      <div class="work-detail-language-tabs" role="tablist">${sections.map(section => `<button class="work-detail-language-tab" type="button" role="tab" data-content-language="${section.language}" aria-label="${languages[section.language]}" aria-selected="false">${section.language.toUpperCase()}</button>`).join('')}</div>
+    </nav><div class="work-detail-content">${sections.map(section => `<div class="work-detail-lang-block" data-detail-lang="${section.language}"><div class="work-info press-article-body">${richText(section.body)}</div></div>`).join('\n')}</div>
+    <p class="work-detail-back work-detail-back-bottom">${back}</p></article>`;
+  const caTitle = item.sections.find(section => section.language === 'ca')?.title || item.title.ca;
+  await write(`premsa/${item.id}.html`, templates.render('detail.njk', {
+    id: item.id,
+    title: caTitle,
+    description: `Text de Ramon Humet sobre el Llibre d’hores.`,
+    content,
+    pageType: 'press-detail',
+  }));
+}
+console.log(`Generat dist/ amb ${allWorks.length} obres, ${Object.keys(noteIndex).length} notes de programa i ${pressItems.length} articles de premsa.`);

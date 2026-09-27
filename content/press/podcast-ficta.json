@@ -1,0 +1,11 @@
+{
+  "id": "podcast-ficta",
+  "order": 5,
+  "title": {
+    "ca": "Podcast Ficta",
+    "es": "Podcast Ficta",
+    "en": "Ficta Podcast"
+  },
+  "kind": { "ca": "Podcast", "es": "Pódcast", "en": "Podcast" },
+  "url": "https://www.youtube.com/watch?v=3xye6ZZtmsY"
+}

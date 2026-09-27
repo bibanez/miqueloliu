@@ -13,10 +13,12 @@ const Components = (() => {
     // Detail pages are generated under /obres/, but belong to the catalogue
     // section for shared navigation and footer highlighting.
     if (/\/obres\//.test(pathname)) return 'catalogue';
+    if (/\/premsa\//.test(pathname)) return 'press';
 
     const slug = pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
     if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
+    if (slug === 'premsa' || slug === 'press') return 'press';
     if (slug === 'audio-player-mockups') return 'catalogue';
     if (slug === 'contact')    return 'contact';
     return 'home';
@@ -40,6 +42,7 @@ const Components = (() => {
           ${link('index.html',      'home')}
           ${link('biografia.html',  'biography')}
           ${link('catalogue.html',  'catalogue')}
+          ${link('premsa.html',     'press')}
           ${link('contact.html',    'contact')}
           <li>
             <div class="lang-switcher">
@@ -59,6 +62,7 @@ const Components = (() => {
       { href: 'index.html',     key: 'home' },
       { href: 'biografia.html', key: 'biography' },
       { href: 'catalogue.html', key: 'catalogue' },
+      { href: 'premsa.html',    key: 'press' },
       { href: 'contact.html',   key: 'contact' }
     ];
 

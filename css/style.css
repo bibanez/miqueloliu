@@ -613,6 +613,116 @@ section:last-child {
   margin-bottom: 0.75rem;
 }
 
+/* --- Press index --- */
+.press-layout {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+.press-layout > .page-header {
+  margin-bottom: 2.5rem;
+}
+
+.press-layout > .page-header p {
+  max-width: none;
+}
+
+.press-stack {
+  min-width: 0;
+}
+
+.press-list {
+  width: 100%;
+}
+
+.press-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.press-item {
+  display: grid;
+  grid-template-columns: 3.25rem minmax(0, 1fr);
+  gap: 0.75rem;
+  align-items: start;
+  padding: 1.45rem 0 1.55rem;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.press-item:first-child {
+  padding-top: 0.25rem;
+}
+
+.press-item:last-child {
+  border-bottom: 0;
+}
+
+.press-item-number {
+  padding-top: 0.2rem;
+  color: var(--color-text-light);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+}
+
+.press-item-kind {
+  margin: 0 0 0.35rem;
+  color: var(--color-text-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.press-item-title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+.press-item-title a {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.press-item-arrow {
+  display: inline-block;
+  margin-left: 0.55rem;
+  color: var(--color-accent);
+  font-family: var(--font-sans);
+  font-size: 0.8em;
+  transition: transform 0.2s ease;
+}
+
+.press-item-title a:hover .press-item-arrow {
+  transform: translate(2px, -2px);
+}
+
+.press-detail-author {
+  margin: 0.7rem 0 0;
+  color: var(--color-text-light);
+  font-size: 0.92rem;
+  letter-spacing: 0.03em;
+}
+
+.press-detail-source {
+  margin: 0.5rem 0 0;
+  font-size: 0.85rem;
+}
+
+.press-article-body {
+  max-width: 720px;
+}
+
+@media (max-width: 600px) {
+  .press-item {
+    grid-template-columns: 2.25rem minmax(0, 1fr);
+    gap: 0.5rem;
+    padding: 1.2rem 0 1.3rem;
+  }
+}
+
 #catalogue-content {
   width: 100%;
   max-width: var(--content-width);
@@ -1582,8 +1692,7 @@ section:last-child {
   }
 
   .contact-image {
-    height: 150px;
-    min-height: 0;
+    display: none;
   }
 }
 

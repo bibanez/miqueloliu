@@ -48,6 +48,8 @@ Decap edits `content/works/<id>.json`, `content/categories/`, `content/pages/`, 
 
 Programme notes were imported from the published `obres/*.html` into language sections with rich-text and poem blocks; their URLs and six source-language sections are preserved. The old Word generator is retired. `documentacio/` remains gitignored and is never copied to `dist/`.
 
+Press entries live in `content/press/<id>.json` and are edited in the Decap **Premsa** collection. The build orders active entries on `premsa.html`; entries with language sections get a generated `premsa/<id>.html` detail page using the same language tabs, detail shell, and reader behavior as work pages. Entries with only an external URL link directly to that source.
+
 The language in the shared navigation controls the site chrome. Detail pages have a second, source-language tab strip for Catalan, Spanish, English, French, German, Euskera, or any language added to the generator manifest. When the shared language changes, the detail tab follows it when that source language exists; otherwise the reader's selected note language is preserved.
 
 Detail pages include `<base href="../">` so the shared root-level components continue to work from the nested `obres/` URLs.

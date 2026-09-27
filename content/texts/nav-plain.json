@@ -22,6 +22,48 @@
       "en": "Works"
     },
     {
+      "key": "nav.press",
+      "format": "plain",
+      "ca": "Premsa",
+      "es": "Prensa",
+      "en": "Press"
+    },
+    {
+      "key": "press.title",
+      "format": "plain",
+      "ca": "Premsa",
+      "es": "Prensa",
+      "en": "Press"
+    },
+    {
+      "key": "press.description",
+      "format": "plain",
+      "ca": "Selecció d’escrits, entrevistes i converses sobre Miquel Oliu i la seva música.",
+      "es": "Selección de escritos, entrevistas y conversaciones sobre Miquel Oliu y su música.",
+      "en": "A selection of writing, interviews and conversations about Miquel Oliu and his music."
+    },
+    {
+      "key": "press.section",
+      "format": "plain",
+      "ca": "Escrits/Premsa",
+      "es": "Escritos/Prensa",
+      "en": "Texts and Press"
+    },
+    {
+      "key": "press.detail.back",
+      "format": "plain",
+      "ca": "← Premsa",
+      "es": "← Prensa",
+      "en": "← Press"
+    },
+    {
+      "key": "press.detail.source",
+      "format": "plain",
+      "ca": "Versió publicada",
+      "es": "Versión publicada",
+      "en": "Published version"
+    },
+    {
       "key": "nav.contact",
       "format": "plain",
       "ca": "Contacte",

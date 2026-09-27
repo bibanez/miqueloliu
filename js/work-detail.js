@@ -1,23 +1,23 @@
 /*
- * Work-detail language tabs
+ * Shared language tabs for work notes and press articles
  *
  * The website language (CA/ES/EN in the shared navigation) translates the
  * chrome around the page. These tabs choose the language of the programme
  * note itself, which may also be French, German, or Euskera.
  */
 
-var PageInit = {
-  'work-detail': () => {
-    const page = document.querySelector('main[data-page="work-detail"]');
+function initDetailPage() {
+    const page = document.querySelector('main[data-page="work-detail"], main[data-page="press-detail"]');
     if (!page) return;
 
-    const tabs = [...page.querySelectorAll('[data-work-language]')];
+    const isPressDetail = page.dataset.page === 'press-detail';
+    const tabs = [...page.querySelectorAll('[data-content-language]')];
     const blocks = [...page.querySelectorAll('[data-detail-lang]')];
     const label = page.querySelector('.work-detail-language-label');
     const stickyTitle = page.querySelector('.work-detail-sticky-title');
     const header = page.querySelector('.work-detail-header');
     const languageNav = page.querySelector('.work-detail-language-nav');
-    const available = tabs.map(tab => tab.dataset.workLanguage);
+    const available = tabs.map(tab => tab.dataset.contentLanguage);
     const content = page.querySelector('.work-detail-content');
     const noteLabels = {
       ca: 'nota de programa',
@@ -27,6 +27,7 @@ var PageInit = {
       de: 'Programmnotiz',
       eu: 'programa-oharra'
     };
+    const articleLabels = { ca: 'text', es: 'texto', en: 'text' };
 
     function findWork(id) {
       if (typeof WORKS === 'undefined') return null;
@@ -42,7 +43,8 @@ var PageInit = {
 
     function renderRecordings() {
       if (!content || typeof RecordingPlayer === 'undefined') return;
-      const work = findWork(page.dataset.workId);
+      if (isPressDetail) return;
+      const work = findWork(page.dataset.detailId);
       const recordings = work && work.recordings ? work.recordings : [];
       let mount = page.querySelector('.work-detail-recordings');
 
@@ -51,7 +53,7 @@ var PageInit = {
         return;
       }
 
-      const recordingsId = `audio-${page.dataset.workId}`;
+      const recordingsId = `audio-${page.dataset.detailId}`;
 
       if (!mount) {
         mount = document.createElement('section');
@@ -69,7 +71,7 @@ var PageInit = {
     }
 
     function updateNoteLabel(lang) {
-      if (label) label.textContent = noteLabels[lang] || 'programme note';
+      if (label) label.textContent = (isPressDetail ? articleLabels : noteLabels)[lang] || (isPressDetail ? 'text' : 'programme note');
     }
 
     function setActiveLanguage(lang) {
@@ -80,7 +82,7 @@ var PageInit = {
       const title = page.querySelector(`[data-detail-lang="${lang}"] h1`);
       if (stickyTitle && title) stickyTitle.textContent = title.textContent;
       tabs.forEach(tab => {
-        const active = tab.dataset.workLanguage === lang;
+        const active = tab.dataset.contentLanguage === lang;
         tab.classList.toggle('active', active);
         tab.setAttribute('aria-selected', String(active));
       });
@@ -92,7 +94,7 @@ var PageInit = {
     }
 
     tabs.forEach(tab => {
-      tab.addEventListener('click', () => setActiveLanguage(tab.dataset.workLanguage));
+      tab.addEventListener('click', () => setActiveLanguage(tab.dataset.contentLanguage));
     });
 
     // Once the title has scrolled away, show its compact counterpart in the
@@ -114,5 +116,9 @@ var PageInit = {
 
     setActiveLanguage(available.includes(I18n.currentLang()) ? I18n.currentLang() : available[0]);
     renderRecordings();
-  }
+}
+
+var PageInit = {
+  'work-detail': initDetailPage,
+  'press-detail': initDetailPage,
 };

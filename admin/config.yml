@@ -868,6 +868,126 @@ collections:
       - order
     format: json
     extension: json
+  - name: press
+    label: Premsa
+    label_singular: Article
+    folder: content/press
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    preview_path: /premsa/{{slug}}.html
+    summary: "{{title.ca}}"
+    fields:
+      - label: Identificador fix
+        name: id
+        widget: string
+        hint: URL immutable. Feu servir un slug únic amb lletres minúscules i guions.
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Escriviu lletres minúscules, números i guions.
+      - label: Ordre
+        name: order
+        widget: number
+        value_type: int
+        min: 0
+        hint: Els nombres més petits apareixen primer a la pàgina de premsa.
+      - label: Arxivat
+        name: archived
+        widget: boolean
+        default: false
+        hint: Els articles arxivats no apareixen a la pàgina de premsa.
+      - label: Títol
+        name: title
+        widget: object
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Tipus
+        name: kind
+        widget: object
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Autoria
+        name: author
+        widget: object
+        required: false
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+            required: false
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
+      - label: Enllaç extern
+        name: url
+        widget: string
+        required: false
+      - label: Versions de l’article
+        name: sections
+        widget: list
+        required: false
+        collapsed: true
+        summary: "{{fields.language}} · {{fields.title}}"
+        fields:
+          - label: Idioma
+            name: language
+            widget: select
+            options:
+              - { label: Català, value: ca }
+              - { label: Castellà, value: es }
+              - { label: Anglès, value: en }
+              - { label: Francès, value: fr }
+              - { label: Alemany, value: de }
+              - { label: Euskera, value: eu }
+          - label: Títol de l’article
+            name: title
+            widget: string
+          - label: Text
+            name: body
+            widget: markdown
+            modes:
+              - rich_text
+            editor_components:
+              - image
+            buttons:
+              - bold
+              - italic
+              - link
+              - heading-two
+              - heading-three
+              - quote
+              - bulleted-list
+              - numbered-list
+    sortable_fields:
+      - order
+      - title.ca
+    format: json
+    extension: json
   - name: categories
     label: Categories
     folder: content/categories
