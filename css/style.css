@@ -945,6 +945,14 @@ section:last-child {
   line-height: 1.35;
 }
 
+.recording-card-year {
+  margin-top: 0.3rem;
+  color: var(--color-accent);
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+
 .recording-card-credit {
   margin-top: 0.35rem;
   color: var(--color-text-light);

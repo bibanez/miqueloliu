@@ -104,6 +104,7 @@ for (let index = 0; index < recordingItems.length; index++) {
   recordingIds.add(item.id);
   assert(Number.isInteger(item.order) && item.order >= 0, `Ordre invàlid per a l’enregistrament ${item.id}.`);
   assert(item.title?.trim(), `Falta el títol de l’enregistrament ${item.id}.`);
+  assert(Number.isInteger(item.year) && item.year >= 1900 && item.year <= 2100, `Any de publicació invàlid per a ${item.id}.`);
   await assertAsset(item.cover, item.id);
   assert(/^https:\/\/open\.spotify\.com\/(?:album|track)\/[A-Za-z0-9]+/.test(item.spotifyUrl || ''), `Enllaç de Spotify invàlid per a ${item.id}.`);
 }
@@ -230,6 +231,7 @@ const recordingCards = recordingItems.filter(item => !item.archived)
     return `<a class="recording-card" href="${esc(item.spotifyUrl)}" target="_blank" rel="noopener noreferrer">
           <img src="${esc(item.cover)}" alt="Cover for ${esc(item.release || item.title)}" loading="lazy" decoding="async">
           <span class="recording-card-title">${esc(item.title)}</span>
+          <span class="recording-card-year">${esc(item.year)}</span>
           ${subtitle ? `<span class="recording-card-credit">${subtitle}</span>` : ''}
         </a>`;
   }).join('\n        ');

@@ -898,6 +898,13 @@ collections:
       - label: Títol de l’obra
         name: title
         widget: string
+      - label: Any de publicació
+        name: year
+        widget: number
+        value_type: int
+        min: 1900
+        max: 2100
+        hint: Any de publicació del disc o de l’enregistrament.
       - label: Títol del disc o publicació
         name: release
         widget: string
