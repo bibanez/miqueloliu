@@ -43,10 +43,9 @@ const RecordingPlayer = (() => {
     return recordings;
   }
 
-  function render(recording, options = {}) {
+  function render(recording) {
     if (!recording || !recording.src) return '';
 
-    const variant = options.variant || 'compact';
     const title = escapeHtml(I18n.loc(recording.title));
     const composer = escapeHtml(I18n.loc(recording.composer));
     const performer = escapeHtml(I18n.loc(recording.performer));
@@ -67,10 +66,10 @@ const RecordingPlayer = (() => {
     const seekLabel = escapeHtml(I18n.t('recording.seek'));
 
     return `
-      <section class="recording-player recording-player--${escapeHtml(variant)}" data-recording-player data-recording-id="${escapeHtml(recording.id || '')}">
+      <section class="recording-player recording-player--editorial" data-recording-player data-recording-id="${escapeHtml(recording.id || '')}">
         <div class="recording-player-topline">
           <span class="recording-kicker" data-i18n="recording.label">${escapeHtml(I18n.t('recording.label'))}</span>
-          <span class="recording-example" data-i18n="recording.example">${escapeHtml(I18n.t('recording.example'))}</span>
+          <a class="recording-download" href="${escapeHtml(recording.src)}" download data-i18n="recording.download">${escapeHtml(I18n.t('recording.download'))}</a>
         </div>
         <div class="recording-player-main">
           <button class="recording-play" type="button" aria-label="${playLabel}" data-play-label="${playLabel}" data-pause-label="${escapeHtml(I18n.t('recording.pause'))}">
@@ -80,19 +79,17 @@ const RecordingPlayer = (() => {
             <h4 class="recording-title">${title}</h4>
             <p class="recording-meta">${composer}<span aria-hidden="true"> · </span>${performer}</p>
           </div>
-          <span class="recording-time recording-time-total">${duration}</span>
         </div>
         <div class="recording-player-panel">
           <button class="recording-waveform" type="button" aria-label="${seekLabel}" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0:00" role="slider">
             <span class="recording-wave-bars">${bars}</span>
             <span class="recording-wave-progress" aria-hidden="true"></span>
           </button>
-          <div class="recording-player-bottomline">
+          <div class="recording-player-times">
             <span class="recording-time recording-time-current">0:00</span>
-            <span class="recording-rule" aria-hidden="true"></span>
-            ${sourceUrl ? `<a class="recording-source" href="${sourceUrl}" target="_blank" rel="noopener" data-i18n="recording.source">${escapeHtml(I18n.t('recording.source'))}</a>` : ''}
-            <a class="recording-download" href="${escapeHtml(recording.src)}" download data-i18n="recording.download">${escapeHtml(I18n.t('recording.download'))}</a>
+            <span class="recording-time recording-time-total">${duration}</span>
           </div>
+          ${sourceUrl ? `<div class="recording-player-bottomline"><a class="recording-source" href="${sourceUrl}" target="_blank" rel="noopener" data-i18n="recording.source">${escapeHtml(I18n.t('recording.source'))}</a></div>` : ''}
           <audio class="recording-audio" preload="metadata" src="${escapeHtml(recording.src)}"></audio>
         </div>
       </section>`;

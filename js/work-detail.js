@@ -62,9 +62,7 @@ function initDetailPage() {
         content.before(mount);
       }
 
-      mount.innerHTML = recordings.map(recording => RecordingPlayer.render(recording, {
-        variant: 'compact',
-      })).join('');
+      mount.innerHTML = recordings.map(recording => RecordingPlayer.render(recording)).join('');
       mount.hidden = false;
       I18n.apply();
       RecordingPlayer.bind(mount);

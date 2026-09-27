@@ -559,6 +559,16 @@ const WORKS = [
         score: 'ficta',
       },
       {
+        recordings: [
+          {
+            id: 'despertar-mp3',
+            title: 'Despertar',
+            performer: 'Jim Franklin',
+            composer: 'Miquel Oliu',
+            duration: '5:33',
+            src: '/uploads/25-06-despertar-jim-franklin-premier-miquel-oliu.mp3',
+          },
+        ],
         id: 'despertar',
         title: {
           ca: 'Despertar',

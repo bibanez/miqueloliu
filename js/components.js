@@ -20,7 +20,6 @@ const Components = (() => {
     if (slug === 'catalogue')  return 'catalogue';
     if (slug === 'recordings') return 'recordings';
     if (slug === 'premsa' || slug === 'press') return 'press';
-    if (slug === 'audio-player-mockups') return 'catalogue';
     if (slug === 'contact')    return 'contact';
     return 'home';
   }

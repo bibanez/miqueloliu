@@ -141,9 +141,7 @@
           if (work.recordings && work.recordings.length) {
             const recordingsId = `audio-${work.id}`;
             html += `<div class="work-recordings" id="${recordingsId}"${openRecordings.has(recordingsId) ? '' : ' hidden'}>`;
-            html += work.recordings.map(recording => RecordingPlayer.render(recording, {
-              variant: 'compact',
-            })).join('');
+            html += work.recordings.map(recording => RecordingPlayer.render(recording)).join('');
             html += '</div>';
           }
 
