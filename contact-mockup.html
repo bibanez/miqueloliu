@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Miquel Oliu — Contacte (mockup)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .mockup-main { padding-top: 3rem; }
+    .mockup-contact { max-width: var(--content-width); margin: 0 auto; }
+    .mockup-contact .page-header { margin: 0 0 2.5rem; }
+    .mockup-contact .page-header h1 { margin-bottom: 0.75rem; }
+    .mockup-contact .contact-grid {
+      display: grid;
+      grid-template-columns: 167px minmax(0, 1fr);
+      align-items: stretch;
+      gap: 2.5rem;
+    }
+    .mockup-contact .contact-rail { position: relative; align-self: stretch; margin: 0; }
+    .mockup-contact .contact-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 55%; border: 1px solid rgba(44,44,44,.08); }
+    .mockup-contact .contact-content { min-width: 0; }
+    .mockup-contact .contact-overview { margin: 0; }
+    .mockup-contact .contact-copy h2,
+    .mockup-contact .message h2 {
+      margin: 0 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--color-border);
+      font-size: 1.5rem;
+    }
+    .mockup-contact .contact-label {
+      margin: 1.25rem 0 0.3rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+    .mockup-contact .email-box { display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+    .mockup-contact .email-link { font-size: 1.05rem; font-weight: 500; color: var(--color-text); text-decoration: underline; text-decoration-color: var(--color-border); text-underline-offset: 4px; }
+    .mockup-contact .copy-btn { border: 1px solid var(--color-border); border-radius: 4px; padding: 0.35rem 0.75rem; background: transparent; color: var(--color-text-light); font: 0.8rem var(--font-sans); }
+    .mockup-contact .welcome { margin: 0.85rem 0 0; font: 1.05rem/1.6 var(--font-serif); color: var(--color-text-light); }
+    .mockup-contact .location { margin: 0; font-size: 0.95rem; }
+    .mockup-contact .text-divider { margin: 2.5rem 0; }
+    .mockup-contact .form-group { margin-bottom: 1.25rem; }
+    .mockup-contact label { display: block; margin-bottom: 0.4rem; font-size: 0.85rem; font-weight: 500; }
+    .mockup-contact input,
+    .mockup-contact select,
+    .mockup-contact textarea { width: 100%; padding: 0.75rem 0.9rem; border: 1px solid var(--color-border); border-radius: 4px; background: var(--color-bg); color: var(--color-text); font: 0.95rem var(--font-sans); }
+    .mockup-contact textarea { min-height: 130px; resize: vertical; }
+    .mockup-contact .submit-btn { border: 0; border-radius: 4px; padding: 0.85rem 1.5rem; background: var(--color-accent); color: white; font: 500 0.9rem var(--font-sans); }
+    .mockup-contact .form-note { margin: 0.75rem 0 0; font-size: 0.8rem; }
+    @media (max-width: 600px) {
+      .mockup-main { padding-top: 2rem; }
+      .mockup-contact .contact-grid { grid-template-columns: minmax(0, 1fr); gap: 1.5rem; }
+      .mockup-contact .contact-rail { height: 150px; min-height: 0; }
+      .mockup-contact .contact-photo { object-position: center 55%; }
+      .mockup-contact .copy-btn { font-size: 0.72rem; }
+    }
+  </style>
+</head>
+<body>
+  <div id="nav-container"></div>
+  <main class="mockup-main">
+    <div class="mockup-contact">
+      <header class="page-header">
+        <h1>Contacte</h1>
+        <p>Per a consultes sobre partitures, encàrrecs, concerts o col·laboracions.</p>
+      </header>
+
+      <div class="contact-grid">
+        <figure class="contact-rail" aria-hidden="true">
+          <img class="contact-photo" src="img/contacte.jpg" alt="">
+        </figure>
+        <div class="contact-content">
+          <section class="contact-overview" aria-labelledby="contact-details-title">
+            <div class="contact-copy">
+              <h2 id="contact-details-title">Informació de contacte</h2>
+              <p class="contact-label">Correu electrònic</p>
+              <div class="email-box">
+                <a class="email-link" href="mailto:mqoliu@gmail.com">mqoliu@gmail.com</a>
+                <button class="copy-btn" type="button">Copiar adreça</button>
+              </div>
+              <p class="welcome">Amb molt de gust serà un plaer llegir i contestar el vostre missatge.</p>
+              <p class="contact-label">Ubicació</p>
+              <p class="location">Barcelona / Catalunya</p>
+            </div>
+          </section>
+
+          <div class="text-divider" aria-hidden="true"></div>
+
+          <section class="message" aria-labelledby="message-title">
+            <h2 id="message-title">Enviar un missatge</h2>
+            <form>
+              <div class="form-group">
+                <label for="subject">Motiu de la consulta</label>
+                <select id="subject"><option>Selecciona una opció...</option><option>Consulta general</option><option>Sol·licitud de partitura / material</option><option>Encàrrec o proposta de concert</option><option>Altres col·laboracions</option></select>
+              </div>
+              <div class="form-group">
+                <label for="message">Missatge</label>
+                <textarea id="message" placeholder="Escriu el teu missatge aquí..."></textarea>
+              </div>
+              <button class="submit-btn" type="button">Enviar correu electrònic</button>
+              <p class="form-note">S’obrirà el teu client de correu electrònic preconfigurat amb les dades introduïdes.</p>
+            </form>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="footer-container"></div>
+  <script src="js/translations.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/components.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', () => Components.init());</script>
+</body>
+</html>

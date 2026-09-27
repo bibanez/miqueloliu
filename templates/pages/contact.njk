@@ -4,11 +4,12 @@
         <p data-i18n="contact.description"></p>
       </div>
 
-      <figure class="contact-image" aria-hidden="true">
-        <img src="img/contacte.jpg" alt="" loading="lazy" decoding="async">
-      </figure>
+      <div class="contact-columns">
+        <figure class="contact-image" aria-hidden="true">
+          <img src="img/contacte.jpg" alt="" loading="lazy" decoding="async">
+        </figure>
 
-      <div class="contact-stack">
+        <div class="contact-stack">
         <!-- Direct Contact & Details Section -->
         <section class="contact-block">
           <h2 class="contact-block-title" data-i18n="contact.card.title"></h2>
@@ -23,6 +24,7 @@
               </button>
             </div>
             <div id="copy-toast" class="copy-toast" aria-live="polite"></div>
+            <p class="contact-welcome" data-i18n="contact.email.welcome"></p>
           </div>
 
           <div class="contact-section">
@@ -30,18 +32,9 @@
             <p class="contact-value" data-i18n="contact.location.value"></p>
           </div>
 
-          <div class="contact-section">
-            <p class="contact-label" data-i18n="contact.publisher.label"></p>
-            <p class="contact-value" data-i18n="contact.publisher.text"></p>
-            <p class="contact-link-wrapper">
-              <a href="https://www.ficta.cat" target="_blank" rel="noopener noreferrer" class="external-link">
-                <span data-i18n="contact.publisher.link"></span> &rarr;
-              </a>
-            </p>
-          </div>
         </section>
 
-        <div class="text-divider"></div>
+        <div class="text-divider" aria-hidden="true"></div>
 
         <!-- Interactive Contact Form Section -->
         <section class="contact-block">
@@ -72,5 +65,6 @@
             <div id="form-status" class="form-status" aria-live="polite"></div>
           </form>
         </section>
+        </div>
       </div>
     </div>

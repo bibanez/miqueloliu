@@ -105,7 +105,6 @@ for (const item of pages.home.additionalTestimonials || []) {
   }
 }
 assert(/^[^\s@<>"'`]+@[^\s@<>"'`]+\.[^\s@<>"'`]+$/.test(pages.contact.contactEmail || ''), 'Adreça de correu de contacte invàlida.');
-assert(/^https:\/\//.test(pages.contact.publisherUrl || ''), 'L’enllaç de l’editorial ha de començar per https://.');
 for (const version of ['short', 'full']) {
   assert(pages.biography[version]?.ca?.length, 'Falta la biografia en català.');
   for (const blocks of Object.values(pages.biography[version])) for (const block of blocks) {
@@ -160,7 +159,7 @@ for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.htm
     });
   }
   if (slug === 'contact') {
-    body = body.replaceAll('mqoliu@gmail.com', esc(page.contactEmail)).replace('src="img/contacte.jpg"', `src="${esc(page.image)}"`).replace('href="https://www.ficta.cat"', `href="${esc(page.publisherUrl)}"`);
+    body = body.replaceAll('mqoliu@gmail.com', esc(page.contactEmail)).replace('src="img/contacte.jpg"', `src="${esc(page.image)}"`);
     html = html.replaceAll('mqoliu@gmail.com', page.contactEmail);
   }
   if (slug === 'home') {
