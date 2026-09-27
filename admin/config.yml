@@ -12,9 +12,8 @@ site_url: https://miqueloliu.netlify.app
 display_url: https://miqueloliu.netlify.app
 show_preview_links: false
 collections:
-  - name: pages
-    label: Pàgines
-    label_singular: Pàgina
+  - name: landing
+    label: Pàgina d’inici
     files:
       - name: home
         label: Inici · imatges i dades
@@ -42,6 +41,165 @@ collections:
                 media_library:
                   config:
                     max_file_size: 10485760
+      - name: home-plain
+        label: Inici · etiquetes
+        file: content/texts/home-plain.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: home-lines
+        label: Inici · versos
+        file: content/texts/home-lines.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: text
+                required: true
+              - name: es
+                label: Castellà
+                widget: text
+                required: false
+              - name: en
+                label: Anglès
+                widget: text
+                required: false
+      - name: home-attribution
+        label: Inici · autoria
+        file: content/texts/home-attribution.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: text
+                required: true
+              - name: es
+                label: Castellà
+                widget: text
+                required: false
+              - name: en
+                label: Anglès
+                widget: text
+                required: false
+      - name: home-rich
+        label: Inici · textos
+        file: content/texts/home-rich.json
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: markdown
+                required: true
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+              - name: es
+                label: Castellà
+                widget: markdown
+                required: false
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+              - name: en
+                label: Anglès
+                widget: markdown
+                required: false
+                modes:
+                  - rich_text
+                editor_components:
+                  - image
+                buttons:
+                  - bold
+                  - italic
+                  - link
+                  - heading-two
+                  - heading-three
+                  - quote
+                  - bulleted-list
+                  - numbered-list
+  - name: pages
+    label: Pàgines
+    label_singular: Pàgina
+    files:
       - name: biography
         label: Biografia
         file: content/pages/biography.json
@@ -674,161 +832,6 @@ collections:
   - name: interface
     label: Textos i traduccions
     files:
-      - name: home-plain
-        label: Inici · etiquetes
-        file: content/texts/home-plain.json
-        fields:
-          - name: entries
-            label: Textos
-            widget: list
-            allow_add: false
-            collapsed: true
-            summary: "{{fields.ca}}"
-            fields:
-              - name: key
-                label: Identificador
-                widget: hidden
-              - name: format
-                label: Format
-                widget: hidden
-              - name: ca
-                label: Català
-                widget: string
-                required: true
-              - name: es
-                label: Castellà
-                widget: string
-                required: false
-              - name: en
-                label: Anglès
-                widget: string
-                required: false
-      - name: home-lines
-        label: Inici · versos
-        file: content/texts/home-lines.json
-        fields:
-          - name: entries
-            label: Textos
-            widget: list
-            allow_add: false
-            collapsed: true
-            summary: "{{fields.ca}}"
-            fields:
-              - name: key
-                label: Identificador
-                widget: hidden
-              - name: format
-                label: Format
-                widget: hidden
-              - name: ca
-                label: Català
-                widget: text
-                required: true
-              - name: es
-                label: Castellà
-                widget: text
-                required: false
-              - name: en
-                label: Anglès
-                widget: text
-                required: false
-      - name: home-attribution
-        label: Inici · autoria
-        file: content/texts/home-attribution.json
-        fields:
-          - name: entries
-            label: Textos
-            widget: list
-            allow_add: false
-            collapsed: true
-            summary: "{{fields.ca}}"
-            fields:
-              - name: key
-                label: Identificador
-                widget: hidden
-              - name: format
-                label: Format
-                widget: hidden
-              - name: ca
-                label: Català
-                widget: text
-                required: true
-              - name: es
-                label: Castellà
-                widget: text
-                required: false
-              - name: en
-                label: Anglès
-                widget: text
-                required: false
-      - name: home-rich
-        label: Inici · textos
-        file: content/texts/home-rich.json
-        fields:
-          - name: entries
-            label: Textos
-            widget: list
-            allow_add: false
-            collapsed: true
-            summary: "{{fields.ca}}"
-            fields:
-              - name: key
-                label: Identificador
-                widget: hidden
-              - name: format
-                label: Format
-                widget: hidden
-              - name: ca
-                label: Català
-                widget: markdown
-                required: true
-                modes:
-                  - rich_text
-                editor_components:
-                  - image
-                buttons:
-                  - bold
-                  - italic
-                  - link
-                  - heading-two
-                  - heading-three
-                  - quote
-                  - bulleted-list
-                  - numbered-list
-              - name: es
-                label: Castellà
-                widget: markdown
-                required: false
-                modes:
-                  - rich_text
-                editor_components:
-                  - image
-                buttons:
-                  - bold
-                  - italic
-                  - link
-                  - heading-two
-                  - heading-three
-                  - quote
-                  - bulleted-list
-                  - numbered-list
-              - name: en
-                label: Anglès
-                widget: markdown
-                required: false
-                modes:
-                  - rich_text
-                editor_components:
-                  - image
-                buttons:
-                  - bold
-                  - italic
-                  - link
-                  - heading-two
-                  - heading-three
-                  - quote
-                  - bulleted-list
-                  - numbered-list
       - name: bio-plain
         label: Biografia · etiquetes
         file: content/texts/bio-plain.json
