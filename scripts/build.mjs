@@ -61,6 +61,8 @@ const files = await jsonFiles('content/works');
 const allWorks = await Promise.all(files.map(file => readJson(`content/works/${file}`)));
 const pressFiles = await jsonFiles('content/press');
 const pressItems = await Promise.all(pressFiles.map(file => readJson(`content/press/${file}`)));
+const recordingFiles = await jsonFiles('content/recordings');
+const recordingItems = await Promise.all(recordingFiles.map(file => readJson(`content/recordings/${file}`)));
 const hasNote = work => Boolean(work.programmeNote?.sections?.length);
 for (let index = 0; index < allWorks.length; index++) {
   const work = allWorks[index];
@@ -94,6 +96,17 @@ for (let index = 0; index < allWorks.length; index++) {
 for (const id of fixedIds.workIds) assert(files.includes(`${id}.json`), `No elimineu l’obra publicada ${id}; arxiveu-la.`);
 for (const id of fixedIds.categoryIds) assert(categoryIds.has(id), `No elimineu la categoria publicada ${id}.`);
 for (const id of fixedIds.programmeNoteIds) assert(hasNote(allWorks.find(w => w.id === id)), `Conserveu la nota publicada de ${id}.`);
+const recordingIds = new Set();
+for (let index = 0; index < recordingItems.length; index++) {
+  const item = recordingItems[index];
+  assert(slugPattern.test(item.id || '') && recordingFiles[index] === `${item.id}.json`, `Identificador d’enregistrament invàlid: ${recordingFiles[index]}.`);
+  assert(!recordingIds.has(item.id), `Identificador d’enregistrament duplicat: ${item.id}.`);
+  recordingIds.add(item.id);
+  assert(Number.isInteger(item.order) && item.order >= 0, `Ordre invàlid per a l’enregistrament ${item.id}.`);
+  assert(item.title?.trim(), `Falta el títol de l’enregistrament ${item.id}.`);
+  await assertAsset(item.cover, item.id);
+  assert(/^https:\/\/open\.spotify\.com\/(?:album|track)\/[A-Za-z0-9]+/.test(item.spotifyUrl || ''), `Enllaç de Spotify invàlid per a ${item.id}.`);
+}
 for (let index = 0; index < pressItems.length; index++) {
   const item = pressItems[index];
   assert(slugPattern.test(item.id || '') && pressFiles[index] === `${item.id}.json`, `Identificador de premsa invàlid: ${pressFiles[index]}.`);
@@ -153,7 +166,7 @@ for (const filename of await jsonFiles('content/texts')) {
 }
 for (const language of ['ca', 'es', 'en']) translations[language]['contact.email.value'] = pages.contact.contactEmail;
 // Catch accidentally removed UI labels before a broken site can be published.
-for (const file of ['index.html', 'biografia.html', 'catalogue.html', 'premsa.html', 'contact.html', 'js/components.js']) {
+for (const file of ['index.html', 'biografia.html', 'catalogue.html', 'recordings.html', 'premsa.html', 'contact.html', 'js/components.js']) {
   const html = await fs.readFile(path.join(root, file), 'utf8');
   for (const [, key] of html.matchAll(/data-i18n(?:-html|-placeholder)?="([a-z][a-z.]+)"/g)) {
     assert(textKeys.has(key), `Falta la traducció ${key}.`);
@@ -208,6 +221,20 @@ for (const [file, slug] of Object.entries({ 'index.html': 'home', 'biografia.htm
   if (page?.heroImage) html = html.replace(/(<header class="home-hero">\s*<img src=")[^"]+/, `$1${esc(page.heroImage)}`);
   await write(file, html);
 }
+let recordingsHtml = await fs.readFile(path.join(root, 'recordings.html'), 'utf8');
+const recordingCards = recordingItems.filter(item => !item.archived)
+  .sort((a, b) => a.order - b.order || a.id.localeCompare(b.id))
+  .map(item => {
+    const subtitle = [item.release && item.release.trim().toLowerCase() !== item.title.trim().toLowerCase() ? item.release : '', item.performers]
+      .filter(Boolean).map(esc).join(' · ');
+    return `<a class="recording-card" href="${esc(item.spotifyUrl)}" target="_blank" rel="noopener noreferrer">
+          <img src="${esc(item.cover)}" alt="Cover for ${esc(item.release || item.title)}" loading="lazy" decoding="async">
+          <span class="recording-card-title">${esc(item.title)}</span>
+          ${subtitle ? `<span class="recording-card-credit">${subtitle}</span>` : ''}
+        </a>`;
+  }).join('\n        ');
+recordingsHtml = recordingsHtml.replace('<!-- recording-items -->', recordingCards);
+await write('recordings.html', recordingsHtml);
 for (const directory of ['css', 'js', 'img', 'audio', 'admin']) await fs.cp(path.join(root, directory), path.join(dist, directory), { recursive: true });
 await write('admin/config.yml', YAML.stringify(config, { lineWidth: 0 }));
 // Netlify previews cannot publish to main; editors use the production CMS URL.

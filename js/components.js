@@ -18,6 +18,7 @@ const Components = (() => {
     const slug = pathname.replace(/\/?(index)?(\.html)?$/, '').split('/').pop();
     if (slug === 'biografia')  return 'biography';
     if (slug === 'catalogue')  return 'catalogue';
+    if (slug === 'recordings') return 'recordings';
     if (slug === 'premsa' || slug === 'press') return 'press';
     if (slug === 'audio-player-mockups') return 'catalogue';
     if (slug === 'contact')    return 'contact';
@@ -42,6 +43,7 @@ const Components = (() => {
           ${link('index.html',      'home')}
           ${link('biografia.html',  'biography')}
           ${link('catalogue.html',  'catalogue')}
+          ${link('recordings.html', 'recordings')}
           ${link('premsa.html',     'press')}
           ${link('contact.html',    'contact')}
           <li>
@@ -62,6 +64,7 @@ const Components = (() => {
       { href: 'index.html',     key: 'home' },
       { href: 'biografia.html', key: 'biography' },
       { href: 'catalogue.html', key: 'catalogue' },
+      { href: 'recordings.html', key: 'recordings' },
       { href: 'premsa.html',    key: 'press' },
       { href: 'contact.html',   key: 'contact' }
     ];

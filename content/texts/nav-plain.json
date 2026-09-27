@@ -22,6 +22,13 @@
       "en": "Works"
     },
     {
+      "key": "nav.recordings",
+      "format": "plain",
+      "ca": "Enregistraments",
+      "es": "Grabaciones",
+      "en": "Recordings"
+    },
+    {
       "key": "nav.press",
       "format": "plain",
       "ca": "Premsa",

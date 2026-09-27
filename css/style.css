@@ -900,6 +900,58 @@ section:last-child {
   margin: 0.75rem 0;
 }
 
+/* --- Recordings gallery --- */
+.recordings-layout {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 4rem;
+}
+
+.recordings-layout .page-header {
+  margin-bottom: 3rem;
+}
+
+.recordings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem 1.5rem;
+}
+
+.recording-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  color: var(--color-text);
+}
+
+.recording-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  background: #eeeae4;
+  margin-bottom: 0.9rem;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.recording-card:hover img {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(47, 38, 30, 0.12);
+}
+
+.recording-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  line-height: 1.35;
+}
+
+.recording-card-credit {
+  margin-top: 0.35rem;
+  color: var(--color-text-light);
+  font-size: 0.76rem;
+  line-height: 1.5;
+}
+
 /* --- Recording player --- */
 .recording-player {
   --recording-ink: var(--color-text);
@@ -1849,6 +1901,15 @@ section:last-child {
 /* --- Responsive --- */
 @media (max-width: 768px) {
   h1 { font-size: 2rem; }
+
+  .recordings-layout {
+    width: 100%;
+    padding: 0 0 3rem;
+  }
+
+  .recordings-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.75rem 1rem; }
+
+  .recording-card-title { font-size: 1.05rem; }
 
   .home-hero-title h1 { font-size: 2rem; }
 

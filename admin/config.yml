@@ -868,6 +868,61 @@ collections:
       - order
     format: json
     extension: json
+  - name: recordings
+    label: Enregistraments
+    label_singular: Enregistrament
+    folder: content/recordings
+    create: true
+    delete: true
+    slug: "{{fields.id}}"
+    summary: "{{title}} — {{release}}"
+    preview_path: /recordings.html
+    fields:
+      - label: Identificador
+        name: id
+        widget: string
+        hint: "Slug únic, en minúscules i amb guions. Per exemple: nou-album."
+        pattern:
+          - ^[a-z0-9]+(?:-[a-z0-9]+)*$
+          - Escriviu lletres minúscules, números i guions.
+      - label: Ordre
+        name: order
+        widget: number
+        value_type: int
+        min: 0
+      - label: Arxivat
+        name: archived
+        widget: boolean
+        default: false
+        hint: Els enregistraments arxivats no apareixen a la pàgina pública.
+      - label: Títol de l’obra
+        name: title
+        widget: string
+      - label: Títol del disc o publicació
+        name: release
+        widget: string
+        required: false
+      - label: Intèrprets i segell
+        name: performers
+        widget: string
+        required: false
+      - label: Portada quadrada (màxim 10 MB)
+        name: cover
+        widget: image
+        media_folder: /uploads/recordings
+        public_folder: /uploads/recordings
+        media_library:
+          config:
+            max_file_size: 10485760
+      - label: Enllaç de Spotify
+        name: spotifyUrl
+        widget: string
+        hint: "Enganxeu l’enllaç de l’àlbum o de la peça a Spotify."
+    sortable_fields:
+      - order
+      - title
+    format: json
+    extension: json
   - name: press
     label: Premsa
     label_singular: Article
