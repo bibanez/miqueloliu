@@ -237,7 +237,8 @@ const recordingCards = recordingItems.filter(item => !item.archived)
   }).join('\n        ');
 recordingsHtml = recordingsHtml.replace('<!-- recording-items -->', recordingCards);
 await write('recordings.html', recordingsHtml);
-for (const directory of ['css', 'js', 'img', 'audio', 'admin']) await fs.cp(path.join(root, directory), path.join(dist, directory), { recursive: true });
+for (const directory of ['css', 'js', 'img', 'admin']) await fs.cp(path.join(root, directory), path.join(dist, directory), { recursive: true });
+try { await fs.cp(path.join(root, 'audio'), path.join(dist, 'audio'), { recursive: true }); } catch (error) { if (error.code !== 'ENOENT') throw error; }
 await write('admin/config.yml', YAML.stringify(config, { lineWidth: 0 }));
 // Netlify previews cannot publish to main; editors use the production CMS URL.
 if (process.env.NETLIFY === 'true' && process.env.CONTEXT !== 'production') {
