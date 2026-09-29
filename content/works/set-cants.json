@@ -36,11 +36,7 @@
           },
           {
             "type": "poem",
-            "text": "Arribes a la cruïlla\npedres velles i molses als bancals\nuna merla desapareix dins la boira\ndins la remor sorda dels àlbers\nt’hi apregones\nvols anar més enllà — foraviar-te, potser\ni esdevens boira, tu també"
-          },
-          {
-            "type": "poem",
-            "text": "invisible, cauen\nun rere l’altre\nels flocs de neu:\ncadascun coneix\nel lloc precís\non s’ha de confondre\namb els altres,\non s’ha de fondre.\n\n(Comprendre això, ara,\nés més enllà de la teva raó.)"
+            "text": "Arribes a la cruïlla \n\tpedres velles i molses als bancals\nuna merla desapareix dins la boira\n\t\tdins la remor sorda dels àlbers\nt’hi apregones\n\tvols anar més enllà — foraviar-te, potser\ni esdevens boira, tu també  \n"
           },
           {
             "type": "prose",
@@ -48,7 +44,8 @@
           },
           {
             "type": "poem",
-            "text": "s’alça del paisatge blanc —\n\nuna emoció que vibra\n\tmolt més enllà\n\t\td’aquest instant."
+            "text": "Com denes d’un rosari\ninvisible, cauen\nun rere l’altre\nels flocs de neu:\n\ncadascun coneix\nel lloc precís\non s’ha de confondre\namb els altres,\non s’ha de fondre.\n\n(Comprendre això, ara,\nés més enllà de la teva raó.)\n",
+            "body": "### III."
           },
           {
             "type": "prose",
@@ -56,7 +53,8 @@
           },
           {
             "type": "poem",
-            "text": "i una fina capa de neu,\ncom un senyal de la deïtat,\n\nel crocus comença a brinar\namb la seva\nhumil\n\tefímera\n\t\tinútil\nbellesa."
+            "text": "Una remor de silenci\ns’alça del paisatge blanc —\n\nuna emoció que vibra\n\tmolt més enllà\n\t\td’aquest instant.\n\n",
+            "body": "### IV."
           },
           {
             "type": "prose",
@@ -64,7 +62,8 @@
           },
           {
             "type": "poem",
-            "text": "\t—o n’eren dues?—\nalça el seu bec dur\n\tenlaire\ni exhala una nota aguda\nque esqueixa el silenci\ndel migdia\n\t\t     i s’expandeix\nenllà de l’estesa blanca\ndels camps gebrats.\n\nNingú no la sent,\naquesta nota        llevat tu.\n\nAdmira aquest gest\nforaviat, humil.\n\nGaudeix de la caducitat\ndel goig de l’instant\n\ten tu."
+            "text": "Entre la fullaraca\ni una fina capa de neu,\ncom un senyal de la deïtat,\n\nel crocus comença a brinar\namb la seva \nhumil\n\tefímera\n\t\tinútil\nbellesa.\n",
+            "body": "### V."
           },
           {
             "type": "prose",
@@ -72,7 +71,16 @@
           },
           {
             "type": "poem",
-            "text": "Què ha de saber\n—si ha de saber res—\nel caminant?\n\nEl silenci és l’única parla\nper al caminant.\n\t\t     Per això\ncamina.\n\nPer això és."
+            "text": "Una garsa\n\t—o n’eren dues?—\nalça el seu bec dur\n\tenlaire\ni exhala una nota aguda\nque esqueixa el silenci\ndel migdia\n\t\t     i s’expandeix\nenllà de l’estesa blanca\ndels camps gebrats.\n\nNingú no la sent,\naquesta nota        llevat tu.\n\nAdmira aquest gest\nforaviat, humil.\n\nGaudeix de la caducitat\ndel goig de l’instant\n\ten tu. \n\n\n",
+            "body": "### VI."
+          },
+          {
+            "type": "prose",
+            "body": "**VII.**"
+          },
+          {
+            "type": "poem",
+            "text": "Què no sap el caminant?\nQuè ha de saber\n—si ha de saber res—\nel caminant?\n\nEl silenci és l’única parla\nper al caminant.\n\t\t     Per això\ncamina.\n\n\n\nPer això és.\n"
           }
         ]
       },
@@ -104,71 +112,47 @@
           },
           {
             "type": "poem",
-            "text": "You reach the crossroads"
+            "text": "You reach the crossroads \n\told stones and moss on the borders\na blackbird vanishes into the mist\n\t\tinto the deaf rustle of the poplars\n\nyou observe this closely\n\tyou want to go further — go astray, maybe\nAnd you turn into mist, you too\n\n"
           },
           {
             "type": "prose",
-            "body": "old stones and moss on the borders"
+            "body": "**III.**"
           },
           {
             "type": "poem",
-            "text": "a blackbird vanishes into the mist"
+            "text": "Like rosary beads\nthe snowflakes fall\none after the other:\n\neach one knows\nthe exact place\nwhere it will meld \nwith the others,\nwhere it will melt.\n\n(To understand this, now,\nis beyond your reasoning.)\n"
           },
           {
             "type": "prose",
-            "body": "into the deaf rustle of the poplars"
+            "body": "**IV.**"
           },
           {
             "type": "poem",
-            "text": "you observe this closely"
+            "text": "A rustle of silence\n\nRises up from the white landscape —\n\na feeling which vibrates\n \n\tfar beyond\n\t\tthis moment.\n"
           },
           {
             "type": "prose",
-            "body": "you want to go further — go astray, maybe"
+            "body": "**V.**"
           },
           {
             "type": "poem",
-            "text": "And you turn into mist, you too"
+            "text": "Between the dead leaves\nAnd a thin layer of snow,\nLike a sign from the deity,\n\nThe crocus is starting to green\nWith its \nhumble\n\tephemeral\n\t\tuseless\nbeauty.\n\n"
           },
           {
             "type": "prose",
-            "body": "### III.\n\nLike rosary beads"
+            "body": "### VI."
           },
           {
             "type": "poem",
-            "text": "the snowflakes fall\none after the other:\n\neach one knows\nthe exact place\nwhere it will meld\nwith the others,\nwhere it will melt.\n\n(To understand this, now,\nis beyond your reasoning.)"
+            "text": "A magpie \n\t—or were there two of them?—\nRaises its hard beak\n\tairwards\nand emits a high-pitched note\nwhich  rends the silence\nof midday\n\t\tand spreads out\nbeyond the white stretch\nof frosted fields.\n\nNobody hears it,\nThat note        except you.\n\nAdmire this stray, humble \ngesture.\n\nEnjoy the expiring\nOf the moment of delight\n\tIn you. \n"
           },
           {
             "type": "prose",
-            "body": "### IV.\n\nA rustle of silence"
+            "body": "### VII."
           },
           {
             "type": "poem",
-            "text": "Rises up from the white landscape —\n\na feeling which vibrates\n\tfar beyond\n\t\tthis moment."
-          },
-          {
-            "type": "prose",
-            "body": "### V.\n\nBetween the dead leaves"
-          },
-          {
-            "type": "poem",
-            "text": "And a thin layer of snow,\nLike a sign from the deity,\n\nThe crocus is starting to green\nWith its\nhumble\n\tephemeral\n\t\tuseless\nbeauty."
-          },
-          {
-            "type": "prose",
-            "body": "### VI.\n\nA magpie"
-          },
-          {
-            "type": "poem",
-            "text": "\t—or were there two of them?—\nRaises its hard beak\n\tairwards\nand emits a high-pitched note\nwhich  rends the silence\nof midday\n\t\tand spreads out\nbeyond the white stretch\nof frosted fields.\n\nNobody hears it,\nThat note        except you.\n\nAdmire this stray, humble\ngesture.\n\nEnjoy the expiring\nOf the moment of delight\n\tIn you."
-          },
-          {
-            "type": "prose",
-            "body": "### VII.\n\nWhat does the walker not know?"
-          },
-          {
-            "type": "poem",
-            "text": "What does the walker\nhave to know\nif he has to know anything?\n\nSilence is the walker's\nonly speech.\n\t\t     Which is why\nhe walks.\n\nWhich is why he is."
+            "text": "What does the walker not know?\nWhat does the walker\nhave to know\nif he has to know anything?\n\n\nSilence is the walker's\nonly speech.\n\t\t     Which is why\nhe walks.\n\n\n\nWhich is why he is.\n\n\n"
           }
         ]
       },
@@ -178,7 +162,7 @@
         "blocks": [
           {
             "type": "prose",
-            "body": "## A propos du programme\n\nLa rencontre toujours renouvelée avec les textes du poète Antoni Clapés est à l'origine de ce petit cycle de compositions pour voix et piano, et plus précisément la suite Heimat, dont sont tirés tous les poèmes à l'exception du second, qui fait partie du livre L'arbre que s'allunyà. Après une forte identification avec cette suite, j'ai choisi en son sein les sept poèmes qui me suggèrent de manière spontanée une image musicale, soit descriptive, soit symbolique, poèmes qui ont également des éléments communs qui en sont le lien autant que la colonne vertébrale. Le point de départ en est la figure du marcheur pendant l'hiver, marcheur captivé par la nature qui l'entoure, jaillissant de lui-même et qui, en dehors de la pensée ou de la raison, provoque une « fusion » avec l'air, le brouillard, la beauté de l'instant... « contenus » dans le silence.\n\nCes textes brefs, pour certains on peut presque parler d'aphorismes, m'ont suggéré une musique également concise : un texte chanté qui tend à l'essentiel, qui cherche aussi à être fidèle à ses pauses et ses espaces, avec un piano qui veut le mettre en place, le souligner, l'accompagner, tel une image ou un paysage sonore. Les sept chants sont construits chacun avec des traits d'identité particuliers, mais ils sont conçus en même temps comme un tout uni, avec une matière commune, et des éléments de continuité ou de contraste qui forment un arc, où le chant central est le plus bref - une trentaine de secondes à peine - et aux extrêmes, ceux, plus longs, qui cherchent à mettre un cadre à l'ambiance/état demandée par le texte.\n\nSet cants per a soprano i piano est une œuvre commandée par l'Association Joan Manén, dont la création est prévue en 2023 au cours du 12è cycle de concerts, et est dédiée à Antoni Clapés montrant la gratitude pour la confiance témoignée, pour les moments partagés aussi bien que pour ses poèmes.\n\n### I"
+            "body": "\n\nLa rencontre toujours renouvelée avec les textes du poète Antoni Clapés est à l'origine de ce petit cycle de compositions pour voix et piano, et plus précisément la suite Heimat, dont sont tirés tous les poèmes à l'exception du second, qui fait partie du livre L'arbre que s'allunyà. Après une forte identification avec cette suite, j'ai choisi en son sein les sept poèmes qui me suggèrent de manière spontanée une image musicale, soit descriptive, soit symbolique, poèmes qui ont également des éléments communs qui en sont le lien autant que la colonne vertébrale. Le point de départ en est la figure du marcheur pendant l'hiver, marcheur captivé par la nature qui l'entoure, jaillissant de lui-même et qui, en dehors de la pensée ou de la raison, provoque une « fusion » avec l'air, le brouillard, la beauté de l'instant... « contenus » dans le silence.\n\nCes textes brefs, pour certains on peut presque parler d'aphorismes, m'ont suggéré une musique également concise : un texte chanté qui tend à l'essentiel, qui cherche aussi à être fidèle à ses pauses et ses espaces, avec un piano qui veut le mettre en place, le souligner, l'accompagner, tel une image ou un paysage sonore. Les sept chants sont construits chacun avec des traits d'identité particuliers, mais ils sont conçus en même temps comme un tout uni, avec une matière commune, et des éléments de continuité ou de contraste qui forment un arc, où le chant central est le plus bref - une trentaine de secondes à peine - et aux extrêmes, ceux, plus longs, qui cherchent à mettre un cadre à l'ambiance/état demandée par le texte.\n\nSet cants per a soprano i piano est une œuvre commandée par l'Association Joan Manén, dont la création est prévue en 2023 au cours du 12è cycle de concerts, et est dédiée à Antoni Clapés montrant la gratitude pour la confiance témoignée, pour les moments partagés aussi bien que pour ses poèmes.\n\n### I."
           },
           {
             "type": "poem",
@@ -186,51 +170,51 @@
           },
           {
             "type": "prose",
-            "body": "### II\n\nTu arrives au carrefour —"
+            "body": "### II."
           },
           {
             "type": "poem",
-            "text": "pierres vieilles et mousses dans les terrasses,\nune merle s'évanouît dans le brouillard\n\ndans la rumeur sourde des peupliers.\nToi tu t'y enfonces\ntu veux t'en aller plus au-delà   —   t'égarer, peut-être\net tu deviens brouillard, toi aussi."
+            "text": "Tu arrives au carrefour   —\npierres vieilles et mousses dans les terrasses,\nune merle s'évanouît dans le brouillard\n\ndans la rumeur sourde des peupliers.\nToi tu t'y enfonces\ntu veux t'en aller plus au-delà   —   t'égarer, peut-être\net tu deviens brouillard, toi aussi.\n\n"
           },
           {
             "type": "prose",
-            "body": "### III\n\nTels les grains d’un chapelet"
+            "body": "### III."
           },
           {
             "type": "poem",
-            "text": "invisible, tombent\nl’un après l’autre\nles flocons de neige   —\n\nchacun d’eux\nconnaît le lieu précis\noù il doit se confondre\navec les autres\noù il doit se fondre.\nOù il doit être.\n\n(Comprendre cela, maintenant,\ndépasse de loin ton entendement.)"
+            "text": "Tels les grains d’un chapelet\ninvisible, tombent\nl’un après l’autre\nles flocons de neige   —\n\nchacun d’eux\nconnaît le lieu précis\noù il doit se confondre\navec les autres\noù il doit se fondre.\nOù il doit être.\n\n(Comprendre cela, maintenant,\ndépasse de loin ton entendement.)\n\n\n\n"
           },
           {
             "type": "prose",
-            "body": "### IV\n\nUn bruissement de silence"
+            "body": "### IV."
           },
           {
             "type": "poem",
-            "text": "s’élève du paysage blanc   —\n\nune émotion qui vibre\n\tloin très loin\n\t\tde cet instant."
+            "text": "Un bruissement de silence\ns’élève du paysage blanc   —\n\nune émotion qui vibre\n\tloin très loin\n\t\tde cet instant.\n\n"
           },
           {
             "type": "prose",
-            "body": "### V\n\nEntre les feuilles mortes"
+            "body": "### V."
           },
           {
             "type": "poem",
-            "text": "et une fine couche de neige,\ntel un signe de la déité,\n\nle crocus commence à pousser\navec son\nhumble\n\t\téphémère\n\t\t\t\tinutile\nbeauté."
+            "text": "Entre les feuilles mortes\net une fine couche de neige,\ntel un signe de la déité,\n\nle crocus commence à pousser\navec son\nhumble\n\t\téphémère\n\t\t\t\tinutile\nbeauté.\n"
           },
           {
             "type": "prose",
-            "body": "### VI\n\nUne pie\n\n(ou peut-être deux ?)\n\nlève son dur bec\n\nvers le ciel\n\net exhale une note aigue\n\nqui hache le silence\n\nde midi\n\net se déploie\n\nau-delà de l’étendue blanche\n\ndes champs glacés.\n\nPersonne ne l’écoute,\n\ncette note sauf toi.\n\nAdmire ce geste\n\négaré, humble.\n\nSavoure l’évanescence\n\nde la joie de l’instant"
+            "body": "### VI."
           },
           {
             "type": "poem",
-            "text": "\t\t\t\ten toi."
+            "text": "Une pie \n          (ou peut-être deux ?)\nlève son dur bec \n\t\t\tvers le ciel\net exhale une note aigue\nqui hache le silence \nde midi \n\t\tet se déploie\nau-delà de l’étendue blanche\ndes champs glacés.\n\nPersonne ne l’écoute,\ncette note \t\tsauf toi.\n\nAdmire ce geste\négaré, humble.\n\nSavoure l’évanescence\nde la joie de l’instant \n\t\t\t\ten toi.\n\n\t"
           },
           {
             "type": "prose",
-            "body": "### VII\n\nQue ne sait-il pas, le promeneur ?"
+            "body": "### VII."
           },
           {
             "type": "poem",
-            "text": "Que doit-il savoir\n(s’il doit savoir quelque chose)\nle promeneur ?\n\nLe silence est la seule voix\ndu promeneur.\n\t\t\tSa seule raison\nd’être en chemin.\n\nTa seule raison d’être."
+            "text": "Que ne sait-il pas, le promeneur ?\n\nQue doit-il savoir\n(s’il doit savoir quelque chose)\nle promeneur ?\n\nLe silence est la seule voix\ndu promeneur.\n\t\t\tSa seule raison\nd’être en chemin.\n\nTa seule raison d’être."
           }
         ]
       }
