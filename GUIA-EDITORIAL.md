@@ -7,7 +7,7 @@
 3. Trieu el contingut i feu els canvis. El panell de previsualització mostra els camps mentre editeu, fins i tot abans de desar. Feu servir els botons d’idioma per revisar les traduccions.
 4. Premeu **Guardar** per guardar un esborrany. El web publicat encara no canvia. Podeu tancar el gestor i reprendre’l des de **Flux Editorial**: esborranys, en revisió i llestos per publicar.
 5. Després de desar, espereu que es prepari la previsualització i obriu l’enllaç **Comprovar Vista Prèvia** del gestor. Mostra el web complet amb aquell esborrany. Cada esborrany té la seva previsualització; els altres esborranys encara no publicats no s’hi combinen.
-6. Quan estigui revisat, marqueu-lo com a llest i trieu **Publicar**. Netlify prepara el web públic; els canvis hi apareixen quan acaba el desplegament. Si la compilació falla, es conserva la versió anterior.
+6. Quan estigui revisat, marqueu-lo com a llest i trieu **Publicar**. Netlify i Cloudflare preparen el web publicat; els canvis hi apareixen quan acaba el desplegament. Si la compilació falla, es conserva la versió anterior.
 
 Mentre el projecte de Netlify sigui privat, només els membres autoritzats de l’equip de Netlify poden obrir el web i el gestor. L’accés de GitHub al gestor no substitueix aquesta restricció.
 
@@ -51,4 +51,4 @@ Pugeu imatges, PDF o fitxers d’àudio als camps corresponents. El límit de pu
 
 ## Recuperar un canvi
 
-Demaneu a l’administrador que reverteixi el canvi a GitHub. El següent desplegament de Netlify publicarà la versió corregida. Per recuperar immediatament tot el lloc, l’administrador pot tornar a publicar un desplegament anterior a Netlify i després corregir també el contingut del repositori.
+Demaneu a l’administrador que reverteixi el canvi a GitHub. El següent desplegament de Netlify publicarà la versió corregida. Per recuperar immediatament tot el lloc, l’administrador pot recuperar el desplegament anterior a Netlify i al Worker de Cloudflare del domini públic i després corregir també el contingut del repositori.

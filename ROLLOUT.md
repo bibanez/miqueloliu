@@ -1,6 +1,7 @@
-# Netlify + Decap CMS
+# Decap CMS, Netlify i el web públic
 
-Producció: https://miqueloliu.netlify.app
+Web públic: https://miqueloliu.com (Cloudflare Worker).
+Web de Netlify i previsualitzacions: https://miqueloliu.netlify.app
 Gestor: https://miqueloliu.netlify.app/admin/
 Repositori: `bibanez/miqueloliu`, branca de publicació `main`.
 
@@ -8,7 +9,7 @@ El gestor utilitza el backend GitHub de Decap amb OAuth de Netlify. No utilitza 
 
 ## Configuració del projecte
 
-`netlify.toml` fixa Node 22, `npm run build` i el directori publicable `dist`. Netlify ha de continuar connectat a aquest repositori i publicar `main`. Les previsualitzacions de pull requests es generen a Netlify; el gestor de les previsualitzacions només mostra un enllaç al gestor de producció.
+`netlify.toml` fixa Node 22, `npm run build` i el directori publicable `dist`. Netlify ha de continuar connectat a aquest repositori i publicar `main`. El Worker de Cloudflare també compila `main` amb `npm run build` i publica `dist/` al domini públic. Les previsualitzacions de pull requests es generen a Netlify; el gestor de les previsualitzacions només mostra un enllaç al gestor de producció.
 
 Manteniu activats els **Deploy Previews** de Netlify per a les pull requests contra `main`, incloses les branques `cms/*`. Decap obté l’URL dels estats de desplegament de GitHub; `show_preview_links: true` i els `preview_path` porten l’editor a la pàgina corresponent. Les obres apunten al catàleg perquè només les que tenen nota generen una pàgina pròpia. Premsa apunta a `/premsa.html` perquè els articles amb només un enllaç extern no generen una pàgina pròpia. No cal afegir un segon desplegament a GitHub Actions.
 
@@ -36,6 +37,8 @@ Les proves de previsualització cobreixen entrades buides, canvis sense desar, i
 
 ## Recuperació
 
-Revisió anterior a la migració: `f6db692934d5cb72b4255617cb3f5ee782e82693`. A Netlify es pot tornar a publicar el desplegament anterior. Revertiu també el canvi corresponent a GitHub per evitar que el següent desplegament torni a publicar contingut incorrecte.
+Revisió anterior a la migració: `f6db692934d5cb72b4255617cb3f5ee782e82693`. A Netlify es pot tornar a publicar el desplegament anterior; per al domini públic, recupereu també la versió anterior del Worker de Cloudflare. Revertiu també el canvi corresponent a GitHub per evitar que el següent desplegament torni a publicar contingut incorrecte.
 
-Els fitxers `auth-worker/` i `wrangler.jsonc` són llegat de la preparació anterior; no intervenen en el desplegament de Netlify.
+La carpeta `auth-worker/` és llegat de la preparació OAuth anterior i no intervé en l’autenticació del gestor. `wrangler.jsonc` configura el Worker que publica `dist/` al domini públic; no intervé en el desplegament de Netlify.
+
+El desplegament de branques de Cloudflare té configurat el comandament antic `npx wrangler preview`, que falla amb la versió fixada de Wrangler. Aquest error és del desplegament de previsualització de Cloudflare: la revisió editorial fa servir els Deploy Previews de Netlify. Comproveu també el desplegament de producció de Cloudflare després de fusionar a `main`.
