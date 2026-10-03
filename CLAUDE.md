@@ -22,7 +22,7 @@ npm run build
 npm test
 ```
 
-`npm run build` validates content and generates the site; `npm run validate` checks content without writing `dist/`. Netlify deploys `dist/` from `main` and creates pull-request previews. The Netlify build validates the content before publishing. Decap uses GitHub login through Netlify OAuth and publishes directly. See `ROLLOUT.md`.
+`npm run build` validates content and generates the site; `npm run validate` checks content without writing `dist/`. Netlify deploys `dist/` from `main` and creates pull-request previews. The Netlify build validates the content before publishing. Decap uses GitHub login through Netlify OAuth and saves drafts through the editorial workflow; publishing merges them into `main`. See `ROLLOUT.md`.
 
 `documentacio/` holds Miquel's working materials (source documents) and is gitignored — never publish or reference it from the site.
 

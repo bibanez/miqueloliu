@@ -33,13 +33,33 @@ test('production emits the site and GitHub CMS without source documents or deplo
   assert.equal(config.backend.name, 'github');
   assert.equal(config.backend.repo, 'bibanez/miqueloliu');
   assert.equal(config.backend.site_domain, 'miqueloliu.netlify.app');
-  assert.equal(config.publish_mode, 'simple');
+  assert.equal(config.publish_mode, 'editorial_workflow');
+  assert.equal(config.show_preview_links, true);
+  assert.equal(config.site_url, 'https://miqueloliu.com');
+  assert.equal(config.backend.branch, 'main');
   assert.equal(config.local_backend, undefined);
   const outputs = await fs.readdir(path.join(dir, 'dist'));
   for (const privateFile of ['content', 'documentacio', 'auth-worker', 'wrangler.jsonc', 'package.json', '.git']) assert.ok(!outputs.includes(privateFile));
   const contact = await read(dir, 'dist/contact.html');
   assert.match(contact, /<textarea id="contact-message"/);
   assert.match(contact, /<option value="general"/);
+  const admin = await read(dir, 'dist/admin/index.html');
+  assert.match(admin, /decap-cms@3\.15\.1/);
+  assert.match(admin, /randomUUID/);
+  assert.ok(admin.indexOf('/admin/markdown-it.min.js') < admin.indexOf('/admin/preview.js'));
+  assert.ok((await read(dir, 'dist/admin/markdown-it.min.js')).length > 0);
+  assert.equal(config.collections.find(collection => collection.name === 'works').preview_path, '/catalogue.html#work-{{slug}}');
+  assert.equal(config.collections.find(collection => collection.name === 'press').preview_path, '/premsa.html');
+  for (const collection of config.collections) {
+    for (const entry of collection.files || [collection]) {
+      const route = entry.preview_path.split('#')[0];
+      assert.ok(await read(dir, `dist/${route === '/' ? 'index.html' : route.slice(1)}`));
+    }
+  }
+  assert.ok(await read(dir, 'dist/recordings.html'));
+  assert.ok(await read(dir, 'dist/premsa/escrit-llibre-dhores-ramon-humet.html'));
+  assert.ok(await read(dir, 'dist/uploads/angel-terrible.mp3'));
+  assert.match(await read(dir, 'dist/js/data/works.js'), /"id":"doodem"/);
 });
 
 test('an editor can create a new work and programme note without adding an HTML template', async t => {
@@ -97,10 +117,15 @@ test('missing nested audio and unsafe asset paths fail before publication', asyn
 
 test('deploy previews point editors to production and do not expose an active CMS', async t => {
   const dir = await fixture(t);
+  const contact = JSON.parse(await read(dir, 'content/pages/contact.json'));
+  contact.contactEmail = 'draft@example.com';
+  await save(dir, 'content/pages/contact.json', contact);
   const result = build(dir, { NETLIFY: 'true', CONTEXT: 'deploy-preview' });
   assert.equal(result.status, 0, result.output);
   const admin = await read(dir, 'dist/admin/index.html');
   assert.match(admin, /https:\/\/miqueloliu.netlify.app\/admin\//);
   assert.doesNotMatch(admin, /decap-cms.js/);
   await assert.rejects(read(dir, 'dist/admin/config.yml'), { code: 'ENOENT' });
+  await assert.rejects(read(dir, 'dist/admin/markdown-it.min.js'), { code: 'ENOENT' });
+  assert.match(await read(dir, 'dist/contact.html'), /mailto:draft@example.com/);
 });

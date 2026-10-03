@@ -4,13 +4,13 @@ backend:
   branch: main
   site_domain: miqueloliu.netlify.app
   auth_scope: public_repo
-publish_mode: simple
+publish_mode: editorial_workflow
 locale: ca
 media_folder: uploads
 public_folder: /uploads
 site_url: https://miqueloliu.com
 display_url: https://miqueloliu.com
-show_preview_links: false
+show_preview_links: true
 collections:
   - name: landing
     label: Pàgina d’inici
@@ -116,6 +116,7 @@ collections:
       - name: home-plain
         label: Inici · etiquetes
         file: content/texts/home-plain.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -145,6 +146,7 @@ collections:
       - name: home-lines
         label: Inici · versos
         file: content/texts/home-lines.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -174,6 +176,7 @@ collections:
       - name: home-attribution
         label: Inici · autoria
         file: content/texts/home-attribution.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -203,6 +206,7 @@ collections:
       - name: home-rich
         label: Inici · textos
         file: content/texts/home-rich.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -473,7 +477,7 @@ collections:
     label: Obres
     label_singular: Obra
     folder: content/works
-    preview_path: /obres/{{slug}}.html
+    preview_path: /catalogue.html#work-{{slug}}
     create: true
     delete: false
     slug: "{{fields.id}}"
@@ -937,7 +941,7 @@ collections:
     create: true
     delete: true
     slug: "{{fields.id}}"
-    preview_path: /premsa/{{slug}}.html
+    preview_path: /premsa.html
     summary: "{{title.ca}}"
     fields:
       - label: Identificador fix
@@ -1053,6 +1057,7 @@ collections:
   - name: categories
     label: Categories
     folder: content/categories
+    preview_path: /catalogue.html
     create: true
     delete: false
     slug: "{{fields.id}}"
@@ -1086,6 +1091,7 @@ collections:
       - name: bio-plain
         label: Biografia · etiquetes
         file: content/texts/bio-plain.json
+        preview_path: /biografia.html
         fields:
           - name: entries
             label: Textos
@@ -1115,6 +1121,7 @@ collections:
       - name: contact-plain
         label: Contacte · etiquetes
         file: content/texts/contact-plain.json
+        preview_path: /contact.html
         fields:
           - name: entries
             label: Textos
@@ -1144,6 +1151,7 @@ collections:
       - name: catalogue-plain
         label: Catàleg · etiquetes
         file: content/texts/catalogue-plain.json
+        preview_path: /catalogue.html
         fields:
           - name: entries
             label: Textos
@@ -1173,6 +1181,7 @@ collections:
       - name: nav-plain
         label: Menú · etiquetes
         file: content/texts/nav-plain.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -1202,6 +1211,7 @@ collections:
       - name: footer-plain
         label: Peu de pàgina · etiquetes
         file: content/texts/footer-plain.json
+        preview_path: /
         fields:
           - name: entries
             label: Textos
@@ -1231,6 +1241,7 @@ collections:
       - name: works-plain
         label: Obres · etiquetes
         file: content/texts/works-plain.json
+        preview_path: /catalogue.html
         fields:
           - name: entries
             label: Textos
@@ -1260,6 +1271,37 @@ collections:
       - name: recording-plain
         label: Reproductor d’àudio · etiquetes
         file: content/texts/recording-plain.json
+        preview_path: /catalogue.html
+        fields:
+          - name: entries
+            label: Textos
+            widget: list
+            allow_add: false
+            collapsed: true
+            summary: "{{fields.ca}}"
+            fields:
+              - name: key
+                label: Identificador
+                widget: hidden
+              - name: format
+                label: Format
+                widget: hidden
+              - name: ca
+                label: Català
+                widget: string
+                required: true
+              - name: es
+                label: Castellà
+                widget: string
+                required: false
+              - name: en
+                label: Anglès
+                widget: string
+                required: false
+      - name: recordings-plain
+        label: Enregistraments · etiquetes
+        file: content/texts/recordings-plain.json
+        preview_path: /recordings.html
         fields:
           - name: entries
             label: Textos
