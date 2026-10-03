@@ -239,6 +239,8 @@ recordingsHtml = recordingsHtml.replace('<!-- recording-items -->', recordingCar
 await write('recordings.html', recordingsHtml);
 for (const directory of ['css', 'js', 'img', 'admin']) await fs.cp(path.join(root, directory), path.join(dist, directory), { recursive: true });
 try { await fs.cp(path.join(root, 'audio'), path.join(dist, 'audio'), { recursive: true }); } catch (error) { if (error.code !== 'ENOENT') throw error; }
+// Use the locked Markdown renderer for live CMS previews and published prose.
+await fs.copyFile(path.join(root, 'node_modules/markdown-it/dist/markdown-it.min.js'), path.join(dist, 'admin/markdown-it.min.js'));
 await write('admin/config.yml', YAML.stringify(config, { lineWidth: 0 }));
 // Netlify previews cannot publish to main; editors use the production CMS URL.
 if (process.env.NETLIFY === 'true' && process.env.CONTEXT !== 'production') {
