@@ -1,12 +1,4 @@
 {
-  "id": "allegories-de-tardor-piano",
-  "title": {
-    "ca": "Al·legories de tardor – Microludis per a piano",
-    "es": "Al·legories de tardor – Microludis per a piano (Alegorías de otoño – Microludios para piano)",
-    "en": "Al·legories de tardor – Microludis per a piano (Autumn allegories – Microludes for piano)"
-  },
-  "years": "2010-2011",
-  "duration": "12’",
   "details": [
     {
       "ca": "Estrena: (parcial) Desembre 2011. El Círcol, Reus. Jordi López Roig",
@@ -17,10 +9,7 @@
       "ca": "CD: Llibre d’hores (Ficta, 2023) – Miquel Villalba"
     }
   ],
-  "score": "ficta",
-  "category": "solista",
   "archived": false,
-  "order": 5,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -30,7 +19,7 @@
         "blocks": [
           {
             "type": "prose",
-            "body": "Microludis - Al·legories de tardor\n\nI Fulles I\n\nII Glaç\n\nIII Terra humida\n\nIV Fulles II\n\nV Ocell solitari\n\nVI Gris sobre gris\n\nVII Fulles III\n\nVIII \\*\\*\\*\n\nMirades a alguns elements de la tardor amb les fulles, en tres imatges diferents (fulles seques que cauen, fulles al vent, colors) com a eix vertebrador, com a fil conductor. Al·legories doncs que, com totes les mirades, es poden viure a diferents nivells de sensibilitat, de profunditat. Peces curtes que cadascú clourà a la seva manera, segons la seva experiència. És una música que, malgrat els contrastos entre números, tendeix a l’estaticitat, música que no tanca, que deixa a l’aire...\n\nL’últim número, sense títol, vol reflectir allò que és present en tot. Es fa un èmfasi en les notes si-la# que, de manera més o menys subtil, han anat apareixent en els números anteriors. Hi ha també, amagat, un petit homenatge a Bach i a Schumann."
+            "body": "Microludis - Al·legories de tardor\n\nI Fulles I\n\nII Glaç\n\nIII Terra humida\n\nIV Fulles II\n\nV Ocell solitari\n\nVI Gris sobre gris\n\nVII Fulles III\n\nVIII \\*\\**\n\nAquesta obra neix de la contemplació de la natura en\n\ntemps de tardor. Està formada per vuit peces breus\n\nque actuen a manera de imatges, mirades, amb les\n\nfulles com a eix vertebrador, com a fil conductor.\n\nPren el nom d’al·legories per la voluntat d’expressar,\n\nsuggerir, una mica més enllà del fet descriptiu, i alhora\n\nconvidar a una mirada més profunda del que ens\n\nenvolta. És una música que, malgrat els contrastos\n\nentre números, tendeix a l’estaticisme, música que no\n\ntanca, que deixa a l’aire...\n\nUn dels motius unificadors és l’interval cromàtic descendent\n\n—concretat en les notes si-la#— que de forma\n\nmés o menys evident es troba en totes les peces, especialment\n\nen l’última; un motiu que vol evocar el sentiment\n\nde quelcom perdut que sol donar-se a la tardor i\n\nque la natura expressa d’aquesta manera tant bonica.\n\nLes imatges que s’han pres com a punt de partida\n\nd’aquestes *Al·legories de tardor* són: el moviment dispers\n\nde fulles amb tendència al descens suau fins al\n\nsòl, a «Fulles I»; el clima més fred, silenciós, amb un\n\npunt incisiu del primer gel, a «Glaç»; la força de la\n\nterra en contrast amb la suavitat de l’olor a terra mullada,\n\na «Terra humida»; diverses ràfegues de vent que\n\nfan volar un munt de fulles, desenvolupant el motiu\n\nde «Fulles I», a «Fulles II»; el cant melancòlic d’un\n\nocell, a «Ocell solitari»; la superposició de dos capes\n\nde núvols foscos, a «Gris sobre Gris»; o els colors de\n\nfulles amb el toc d’atenció inicial i el benestar intern\n\nfinal, a «Fulles III». L’última, per tancar, sense títol,\n\nvol posar el focus en *allò que està present en tot*; posa\n\nèmfasi en el motiu generador de segona descendent,\n\nque pren aquí un caràcter cerimoniós i vol expressar\n\nuna certa sacralitat. Conté, amagat, un petit homenatge\n\na J.S. Bach i a R. Schumann, de qui també s’ha\n\nextret l’enigmàtic títol amb els tres asteriscs.\n\nÉs una obra que demana molt de l’intèrpret degut\n\na la confluència de diverses dificultats, com ara la\n\nconcisió de cada peça, l’alta variabilitat d’elements de\n\ntècnica pianística, la subtilesa i delicadesa tímbrica,\n\nla gran gama dinàmica, l’ús dels tres pedals, o l’amplitud\n\nde registre.\n\n*Al·legories de tardor – Microludis per a piano*, escrita la\n\ntardor del 2010, va ser dedicada al pianista i estimat\n\namic Miquel Villalba, amb profund agraïment."
           }
         ]
       },
@@ -50,7 +39,7 @@
         "blocks": [
           {
             "type": "prose",
-            "body": "Microludes - Autumn allegories\n\nI Leaves I\n\nII Ice\n\nIII Wet earth\n\nIV Leaves II\n\nV Lonely bird\n\nVI Grey over grey\n\nVII Leaves III\n\nVIII \\*\\*\\*\n\nA glance to some Autumn references about leaves, three diferent images (the fall of golden leaves, green leaves of Summer moving in the air, the beautiful colours) taken as a leadind thread. The allegorical glances which can be lived at different levels of sense amd sensibility. Short pieces to be ended by oneself, according to the own experience. It’s the kind of music which in spite of the contrast between pieces, has a clear tendency to the elasticity, a music which doesn’t pretend to solve anything, music that remains suspended in the air. . .\n\nThe last piece untitled tries to reflect a presence in every thing. A stress on to the notes B-A#, which in a more subtle way, have appeared in some previous pieces. And finally to be recognized, a hidden homage to Bach and Schumann.."
+            "body": "Microludes - Autumn allegories\n\nI Leaves I\n\nII Ice\n\nIII Wet earth\n\nIV Leaves II\n\nV Lonely bird\n\nVI Grey over grey\n\nVII Leaves III\n\nVIII \\*\\**\n\nThis work was already the fruit of the contemplation\n\nof nature in autumn. It consists of eight short pieces\n\nthat serve as images or observations, with leaves\n\nservingas the central theme, as the guiding thread.\n\nIt is titled “Allegories” because of the desire to express\n\nor suggest something that goes a little beyond\n\nthe descriptive fact and, at the same time, invites a\n\ndeeper exploration of what surrounds us. Despite the\n\ncontrasts between the parts, it is music that tends towards\n\nthe static, music without a closure that keeps\n\neverything in suspense.\n\nOne of the unifying motifs is the descending chromatic\n\ninterval– expressed by the notes B-A#. It is\n\nmore or less in evidence in all the pieces, although especially\n\nin the last one; it is a motif that aims to evoke\n\nthe feeling of something lost that usually surfaces in\n\nautumn and that nature expresses in this beautiful\n\nway.\n\nThe images taken as a starting point for these *Autumn*\n\n*Allegories* are as follows: the scattered movement\n\nof leaves with their tendency to gently float to the\n\nground,in “Fulles I” (Leaves I); the coldest weather,\n\nso silent, with the incisive turning point of the\n\nfirst frost, in “Glaç” (Ice); the power of the earth in\n\ncontrast to the mild smell of damp earth, in “Terra\n\nhumida”(Damp Earth); gusts of wind wafting a pile\n\nof leaves, where the motif from “Fulles I” (Leaves I)\n\nis developed into “Fulles II” (Leaves II); the sad song\n\nof a bird in “Ocell solitary” (Lonely Bird); the superposition\n\nof two layers of dark clouds, in “Gris sobre\n\ngris”(Grey on Grey); and the colours of leaves with\n\nafirst call for attention and final sense of internal\n\nwell-beingin “Fulles III” (Leaves III). The purpose of\n\nthe closing allegory —which is untitled— is to focus\n\non what is present in everything; emphasis is placed\n\non the generating motif of the descending second,\n\nwhich here takes on a ceremonial character and is\n\nintended to express a certain sanctity. It contains a\n\nsmall camouflaged tribute to J. S. Bach and R. Schumann,\n\nfrom whom the enigmatic title with the three\n\nasterisks has also been taken.\n\nThis work demands a great deal of the performer due\n\nto the convergence of various difficulties, such as the\n\nbrevityof each piece, the great variety of piano techniques,\n\nthe subtlety and delicacy of timbre, the broad\n\ndynamic range, the use of the three pedals and the\n\nwide compass of the music.\n\n*Autumn Allegories – Microludes for piano*, written in the\n\nfall of 2010, was dedicated to the pianist and dear\n\nfriend MiquelVillalba, with deep gratitude."
           }
         ]
       },
@@ -66,5 +55,16 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 5,
+  "score": "ficta",
+  "duration": "12’",
+  "years": "2010-2011",
+  "title": {
+    "ca": "Al·legories de tardor – Microludis per a piano",
+    "es": "Al·legories de tardor – Microludis per a piano (Alegorías de otoño – Microludios para piano)",
+    "en": "Al·legories de tardor – Microludis per a piano (Autumn allegories – Microludes for piano)"
+  },
+  "id": "allegories-de-tardor-piano",
+  "category": "solista"
 }
