@@ -36,5 +36,206 @@
   "category": "veu",
   "archived": false,
   "order": 0,
-  "assets": []
+  "assets": [],
+  "programmeNote": {
+    "sections": [
+      {
+        "language": "ca",
+        "title": "Set cants",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Aquest petit cicle per a veu i piano neix d’un nou retrobament amb els textos del poeta Antoni Clapés, més concretament de la suite Heimat, de la qual són extrets tots els poemes, a excepció del segon, que forma part del llibre L’arbre que s’allunyà. Per la forta identificació viscuda amb aquesta suite, n’he destriat els set poemes que em suggereixen espontàniament una idea musical —descriptiva o simbòlica— i que alhora tenen elements comuns que els vertebren i unifiquen. El punt de partida és la figura del caminant en temps d’hivern; un caminant que és captivat per la natura que l’envolta, que es desprèn d’ell mateix i que —fora de la ment, de la raó— es «fon» amb l’aire, la boira, l’ocell, la bellesa de l’instant... que «és» en el silenci.\n\nLa brevetat dels textos, algun quasi com un aforisme, m’ha suggerit una música també concisa: un text cantat que tendeix a l’essencial i que intenta ésser fidel a les seves pauses i espais, amb el piano que vol situar-lo, subratllar-lo, acompanyar-lo, a manera d’imatge, de paisatge sonor. Cada un dels set cants està construït amb els seus trets identificadors, però alhora l’obra està concebuda com una sola unitat, amb material comú, elements de continuïtat o de contrast i en forma d’arc, on el cant central és el més curt —només uns trenta segons— i els extrems, els més llargs, a fi d’ajudar a emmarcar-la en l’ambient/l’estat que el text demana.\n\nSet cants per a soprano i piano és una obra encàrrec de l’Associació Joan Manén per ser estrenada el 2023 en el 12è cicle de concerts, i està dedicada a Antoni Clapés, amb agraïment per la confiança mostrada, per les estones compartides i pels seus poemes.\n\n### I."
+          },
+          {
+            "type": "poem",
+            "text": "Entre marges blancs,\ns’obre pas el camí.\nVol arribar a l’indret familiar\nperò els traços s’han anat esvaint\ncom promeses a desgrat,\ncom l’ombra fosca\ndel vol de corb  —  fugaç.\nCom el ressò dels passos del caminant\ndins seu.\n\n\tL’assossec i l’espera.\n\nSer pur aire\n\t\t\ten l’aire."
+          },
+          {
+            "type": "prose",
+            "body": "### II."
+          },
+          {
+            "type": "poem",
+            "text": "Arribes a la cruïlla \n\tpedres velles i molses als bancals\nuna merla desapareix dins la boira\n\t\tdins la remor sorda dels àlbers\nt’hi apregones\n\tvols anar més enllà — foraviar-te, potser\ni esdevens boira, tu també  \n"
+          },
+          {
+            "type": "prose",
+            "body": "### III."
+          },
+          {
+            "type": "poem",
+            "text": "Com denes d’un rosari\ninvisible, cauen\nun rere l’altre\nels flocs de neu:\n\ncadascun coneix\nel lloc precís\non s’ha de confondre\namb els altres,\non s’ha de fondre.\n\n(Comprendre això, ara,\nés més enllà de la teva raó.)\n"
+          },
+          {
+            "type": "prose",
+            "body": "### IV."
+          },
+          {
+            "type": "poem",
+            "text": "Una remor de silenci\ns’alça del paisatge blanc —\n\nuna emoció que vibra\n\tmolt més enllà\n\t\td’aquest instant.\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### V."
+          },
+          {
+            "type": "poem",
+            "text": "Entre la fullaraca\n\ni una fina capa de neu,\ncom un senyal de la deïtat,\n\nel crocus comença a brinar\namb la seva \nhumil\n\t   efímera\n\t\t      inútil\nbellesa.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### VI."
+          },
+          {
+            "type": "poem",
+            "text": "Una garsa\n\n\t—o n’eren dues?—\nalça el seu bec dur\n\tenlaire\ni exhala una nota aguda\nque esqueixa el silenci\ndel migdia\n\t\t     i s’expandeix\nenllà de l’estesa blanca\ndels camps gebrats.\n\nNingú no la sent,\naquesta nota        llevat tu.\n\nAdmira aquest gest\nforaviat, humil.\n\nGaudeix de la caducitat\ndel goig de l’instant\n\ten tu. \n\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### VII."
+          },
+          {
+            "type": "poem",
+            "text": "Què no sap el caminant?\nQuè ha de saber\n—si ha de saber res—\nel caminant?\n\nEl silenci és l’única parla\nper al caminant.\n\t\t     Per això\ncamina.\n\n\n\nPer això és.\n"
+          }
+        ]
+      },
+      {
+        "language": "es",
+        "title": "Set cants (Siete cantos)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "Este pequeño ciclo para voz y piano nace de un nuevo reencuentro con los textos del poeta Antoni Clapés, más concretamente de la suite Heimat, de la cual son extraídos todos los poemas, a excepción del segundo, que forma parte del libro L’arbre que s’allunyà. Por la fuerte identificación vivida con esta suite, he escogido los siete poemas que me sugieren espontáneamente una idea musical —descriptiva o simbólica— y que a la vez tienen elementos comunes que los vertebran y unifican. El punto de partida es la figura del caminante en tiempo de invierno; un caminante que es cautivado por la naturaleza que lo envuelve, que se desprende de él mismo y que —fuera de la mente, de la razón— se «funde» con el aire, la niebla, el pájaro, la belleza del instante... que «es» en el silencio.\n\nLa brevedad de los textos, alguno casi como un aforismo, me ha sugerido una música también concisa: un texto cantado que tiende a lo esencial y que intenta ser fiel a sus pausas y espacios, con el piano que quiere situarlo, subrayarlo, acompañarlo, a manera de imagen, de paisaje sonoro. Cada uno de los siete cantos está construido con sus rasgos identificadores, pero a la vez la obra está concebida como una sola unidad, con material común, elementos de continuidad o de contraste y en forma de arco, donde el canto central es el más corto —solo unos treinta segundos— y los extremos, los más largos, con el fin de ayudar a enmarcarla en el ambiente/estado que el texto pide.\n\nSet cants per a soprano i piano (Siete cantos para soprano y piano) es una obra encargo de la Associació Joan Manén para ser estrenada el 2023 en el 12º ciclo de conciertos, y está dedicada a Antoni Clapés, con agradecimiento por la confianza mostrada, por el tiempo compartido y por sus poemas."
+          }
+        ]
+      },
+      {
+        "language": "en",
+        "title": "Set cants (Seven songs)",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "This short cycle for voice and piano was born from a new reunion with the texts of the poet Antoni Clapés, more specifically from the Heimat suite from which all the poems are extracted, with the exception of the 2nd, which is part of the book L'arbre que s’allunyà (The tree who walked away). From the strong identification with this suite, I have distinguished the seven poems that spontaneously suggest a musical idea - descriptive and / or symbolic - and that at the same time have common elements that structure and unify them. The starting point is the figure of the walker in wintertime; a walker who is captivated by the nature that surrounds him, who detaches himself and who — out of his mind, out of reason — “melts” with the air, the fog, the bird, the beauty of the moment ... that “is” in silence.\n\nThe brevity of the texts, some almost like an aphorism, has suggested to me a concise music: a sung text that tends to the essential, and that tries to be faithful to its pauses and spaces, with the piano that wants to place it, underline it, accompany it, as an image, as a soundscape. Each of the seven songs is constructed with its identifying features but at the same time the work is conceived as a single unit, with common material, elements of continuity and / or contrast and in the form of an arch, the central song being the shortest —only about 30 seconds— and the longest ends, in order to help frame it in the environment / state that the text calls for.\n\nSet cants (Seven songs), for soprano and piano has been commissioned by Associació Joan Manén to be premiered in 2023 in the 12th cycle of concerts and is dedicated to Antoni Clapés, with gratitude for the confidence shown, the times shared and for his poems.\n\n### I."
+          },
+          {
+            "type": "poem",
+            "text": "Between white edges\nThe path goes on its way.\nIt wishes to reach a familiar place\nbut the outlines have been fading\nlike grudging promises,\nlike the dark shadow\nof a raven's flight  —  fleeting.\n\nLike the echo of the walker's steps\ninside him.\n\n\tThe quietness and the waiting.\n\nTo be air, pure\n\t\t\tin the air."
+          },
+          {
+            "type": "prose",
+            "body": "### II."
+          },
+          {
+            "type": "poem",
+            "text": "You reach the crossroads \n\told stones and moss on the borders\na blackbird vanishes into the mist\n\t\tinto the deaf rustle of the poplars\n\nyou observe this closely\n\tyou want to go further — go astray, maybe\nAnd you turn into mist, you too\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### III."
+          },
+          {
+            "type": "poem",
+            "text": "Like rosary beads\nthe snowflakes fall\none after the other:\n\neach one knows\nthe exact place\nwhere it will meld \nwith the others,\nwhere it will melt.\n\n(To understand this, now,\nis beyond your reasoning.)\n"
+          },
+          {
+            "type": "prose",
+            "body": "### IV."
+          },
+          {
+            "type": "poem",
+            "text": "A rustle of silence\n\nRises up from the white landscape —\n\na feeling which vibrates\n \n\tfar beyond\n\t\tthis moment.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### V."
+          },
+          {
+            "type": "poem",
+            "text": "Between the dead leaves\nAnd a thin layer of snow,\nLike a sign from the deity,\n\nThe crocus is starting to green\nWith its \nhumble\n\tephemeral\n\t\tuseless\nbeauty.\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### VI."
+          },
+          {
+            "type": "poem",
+            "text": "A magpie \n\t—or were there two of them?—\nRaises its hard beak\n\tairwards\nand emits a high-pitched note\nwhich  rends the silence\nof midday\n\t\tand spreads out\nbeyond the white stretch\nof frosted fields.\n\nNobody hears it,\nThat note        except you.\n\nAdmire this stray, humble \ngesture.\n\nEnjoy the expiring\nOf the moment of delight\n\tIn you. \n"
+          },
+          {
+            "type": "prose",
+            "body": "### VII."
+          },
+          {
+            "type": "poem",
+            "text": "What does the walker not know?\nWhat does the walker\nhave to know\nif he has to know anything?\n\n\nSilence is the walker's\nonly speech.\n\t\t     Which is why\nhe walks.\n\n\n\nWhich is why he is.\n\n\n"
+          }
+        ]
+      },
+      {
+        "language": "fr",
+        "title": "Set cants",
+        "blocks": [
+          {
+            "type": "prose",
+            "body": "\n\nLa rencontre toujours renouvelée avec les textes du poète Antoni Clapés est à l'origine de ce petit cycle de compositions pour voix et piano, et plus précisément la suite Heimat, dont sont tirés tous les poèmes à l'exception du second, qui fait partie du livre L'arbre que s'allunyà. Après une forte identification avec cette suite, j'ai choisi en son sein les sept poèmes qui me suggèrent de manière spontanée une image musicale, soit descriptive, soit symbolique, poèmes qui ont également des éléments communs qui en sont le lien autant que la colonne vertébrale. Le point de départ en est la figure du marcheur pendant l'hiver, marcheur captivé par la nature qui l'entoure, jaillissant de lui-même et qui, en dehors de la pensée ou de la raison, provoque une « fusion » avec l'air, le brouillard, la beauté de l'instant... « contenus » dans le silence.\n\nCes textes brefs, pour certains on peut presque parler d'aphorismes, m'ont suggéré une musique également concise : un texte chanté qui tend à l'essentiel, qui cherche aussi à être fidèle à ses pauses et ses espaces, avec un piano qui veut le mettre en place, le souligner, l'accompagner, tel une image ou un paysage sonore. Les sept chants sont construits chacun avec des traits d'identité particuliers, mais ils sont conçus en même temps comme un tout uni, avec une matière commune, et des éléments de continuité ou de contraste qui forment un arc, où le chant central est le plus bref - une trentaine de secondes à peine - et aux extrêmes, ceux, plus longs, qui cherchent à mettre un cadre à l'ambiance/état demandée par le texte.\n\nSet cants per a soprano i piano est une œuvre commandée par l'Association Joan Manén, dont la création est prévue en 2023 au cours du 12è cycle de concerts, et est dédiée à Antoni Clapés montrant la gratitude pour la confiance témoignée, pour les moments partagés aussi bien que pour ses poèmes.\n\n### I."
+          },
+          {
+            "type": "poem",
+            "text": "Entre les marges blanches\nle chemin fraie un espace.\nTu voudrais arriver à un endroit familier\nmais les empreintes vont s’estompant\ncomme des promesses non tenues,\ncomme l’ombre obscure\ndu vol du corbeau   —   fugace.\n\nComme l’écho de tes pas\nen toi.\n\nL’apaisement et l’attente.\nÊtre pur air\n\t\t\t\t\tdans l’air."
+          },
+          {
+            "type": "prose",
+            "body": "### II."
+          },
+          {
+            "type": "poem",
+            "text": "Tu arrives au carrefour   —\npierres vieilles et mousses dans les terrasses,\nune merle s'évanouît dans le brouillard\n\ndans la rumeur sourde des peupliers.\nToi tu t'y enfonces\ntu veux t'en aller plus au-delà   —   t'égarer, peut-être\net tu deviens brouillard, toi aussi.\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### III."
+          },
+          {
+            "type": "poem",
+            "text": "Tels les grains d’un chapelet\ninvisible, tombent\nl’un après l’autre\nles flocons de neige   —\n\nchacun d’eux\nconnaît le lieu précis\noù il doit se confondre\navec les autres\noù il doit se fondre.\nOù il doit être.\n\n(Comprendre cela, maintenant,\ndépasse de loin ton entendement.)\n\n\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### IV."
+          },
+          {
+            "type": "poem",
+            "text": "Un bruissement de silence\ns’élève du paysage blanc   —\n\nune émotion qui vibre\n\tloin très loin\n\t\tde cet instant.\n\n"
+          },
+          {
+            "type": "prose",
+            "body": "### V."
+          },
+          {
+            "type": "poem",
+            "text": "Entre les feuilles mortes\net une fine couche de neige,\ntel un signe de la déité,\n\nle crocus commence à pousser\navec son\nhumble\n\t\téphémère\n\t\t\t\tinutile\nbeauté.\n"
+          },
+          {
+            "type": "prose",
+            "body": "### VI."
+          },
+          {
+            "type": "poem",
+            "text": "Une pie \n          (ou peut-être deux ?)\nlève son dur bec \n\t\t\tvers le ciel\net exhale une note aigue\nqui hache le silence \nde midi \n\t\tet se déploie\nau-delà de l’étendue blanche\ndes champs glacés.\n\nPersonne ne l’écoute,\ncette note \t\tsauf toi.\n\nAdmire ce geste\négaré, humble.\n\nSavoure l’évanescence\nde la joie de l’instant \n\t\t\t\ten toi.\n\n\t"
+          },
+          {
+            "type": "prose",
+            "body": "### VII."
+          },
+          {
+            "type": "poem",
+            "text": "Que ne sait-il pas, le promeneur ?\n\nQue doit-il savoir\n(s’il doit savoir quelque chose)\nle promeneur ?\n\nLe silence est la seule voix\ndu promeneur.\n\t\t\tSa seule raison\nd’être en chemin.\n\nTa seule raison d’être."
+          }
+        ]
+      }
+    ],
+    "assets": []
+  }
 }

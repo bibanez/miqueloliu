@@ -44,8 +44,7 @@
           },
           {
             "type": "poem",
-            "text": "Com denes d’un rosari\ninvisible, cauen\nun rere l’altre\nels flocs de neu:\n\ncadascun coneix\nel lloc precís\non s’ha de confondre\namb els altres,\non s’ha de fondre.\n\n(Comprendre això, ara,\nés més enllà de la teva raó.)\n",
-            "body": "### III."
+            "text": "Com denes d’un rosari\ninvisible, cauen\nun rere l’altre\nels flocs de neu:\n\ncadascun coneix\nel lloc precís\non s’ha de confondre\namb els altres,\non s’ha de fondre.\n\n(Comprendre això, ara,\nés més enllà de la teva raó.)\n"
           },
           {
             "type": "prose",
@@ -53,8 +52,7 @@
           },
           {
             "type": "poem",
-            "text": "Una remor de silenci\ns’alça del paisatge blanc —\n\nuna emoció que vibra\n\tmolt més enllà\n\t\td’aquest instant.\n\n",
-            "body": "### IV."
+            "text": "Una remor de silenci\ns’alça del paisatge blanc —\n\nuna emoció que vibra\n\tmolt més enllà\n\t\td’aquest instant.\n\n"
           },
           {
             "type": "prose",
@@ -62,8 +60,7 @@
           },
           {
             "type": "poem",
-            "text": "Entre la fullaraca\n\ni una fina capa de neu,\ncom un senyal de la deïtat,\n\nel crocus comença a brinar\namb la seva \nhumil\n\t   efímera\n\t\t      inútil\nbellesa.\n",
-            "body": "### V."
+            "text": "Entre la fullaraca\n\ni una fina capa de neu,\ncom un senyal de la deïtat,\n\nel crocus comença a brinar\namb la seva \nhumil\n\t   efímera\n\t\t      inútil\nbellesa.\n"
           },
           {
             "type": "prose",
@@ -71,12 +68,11 @@
           },
           {
             "type": "poem",
-            "text": "Una garsa\n\n\t—o n’eren dues?—\nalça el seu bec dur\n\tenlaire\ni exhala una nota aguda\nque esqueixa el silenci\ndel migdia\n\t\t     i s’expandeix\nenllà de l’estesa blanca\ndels camps gebrats.\n\nNingú no la sent,\naquesta nota        llevat tu.\n\nAdmira aquest gest\nforaviat, humil.\n\nGaudeix de la caducitat\ndel goig de l’instant\n\ten tu. \n\n\n",
-            "body": "### VI."
+            "text": "Una garsa\n\n\t—o n’eren dues?—\nalça el seu bec dur\n\tenlaire\ni exhala una nota aguda\nque esqueixa el silenci\ndel migdia\n\t\t     i s’expandeix\nenllà de l’estesa blanca\ndels camps gebrats.\n\nNingú no la sent,\naquesta nota        llevat tu.\n\nAdmira aquest gest\nforaviat, humil.\n\nGaudeix de la caducitat\ndel goig de l’instant\n\ten tu. \n\n\n"
           },
           {
             "type": "prose",
-            "body": "**VII.**"
+            "body": "### VII."
           },
           {
             "type": "poem",
@@ -116,7 +112,7 @@
           },
           {
             "type": "prose",
-            "body": "**III.**"
+            "body": "### III."
           },
           {
             "type": "poem",
@@ -124,7 +120,7 @@
           },
           {
             "type": "prose",
-            "body": "**IV.**"
+            "body": "### IV."
           },
           {
             "type": "poem",
@@ -132,7 +128,7 @@
           },
           {
             "type": "prose",
-            "body": "**V.**"
+            "body": "### V."
           },
           {
             "type": "poem",

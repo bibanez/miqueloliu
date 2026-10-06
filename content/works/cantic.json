@@ -37,11 +37,7 @@
         "blocks": [
           {
             "type": "prose",
-            "body": "Dos elements configuren aquesta breu composició: un motiu viu, lleuger, àgil, quasi fugaç, amb molt ús del so d’aire; i el cant, un cant de poques notes que vol ser d’expressió concentrada però alhora nítid, tranquil, un punt serè."
-          },
-          {
-            "type": "poem",
-            "text": "Moviment/aire i cant es troben, es fonen: vol ser un cant de lloança dins d’un dinamisme permanent.\nObra escrita a petició del festival Mixtur 2019 per a Tm+ensemble."
+            "body": "Dos elements configuren aquesta breu composició: un motiu viu, lleuger, àgil, quasi fugaç, amb molt ús del so d’aire; i el cant, un cant de poques notes que vol ser d’expressió concentrada però alhora nítid, tranquil, un punt serè. Moviment/aire i cant es troben, es fonen: vol ser un cant de lloança dins d’un dinamisme permanent. Obra escrita a petició del festival Mixtur 2019 per a Tm+ensemble."
           }
         ]
       },
@@ -50,16 +46,8 @@
         "title": "Càntic (Cántico)",
         "blocks": [
           {
-            "type": "poem",
-            "text": "“Cántico” para flauta sola."
-          },
-          {
             "type": "prose",
-            "body": "Dos elementos configuran esta breve composición: un motivo vivo, ligero, ágil, casi fugaz, con mucho uso del sonido de aire; y el canto, un canto de pocas notas que quiere ser de expresión concentrada pero a la vez nítido, tranquilo, un punto sereno."
-          },
-          {
-            "type": "poem",
-            "text": "Movimiento/aire y canto se encuentran, se funden: quiere ser un canto de alabanza dentro de un dinamismo permanente.\nObra escrita a petición del festival Mixtur 2019 para Tm+ensemble."
+            "body": "“Cántico” para flauta sola. Dos elementos configuran esta breve composición: un motivo vivo, ligero, ágil, casi fugaz, con mucho uso del sonido de aire; y el canto, un canto de pocas notas que quiere ser de expresión concentrada pero a la vez nítido, tranquilo, un punto sereno. Movimiento/aire y canto se encuentran, se funden: quiere ser un canto de alabanza dentro de un dinamismo permanente. Obra escrita a petición del festival Mixtur 2019 para Tm+ensemble."
           }
         ]
       },
@@ -68,16 +56,8 @@
         "title": "Càntic (Canticle)",
         "blocks": [
           {
-            "type": "poem",
-            "text": "“Canticle” for solo flute"
-          },
-          {
             "type": "prose",
-            "body": "Two elements configure this brief musical composition: a lively, light and agile, almost fleeting motive, with much use of air sound; and the chant, a chant with only a few notes that is meant to be of concentrated expression while at the same time clear, calm and slightly serene."
-          },
-          {
-            "type": "poem",
-            "text": "Movement/air and chant get together, they melt: it intends to be a chant of praise within a permanent dynamism.\nPiece written by request of the Mixtur 2019 festival for Tm+ ensemble."
+            "body": "“Canticle” for solo flute Two elements configure this brief musical composition: a lively, light and agile, almost fleeting motive, with much use of air sound; and the chant, a chant with only a few notes that is meant to be of concentrated expression while at the same time clear, calm and slightly serene. Movement/air and chant get together, they melt: it intends to be a chant of praise within a permanent dynamism. Piece written by request of the Mixtur 2019 festival for Tm+ ensemble."
           }
         ]
       }
