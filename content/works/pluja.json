@@ -55,7 +55,11 @@
           },
           {
             "type": "poem",
-            "text": "Por lo tanto, olvida todo pensamiento    —   y la memoria,\nrefúgiate en la humildad de la tiniebla,\nporque solo en ella podrás ver\n\t\t\t\t   y verte.\n\n\t\t\t\t\t\t\tAntoni Clapés (trad. Dolors Udina)"
+            "text": "Por lo tanto, olvida todo pensamiento    —   y la memoria,\nrefúgiate en la humildad de la tiniebla,\nporque solo en ella podrás ver\n\t\t\t\t   y verte."
+          },
+          {
+            "type": "prose",
+            "body": "Antoni Clapés (trad. Dolors Udina)"
           }
         ]
       },
@@ -69,7 +73,7 @@
           },
           {
             "type": "prose",
-            "body": "I"
+            "body": "### I"
           },
           {
             "type": "poem",
@@ -81,8 +85,11 @@
           },
           {
             "type": "poem",
-            "text": "Then, forget all thought — and memory,\nand seek refuge in the humility of darkness,\nsince only there will you be able to see\nand see yourself.\nAntoni Clapés (trans. Sam Abrams)",
-            "body": "### I"
+            "text": "Then, forget all thought — and memory,\nand seek refuge in the humility of darkness,\nsince only there will you be able to see\nand see yourself."
+          },
+          {
+            "type": "prose",
+            "body": "Antoni Clapés (trans. Sam Abrams)"
           }
         ]
       },
@@ -134,7 +141,11 @@
           },
           {
             "type": "poem",
-            "text": "Alsdann vergiss alle Gedanken  —   und die Erinnerung\nund flüchte dich in die Demut der Dunkelheit,\ndenn nur in ihr wirst du sehen\n\t\t\tund dich sehen.\n\n\t\t\t\t\tAntoni Clapés (Übersetzung von Claudia Kalász)"
+            "text": "Alsdann vergiss alle Gedanken  —   und die Erinnerung\nund flüchte dich in die Demut der Dunkelheit,\ndenn nur in ihr wirst du sehen\n\t\t\tund dich sehen."
+          },
+          {
+            "type": "prose",
+            "body": "Antoni Clapés (Übersetzung von Claudia Kalász)"
           }
         ]
       },

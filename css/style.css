@@ -1429,6 +1429,7 @@ section:last-child {
 
 .work-detail-sticky-title {
   flex: 0 1 auto;
+  min-width: 0;
   max-width: 0;
   overflow: hidden;
   color: var(--color-text);
@@ -1437,12 +1438,14 @@ section:last-child {
   line-height: 1.2;
   opacity: 0;
   transform: translateY(0.2rem);
-  transition: max-width 0.45s ease, opacity 0.35s ease, transform 0.45s ease;
+  transition: opacity 0.35s ease, transform 0.45s ease;
   white-space: nowrap;
 }
 
 .work-detail-language-nav.is-scrolled .work-detail-sticky-title {
   max-width: 24rem;
+  white-space: normal;
+  overflow-wrap: anywhere;
   opacity: 1;
   transform: translateY(0);
 }
@@ -1547,8 +1550,9 @@ section:last-child {
   color: var(--color-text-light);
 }
 
-.work-info-poem-line {
+.work-info .work-info-poem-line {
   min-height: 1.45em;
+  line-height: 1.45;
   margin: 0 !important;
   white-space: pre-wrap;
 }
@@ -1922,6 +1926,10 @@ section:last-child {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.4rem;
+  }
+
+  .work-detail-language-nav.is-scrolled .work-detail-sticky-title {
+    max-width: 100%;
   }
 
   .work-detail-language-tabs {

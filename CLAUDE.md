@@ -18,11 +18,11 @@ python3 -m http.server 8000 --directory dist
 npm ci
 npm run build
 
-# Netlify deploys dist/ automatically from main
+# Netlify and Cloudflare deploy dist/ automatically from main
 npm test
 ```
 
-`npm run build` validates content and generates the site; `npm run validate` checks content without writing `dist/`. Netlify deploys `dist/` from `main` and creates pull-request previews. The Netlify build validates the content before publishing. Decap uses GitHub login through Netlify OAuth and publishes directly. See `ROLLOUT.md`.
+`npm run build` validates content and generates the site; `npm run validate` checks content without writing `dist/`. Netlify deploys `dist/` from `main` and creates pull-request previews. Cloudflare also deploys `dist/` from `main` to the public domain through the Worker configured in `wrangler.jsonc`. The Netlify build validates the content before publishing. Decap uses GitHub login through Netlify OAuth and saves drafts through the editorial workflow; publishing merges them into `main`. See `ROLLOUT.md`.
 
 `documentacio/` holds Miquel's working materials (source documents) and is gitignored — never publish or reference it from the site.
 
