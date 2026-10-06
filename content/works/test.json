@@ -1,0 +1,9 @@
+{
+  "archived": false,
+  "id": "test",
+  "category": "cambra",
+  "order": 0,
+  "title": {
+    "ca": "test"
+  }
+}
