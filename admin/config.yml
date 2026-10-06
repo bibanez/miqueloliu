@@ -502,10 +502,9 @@ collections:
           - name.ca
       - label: Ordre
         name: order
-        widget: number
-        value_type: int
-        min: 0
-        hint: Nombre per ordenar les obres (els més petits apareixen primer). Es poden repetir.
+        widget: work-order
+        default: 0
+        hint: "Feu servir «Posa al principi de la secció» per situar l’obra abans de les altres. També podeu escriure un nombre: els més petits apareixen primer, inclosos els negatius."
       - label: Arxivada
         name: archived
         widget: boolean

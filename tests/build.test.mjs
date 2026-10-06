@@ -5,6 +5,7 @@ import path from 'node:path';
 import os from 'node:os';
 import { spawnSync } from 'node:child_process';
 import YAML from 'yaml';
+import vm from 'node:vm';
 
 const root = process.cwd();
 async function fixture(t) {
@@ -24,6 +25,32 @@ function build(dir, environment = {}, validateOnly = false) {
 }
 const read = (dir, file) => fs.readFile(path.join(dir, file), 'utf8');
 const save = (dir, file, value) => fs.writeFile(path.join(dir, file), JSON.stringify(value));
+async function catalogue(dir) {
+  return vm.runInNewContext(`${await read(dir, 'dist/js/data/works.js')}\nWORKS;`);
+}
+
+test('Doodem leads chamber works and successive negative orders put new works first', async t => {
+  const dir = await fixture(t);
+  let result = build(dir);
+  assert.equal(result.status, 0, result.output);
+  assert.equal((await catalogue(dir)).find(section => section.id === 'cambra').works[0].id, 'doodem');
+  const config = YAML.parse(await read(dir, 'dist/admin/config.yml'));
+  const order = config.collections.find(c => c.name === 'works').fields.find(f => f.name === 'order');
+  assert.equal(order.widget, 'work-order');
+  assert.match(await read(dir, 'dist/admin/index.html'), /src="\/admin\/work-order.js"/);
+  assert.ok(await read(dir, 'dist/admin/work-order.js'));
+  for (const [id, value] of [['zz-nova', -2], ['zz-seguent', -3]]) {
+    await save(dir, `content/works/${id}.json`, { id, category: 'cambra', order: value, title: { ca: id } });
+    result = build(dir);
+    assert.equal(result.status, 0, result.output);
+    assert.equal((await catalogue(dir)).find(section => section.id === 'cambra').works[0].id, id);
+    assert.ok(JSON.parse(await read(dir, 'dist/admin/work-order.json')).orders.includes(value));
+  }
+  await save(dir, 'content/works/zz-seguent.json', { id: 'zz-seguent', category: 'cambra', order: -3.5, title: { ca: 'Prova' } });
+  result = build(dir, {}, true);
+  assert.notEqual(result.status, 0);
+  assert.match(result.output, /Ordre invàlid/);
+});
 
 test('production emits the site and GitHub CMS without source documents or deployment secrets', async t => {
   const dir = await fixture(t);

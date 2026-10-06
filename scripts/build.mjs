@@ -68,7 +68,7 @@ for (let index = 0; index < allWorks.length; index++) {
   const work = allWorks[index];
   assert(slugPattern.test(work.id || '') && files[index] === `${work.id}.json`, `Identificador d’obra invàlid: ${files[index]}.`);
   assert(categoryIds.has(work.category), `Categoria inexistent per a ${work.id}.`);
-  assert(Number.isInteger(work.order) && work.order >= 0, `Ordre invàlid per a ${work.id}.`);
+  assert(Number.isSafeInteger(work.order), `Ordre invàlid per a ${work.id}.`);
   assert(typeof work.title === 'string' ? work.title.trim() : work.title?.ca?.trim(), `Falta el títol de ${work.id}.`);
   const validateWork = async item => {
     await assertAssets(item.assets, work.id);
@@ -245,6 +245,7 @@ try { await fs.cp(path.join(root, 'audio'), path.join(dist, 'audio'), { recursiv
 // Use the locked Markdown renderer for live CMS previews and published prose.
 await fs.copyFile(path.join(root, 'node_modules/markdown-it/dist/markdown-it.min.js'), path.join(dist, 'admin/markdown-it.min.js'));
 await write('admin/config.yml', YAML.stringify(config, { lineWidth: 0 }));
+await write('admin/work-order.json', JSON.stringify({ orders: allWorks.map(work => work.order) }));
 // Netlify previews cannot publish to main; editors use the production CMS URL.
 if (process.env.NETLIFY === 'true' && process.env.CONTEXT !== 'production') {
   await fs.rm(path.join(dist, 'admin'), { recursive: true, force: true });

@@ -31,7 +31,7 @@ Si l’enllaç encara no està disponible, espereu que acabi la compilació i to
 
 ## Afegir o actualitzar una obra
 
-Poseu un identificador únic amb minúscules i guions, com `nova-obra`. Un cop publicada, no canvieu l’identificador perquè forma part de l’adreça del web. Trieu la categoria i un nombre d’ordre: els més petits apareixen primer. Per retirar una obra del catàleg sense perdre’n la informació, marqueu **Arxivada**.
+Poseu un identificador únic amb minúscules i guions, com `nova-obra`. Un cop publicada, no canvieu l’identificador perquè forma part de l’adreça del web. Trieu la categoria i, al camp **Ordre**, premeu **Posa al principi de la secció** per situar l’obra abans de les altres sense haver de renumerar-les. El botó consulta l’últim catàleg publicat; si hi ha altres esborranys pendents, publiqueu-los i espereu que acabi el desplegament abans de tornar-lo a fer servir en una altra sessió. També podeu escriure un nombre d’ordre manualment: els més petits apareixen primer, inclosos els negatius. Per retirar una obra del catàleg sense perdre’n la informació, marqueu **Arxivada**.
 
 Les traduccions opcionals poden quedar buides; el web mostra el català quan falta una traducció.
 
