@@ -55,11 +55,8 @@
           },
           {
             "type": "poem",
-            "text": "Por lo tanto, olvida todo pensamiento    —   y la memoria,\nrefúgiate en la humildad de la tiniebla,\nporque solo en ella podrás ver\n\t\t\t\t   y verte."
-          },
-          {
-            "type": "prose",
-            "body": "Antoni Clapés (trad. Dolors Udina)"
+            "text": "Por lo tanto, olvida todo pensamiento    —   y la memoria,\nrefúgiate en la humildad de la tiniebla,\nporque solo en ella podrás ver\n\t\t\t\t   y verte.",
+            "attribution": "Antoni Clapés (trad. Dolors Udina)"
           }
         ]
       },
@@ -85,11 +82,8 @@
           },
           {
             "type": "poem",
-            "text": "Then, forget all thought — and memory,\nand seek refuge in the humility of darkness,\nsince only there will you be able to see\nand see yourself."
-          },
-          {
-            "type": "prose",
-            "body": "Antoni Clapés (trans. Sam Abrams)"
+            "text": "Then, forget all thought — and memory,\nand seek refuge in the humility of darkness,\nsince only there will you be able to see\nand see yourself.",
+            "attribution": "Antoni Clapés (trans. Sam Abrams)"
           }
         ]
       },
@@ -115,11 +109,8 @@
           },
           {
             "type": "poem",
-            "text": "Alors, oublie toute pensée — et souvenance,\net  trouve refuge dans l’humilité de l’obscurité,\ncar en elle seulement tu pourras voir\n                                                                     et te voir,   toi."
-          },
-          {
-            "type": "prose",
-            "body": "Antoni Clapés (trad. Mireille Gansel)"
+            "text": "Alors, oublie toute pensée — et souvenance,\net  trouve refuge dans l’humilité de l’obscurité,\ncar en elle seulement tu pourras voir\n                                                                     et te voir,   toi.",
+            "attribution": "Antoni Clapés (trad. Mireille Gansel)"
           }
         ]
       },
@@ -141,11 +132,8 @@
           },
           {
             "type": "poem",
-            "text": "Alsdann vergiss alle Gedanken  —   und die Erinnerung\nund flüchte dich in die Demut der Dunkelheit,\ndenn nur in ihr wirst du sehen\n\t\t\tund dich sehen."
-          },
-          {
-            "type": "prose",
-            "body": "Antoni Clapés (Übersetzung von Claudia Kalász)"
+            "text": "Alsdann vergiss alle Gedanken  —   und die Erinnerung\nund flüchte dich in die Demut der Dunkelheit,\ndenn nur in ihr wirst du sehen\n\t\t\tund dich sehen.",
+            "attribution": "Antoni Clapés (Übersetzung von Claudia Kalász)"
           }
         ]
       },
@@ -167,11 +155,8 @@
           },
           {
             "type": "poem",
-            "text": "Orduan, ahaztu pentsamendu oro — eta memoria,\neta babes zaitez umelaren umilean,\nbertan bakarrik ikusi ahal izango baituzu zeure\nburua ikusiaz."
-          },
-          {
-            "type": "prose",
-            "body": "Antoni Clapés (trad. Tere Irastortza)"
+            "text": "Orduan, ahaztu pentsamendu oro — eta memoria,\neta babes zaitez umelaren umilean,\nbertan bakarrik ikusi ahal izango baituzu zeure\nburua ikusiaz.",
+            "attribution": "Antoni Clapés (trad. Tere Irastortza)"
           }
         ]
       }

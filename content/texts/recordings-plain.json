@@ -6,13 +6,6 @@
       "ca": "Enregistraments",
       "es": "Grabaciones",
       "en": "Recordings"
-    },
-    {
-      "key": "recordings.description",
-      "format": "plain",
-      "ca": "Una selecció d’enregistraments de música de Miquel Oliu.",
-      "es": "Una selección de grabaciones de música de Miquel Oliu.",
-      "en": "A selection of recordings of music by Miquel Oliu."
     }
   ]
 }

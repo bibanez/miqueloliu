@@ -10,9 +10,9 @@
     {
       "key": "contact.description",
       "format": "plain",
-      "ca": "Per a consultes sobre partitures, encàrrecs, concerts o col·laboracions.",
-      "es": "Para consultas sobre partituras, encargos, conciertos o colaboraciones.",
-      "en": "For enquiries regarding scores, commissions, performances or collaborations."
+      "ca": "Per a qualsevol consulta",
+      "es": "Para cualquier consulta",
+      "en": "For any enquiry"
     },
     {
       "key": "contact.card.title",
@@ -38,9 +38,9 @@
     {
       "key": "contact.email.welcome",
       "format": "plain",
-      "ca": "Amb molt de gust serà un plaer llegir i contestar el vostre missatge.",
-      "es": "Con mucho gusto será un placer leer y contestar a vuestro mensaje.",
-      "en": "I’ll be very happy to read and reply to your message."
+      "ca": "Amb molt de gust llegiré i contestaré el vostre missatge.",
+      "es": "Con mucho gusto leeré y contestaré vuestro mensaje.",
+      "en": "I’ll be happy to read and reply to your message."
     },
     {
       "key": "contact.copy.button",

@@ -88,7 +88,10 @@ for (let index = 0; index < allWorks.length; index++) {
     for (const block of section.blocks) {
       assert(['prose', 'poem', 'separator'].includes(block.type), `Bloc de text invàlid a ${work.id}.`);
       if (block.type === 'prose') { assert(block.body?.trim(), `Text buit a ${work.id}.`); await assertMarkdownAssets(block.body, work.id); }
-      if (block.type === 'poem') assert(block.text?.trim(), `Poema buit a ${work.id}.`);
+      if (block.type === 'poem') {
+        assert(block.text?.trim(), `Poema buit a ${work.id}.`);
+        assert(block.attribution == null || typeof block.attribution === 'string', `Atribució invàlida a ${work.id}.`);
+      }
     }
   }
   await assertAssets(work.programmeNote?.assets, work.id);
@@ -257,7 +260,9 @@ for (const work of allWorks.filter(hasNote)) {
   const blocks = section => section.blocks.map(block => {
     if (block.type === 'prose') return richText(block.body).replace(/<ul>/g, '<ul class="work-info-list">');
     if (block.type === 'separator') return '<div class="work-info-stanza-break"></div>';
-    return `<div class="work-info-poem">${block.text.split('\n').map(line => line.trim() ? `<p class="work-info-poem-line">${esc(line)}</p>` : '<div class="work-info-stanza-break"></div>').join('\n')}</div>`;
+    const [author, ...source] = (block.attribution || '').trim().split('\n');
+    const attribution = author ? `<p class="work-info-poem-attribution">${esc(author)}${source.length ? `<span class="work-info-poem-source">${esc(source.join('\n'))}</span>` : ''}</p>` : '';
+    return `<div class="work-info-poem">${block.text.split('\n').map(line => line.trim() ? `<p class="work-info-poem-line">${esc(line)}</p>` : '<div class="work-info-stanza-break"></div>').join('\n')}${attribution}</div>`;
   }).join('\n');
   const back = `<a href="catalogue.html#work-${work.id}" data-i18n="works.detail.back"></a>`;
   const content = `<article class="work-detail-layout">

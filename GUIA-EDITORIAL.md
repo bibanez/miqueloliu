@@ -40,7 +40,7 @@ Les traduccions opcionals poden quedar buides; el web mostra el català quan fal
 Dins de l’obra, desplegueu **Nota de programa i poemes** i afegiu una versió per idioma. Cada versió té un títol i una llista de blocs:
 
 - **Text:** paràgrafs, negreta, cursiva, llistes i enllaços.
-- **Poema:** un vers per línia; una línia en blanc separa estrofes.
+- **Poema:** un vers per línia; una línia en blanc separa estrofes. El camp opcional **Atribució** permet posar l’autoria a la primera línia i la font o traducció a les següents; es mostra al final del poema, alineada a la dreta.
 - **Separació entre estrofes:** espai entre dos blocs.
 
 Es conserven les versions existents en català, castellà, anglès, francès, alemany i euskera. També podeu crear una nota per a una obra nova: la pàgina es genera automàticament.

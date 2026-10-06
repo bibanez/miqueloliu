@@ -45,9 +45,9 @@
     {
       "key": "press.description",
       "format": "plain",
-      "ca": "Selecció d’escrits, entrevistes i converses sobre Miquel Oliu i la seva música.",
-      "es": "Selección de escritos, entrevistas y conversaciones sobre Miquel Oliu y su música.",
-      "en": "A selection of writing, interviews and conversations about Miquel Oliu and his music."
+      "ca": "Una selecció d’escrits, entrevistes i converses.",
+      "es": "Una selección de escritos, entrevistas y conversaciones.",
+      "en": "A selection of writing, interviews and conversations."
     },
     {
       "key": "press.section",

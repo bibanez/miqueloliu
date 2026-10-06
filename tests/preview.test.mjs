@@ -54,9 +54,12 @@ test('language controls update live data and preserve Catalan fallback', () => {
 test('programme notes render Markdown, poems, source languages and draft media safely', () => {
   const data = { programmeNote: { sections: [{ language: 'fr', title: 'Note française', blocks: [
     { type: 'prose', body: '**Llum** ![Foto](/uploads/nova.jpg) <script>alert(1)</script> [link](javascript:alert(1))' },
-    { type: 'poem', text: 'Primer vers\n\nSegon vers' },
+    { type: 'poem', text: 'Primer vers\n\nSegon vers', attribution: '— Autoria & llum\nLlibre <script>\nTraducció' },
+    { type: 'poem', text: 'Sense atribució' },
+    { type: 'poem', text: 'Atribució buida', attribution: '  \n  ' },
   ] }] }, recordings: [{ title: 'Prova', src: '/uploads/nou.mp3' }] };
-  const tree = preview('works', data, value => value.startsWith('/uploads/') ? `blob:https://example.com/${value.split('/').pop()}` : value).render();
+  const instance = preview('works', data, value => value.startsWith('/uploads/') ? `blob:https://example.com/${value.split('/').pop()}` : value);
+  const tree = instance.render();
   const html = nodes(tree).find(node => node.props.dangerouslySetInnerHTML)?.props.dangerouslySetInnerHTML.__html;
   assert.match(html, /<strong>Llum<\/strong>/);
   assert.match(html, /src="blob:https:\/\/example.com\/nova.jpg"/);
@@ -64,6 +67,15 @@ test('programme notes render Markdown, poems, source languages and draft media s
   assert.ok(nodes(tree).some(node => node.props.className === 'work-info-stanza-break'));
   assert.ok(nodes(tree).some(node => node.tag === 'button' && text(node) === 'Francès'));
   assert.equal(nodes(tree).find(node => node.tag === 'audio').props.src, 'blob:https://example.com/nou.mp3');
+  const poem = nodes(tree).find(node => node.props.className === 'work-info-poem');
+  assert.equal(poem.children.at(-1).props.className, 'work-info-poem-attribution');
+  assert.equal(text(poem.children.at(-1)), '— Autoria & llumLlibre <script>\nTraducció');
+  assert.equal(nodes(tree).filter(node => node.props.className === 'work-info-poem-attribution').length, 1);
+  assert.equal(nodes(poem).filter(node => node.props.dangerouslySetInnerHTML).length, 0);
+  data.programmeNote.sections[0].blocks[1].attribution = 'Canvi sense desar';
+  assert.match(text(instance.render()), /Canvi sense desar/);
+  data.programmeNote.sections[0].blocks[1].attribution = '';
+  assert.equal(nodes(instance.render()).filter(node => node.props.className === 'work-info-poem-attribution').length, 0);
 });
 
 test('biography falls back for empty translations and media resolve from the site root', () => {

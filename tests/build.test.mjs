@@ -69,6 +69,8 @@ test('an editor can create a new work and programme note without adding an HTML 
     programmeNote: { sections: [{ language: 'ca', title: 'Prova & llum', blocks: [
       { type: 'prose', body: 'Una **nota** nova.' },
       { type: 'poem', text: 'Primer vers\nSegon vers\n\nUna altra estrofa <script>' },
+      { type: 'poem', text: 'Vers amb autoria', attribution: '— Autoria & llum\nLlibre <script>\nTraducció' },
+      { type: 'poem', text: 'Vers sense autoria', attribution: '  \n  ' },
     ] }] },
   };
   await save(dir, 'content/works/prova-nova.json', work);
@@ -78,6 +80,10 @@ test('an editor can create a new work and programme note without adding an HTML 
   assert.match(page, /<strong>nota<\/strong>/);
   assert.match(page, /work-info-stanza-break/);
   assert.match(page, /Una altra estrofa &lt;script&gt;/);
+  assert.match(page, /Vers amb autoria<\/p><p class="work-info-poem-attribution">— Autoria &amp; llum<span class="work-info-poem-source">Llibre &lt;script&gt;\nTraducció<\/span><\/p><\/div>/);
+  assert.equal((page.match(/class="work-info-poem-attribution"/g) || []).length, 1);
+  const angel = await read(dir, 'dist/obres/angel-terrible.html');
+  assert.equal((angel.match(/class="work-info-poem-attribution">Rainer Maria Rilke/g) || []).length, 3);
   assert.match(await read(dir, 'dist/js/data/work-info.js'), /obres\/prova-nova.html/);
   work.archived = true;
   await save(dir, 'content/works/prova-nova.json', work);
@@ -85,6 +91,11 @@ test('an editor can create a new work and programme note without adding an HTML 
   assert.equal(result.status, 0, result.output);
   assert.doesNotMatch(await read(dir, 'dist/js/data/works.js'), /"id":"prova-nova"/);
   assert.ok(await read(dir, 'dist/obres/prova-nova.html'));
+  work.programmeNote.sections[0].blocks[2].attribution = { ca: 'Autoria' };
+  await save(dir, 'content/works/prova-nova.json', work);
+  result = build(dir, {}, true);
+  assert.notEqual(result.status, 0);
+  assert.match(result.output, /Atribució invàlida/);
 });
 
 test('contact changes update the visible address, copy action, and email form', async t => {

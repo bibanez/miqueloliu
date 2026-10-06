@@ -67,12 +67,17 @@
       section && h('section', { className: 'cms-preview-note', lang: section.language },
         h('p', { className: 'cms-preview-label' }, `Nota de programa · ${languages[section.language] || section.language}`),
         h('h2', {}, section.title),
-        h('div', { className: 'work-info' }, list(section.blocks).map((block, index) => h('div', { key: index },
-          block.type === 'prose' ? rich(props, block.body) : block.type === 'poem'
-            ? h('div', { className: 'work-info-poem' }, String(block.text || '').split('\n').map((line, lineIndex) => line.trim()
-              ? h('p', { key: lineIndex, className: 'work-info-poem-line' }, line)
-              : h('div', { key: lineIndex, className: 'work-info-stanza-break' })))
-            : h('div', { className: 'work-info-stanza-break' })))),
+        h('div', { className: 'work-info' }, list(section.blocks).map((block, index) => {
+          const [author, ...source] = String(block.attribution || '').trim().split('\n');
+          return h('div', { key: index },
+            block.type === 'prose' ? rich(props, block.body) : block.type === 'poem'
+              ? h('div', { className: 'work-info-poem' }, String(block.text || '').split('\n').map((line, lineIndex) => line.trim()
+                ? h('p', { key: lineIndex, className: 'work-info-poem-line' }, line)
+                : h('div', { key: lineIndex, className: 'work-info-stanza-break' })),
+              author && h('p', { className: 'work-info-poem-attribution' }, author,
+                source.length > 0 && h('span', { className: 'work-info-poem-source' }, source.join('\n'))))
+              : h('div', { className: 'work-info-stanza-break' }));
+        })),
         attachments(props, data.programmeNote?.assets)));
   };
   const biographyPreview = (props, data, language) => h('div', {},

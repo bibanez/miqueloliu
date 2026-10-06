@@ -716,6 +716,11 @@ collections:
                         label: Versos
                         widget: text
                         hint: Un vers per línia. Deixeu una línia en blanc entre estrofes.
+                      - name: attribution
+                        label: Atribució
+                        widget: text
+                        required: false
+                        hint: Autoria i, opcionalment, font o traducció a les línies següents. Es mostra al final del poema, alineada a la dreta.
                   - name: separator
                     label: Separació entre estrofes
                     widget: object

@@ -59,11 +59,8 @@
           },
           {
             "type": "poem",
-            "text": "Confundirse con la nieve:\n                       ser copo que el mediodía ha de volver líquido.\n\nConfundirse con el paisaje:\n                       desvanecerse para perdurar."
-          },
-          {
-            "type": "prose",
-            "body": "(Trad. Antoni Clapés)"
+            "text": "Confundirse con la nieve:\n                       ser copo que el mediodía ha de volver líquido.\n\nConfundirse con el paisaje:\n                       desvanecerse para perdurar.",
+            "attribution": "(Trad. Antoni Clapés)"
           },
           {
             "type": "prose",
@@ -81,11 +78,8 @@
           },
           {
             "type": "poem",
-            "text": "To get mixed with snow:\n                       to be snowflake that noon will make liquid.\n\n            To get mixed with landscape:\n                       to vanish to endure"
-          },
-          {
-            "type": "prose",
-            "body": "(Trans. Antoni Clapés)"
+            "text": "To get mixed with snow:\n                       to be snowflake that noon will make liquid.\n\n            To get mixed with landscape:\n                       to vanish to endure",
+            "attribution": "(Trans. Antoni Clapés)"
           },
           {
             "type": "prose",
