@@ -50,13 +50,6 @@
       "en": "A selection of writing, interviews and conversations."
     },
     {
-      "key": "press.section",
-      "format": "plain",
-      "ca": "Escrits/Premsa",
-      "es": "Escritos/Prensa",
-      "en": "Texts and Press"
-    },
-    {
       "key": "press.detail.back",
       "format": "plain",
       "ca": "← Premsa",
