@@ -1,15 +1,4 @@
 {
-  "id": "allegories-de-tardor-orquestra",
-  "title": {
-    "ca": "Al·legories de tardor – Microludis per a orquestra",
-    "es": "Al·legories de tardor – Microludis per a orquestra (Alegorías de otoño – Microludios para orquesta)",
-    "en": "Al·legories de tardor – Microludis per a orquestra (Autumn allegories – Microludes for orchestra)"
-  },
-  "years": "2012-2013",
-  "instrumentation": {
-    "ca": "[2.2.2.2.-2.2.2.1.-3 perc. –arp. -12.10.8.8.6.]"
-  },
-  "duration": "13’",
   "details": [
     {
       "ca": "XXXII Premi Reina Sofia de Composició Musical",
@@ -22,10 +11,7 @@
       "en": "Premiere: October 2015. Teatro Monumental, Madrid. Orquesta de RTVE, Carlos Kalmar"
     }
   ],
-  "score": "ficta",
-  "category": "orquestra",
   "archived": false,
-  "order": 2,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -85,5 +71,23 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 2,
+  "instrumentation": {
+    "ca": "[2.2.2.2.-2.2.2.1.-3 perc. –arp. -12.10.8.8.6.]"
+  },
+  "score": "ficta",
+  "duration": "13’",
+  "years": "2012-2013",
+  "title": {
+    "ca": "Al·legories de tardor – Microludis per a orquestra",
+    "es": "Al·legories de tardor – Microludis per a orquestra (Alegorías de otoño – Microludios para orquesta)",
+    "en": "Al·legories de tardor – Microludis per a orquestra (Autumn allegories – Microludes for orchestra)"
+  },
+  "links": {
+    "audio": "https://www.youtube.com/watch?v=G4k5j9T8xig",
+    "score": "https://www.ficta.cat/ca/miquel-oliu-i-nieto/236-allegories-de-tardor-microludis-per-a-orquestra-digital.html"
+  },
+  "id": "allegories-de-tardor-orquestra",
+  "category": "orquestra"
 }
