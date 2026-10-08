@@ -41,9 +41,9 @@
       catalogue: () => {
         const container = document.getElementById('catalogue-content');
         const quickNav = document.getElementById('catalogue-nav');
-        const AUDIO_EXT = /\.(mp3|m4a|ogg|wav)(\?.*)?$/i;
 
         const loc = v => I18n.fmt(I18n.loc(v));
+        const escapeUrl = value => String(value).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
 
         // Open state of the parts fold (e.g. Llibre d'hores) is preserved across
         // language re-renders; populated in render() before renderWork runs.
@@ -57,17 +57,6 @@
           };
           const recordingsId = `audio-${work.id}`;
           const recordingsOpen = openRecordings.has(recordingsId);
-          if (work.links && work.links.audio) {
-            if (AUDIO_EXT.test(work.links.audio)) {
-              // Self-hosted audio gets an inline player below the links row
-              addItem(`<span class="work-link-label" data-i18n="works.link.audio"></span>`);
-            } else {
-              addItem(`<a href="${work.links.audio}" target="_blank" rel="noopener" data-i18n="works.link.audio"></a>`);
-            }
-          }
-          if (work.links && work.links.score) {
-            addItem(`<a href="${work.links.score}" target="_blank" rel="noopener" data-i18n="works.link.score"></a>`);
-          }
           if (work.note) {
             addItem(`<button class="work-note-toggle" data-target="note-${work.id}" data-i18n="works.link.note"></button>`);
           }
@@ -84,16 +73,13 @@
               addItem(`<span class="work-link-disabled" aria-disabled="true" data-i18n="works.link.info"></span>`);
             }
           }
-          if (work.recordings && work.recordings.length) {
+          if (RecordingPlayer.hasAudio(work)) {
             addItem(`<button class="work-audio-toggle" data-target="${recordingsId}" aria-controls="${recordingsId}" aria-expanded="${recordingsOpen}" data-i18n="works.link.audio.${recordingsOpen ? 'close' : 'toggle'}"></button>`, true);
           }
 
           let html = '';
           if (items.length) {
             html += `<p class="work-links">${items.map((item, index) => `${index && !item.noSeparatorBefore ? '<span class="work-link-sep">·</span>' : ''}${item.html}`).join('')}</p>`;
-          }
-          if (work.links && work.links.audio && AUDIO_EXT.test(work.links.audio)) {
-            html += `<audio class="work-audio" controls preload="none" src="${work.links.audio}"></audio>`;
           }
           if (work.note) {
             html += `<div class="work-note" id="note-${work.id}" hidden>${loc(work.note)}</div>`;
@@ -126,11 +112,16 @@
             html += `<ul class="work-movements">${work.movements.map(m => `<li>${loc(m)}</li>`).join('')}</ul>`;
           }
           if (work.duration)        html += `<p class="work-duration">${loc(work.duration)}</p>`;
-          (work.details || []).forEach(d => { html += `<p class="work-detail">${loc(d)}</p>`; });
+          (work.details || []).forEach(d => {
+            const text = loc(d);
+            html += `<p class="work-detail">${d.url ? `<a href="${escapeUrl(d.url)}" target="_blank" rel="noopener">${text}</a>` : text}</p>`;
+          });
 
           // Disponibilitat de la partitura: editada per Ficta o sota demanda
-          if (work.score) {
-            const scoreValue = work.score === 'contact'
+          if (work.score || work.links?.score) {
+            const scoreValue = work.links?.score
+              ? `<a href="${escapeUrl(work.links.score)}" target="_blank" rel="noopener" data-i18n="works.score.${work.score === 'contact' ? 'contact' : 'ficta'}"></a>`
+              : work.score === 'contact'
               ? `<a href="contact.html" data-i18n="works.score.contact"></a>`
               : `<span data-i18n="works.score.ficta"></span>`;
             html += `<p class="work-detail work-score"><span data-i18n="works.score.label"></span> ${scoreValue}</p>`;
@@ -138,10 +129,10 @@
 
           html += renderLinks(work, isPart);
 
-          if (work.recordings && work.recordings.length) {
+          if (RecordingPlayer.hasAudio(work)) {
             const recordingsId = `audio-${work.id}`;
             html += `<div class="work-recordings" id="${recordingsId}"${openRecordings.has(recordingsId) ? '' : ' hidden'}>`;
-            html += work.recordings.map(recording => RecordingPlayer.render(recording)).join('');
+            html += RecordingPlayer.renderWorkAudio(work);
             html += '</div>';
           }
 

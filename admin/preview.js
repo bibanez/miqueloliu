@@ -51,11 +51,17 @@
       work.years && h('span', { className: 'work-years' }, ` (${work.years})`)),
     ['subtitle', 'instrumentation', 'duration'].map(field => loc(work[field], language) && h('p', { key: field, className: `work-${field}` }, formatted(loc(work[field], language)))),
     list(work.movements).length > 0 && h('ul', { className: 'work-movements' }, list(work.movements).map((movement, index) => h('li', { key: index }, formatted(loc(movement, language))))),
-    list(work.details).map((detail, index) => h('p', { key: index, className: 'work-detail' }, formatted(loc(detail, language)))),
-    work.score && h('p', { className: 'work-detail' }, `Partitura: ${work.score === 'ficta' ? 'Ficta' : 'Sota demanda'}`),
-    work.links?.score && h('p', {}, link(asset(props, work.links.score), 'Partitura')),
-    work.links?.audio && h('p', {}, link(asset(props, work.links.audio), 'Àudio')),
-    recordings(props, work.recordings), attachments(props, work.assets),
+    list(work.details).map((detail, index) => h('p', { key: index, className: 'work-detail' },
+      detail.url ? link(detail.url, formatted(loc(detail, language))) : formatted(loc(detail, language)))),
+    (work.score || work.links?.score) && h('p', { className: 'work-detail' }, 'Partitura: ',
+      work.links?.score ? link(asset(props, work.links.score), work.score === 'contact' ? 'Sota demanda' : 'Ficta') : work.score === 'ficta' ? 'Ficta' : 'Sota demanda'),
+    (list(work.recordings).length > 0 || work.links?.audio) && h('details', { className: 'cms-preview-audio' },
+      h('summary', {}, '+àudio'), recordings(props, work.recordings),
+      work.links?.audio && !list(work.recordings).some(recording => recording.src === work.links.audio) &&
+        (/\.(mp3|m4a|ogg|wav|aac|flac)([?#].*)?$/i.test(work.links.audio)
+          ? recordings(props, [{ title: loc(work.title, language), src: work.links.audio }])
+          : h('p', { className: 'work-detail' }, link(asset(props, work.links.audio), 'Àudio')))),
+    attachments(props, work.assets),
     list(work.parts).map((part, index) => h('div', { key: index, className: 'work-part' }, workCard(props, part, language))));
 
   const workPreview = (props, data, language) => {

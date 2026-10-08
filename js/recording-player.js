@@ -182,5 +182,18 @@ const RecordingPlayer = (() => {
     });
   }
 
-  return { allRecordings, bind, findRecording, render };
+  const audioFile = url => /\.(?:mp3|m4a|ogg|wav|aac|flac)(?:[?#].*)?$/i.test(url);
+  const hasAudio = work => Boolean(work.recordings?.length || work.links?.audio);
+  function renderWorkAudio(work) {
+    let html = (work.recordings || []).map(render).join('');
+    const url = work.links?.audio;
+    if (url && !(work.recordings || []).some(recording => recording.src === url)) {
+      html += audioFile(url)
+        ? render({ id: `linked-${work.id}`, title: work.title, composer: 'Miquel Oliu', src: url })
+        : `<p class="work-detail"><a href="${escapeHtml(url)}" target="_blank" rel="noopener" data-i18n="works.link.audio"></a></p>`;
+    }
+    return html;
+  }
+
+  return { allRecordings, bind, findRecording, render, audioFile, hasAudio, renderWorkAudio };
 })();

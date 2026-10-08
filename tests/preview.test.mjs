@@ -128,3 +128,20 @@ test('recording previews show release details, draft cover and archive status', 
   assert.equal(nodes(tree).find(node => node.tag === 'img').props.src, 'blob:https://example.com/cover');
   assert.equal(nodes(tree).find(node => node.tag === 'a').props.href, 'https://open.spotify.com/album/example');
 });
+
+test('CD and score links use their existing descriptions and audio lives under one disclosure', () => {
+  const work = { title: { ca: 'Obra' }, score: 'ficta',
+    details: [{ ca: 'CD: Mirades sonores (Ficta)', url: 'https://example.com/cd' }],
+    links: { score: 'https://example.com/score', audio: 'https://example.com/listen' },
+  };
+  let tree = preview('works', work).render();
+  assert.equal(nodes(tree).find(node => node.tag === 'a' && text(node) === 'CD: Mirades sonores (Ficta)').props.href, work.details[0].url);
+  assert.equal(nodes(tree).find(node => node.tag === 'a' && text(node) === 'Ficta').props.href, work.links.score);
+  assert.equal(nodes(tree).filter(node => node.tag === 'a' && text(node) === 'Partitura').length, 0);
+  const disclosure = nodes(tree).find(node => node.tag === 'details');
+  assert.equal(text(disclosure.children[0]), '+àudio');
+  assert.equal(nodes(disclosure).find(node => node.tag === 'a').props.href, work.links.audio);
+  work.links.audio = 'https://example.com/music.mp3?version=2';
+  tree = preview('works', work).render();
+  assert.equal(nodes(nodes(tree).find(node => node.tag === 'details')).find(node => node.tag === 'audio').props.src, work.links.audio);
+});

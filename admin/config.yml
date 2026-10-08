@@ -604,6 +604,11 @@ collections:
             name: en
             widget: string
             required: false
+          - label: Enllaç de la descripció (CD, editorial…)
+            name: url
+            widget: string
+            required: false
+            hint: Enganxeu una URL HTTPS. La descripció sencera serà clicable, sense afegir una altra etiqueta.
       - label: Enregistraments
         name: recordings
         widget: list
@@ -692,6 +697,7 @@ collections:
                     fields:
                       - name: body
                         label: Text
+                        hint: Enganxeu sense format (Cmd+Maj+V), separeu els paràgrafs i apliqueu la cursiva o negreta aquí. Per als versos, feu servir un bloc Poema.
                         widget: markdown
                         required: true
                         modes:
@@ -754,11 +760,11 @@ collections:
         widget: object
         required: false
         fields:
-          - label: Àudio
+          - label: Àudio (enllaç dins +àudio)
             name: audio
             widget: string
             required: false
-          - label: Partitura
+          - label: Partitura (enllaç de Ficta o fitxer PDF)
             name: score
             widget: file
             required: false
@@ -833,6 +839,11 @@ collections:
                 name: en
                 widget: string
                 required: false
+              - label: Enllaç de la descripció (CD, editorial…)
+                name: url
+                widget: string
+                required: false
+                hint: Enganxeu una URL HTTPS. La descripció sencera serà clicable, sense afegir una altra etiqueta.
           - label: Enregistraments
             name: recordings
             widget: list

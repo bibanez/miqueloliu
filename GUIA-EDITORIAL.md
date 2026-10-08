@@ -45,6 +45,20 @@ Dins de l’obra, desplegueu **Nota de programa i poemes** i afegiu una versió 
 
 Es conserven les versions existents en català, castellà, anglès, francès, alemany i euskera. També podeu crear una nota per a una obra nova: la pàgina es genera automàticament.
 
+## Enllaços de CD, partitura i àudio al catàleg
+
+- **CD:** dins de **Detalls**, obriu la línia que descriu el disc (per exemple, «CD: Mirades sonores (Ficta, 2025)…») i enganxeu l’adreça de compra al camp **Enllaç de la descripció**. La mateixa descripció serà clicable. L’enllaç és compartit per les tres traduccions.
+- **Partitura:** trieu **Ficta** al camp **Partitura** i, dins de **Enllaços → Partitura**, enganxeu l’adreça HTTPS de la partitura a l’editorial o pugeu un PDF. «Ficta» serà clicable a la línia de partitura, sense una segona etiqueta.
+- **Àudio:** per pujar un fitxer amb títol, intèrpret i durada, feu servir **Enregistraments**. Per afegir només un enllaç, feu servir **Enllaços → Àudio**. Tots dos s’obren dins de **+àudio**. Un enllaç directe a un fitxer sonor mostra el reproductor; un enllaç a una pàgina externa mostra l’accés a aquesta pàgina. La nota de programa (**+info**) mostra el text.
+
+## Entrar textos de Word sense problemes de format
+
+1. Copieu el text de Word i enganxeu-lo **sense format** al bloc **Text** del gestor: **Cmd+Maj+V** al Mac o **Ctrl+Maj+V** a Windows. Si el navegador conserva el format, passeu abans el text per un editor de text pla i torneu-lo a copiar.
+2. Reviseu els paràgrafs: no inseriu salts manuals al final de cada línia que veieu a Word. Separeu els paràgrafs amb Enter al gestor; la font i l’interlineat els aplica el web.
+3. Apliqueu la cursiva, la negreta i els enllaços amb els botons del gestor. Per als poemes feu servir **Poema**, amb un vers per línia i una línia buida entre estrofes.
+4. Reviseu els espais entre paraules, sobretot a les unions de fragments o al costat de cursives. Enganxar sense format no recupera espais que ja falten al document original.
+5. Repetiu-ho a cada versió d’idioma i reviseu tant el panell com **Comprovar Vista Prèvia** abans de publicar.
+
 ## Fitxers i àudio
 
 Pugeu imatges, PDF o fitxers d’àudio als camps corresponents. El límit de pujada és de 10 MB per fitxer. Per a àudios més grans, enganxeu un enllaç HTTPS al fitxer allotjat externament. Els fitxers pujats es desen a `/uploads/`; no elimineu un fitxer que encara aparegui en alguna pàgina.

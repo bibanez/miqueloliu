@@ -37,3 +37,5 @@ img, video, audio { max-width: 100%; }
 .cms-preview-notice { padding: 0.75rem; margin-bottom: 1.5rem; background: #eee8dd; }
 .cms-preview-lines, .cms-preview-source, .work-info-poem-line { white-space: pre-wrap; }
 .cms-preview-source { display: block; }
+
+.cms-preview-audio summary { cursor: pointer; color: var(--color-accent); font-size: 0.85rem; }

@@ -72,6 +72,7 @@ for (let index = 0; index < allWorks.length; index++) {
   assert(typeof work.title === 'string' ? work.title.trim() : work.title?.ca?.trim(), `Falta el títol de ${work.id}.`);
   const validateWork = async item => {
     await assertAssets(item.assets, work.id);
+    for (const detail of item.details || []) if (detail.url) await assertAsset(detail.url, work.id);
     for (const recording of item.recordings || []) {
       assert(recording.id && recording.title, `Falta el títol o identificador d’un enregistrament de ${work.id}.`);
       await assertAsset(recording.src, work.id);

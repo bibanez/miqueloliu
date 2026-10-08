@@ -18,7 +18,6 @@ function initDetailPage() {
     const header = page.querySelector('.work-detail-header');
     const languageNav = page.querySelector('.work-detail-language-nav');
     const available = tabs.map(tab => tab.dataset.contentLanguage);
-    const content = page.querySelector('.work-detail-content');
     const noteLabels = {
       ca: 'nota de programa',
       es: 'nota de programa',
@@ -28,45 +27,6 @@ function initDetailPage() {
       eu: 'programa-oharra'
     };
     const articleLabels = { ca: 'text', es: 'texto', en: 'text' };
-
-    function findWork(id) {
-      if (typeof WORKS === 'undefined') return null;
-      for (const category of WORKS) {
-        for (const work of category.works || []) {
-          if (work.id === id) return work;
-          const part = (work.parts || []).find(item => item.id === id);
-          if (part) return part;
-        }
-      }
-      return null;
-    }
-
-    function renderRecordings() {
-      if (!content || typeof RecordingPlayer === 'undefined') return;
-      if (isPressDetail) return;
-      const work = findWork(page.dataset.detailId);
-      const recordings = work && work.recordings ? work.recordings : [];
-      let mount = page.querySelector('.work-detail-recordings');
-
-      if (!recordings.length) {
-        if (mount) mount.remove();
-        return;
-      }
-
-      const recordingsId = `audio-${page.dataset.detailId}`;
-
-      if (!mount) {
-        mount = document.createElement('section');
-        mount.className = 'work-detail-recordings';
-        mount.id = recordingsId;
-        content.before(mount);
-      }
-
-      mount.innerHTML = recordings.map(recording => RecordingPlayer.render(recording)).join('');
-      mount.hidden = false;
-      I18n.apply();
-      RecordingPlayer.bind(mount);
-    }
 
     function updateNoteLabel(lang) {
       if (label) label.textContent = (isPressDetail ? articleLabels : noteLabels)[lang] || (isPressDetail ? 'text' : 'programme note');
@@ -109,11 +69,9 @@ function initDetailPage() {
     // reader's current note rather than silently falling back to another one.
     I18n.onChange(lang => {
       if (available.includes(lang)) setActiveLanguage(lang);
-      renderRecordings();
     });
 
     setActiveLanguage(available.includes(I18n.currentLang()) ? I18n.currentLang() : available[0]);
-    renderRecordings();
 }
 
 var PageInit = {
