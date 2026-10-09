@@ -1,4 +1,11 @@
 {
+  "recordings": [
+    {
+      "src": "https://open.spotify.com/album/4xXnKX2FajfRuCBlrxFg49",
+      "id": "IBS Classical",
+      "title": "Aeternum"
+    }
+  ],
   "details": [
     {
       "ca": "Estrena: Novembre 2024. Auditori de St. Josep, Moià. Tempus Trio",
@@ -6,7 +13,8 @@
       "en": "Premiere: November 2024. Auditori de St. Josep, Moià. Tempus Trio"
     },
     {
-      "ca": "CD: Aeternum (IBS Classical, 2025) – Tempus Trio"
+      "ca": "CD: Aeternum (IBS Classical, 2025) – Tempus Trio",
+      "url": "https://ibsclassical.es/producto/aeternum-tempus-trio/"
     }
   ],
   "archived": false,
@@ -59,6 +67,9 @@
     "ca": "Un simple aleteig...",
     "es": "Un simple aleteig... (Un simple aleteo...)",
     "en": "Un simple aleteig... (A simple flutter...)"
+  },
+  "links": {
+    "audio": "https://open.spotify.com/album/4xXnKX2FajfRuCBlrxFg49"
   },
   "id": "un-simple-aleteig",
   "category": "cambra"
