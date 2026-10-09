@@ -1,17 +1,4 @@
 {
-  "id": "jardins-del-silenci",
-  "title": {
-    "ca": "Jardins del silenci",
-    "es": "Jardins del silenci (Jardines del silencio)",
-    "en": "Jardins del silenci (Gardens of silence)"
-  },
-  "years": "2016",
-  "instrumentation": {
-    "ca": "Viola i piano",
-    "es": "Viola y piano",
-    "en": "Viola and piano"
-  },
-  "duration": "11’",
   "details": [
     {
       "ca": "Encàrrec de Joventuts Musicals de Catalunya – Fundació Ferrer-Salat",
@@ -24,13 +11,11 @@
       "en": "Premiere: Xarxa de músiques (2017) and L’Auditori de BCN, sala2 (April 2018). Agnès Mauri, Benedek Horváth"
     },
     {
-      "ca": "CD: Mirades sonores (Ficta, 2025) – Mariona Oliu, Miquel Villalba"
+      "ca": "CD: Mirades sonores (Ficta, 2025) – Mariona Oliu, Miquel Villalba",
+      "url": "https://open.spotify.com/album/01G6TlqgViSQwbuYcmNREk"
     }
   ],
-  "score": "ficta",
-  "category": "cambra",
   "archived": false,
-  "order": 3,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -66,5 +51,25 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 3,
+  "instrumentation": {
+    "ca": "Viola i piano",
+    "es": "Viola y piano",
+    "en": "Viola and piano"
+  },
+  "score": "ficta",
+  "duration": "11’",
+  "years": "2016",
+  "title": {
+    "ca": "Jardins del silenci",
+    "es": "Jardins del silenci (Jardines del silencio)",
+    "en": "Jardins del silenci (Gardens of silence)"
+  },
+  "links": {
+    "audio": "https://www.youtube.com/watch?v=f3ViXMQvw_U&list=RDf3ViXMQvw_U&start_radio=1",
+    "score": "https://www.ficta.cat/ca/partitures/239-jardins-del-silenci-miquel-oliu-viola-piano-9790805403571.html"
+  },
+  "id": "jardins-del-silenci",
+  "category": "cambra"
 }
