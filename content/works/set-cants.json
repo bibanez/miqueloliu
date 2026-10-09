@@ -1,4 +1,5 @@
 {
+  "recordings": [],
   "details": [
     {
       "ca": "Encàrrec de l’Associació Joan Manén",
@@ -11,7 +12,8 @@
       "en": "Premiere: June 2023. Ateneu Barcelonès. Elena Copons, David Malet"
     },
     {
-      "ca": "CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet"
+      "ca": "CD: Una remor de silenci (Ficta, 2024) – Elena Copons, David Malet",
+      "url": "https://www.ficta.cat/ca/cd/481-una-remor-de-silenci-cd-copons-malet-magrane-oliu-guix-3617669344344.html"
     }
   ],
   "archived": false,
@@ -235,6 +237,10 @@
     "ca": "Set cants",
     "es": "Set cants (Siete cantos)",
     "en": "Set cants (Seven songs)"
+  },
+  "links": {
+    "score": "https://www.ficta.cat/ca/partitures/450-set-cants-per-a-soprano-i-piano-sobre-poemes-dantoni-clapes-miquel-oliu-9790805448527.html",
+    "audio": "https://open.spotify.com/album/79IQ172yJtQnmvIRH05Dzd"
   },
   "id": "set-cants",
   "category": "cambra"
