@@ -1,17 +1,13 @@
 {
-  "id": "angel-terrible",
-  "title": {
-    "ca": "L’àngel terrible",
-    "es": "L’àngel terrible (El ángel terrible)",
-    "en": "L’àngel terrible (The terrible angel)"
-  },
-  "years": "2017-2018",
-  "instrumentation": {
-    "ca": "Quartet de corda",
-    "es": "Cuarteto de cuerda",
-    "en": "String quartet"
-  },
-  "duration": "14’",
+  "recordings": [
+    {
+      "id": "angel-terrible-recording",
+      "title": "L’àngel terrible",
+      "composer": "Miquel Oliu",
+      "duration": "13:55",
+      "src": "/uploads/angel-terrible.mp3"
+    }
+  ],
   "details": [
     {
       "ca": "Encàrrec de Dalia Quartet",
@@ -24,10 +20,7 @@
       "en": "Premiere: April 2019. Xarxa de músiques de Joventuts Musicals de Catalunya. Dalia Quartet"
     }
   ],
-  "score": "ficta",
-  "category": "cambra",
   "archived": false,
-  "order": 2,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -79,13 +72,23 @@
     ],
     "assets": []
   },
-  "recordings": [
-    {
-      "id": "angel-terrible-recording",
-      "title": "L’àngel terrible",
-      "composer": "Miquel Oliu",
-      "duration": "13:55",
-      "src": "/uploads/angel-terrible.mp3"
-    }
-  ]
+  "order": 2,
+  "instrumentation": {
+    "ca": "Quartet de corda",
+    "es": "Cuarteto de cuerda",
+    "en": "String quartet"
+  },
+  "score": "ficta",
+  "duration": "14’",
+  "years": "2017-2018",
+  "title": {
+    "ca": "L’àngel terrible",
+    "es": "L’àngel terrible (El ángel terrible)",
+    "en": "L’àngel terrible (The terrible angel)"
+  },
+  "links": {
+    "score": "https://www.ficta.cat/ca/miquel-oliu-i-nieto/241-langel-terrible-quartet-de-corda-miquel-oliu.html"
+  },
+  "id": "angel-terrible",
+  "category": "cambra"
 }
