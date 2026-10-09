@@ -1,13 +1,4 @@
 {
-  "id": "in-luce-praesenti",
-  "title": {
-    "ca": "In luce praesenti"
-  },
-  "years": "2019-2020",
-  "instrumentation": {
-    "ca": "[2.2.2.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -14.12.10.8.6.]"
-  },
-  "duration": "17’",
   "details": [
     {
       "ca": "Encàrrec de L’Auditori de Barcelona – Fundació SGAE-AEOS",
@@ -25,10 +16,7 @@
       "en": "Recording: July 2022. OBC, Benjamin Schwarz"
     }
   ],
-  "score": "ficta",
-  "category": "orquestra",
   "archived": false,
-  "order": 1,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -91,5 +79,21 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 1,
+  "instrumentation": {
+    "ca": "[2.2.2.2.-2.2.2.1.-timp.+3 perc. –arp. -celesta -14.12.10.8.6.]"
+  },
+  "score": "ficta",
+  "duration": "17’",
+  "years": "2019-2020",
+  "title": {
+    "ca": "In luce praesenti"
+  },
+  "links": {
+    "audio": "https://www.youtube.com/watch?v=sWjZdzrMBPg&list=RDsWjZdzrMBPg&start_radio=1",
+    "score": "https://www.ficta.cat/ca/partitures/485-in-luce-praesenti-per-a-orquestra-simfonica-moliu-9790805434599.html"
+  },
+  "id": "in-luce-praesenti",
+  "category": "orquestra"
 }
