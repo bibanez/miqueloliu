@@ -6,7 +6,8 @@
       "en": "Premiere: (partial) December 2011. El Círcol, Reus. Jordi López Roig"
     },
     {
-      "ca": "CD: Llibre d’hores (Ficta, 2023) – Miquel Villalba"
+      "ca": "CD: Llibre d’hores (Ficta, 2023) – Miquel Villalba",
+      "url": "https://www.ficta.cat/ca/cd/418-llibre-d-hores-miquel-oliu-cd-miquel-villalba-piano-3617381706437.html"
     }
   ],
   "archived": false,
@@ -96,6 +97,10 @@
     "ca": "Al·legories de tardor – Microludis per a piano",
     "es": "Al·legories de tardor – Microludis per a piano (Alegorías de otoño – Microludios para piano)",
     "en": "Al·legories de tardor – Microludis per a piano (Autumn allegories – Microludes for piano)"
+  },
+  "links": {
+    "score": "https://www.ficta.cat/ca/miquel-oliu-i-nieto/233-allegories-de-tardor-microludis-per-a-piano.html",
+    "audio": "https://open.spotify.com/album/0n0e3Y3gGP6qAPe9DUMDun"
   },
   "id": "allegories-de-tardor-piano",
   "category": "solista"
