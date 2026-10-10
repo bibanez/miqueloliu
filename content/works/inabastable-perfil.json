@@ -1,17 +1,4 @@
 {
-  "id": "inabastable-perfil",
-  "title": {
-    "ca": "L’inabastable perfil – Homenatge E. Chillida",
-    "es": "L’inabastable perfil – Homenatge E. Chillida (El inalcanzable perfil – Homenaje a E. Chillida)",
-    "en": "L’inabastable perfil – Homenatge E. Chillida (The unattainable profile – Homage to E. Chillida)"
-  },
-  "years": "2013-2014",
-  "instrumentation": {
-    "ca": "Violí i piano",
-    "es": "Violín y piano",
-    "en": "Violin and piano"
-  },
-  "duration": "8’",
   "details": [
     {
       "ca": "Estrena: Juny 2015. Nagoya, Japó. Ensemble Musica QuLacoza",
@@ -19,13 +6,11 @@
       "en": "Premiere: June 2015. Nagoya, Japan. Ensemble Musica QuLacoza"
     },
     {
-      "ca": "CD: Intertwined Paths (Seed-music, 2016) – Joel Bardolet, Marco Scilironi"
+      "ca": "CD: Intertwined Paths (Seed-music, 2016) – Joel Bardolet, Marco Scilironi",
+      "url": "https://seedmusic.eu/album/joel-bardolet-intertwined-paths/"
     }
   ],
-  "score": "ficta",
-  "category": "cambra",
   "archived": false,
-  "order": 5,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -61,5 +46,25 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 5,
+  "instrumentation": {
+    "ca": "Violí i piano",
+    "es": "Violín y piano",
+    "en": "Violin and piano"
+  },
+  "score": "ficta",
+  "duration": "8’",
+  "years": "2013-2014",
+  "title": {
+    "ca": "L’inabastable perfil – Homenatge E. Chillida",
+    "es": "L’inabastable perfil – Homenatge E. Chillida (El inalcanzable perfil – Homenaje a E. Chillida)",
+    "en": "L’inabastable perfil – Homenatge E. Chillida (The unattainable profile – Homage to E. Chillida)"
+  },
+  "links": {
+    "score": "https://www.ficta.cat/ca/miquel-oliu-i-nieto/237-linabastable-perfil-homenatge-a-eduardo-chillida.html",
+    "audio": "https://open.spotify.com/track/1rXAr2MLn2AoLzQD3hGpCx"
+  },
+  "id": "inabastable-perfil",
+  "category": "cambra"
 }
