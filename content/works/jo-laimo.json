@@ -1,17 +1,4 @@
 {
-  "id": "jo-laimo",
-  "title": {
-    "ca": "Jo l’aimo",
-    "es": "Jo l’aimo (Yo la amo)",
-    "en": "Jo l’aimo (I love her)"
-  },
-  "years": "2023",
-  "instrumentation": {
-    "ca": "Viola i cor mixt [SSAATTBB]",
-    "es": "Viola y coro mixto [SSAATTBB]",
-    "en": "Viola and mixed choir [SSAATTBB]"
-  },
-  "duration": "6’",
   "details": [
     {
       "ca": "Encàrrec d’Agnès Mauri",
@@ -22,12 +9,14 @@
       "ca": "Estrena: Març 2025. Barcelona, Basilea, Cardedeu. Agnès Mauri, Cor Noctes",
       "es": "Estreno: Marzo 2025. Barcelona, Basilea, Cardedeu. Agnès Mauri, Cor Noctes",
       "en": "Premiere: March 2025. Barcelona, Basel, Cardedeu. Agnès Mauri, Cor Noctes"
+    },
+    {
+      "ca": "CD: en preparació (Columna Música, 2026)-Agnès Mauri, Cor Noctes  ",
+      "es": "CD: en preparación (Columna Música, 2026)-Agnès Mauri, Cor Noctes",
+      "en": "CD: forthcoming (Columna Música, 2026)-Agnès Mauri, Cor Noctes"
     }
   ],
-  "score": "ficta",
-  "category": "veu",
   "archived": false,
-  "order": 2,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -53,5 +42,24 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 2,
+  "instrumentation": {
+    "ca": "Viola i cor mixt [SSAATTBB]",
+    "es": "Viola y coro mixto [SSAATTBB]",
+    "en": "Viola and mixed choir [SSAATTBB]"
+  },
+  "score": "ficta",
+  "duration": "6’",
+  "years": "2023",
+  "title": {
+    "ca": "Jo l’aimo",
+    "es": "Jo l’aimo (Yo la amo)",
+    "en": "Jo l’aimo (I love her)"
+  },
+  "links": {
+    "audio": "https://www.youtube.com/watch?v=lKGQKW_2N1U"
+  },
+  "id": "jo-laimo",
+  "category": "veu"
 }
