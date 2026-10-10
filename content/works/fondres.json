@@ -1,17 +1,4 @@
 {
-  "id": "fondres",
-  "title": {
-    "ca": "Fondre’s",
-    "es": "Fondre’s (Fundirse)",
-    "en": "Fondre’s (Melting)"
-  },
-  "years": "2018",
-  "subtitle": {
-    "ca": "Estudi de concert per a vibràfon",
-    "es": "Estudio de concierto para vibráfono",
-    "en": "Concert study for vibraphone"
-  },
-  "duration": "7’",
   "details": [
     {
       "ca": "Encàrrec de Miquel Bernat",
@@ -22,12 +9,14 @@
       "ca": "Estrena: Desembre 2019. Évora, Portugal. Miquel Bernat",
       "es": "Estreno: Diciembre 2019. Évora, Portugal. Miquel Bernat",
       "en": "Premiere: December 2019. Évora, Portugal. Miquel Bernat"
+    },
+    {
+      "ca": "CD: en preparació (2026) - Miquel Bernat",
+      "es": "CD: en preparación (2026) - Miquel Bernat",
+      "en": "CD: forthcoming (2026) - Miquel Bernat"
     }
   ],
-  "score": "ficta",
-  "category": "solista",
   "archived": false,
-  "order": 3,
   "assets": [],
   "programmeNote": {
     "sections": [
@@ -89,5 +78,21 @@
       }
     ],
     "assets": []
-  }
+  },
+  "order": 3,
+  "score": "ficta",
+  "duration": "7’",
+  "years": "2018",
+  "subtitle": {
+    "ca": "Estudi de concert per a vibràfon",
+    "es": "Estudio de concierto para vibráfono",
+    "en": "Concert study for vibraphone"
+  },
+  "title": {
+    "ca": "Fondre’s",
+    "es": "Fondre’s (Fundirse)",
+    "en": "Fondre’s (Melting)"
+  },
+  "id": "fondres",
+  "category": "solista"
 }
