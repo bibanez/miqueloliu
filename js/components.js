@@ -104,5 +104,6 @@ const Components = (() => {
     I18n.init();
   }
 
-  return { init, activePage };
+  // Pure renderers are also used by the static build for crawlable navigation.
+  return { init, activePage, renderNav, renderFooter };
 })();

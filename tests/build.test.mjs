@@ -118,6 +118,8 @@ test('an editor can create a new work and programme note without adding an HTML 
   assert.equal(result.status, 0, result.output);
   assert.doesNotMatch(await read(dir, 'dist/js/data/works.js'), /"id":"prova-nova"/);
   assert.ok(await read(dir, 'dist/obres/prova-nova.html'));
+  assert.doesNotMatch(await read(dir, 'dist/sitemap.xml'), /obres\/prova-nova/);
+  assert.match(await read(dir, 'dist/obres/prova-nova.html'), /name="robots" content="noindex, follow"/);
   work.programmeNote.sections[0].blocks[2].attribution = { ca: 'Autoria' };
   await save(dir, 'content/works/prova-nova.json', work);
   result = build(dir, {}, true);
@@ -166,4 +168,51 @@ test('deploy previews point editors to production and do not expose an active CM
   await assert.rejects(read(dir, 'dist/admin/config.yml'), { code: 'ENOENT' });
   await assert.rejects(read(dir, 'dist/admin/markdown-it.min.js'), { code: 'ENOENT' });
   assert.match(await read(dir, 'dist/contact.html'), /mailto:draft@example.com/);
+  assert.match(await read(dir, 'dist/contact.html'), /name="robots" content="noindex, follow"/);
+  assert.match(await read(dir, 'dist/robots.txt'), /Disallow: \/\n/);
+  assert.match(await read(dir, 'dist/_headers'), /\/\*\n  X-Robots-Tag: noindex, nofollow/);
+});
+
+test('public pages expose content, navigation, canonical metadata and a complete sitemap without JavaScript', async t => {
+  const dir = await fixture(t);
+  const result = build(dir, { CONTEXT: 'production' });
+  assert.equal(result.status, 0, result.output);
+  const sitemap = await read(dir, 'dist/sitemap.xml');
+  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map(match => match[1]);
+  assert.equal(new Set(urls).size, urls.length);
+  assert.ok(urls.includes('https://miqueloliu.com/'));
+  assert.ok(urls.includes('https://miqueloliu.com/recordings'));
+  assert.ok(urls.includes('https://miqueloliu.com/obres/angel-terrible'));
+  assert.ok(urls.includes('https://miqueloliu.com/premsa/escrit-llibre-dhores-ramon-humet'));
+  assert.doesNotMatch(sitemap, /\.html|\/admin|mockup|documentacio/);
+  const titles = new Set();
+  for (const url of urls) {
+    const route = new URL(url).pathname;
+    const html = await read(dir, `dist/${route === '/' ? 'index' : route.slice(1)}.html`);
+    assert.equal((html.match(/rel="canonical"/g) || []).length, 1);
+    assert.ok(html.includes(`<link rel="canonical" href="${url}">`));
+    assert.match(html, /name="description" content="[^"]+"/);
+    assert.match(html, /property="og:url"/);
+    assert.doesNotMatch(html, /name="robots" content="noindex/);
+    assert.match(html, /<div id="nav-container">\s*<nav>/);
+    assert.match(html, /data-i18n="nav.biography">Biografia<\/a>/);
+    assert.match(html, /<h1\b[^>]*>[^<]+<\/h1>/);
+    const title = html.match(/<title>([^<]+)<\/title>/)[1];
+    assert.ok(!titles.has(title), `Duplicate title: ${title}`);
+    titles.add(title);
+    const structured = JSON.parse(html.match(/type="application\/ld\+json">([^<]+)<\/script>/)[1]);
+    assert.equal(structured['@graph'][0].name, 'Miquel Oliu');
+    assert.equal(structured['@graph'][2].url, url);
+  }
+  const catalogueHtml = await read(dir, 'dist/catalogue.html');
+  const workData = await catalogue(dir);
+  for (const category of workData) for (const work of category.works) {
+    assert.ok(catalogueHtml.includes(`id="work-${work.id}"`), `Missing static work: ${work.id}`);
+  }
+  assert.match(catalogueHtml, /href="obres\/angel-terrible.html"/);
+  assert.ok(!urls.includes('https://miqueloliu.com/obres/set-cants-veu'));
+  assert.match(await read(dir, 'dist/obres/set-cants-veu.html'), /rel="canonical" href="https:\/\/miqueloliu.com\/obres\/set-cants"/);
+  assert.match(await read(dir, 'dist/index.html'), /data-i18n="home.hero.subtitle">compositor<\/p>/);
+  assert.match(await read(dir, 'dist/obres/angel-terrible.html'), /class="work-detail-lang-block is-active" lang="ca"/);
+  assert.match(await read(dir, 'dist/robots.txt'), /Sitemap: https:\/\/miqueloliu.com\/sitemap.xml/);
 });

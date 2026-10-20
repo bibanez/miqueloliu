@@ -4,6 +4,8 @@ import nunjucks from 'nunjucks';
 import sanitizeHtml from 'sanitize-html';
 import MarkdownIt from 'markdown-it';
 import YAML from 'yaml';
+import vm from 'node:vm';
+import { origin, canonicalPath, pageMetadata, populateText, addMetadata, renderCatalogue } from './seo.mjs';
 
 const root = process.cwd();
 const dist = path.join(root, 'dist');
@@ -297,9 +299,72 @@ for (const item of pressItems.filter(record => record.sections?.length)) {
   await write(`premsa/${item.id}.html`, templates.render('detail.njk', {
     id: item.id,
     title: caTitle,
-    description: `Text de Ramon Humet sobre el Llibre d’hores.`,
+    description: `${item.title.ca}${item.author?.ca ? ` — ${item.author.ca}` : ''}. Text sobre la música de Miquel Oliu.`,
     content,
     pageType: 'press-detail',
   }));
 }
+// Publish meaningful HTML before client-side enhancements run. This also makes
+// every public page discoverable through ordinary navigation links.
+const componentSource = await fs.readFile(path.join(root, 'js/components.js'), 'utf8');
+const publicFiles = [
+  ...Object.keys(pageMetadata),
+  ...allWorks.filter(hasNote).map(work => `obres/${work.id}.html`),
+  ...pressItems.filter(item => item.sections?.length).map(item => `premsa/${item.id}.html`),
+];
+const preview = process.env.CONTEXT && process.env.CONTEXT !== 'production';
+// A work may appear in two catalogue categories with the same programme note.
+// Keep both published routes, but consolidate identical content in search.
+const canonicalNotes = new Map();
+const noteCanonicalFiles = new Map();
+for (const work of allWorks.filter(hasNote).sort((a, b) =>
+  Number(Boolean(a.archived)) - Number(Boolean(b.archived)) ||
+  Number(fixedIds.programmeNoteIds.includes(b.id)) - Number(fixedIds.programmeNoteIds.includes(a.id)) || a.id.localeCompare(b.id))) {
+  const signature = js({ title: work.title, years: work.years, instrumentation: work.instrumentation, note: work.programmeNote });
+  const file = `obres/${work.id}.html`;
+  if (!canonicalNotes.has(signature)) canonicalNotes.set(signature, file);
+  noteCanonicalFiles.set(file, canonicalNotes.get(signature));
+}
+const sitemapFiles = [];
+for (const file of publicFiles) {
+  let html = await fs.readFile(path.join(dist, file), 'utf8');
+  const components = vm.runInNewContext(`${componentSource}\nComponents;`, {
+    window: { location: { pathname: canonicalPath(file) } },
+  });
+  html = html.replace('<div id="nav-container"></div>', `<div id="nav-container">${components.renderNav()}</div>`)
+    .replace('<div id="footer-container"></div>', `<div id="footer-container">${components.renderFooter()}</div>`);
+  if (file === 'catalogue.html') {
+    html = html.replace('<div id="catalogue-content"></div>', `<div id="catalogue-content">${renderCatalogue(catalogue, noteIndex)}</div>`)
+      .replace('<nav class="catalogue-nav" id="catalogue-nav" aria-label="Categories"></nav>',
+        `<nav class="catalogue-nav" id="catalogue-nav" aria-label="Categories">${catalogue.map(category => `<a href="#${esc(category.id)}">${esc(category.name.ca)}</a>`).join('')}</nav>`);
+  }
+  const work = file.startsWith('obres/') ? allWorks.find(item => file === `obres/${item.id}.html`) : null;
+  const press = file.startsWith('premsa/') ? pressItems.find(item => file === `premsa/${item.id}.html`) : null;
+  const sections = work?.programmeNote?.sections || press?.sections;
+  const language = sections?.some(s => s.language === 'ca') ? 'ca' : sections?.[0]?.language || 'ca';
+  if (sections) {
+    html = html.replace(/class="work-detail-lang-block" data-detail-lang="([a-z]+)"/g,
+      (_match, lang) => `class="work-detail-lang-block${lang === language ? ' is-active' : ''}" lang="${lang}" data-detail-lang="${lang}"`);
+  }
+  const workTitle = work && (typeof work.title === 'string' ? work.title : work.title.ca);
+  const detailTitle = workTitle || press?.sections.find(s => s.language === language)?.title || press?.title.ca;
+  const title = pageMetadata[file]?.[0] || `${detailTitle} — Miquel Oliu`;
+  const description = pageMetadata[file]?.[1] || (work ? `${workTitle}, de Miquel Oliu. ${typeof work.instrumentation === 'string' ? work.instrumentation : work.instrumentation?.ca || ''} Nota de programa de l’obra.` : `${press.title.ca}${press.author?.ca ? ` — ${press.author.ca}` : ''}. Text sobre la música de Miquel Oliu.`);
+  const archived = Boolean(work?.archived || press?.archived);
+  const canonicalFile = noteCanonicalFiles.get(file) || file;
+  html = addMetadata(html, canonicalFile, {
+    title, description, language,
+    image: file === 'index.html' ? pages.home.heroImage : undefined,
+    noindex: Boolean(preview || archived),
+    mainEntity: work ? { '@type': 'MusicComposition', name: workTitle, composer: { '@id': `${origin}/#person` } } : undefined,
+  });
+  html = populateText(html, translations.ca);
+  await write(file, html);
+  if (!archived && canonicalFile === file) sitemapFiles.push(file);
+}
+await write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapFiles.map(file => `  <url><loc>${esc(origin + canonicalPath(file))}</loc></url>`).join('\n')}\n</urlset>\n`);
+await write('robots.txt', `User-agent: *\n${preview ? 'Disallow: /' : 'Allow: /\nDisallow: /admin/'}\n\nSitemap: ${origin}/sitemap.xml\n`);
+// Both production hosts support this file; keep the CMS and preview deployments
+// out of search results without relying on robots.txt to prevent indexing.
+await write('_headers', `/admin/*\n  X-Robots-Tag: noindex, nofollow\n  Cache-Control: no-store\n${preview ? '/*\n  X-Robots-Tag: noindex, nofollow\n' : ''}`);
 console.log(`Generat dist/ amb ${allWorks.length} obres, ${Object.keys(noteIndex).length} notes de programa i ${pressItems.length} articles de premsa.`);
