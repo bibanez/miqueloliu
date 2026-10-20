@@ -51,6 +51,8 @@ Es conserven les versions existents en català, castellà, anglès, francès, al
 - **Partitura:** trieu **Ficta** al camp **Partitura** i, dins de **Enllaços → Partitura**, enganxeu l’adreça HTTPS de la partitura a l’editorial o pugeu un PDF. «Ficta» serà clicable a la línia de partitura, sense una segona etiqueta.
 - **Àudio:** per pujar un fitxer amb títol, intèrpret i durada, feu servir **Enregistraments**. Per afegir només un enllaç, feu servir **Enllaços → Àudio**. Tots dos s’obren dins de **+àudio**. Un enllaç directe a un fitxer sonor mostra el reproductor; un enllaç a una pàgina externa mostra l’accés a aquesta pàgina. La nota de programa (**+info**) mostra el text.
 
+Per a **Llibre d’hores**, els camps de la fitxa principal corresponen al cicle complet. Dins de **Peces del cicle**, obriu cadascun dels quatre quaderns per afegir-hi els seus detalls de CD, partitura i àudio. Els títols dels moviments s’editen directament en català, castellà i anglès; només el català és obligatori.
+
 ## Entrar textos de Word sense problemes de format
 
 1. Copieu el text de Word i enganxeu-lo **sense format** al bloc **Text** del gestor: **Cmd+Maj+V** al Mac o **Ctrl+Maj+V** a Windows. Si el navegador conserva el format, passeu abans el text per un editor de text pla i torneu-lo a copiar.

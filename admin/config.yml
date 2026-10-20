@@ -567,22 +567,19 @@ collections:
         name: movements
         widget: list
         required: false
-        field:
-          label: Títol
-          name: title
-          widget: object
-          fields:
-            - label: Català
-              name: ca
-              widget: string
-            - label: Castellà
-              name: es
-              widget: string
-              required: false
-            - label: Anglès
-              name: en
-              widget: string
-              required: false
+        summary: "{{fields.ca}}"
+        fields:
+          - label: Català
+            name: ca
+            widget: string
+          - label: Castellà
+            name: es
+            widget: string
+            required: false
+          - label: Anglès
+            name: en
+            widget: string
+            required: false
       - label: Durada
         name: duration
         widget: string
@@ -802,22 +799,19 @@ collections:
             name: movements
             widget: list
             required: false
-            field:
-              label: Títols
-              name: title
-              widget: object
-              fields:
-                - label: Català
-                  name: ca
-                  widget: string
-                - label: Castellà
-                  name: es
-                  widget: string
-                  required: false
-                - label: Anglès
-                  name: en
-                  widget: string
-                  required: false
+            summary: "{{fields.ca}}"
+            fields:
+              - label: Català
+                name: ca
+                widget: string
+              - label: Castellà
+                name: es
+                widget: string
+                required: false
+              - label: Anglès
+                name: en
+                widget: string
+                required: false
           - label: Durada
             name: duration
             widget: string
@@ -881,6 +875,31 @@ collections:
                 name: sourceUrl
                 widget: string
                 required: false
+          - label: Partitura
+            name: score
+            widget: select
+            options:
+              - label: Ficta
+                value: ficta
+              - label: Sota demanda
+                value: contact
+            required: false
+          - label: Enllaços
+            name: links
+            widget: object
+            required: false
+            fields:
+              - label: Àudio (enllaç dins +àudio)
+                name: audio
+                widget: string
+                required: false
+              - label: Partitura (enllaç de Ficta o fitxer PDF)
+                name: score
+                widget: file
+                required: false
+                media_library:
+                  config:
+                    max_file_size: 10485760
     sortable_fields:
       - title.ca
       - category
